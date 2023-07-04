@@ -24,7 +24,7 @@ sitio. También agregar una breve descripción del público al que apunta el sit
 Edad: 20 años, Prof. De Educ. Sec. En TIC, estudiante de 🤣
 
 # Cruz Carina
-Edad
+Edad: 19
 
 # Cruz Max
 Max Cruz: 17 años, ingles intermedio, basicos conocimientos de javascript y buen compañero
