@@ -1,8 +1,6 @@
 # 7ecno Shop
 
-¿Eres un adolescente en busca de las últimas novedades en tecnología? ¡Entonces 7ecto Shop es tu lugar!<br>
-En primer lugar, te ofrecemos una amplia selección de celulares de última generación, con las mejores marcas y modelos disponibles.<br>
-Pero eso no es todo, en 7ecto Shop sabemos que cada quien es único, por lo que te brindamos la oportunidad de personalizar tus dispositivos y accesorios a tu gusto.
+Nuestro eCommerce se va a especializar en la venta de celulares, accesorios y personalizaciones para estos. Nuestra audiencia objetivo van a ser los adolescentes
 
 <hr>
 
