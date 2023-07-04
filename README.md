@@ -1,53 +1,46 @@
-Nombre pendiente (Opciones de Nombre)
-- SevenShop
-- 7ecno Shop
-- SevenG
+# 7ecno Shop
 
-¿Qué productos o servicios brindará nuestro sitio?
-Nuestra tienda se va a especializar en la venta de celulares y accesorios para estos.
+¿Eres un adolescente en busca de las últimas novedades en tecnología? ¡Entonces 7ecto Shop es tu lugar!<br>
+En primer lugar, te ofrecemos una amplia selección de celulares de última generación, con las mejores marcas y modelos disponibles.<br>
+Pero eso no es todo, en 7ecto Shop sabemos que cada quien es único, por lo que te brindamos la oportunidad de personalizar tus dispositivos y accesorios a tu gusto.
 
-¿Quién será nuestra audiencia objetivo?
-Nuestra audiencia objetivo van a ser los adolescentes.
+<hr>
 
-¿Cómo ajustaremos nuestra oferta a ese público?
-Productos innovadores y personalizados para nuestro publico objetivo.
+## Integrantes del equipo
 
-Articulos personalizados, venta de celulares y accesorios en general
+- **Castañares Silvia**<br>
+20 años, estudiante del Prof. de Educ. Sec. en TIC.
 
-Entregable: Crear archivo README.md en el repositiorio con:
-● Una breve descripción de la oferta de productos y/o servicios ofrecidos por su
-sitio. También agregar una breve descripción del público al que apunta el sitio.
-
-● Una breve descripción de los integrantes del equipo.
-
-# Castañares Silvia
-Edad: 20 años, Prof. De Educ. Sec. En TIC, estudiante de 🤣
-
-# Cruz Carina
+- **Cruz Carina**<br>
 Edad: 19
 
-# Cruz Max
-Max Cruz: 17 años, ingles intermedio, basicos conocimientos de javascript y buen compañero
+- **Cruz Max**<br>
+17 años, inglés intermedio, conocimientos básicos en JavaScript, buen compañero.
 
-# Leiva Nayla
+- **Leiva Nayla**<br>
 Edad: 22
 
-# Toconas Luciano
-Edad: 22
+- **Rodríguez Roció**<br>
+17 años, inglés B1, conocimientos básicos en HTML y CSS.
 
-# Torres Ezequiel
-Edad
+- **Toconas Luciano**<br>
+22 años, estudiante del Prof. de Educ. Sec. en Informática.
 
-# Rodriguez Rocio
-Rocio Rodriguez: 17 años, ingles B1, conocimientos básicos en HTML y Css.
+- **Torres Ezequiel**<br>
+Edad:
 
-Paginas de interes
-https://tienda.movistar.com.ar/
-Movistar me intereso la sencillez de los colores que utiliza y la especializacion de celulares que promueve
+<hr>
 
-https://www.tecnocompro.com/
-Tecno compro, porque su estilo es muy dinamico y sus imágenes de promociones atrapan al comprador para seguir navegando por la pagina. además ofrece gran variedad de productos y están bien clasificados
+## Sitios de referencia
 
-https://compraonline.telecom.com.ar/producto/conectividad/tienda-de-celulares
-Telecom tiene muy buena funcionalidades intuitivas y bien estructurada, su gran variedad no solo de celulares sino de productos complementario para estos hacen que sea una pagina llamativa
+https://tienda.movistar.com.ar<br>
+Movistar nos interesó la sencillez de los colores que utiliza y la especialización de celulares que promueve.
 
+https://www.tecnocompro.com<br>
+Tecno compro, porque su estilo es muy dinámico y sus imágenes de promociones atrapan al comprador para seguir navegando por la página. además, ofrece gran variedad de productos y están bien clasificados.
+
+https://compraonline.telecom.com.ar/producto/conectividad/tienda-de-celulares<br>
+Telecom tiene muy buenas funcionalidades intuitivas y bien estructurada, su gran variedad no solo de celulares sino de productos complementario para estos hacen que sea una página llamativa.
+
+https://tienda.claro.com.ar/<br>
+Claro nos gustó porque tiene una interfaz bastante limpia y centrada en sus productos.
