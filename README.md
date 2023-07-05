@@ -26,7 +26,7 @@ Edad: 22
 22 años, estudiante del Prof. de Educ. Sec. en Informática.
 
 - **Torres Ezequiel**<br>
-Edad:
+18 años, estudiante de E.E.T N°1 - Esp Construcciones.
 
 <hr>
 
