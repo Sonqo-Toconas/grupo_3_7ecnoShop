@@ -10,7 +10,7 @@ Nuestro eCommerce se va a especializar en la venta de celulares, accesorios y pe
 20 años, estudiante del Prof. de Educ. Sec. en TIC.
 
 - **Cruz Carina**<br>
-Edad: 19
+Edad: 19, estudiante del Prof. de Biologia.
 
 - **Cruz Max**<br>
 17 años, inglés intermedio, conocimientos básicos en JavaScript, buen compañero.
