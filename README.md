@@ -11,7 +11,7 @@ Nuestra audiencia objetivo van a ser los adolescentes
 20 años, estudiante del Prof. de Educ. Sec. en TIC.
 
 - **Cruz Carina**<br>
-Edad: 19, estudiante del Prof. de Biologia.
+Edad: 19, estudiante del Prof. de Biología.
 
 - **Cruz Max**<br>
 17 años, inglés intermedio, conocimientos básicos en JavaScript, buen compañero.
@@ -43,7 +43,6 @@ Telecom tiene muy buenas funcionalidades intuitivas y bien estructurada, su gran
 
 https://tienda.claro.com.ar/<br>
 Claro nos gustó porque tiene una interfaz bastante limpia y centrada en sus productos.
-
 
 https://tienda.personal.com.ar/celulares<br>
 Personal es una buena página porque se puede encontrar lo que uno busca fácilmente.
