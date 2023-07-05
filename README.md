@@ -44,5 +44,5 @@ Telecom tiene muy buenas funcionalidades intuitivas y bien estructurada, su gran
 https://tienda.claro.com.ar/<br>
 Claro nos gustó porque tiene una interfaz bastante limpia y centrada en sus productos.
 
-https://tienda.personal.com.ar/celulares<br>
-Personal es una buena página porque se puede encontrar lo que uno busca fácilmente.
+https://www.apple.com/store<br>
+Apple Store porque el diseño es elegante y minimalista y es bueno su enfoque de calidad e innovación.
