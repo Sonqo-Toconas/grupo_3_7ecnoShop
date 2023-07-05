@@ -1,6 +1,7 @@
 # 7ecno Shop
 
-Nuestro eCommerce se va a especializar en la venta de celulares, accesorios y personalizaciones para estos. Nuestra audiencia objetivo van a ser los adolescentes
+Nuestro eCommerce se va a especializar en la venta de celulares, accesorios y personalizaciones para estos.<br>
+Nuestra audiencia objetivo van a ser los adolescentes
 
 <hr>
 
@@ -42,3 +43,6 @@ Telecom tiene muy buenas funcionalidades intuitivas y bien estructurada, su gran
 
 https://tienda.claro.com.ar/<br>
 Claro nos gustó porque tiene una interfaz bastante limpia y centrada en sus productos.
+
+https://tienda.personal.com.ar/celulares<br>
+Personal es una buena página porque se puede encontrar lo que uno busca fácilmente.
