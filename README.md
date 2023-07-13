@@ -17,7 +17,7 @@ Edad: 19, estudiante del Prof. de Biología.
 17 años, inglés intermedio, estudiante de la secundaria, conocimientos basicos de java,html,css.
 
 - **Leiva Nayla**<br>
-Edad: 22
+Edad: 22, estudiante de la Tec. Sup. en Gestión y Mantenimiento de Equipamientos Biomédicos, conocimientos básicos, Html y Css, JavaScript y React.
 
 - **Rodríguez Roció**<br>
 17 años, inglés B1, conocimientos básicos en HTML y CSS.
