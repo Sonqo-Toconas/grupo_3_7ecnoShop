@@ -14,7 +14,7 @@ Nuestra audiencia objetivo van a ser los adolescentes
 Edad: 19, estudiante del Prof. de Biología.
 
 - **Cruz Max**<br>
-17 años, inglés intermedio, conocimientos básicos en JavaScript, buen compañero.
+17 años, inglés intermedio, estudiante de la secundaria, conocimientos basicos de java,html,css.
 
 - **Leiva Nayla**<br>
 Edad: 22
