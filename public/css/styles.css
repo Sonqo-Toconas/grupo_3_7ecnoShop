@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+
+
+.formulario {
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.formulario1 {
+    margin-bottom: 45px;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.formulario2 {
+    padding: 8px;
+    border-radius: 5px;
+    border: solid 1px lightgray;
+}
