@@ -1,0 +1,15 @@
+{
+  "name": "grupo_3_7ecnoshop",
+  "version": "1.0.0",
+  "description": "Nuestro eCommerce se va a especializar en la venta de celulares, accesorios y personalizaciones para estos.<br>\r Nuestra audiencia objetivo van a ser los adolescentes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
