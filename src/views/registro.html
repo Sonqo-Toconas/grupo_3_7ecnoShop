@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro de Usuario</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -40,7 +40,37 @@
 
     </header>
     <main>
-
+        <form action="/" method="GET" class="formulario">
+            <div class="formulario1">
+                <h3>Datos personales</h3>
+                <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3" class="formulario2" required>
+            </div>
+            <div class="formulario1">
+                <input type="text" name="usuario" placeholder="Nombre de usuario" class="formulario2" required>
+            </div>
+            <div class="formulario1">
+                <input type="email" name="email" placeholder="E-mail" class="formulario2" required>
+            </div>
+            <div class="formulario1">
+                <input type="tel" name="telefono" placeholder="Teléfono" class="formulario2">
+            </div>
+            <div class="formulario1">
+                <input type="text" name="domicilio" placeholder="Domicilio" class="formulario2">
+            </div>
+            <div class="formulario1">
+                <h3>Imagen de usuario (Opcional)</h3>
+                <input type="file" name="fotoUsuario" accept=".jpg, .png" class="formulario2"></input>
+            </div>
+            <div class="formulario1">
+                <h3>Contraseña</h3>
+                <input type="password" name="contrasena" placeholder="Contraseña" class="formulario2" required>
+            </div>
+            <div class="formulario1">
+                <input type="password" name="Ccontrasena" placeholder="Confirmar contraseña" class="formulario2" required>
+            </div>
+            <button type="submit" class="boton-formulario">Enviar</button>
+            <button type="reset" class="boton-formulario">Borrar</button>
+        </form>
 
 
 
