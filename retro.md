@@ -12,8 +12,13 @@
 
 - **Cruz Max**<br>
 ¿Qué se hizo bien?<br>
+Nos organizamos de manera rapida y todos entendimos lo que se hizo
+
 ¿Qué se hizo mal?<br>
+No tuvimos la mejor comunicacion
+
 ¿Qué debería cambiar?<br>
+Mejorar las relaciones entre los miembros del grupo
 
 - **Leiva Nayla**<br>
 ¿Qué se hizo bien?<br>
