@@ -46,3 +46,10 @@ Claro nos gustó porque tiene una interfaz bastante limpia y centrada en sus pro
 
 https://www.apple.com/store<br>
 Apple Store porque el diseño es elegante y minimalista y es bueno su enfoque de calidad e innovación.
+
+
+<hr>
+
+## Tablero de trabajo
+
+https://trello.com/b/w36qDB8S/trabajo-7ecto-shop
