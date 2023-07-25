@@ -7,9 +7,11 @@
 
 - **Cruz Carina**<br>
 ¿Qué se hizo bien?<br>
+Hubo una buena organizacion y se termino muy rapido el trabajo
 ¿Qué se hizo mal?<br>
+Siento que falto mas aportes ya que muchos estubimos algo ausentes
 ¿Qué debería cambiar?<br>
-
+Nada, solo hacerlo con mas energias
 - **Cruz Max**<br>
 ¿Qué se hizo bien?<br>
 Nos organizamos de manera rapida y todos entendimos lo que se hizo
