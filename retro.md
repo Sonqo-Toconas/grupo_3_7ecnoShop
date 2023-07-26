@@ -29,8 +29,11 @@ Mejorar las relaciones entre los miembros del grupo
 
 - **Rodríguez Roció**<br>
 ¿Qué se hizo bien?<br>
+Nos pudimos organizar rapido terminando el trabajo.
 ¿Qué se hizo mal?<br>
+Mas ideas y poder trabajr en simultaneo todos.
 ¿Qué debería cambiar?<br>
+La comunicacion tendria que ser mejor.
 
 - **Toconas Luciano**<br>
 ¿Qué se hizo bien?<br>
