@@ -24,8 +24,11 @@ Mejorar las relaciones entre los miembros del grupo
 
 - **Leiva Nayla**<br>
 ¿Qué se hizo bien?<br>
+La organización inicial y repartición de temas fue muy buena, clara y rápida.
 ¿Qué se hizo mal?<br>
+Creo que no tuvimos en cuenta algunos aspectos, ni creamos un Plan B en caso que surgieran dificultades.
 ¿Qué debería cambiar?<br>
+Creo que podemos mejorar la comunicacion aún más, pero estoy segura que eso cambiara positivamente con el tiempo.
 
 - **Rodríguez Roció**<br>
 ¿Qué se hizo bien?<br>
