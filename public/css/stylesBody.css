@@ -1,0 +1,16 @@
+footer{
+    background-color: #003e4f;
+    color: #eff4d5;
+
+    line-height: 5px;
+
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+div{
+    padding: 15px;
+}
+
