@@ -11,7 +11,7 @@
 
 <body>
     <header>
-
+        <p>f</p>
 
 
 
@@ -41,38 +41,40 @@
 
     </header>
     <main>
-        <form action="/" method="GET" class="formulario">
-            <div class="formulario1">
-                <h3>Datos personales</h3>
-                <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3" class="formulario2"
-                    required>
+        <div class="registro">
+            <form action="/" method="GET" class="formulario">
+                <div class="formulario-registro">
+                    <h3 class="titulo-datos">Datos personales</h3>
+                    <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3"
+                        class="input-registro" required>
+                </div>
+                <div class="formulario-registro">
+                    <input type="text" name="usuario" placeholder="Nombre de usuario" class="input-registro" required>
+                </div>
+                <div class="formulario-registro">
+                    <input type="email" name="email" placeholder="E-mail" class="input-registro" required>
+                </div>
+                <div class="formulario-registro">
+                    <input type="tel" name="telefono" placeholder="Teléfono" class="input-registro">
+                </div>
+                <div class="formulario-registro">
+                    <input type="text" name="domicilio" placeholder="Domicilio" class="input-registro">
+                </div>
+                <div class="formulario-registro">
+                    <h3 class="titulo-datos">Imagen de usuario (Opcional)</h3>
+                    <input type="file" name="fotoUsuario" accept=".jpg, .png" class="input-registro"></input>
+                </div>
+                <div class="formulario-registro">
+                    <h3 class="titulo-datos">Contraseña</h3>
+                    <input type="password" name="contrasena" placeholder="Contraseña" class="input-registro" required>
+                </div>
+                <div class="formulario-registro">
+                    <input type="password" name="contrasena2" placeholder="Confirmar contraseña" class="input-registro"
+                        required>
+                </div>
+        <button type="submit" class="boton-formulario">Enviar</button>
+        <button type="reset" class="boton-formulario">Borrar</button>
             </div>
-            <div class="formulario1">
-                <input type="text" name="usuario" placeholder="Nombre de usuario" class="formulario2" required>
-            </div>
-            <div class="formulario1">
-                <input type="email" name="email" placeholder="E-mail" class="formulario2" required>
-            </div>
-            <div class="formulario1">
-                <input type="tel" name="telefono" placeholder="Teléfono" class="formulario2">
-            </div>
-            <div class="formulario1">
-                <input type="text" name="domicilio" placeholder="Domicilio" class="formulario2">
-            </div>
-            <div class="formulario1">
-                <h3>Imagen de usuario (Opcional)</h3>
-                <input type="file" name="fotoUsuario" accept=".jpg, .png" class="formulario2"></input>
-            </div>
-            <div class="formulario1">
-                <h3>Contraseña</h3>
-                <input type="password" name="contrasena" placeholder="Contraseña" class="formulario2" required>
-            </div>
-            <div class="formulario1">
-                <input type="password" name="Ccontrasena" placeholder="Confirmar contraseña" class="formulario2"
-                    required>
-            </div>
-            <button type="submit" class="boton-formulario">Enviar</button>
-            <button type="reset" class="boton-formulario">Borrar</button>
         </form>
 
 
@@ -158,7 +160,7 @@
         <div class="caja2">
             <div class="TecnoShop">
                 <h3 class="titulo">7ecno Shop</h3>
-                <a href="" >Acerca de</a>
+                <a href="">Acerca de</a>
                 <a href="">Terminos y Condiciones</a>
                 <a href="">Privacidad</a>
             </div>
@@ -179,10 +181,10 @@
             </div>
             <div class="formularioDeSuscripcion">
                 <h3 class="titulo">Suscribite para recibir nuestras mejores ofertas y promociones</h3>
-                    <form action="" method="POST" class="sus">
-                        <input type="email" name="email" placeholder="Ingresá tu e-mail">
-                        <button type="submit">Suscribirme</button>
-                    </form>
+                <form action="" method="POST">
+                    <input type="email" name="email" placeholder="Ingresá tu e-mail" class="email-sus">
+                    <button type="submit" class="boton-suscripcion">Suscribirme</button>
+                </form>
             </div>
         </div>
         <div class="caja3">
