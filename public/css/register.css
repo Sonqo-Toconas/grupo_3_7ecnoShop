@@ -1,24 +1,41 @@
-
-
-
-
-
-
-
-
-.formulario {
-    padding: 20px 15px;
+main{
+    background-color: #F5F5DC;
     text-align: center;
+    padding-top: 120px;
+}
+.titulo-datos{
+    font-size: 20px;
+    color: #353839;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;    
+    padding: 10px;
+    margin: 8px;
 }
 
-.formulario1 {
-    margin-bottom: 45px;
-    text-align: left;
-    margin-left: 10%;
+.input-registro{
+    width: 33%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', 'sans-serif';
 }
 
-.formulario2 {
-    padding: 8px;
-    border-radius: 5px;
-    border: solid 1px lightgray;
+.boton-formulario{
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #F5F5DC;
+
+    border-color:#DA2C43;
+    border-style: solid;
+    background-color: #DA2C43;
+    border-radius: 20px;
+    padding: 10px;
+    width: 15%;
+    margin: 10px;
 }
