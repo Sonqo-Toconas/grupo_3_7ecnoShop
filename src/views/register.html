@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/register.css">
     <link href="css/stylesBody.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -41,41 +43,44 @@
 
     </header>
     <main>
-        <div class="registro">
-            <form action="/" method="GET" class="formulario">
-                <div class="formulario-registro">
-                    <h3 class="titulo-datos">Datos personales</h3>
-                    <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3"
-                        class="input-registro" required>
-                </div>
-                <div class="formulario-registro">
-                    <input type="text" name="usuario" placeholder="Nombre de usuario" class="input-registro" required>
-                </div>
-                <div class="formulario-registro">
-                    <input type="email" name="email" placeholder="E-mail" class="input-registro" required>
-                </div>
-                <div class="formulario-registro">
-                    <input type="tel" name="telefono" placeholder="Teléfono" class="input-registro">
-                </div>
-                <div class="formulario-registro">
-                    <input type="text" name="domicilio" placeholder="Domicilio" class="input-registro">
-                </div>
-                <div class="formulario-registro">
-                    <h3 class="titulo-datos">Imagen de usuario (Opcional)</h3>
-                    <input type="file" name="fotoUsuario" accept=".jpg, .png" class="input-registro"></input>
-                </div>
-                <div class="formulario-registro">
-                    <h3 class="titulo-datos">Contraseña</h3>
-                    <input type="password" name="contrasena" placeholder="Contraseña" class="input-registro" required>
-                </div>
-                <div class="formulario-registro">
-                    <input type="password" name="contrasena2" placeholder="Confirmar contraseña" class="input-registro"
-                        required>
-                </div>
-        <button type="submit" class="boton-formulario">Enviar</button>
-        <button type="reset" class="boton-formulario">Borrar</button>
+        <form action="/" method="GET" class="contenedor-formulario">
+            <h1>Completá los datos para crear tu cuenta</h1>
+            <br>
+
+            <div class="formulario">
+                <label for="nombre" class="texto-formulario">
+                    Elegí tu nombre
+                </label>
+                <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3" class="barra-formulario"
+                    required>
+
+                <label for="email" class="texto-formulario">
+                    Agregá tu e-mail
+                </label>
+                <input type="email" name="email" placeholder="E-mail" class="barra-formulario" required>
+
+                <label for="telefono" class="texto-formulario">
+                    Agregá tu celular
+                </label>
+                <input type="tel" name="telefono" placeholder="Teléfono" class="barra-formulario">
+
+                <label for="contrasena" class="texto-formulario">
+                    Contraseña
+                </label>
+                <input type="password" name="contrasena" placeholder="Contraseña" class="barra-formulario2" required>
+                <input type="password" name="contrasena2" placeholder="Confirmar contraseña" class="barra-formulario2"
+                    required>
             </div>
+
+            <div class="botones">
+                <button type="submit" class="boton-formulario">Enviar</button>
+                <button type="reset" class="boton-formulario">Borrar</button>
+            </div>
+
         </form>
+
+        <hr>
+
 
 
 
