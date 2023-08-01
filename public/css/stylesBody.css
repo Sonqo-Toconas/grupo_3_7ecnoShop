@@ -1,16 +1,104 @@
-footer{
-    background-color: #003e4f;
-    color: #eff4d5;
-
-    line-height: 5px;
-
-    font-size: 15px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
-
 }
 
-div{
+header {
+    background-color: #DA2C43;
+    position: fixed;
+    width: 100%;
+    height: 20%;
+}
+
+footer {
+    background-color: #353839;
+    line-height: 5px;
+    width: 100%;
+}
+
+div {
     padding: 15px;
 }
 
+.caja2 {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    color: #a8ab84;
+    line-height: 150%;
+
+}
+
+.TecnoShop {
+    width: 20%;
+
+}
+
+.Informacion {
+    width: 20%;
+
+}
+
+.Productos {
+    width: 20%;
+
+}
+
+.formularioDeSuscripcion {
+    width: 40%;
+    line-height: 50px;
+
+}
+
+.titulo {
+    color: #ffffef;
+    line-height: 25px;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: #ffffef;
+}
+
+.email-sus {
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #353839;
+    color: #a8ab84;
+    border-color: #ffffef;
+    border-radius: 10px;
+    border-style: solid;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.boton-suscripcion {
+    background-color: #DA2C43;
+    border-radius: 20px;
+    border-color: none;
+    color: #ffffef;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.caja3 {
+    width: 100%;
+    text-align: center;
+    color: #a8ab84;
+    font-size: small;
+}

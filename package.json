@@ -4,7 +4,7 @@
   "description": "Nuestro eCommerce se va a especializar en la venta de celulares, accesorios y personalizaciones para estos.<br>\r Nuestra audiencia objetivo van a ser los adolescentes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",

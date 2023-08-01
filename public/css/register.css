@@ -6,6 +6,16 @@ main {
     margin: 0;
     padding: 0;
     text-align: center;
+    padding-top: 120px;
+}
+.titulo-datos{
+    font-size: 20px;
+    color: #353839;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;    
+    padding: 10px;
+    margin: 8px;
 }
 
 .contenedor-formulario {
