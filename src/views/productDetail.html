@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto</title>
-    <link rel="stylesheet" href="css/productDetail.css">
+    <link rel="stylesheet" href="/public/css/productDetail.css">
     <script src="https://kit.fontawesome.com/bd1cbc1938.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -40,6 +42,7 @@
 
 
     </header>
+
     <main>
         <h1>Celular Samsung Galaxy A04</h1>
         <img src="/public/images/celulares/samsung/samsun-galaxy-a04e-cobre-frente.png" alt="Celular Samsung Cobre">
@@ -48,7 +51,7 @@
             <select name="forma" id="forma">
                 <option disabled selected="formas de pago">Formas de Pago</option> 
                 <option value="tarjeta de credito">Tarjeta de credito</option>
-                <option value="tarjeta de debito">Tarjeta de debito</option>
+                <option value="tarjeta de debi4to">Tarjeta de debito</option>
                 <option value="efectivo">Efectivo</option>
                 <option value="billetera virtual">Billetera virtual</option>
             </select>
@@ -61,19 +64,19 @@
         <div class="color">
             <h3>Seleccion de colores</h3>
             <div class="form-group">
-                <input type="radio" name="size" id="azul">
+                <input type="radio" name="color" id="azul">
                 <label for="azul">Negro</label>
             </div>
             <div class="form-group">
-                <input type="radio" name="size" id="blanco">
+                <input type="radio" name="color" id="blanco">
                 <label for="blanco">Blanco</label>
             </div>
             <div class="form-group">
-                <input type="radio" name="size" id="cobre">
+                <input type="radio" name="color" id="cobre" checked>
                 <label for="cobre">Cobre</label>
             </div>
             <div class="form-group">
-                <input type="radio" name="size" id="verde">
+                <input type="radio" name="color" id="verde">
                 <label for="verde">Verde</label>
             </div>
         </div>
@@ -83,10 +86,10 @@
             </button>
             <button class="añadir">
                 <h3>Añadir al carrito</h3>
-                <i class="fa-regular fa-cart-plus" style="color: #000000;"></i>
+                <i class="fa-regular fa-cart-plus"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20h44v44c0 11 9 20 20 20s20-9 20-20V180h44c11 0 20-9 20-20s-9-20-20-20H356V96c0-11-9-20-20-20s-20 9-20 20v44H272c-11 0-20 9-20 20z"/></svg>
             </button>
         </div>
-
         <div>
             <h2>Informacion del producto</h2>
             <p>Doble cámara y más detalles
@@ -96,44 +99,38 @@
                 Batería de duración superior:¡Desenchufate! Con la súper batería de 5000 mAh tendrás energía por mucho más tiempo para jugar, ver series o trabajar sin necesidad de realizar recargas.<br>
                 Gran capacidad de almacenamiento: Con su memoria interna de 128 GB podrás almacenar archivos y aplicaciones de gran tamaño sin necesidad de subirlos a la nube y aprovechar tus momentos sin conexión para darles el máximo uso.</p>
         </div>
-        <section class="productosDestacados">
-            <h2>Productos destacados</h2>
-            <div class="card-list-products">
-                <div class="card">
-                    <div class="cardImagen">
-                        <img src="/public/images/celulares/samsung/samsung-a14-frente-negro.png" alt=" samsung galaxy A14">
-                    </div>
-                    <div class="cardPrice">
-                        <h3>Samsung Galaxy A14</h3>
-                        <p>Precio: $94.999</p>
-                    </div>
-                <div class="card">
-                    <div class="cardImagen">
-                        <img src="/public/images/celulares/xiaomi/Xiaomi-redmi-note-11-frente-negro.png" alt=" xiaomi redmi note 11">
-                    </div>
-                    <div class="cardPrice">
-                        <h3>Xiaomi Redmi Note 11</h3>
-                        <p>Precio: $85999</p>
-                    </div>
+    </main>
+    <section class="productosDestacados">
+        <h2>Productos destacados</h2>
+        <div class="card-list-products">
+            <div class="card">
+                <div class="cardImagen">
+                    <img src="/public/images/celulares/samsung/samsung-a14-frente-negro.png" alt=" samsung galaxy A14">
                 </div>
-                <div class="card">
-                    <div class="cardImagen">
-                        <img src="/public/images/celulares/motorola/Motorola-moto-g72-frente-blanco.png" alt=" motorola moto g72">
-                    </div>
-                    <div class="cardPrice">
-                        <h3>Motorola Moto G72</h3>
-                        <p>Precio: $125.999</p>
-                    </div>
+                <div class="cardPrice">
+                    <h3>Samsung Galaxy A14</h3>
+                    <p>Precio: $94.999</p>
+                </div>
+            <div class="card">
+                <div class="cardImagen">
+                    <img src="/public/images/celulares/xiaomi/Xiaomi-redmi-note-11-frente-negro.png" alt=" xiaomi redmi note 11">
+                </div>
+                <div class="cardPrice">
+                    <h3>Xiaomi Redmi Note 11</h3>
+                    <p>Precio: $85999</p>
                 </div>
             </div>
-        </section>
-    </main>
-
-
-
-
-
-
+            <div class="card">
+                <div class="cardImagen">
+                    <img src="/public/images/celulares/motorola/Motorola-moto-g72-frente-blanco.png" alt=" motorola moto g72">
+                </div>
+                <div class="cardPrice">
+                    <h3>Motorola Moto G72</h3>
+                    <p>Precio: $125.999</p>
+                </div>
+            </div>
+        </div>
+    </section>   
 
 
 
