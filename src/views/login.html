@@ -1,48 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/login.css">
-</head>
-
-<body>
-    <header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </header>
+  <body>
+    <header></header>
     <main>
-        
-        <section>        
-            <!--zona lateral derecha-->
+      <!--zona lateral derecha-->
+      <!-- <section class="seccion-lateral">        
             <div>
                 <button>Marcas</button>
                 <ul>
@@ -55,44 +26,41 @@
                 <button>Pantalla</button><br>
                 <button>Precio</button>
             </div>
-        </section>
-        <section>
-            <!--div con el Login-->
+        </section> -->
+      <section class="contenedor-main">
+        <!--div con el Login-->
         <div>
-            <div>
-                <h2>Iniciar sesion</h2>
-                <p>Inicie sesion para acceder a su cuenta</p>
-            </div>
-            <div>
-                <!--Inputs-->
-                <form>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div>
-                        <label for="password">Contraseña</label>
-                        <input type="password" name="password" id="password">
-                    </div>
-                    <button>Iniciar Sesion</button>
-                </form>
-            </div>
-            <div>
-                <p>Olvidaste tu Contraseña</p>
-            </div>
-            <div>
-                <!--Botones de redes sociales-->
-                <button>Google</button>
-                <button>Facebook</button>
-                <button>Microsoft</button>
-            </div>
+          <h2>Iniciar sesion</h2>
+          <p>Inicie sesion para acceder a su cuenta</p>
         </div>
-        </section>
+        <!--Inputs-->
+        <form>
+        <div class="formulario">
+          <div>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+          </div>
+          <div>
+              <label for="password">Contraseña</label>
+              <input type="password" name="password" id="password" />
+          </div>
+        </div>
+          <button class="boton-IniSesion">Iniciar Sesion</button>
+        </form>
+        <div>
+          <p>Olvidaste tu Contraseña</p>
+        </div>
+        <div>
+        </div>
+        <div class="botones">
+          <!--Botones de redes sociales-->
+          <button class="icon-G"><i class="fa-brands fa-google" id="google"></i></button>
+          <button class="icon-F"><i class="fa-brands fa-facebook" id="facebook"></i></button>
+          <button class="icon-T"><i class="fa-brands fa-twitter" id="twitter"></i></button>
+        </div>
+      </section>
     </main>
 
-    <footer>
-
-    </footer>
-</body>
-
+    <footer></footer>
+  </body>
 </html>

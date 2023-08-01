@@ -1,0 +1,120 @@
+body {
+    background-color: #007F7F;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.contenedor-main {
+    border: 15px rgb(0 222 255) solid;
+    background-image: linear-gradient(152deg, #040406, #18a6c7, #040406);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10% 20%;
+    animation: border-color 2s alternate-reverse infinite;
+}
+
+
+@keyframes border-color {
+    0% {
+        border-top: 15px solid #1e1e1f;
+    }
+    25% {
+        border-right: 15px solid #1e1e1f;
+    }
+    50% {
+        border-bottom: 15px solid #1e1e1f;
+    }
+    100% {
+        border-left: 15px solid #1e1e1f;
+    }
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.formulario div {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+.formulario div input {
+    width: 80%;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    border-bottom: 3px solid rgb(241 241 241);
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+}
+
+.boton-IniSesion {
+    border-radius: 50px;
+    background-color: white;
+    outline: none;
+    border: none;
+    width: 30vw;
+    height: 7vh;
+    font-weight: bold;
+}
+.icon-F, .icon-T, .icon-G {
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0 20px;
+    color: #1877F2;
+}
+
+.icon-G{
+    background-color: white;
+    color: black;
+}
+
+
+@media (min-width:700px){
+    .botones button {
+        transition: all 500ms;
+        color: black;
+    }
+
+    .botones button:hover {
+        width: 90px;
+        border-radius: 50px;
+    }
+    
+    .icon-G:hover {
+        background-color: rgb(222, 218, 218);
+    }
+    .icon-G:hover > #google{
+        font-size: 25px;
+        animation: color-icon 4s linear infinite;
+    }
+    
+    .icon-F:hover{
+        background-color: #1877F2;
+    }
+    .icon-F:hover > #facebook{
+        font-size: 25px;
+        color: #ffffff;
+    }
+    
+    .icon-T:hover > #twitter {
+        font-size: 25px;
+        color: #1D9BF0;
+    }
+    
+    @keyframes color-icon {
+        0%{color: rgb(220, 42, 42);}
+        25%{color: rgb(245, 245, 41);}
+        50%{color: rgb(0, 223, 0);}
+        75%{color: rgb(0, 247, 255);}
+    }
+}
