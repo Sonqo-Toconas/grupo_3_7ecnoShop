@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+img{
+    width: 50%;
+    background-color: #ebebed;
+}
+
+.caja{
+    background-color: #ebebed;
+    border-top: solid 1px #ebebed;
+    padding: 15px;
+}
+article{
+    display: flex;
+    padding: 5px;
+    background-color: #007F7F;
+    border: solid #007F7F 5px;
+    margin-bottom: 3px;
+}
+.desplegable select{
+    width: 200px;
+    border: none;
+    margin-top: 10px;
+    padding: 12px 15px;
+    background-color: #f7f7f7;
+    color: #666;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+button{
+    background-color: none;
+    color: #666;
+    margin: 5px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+}
+.mas{
+    display:flex;
+    background-color: #ebebed;
+    border: solid #666 1px;
+}
+.color{
+    padding: 12px 15px;
+    background-color: #f7f7f7;
+}
+.botones{
+    display: flex;
+    justify-content: center;
+}
+.informacion{
+    background-color: #ebebed;
+    padding: 20px;
+}
+
+@media (max-width:480px){
+    .cajagrande{
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        margin-left: 30px;
+    }
+}
+
+@media (min-width:768px){
+    .grande{
+        display: flex;
+    }
+    
+}
+
+.caja3{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.card-list-products{
+    display: grid;      
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+
+}
+.card{
+
+    justify-content: center;
+    background-color: #ebebed;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+}
+.img2{
+    width: 100%;
+}
+.flecha{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+h2, h3{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.p{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    color: brown;
+}
