@@ -2,43 +2,136 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-} 
+
+}
 
 header {
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
     position: fixed;
     color: white;
-    background-color: #353839;
+    background-color: #000000;
     font-family: 'Quicksand', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
-    
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedor1H{
+    text-align: center;
+}
+
+.logo-header {
+    justify-items: center;
+}
+
+#logoH {
+    display: flex;
+    font-size: 150%;
+    justify-items: center;
+
+}
+
+.titulo-logoH {
+    text-align: center;
+}
+
+.localizador{
+    width: 20%;
+    display: flex;
+    text-align: center;
+}
+
+#iconoL{
+    display: flex;
+    font-size: medium;
+    align-items: center;
+}
+
+.contenedor-provincias{
+    font-size: 13px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #000000;
+    color: #a8ab84;
+    padding: 5px;
+    text-align: center;
+    border-width: 0.1px;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-localizacion{
+    background-color: #007F7F;
+    color: #ffffef;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 2px;
+    font-size: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-width: 0.1px;
+}
+
+
+.contenido-header {
+    text-align: center;
+    align-items: center;
+    width: 10%;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+}
+
+.barra-busqueda {
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #000000;
+    color: #a8ab84;
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    border-width: 0.1px;
+}
+
+.boton-busqueda {
+    background-color: #007F7F;
+    color: #ffffef;
+    display: block;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-width: 0.1px;
 }
 
 #icono{
-    font-size: 25px;
+    font-size:30px;
 }
 
-.barra-postal{
-    border-radius: 5px;
-    padding: 5px;
-}
-.contenido-header {
-    text-align: center;
-font-size: 20px;
+.boton-busqueda:hover {
+    background-color: #ffffef;
+    color: #007F7F;
 }
 
+#icono:hover{
+    color: #0022AA;
+    font-size: 32px;
+}
 
-
-
-
-
-
-
-button{
+button {
     cursor: pointer;
 }
 
@@ -52,21 +145,22 @@ div {
     padding: 15px;
 }
 
-#logo{
+#logo {
     font-size: 40px;
-    padding: 10px;}
+    padding: 10px;
+}
 
-.titulo-logo{
+.titulo-logo {
     font-size: 40px;
     text-align: center;
 }
 
-.caja1{
-    color:  #ffffef;
+.caja1 {
+    color: #ffffef;
     display: flex;
     flex-wrap: wrap;
     width: 60%;
-    
+
 }
 
 .caja2 {
@@ -75,7 +169,7 @@ div {
     font-size: 16px;
     color: #a8ab84;
     line-height: 160%;
-    
+
 
 }
 
@@ -113,7 +207,7 @@ a {
 }
 
 
-.suscripcion{
+.suscripcion {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -147,11 +241,11 @@ a {
     border-width: 0.1px;
 }
 
-.redes{
+.redes {
     text-align: center;
 }
 
-.boton-red{
+.boton-red {
     width: 35px;
     margin-right: 20px;
     background-color: #000000;
@@ -160,7 +254,7 @@ a {
 
 }
 
-#icono-red{
+#icono-red {
     color: white;
     font-size: 30px;
 }
@@ -172,17 +266,17 @@ a {
     font-size: small;
 }
 
-#icono-red:hover{
+#icono-red:hover {
     color: #0022AA;
     font-size: 40px;
 }
 
-a:hover{
+a:hover {
     color: #0022AA;
     font-size: 19px;
 }
 
-.boton-suscripcion:hover{
+.boton-suscripcion:hover {
     background-color: #ffffef;
     color: #007F7F;
 }
