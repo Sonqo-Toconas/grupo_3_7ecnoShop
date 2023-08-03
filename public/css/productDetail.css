@@ -9,14 +9,20 @@
 
 .cajagrande1{
     display:flex;
-    background-color: #ebebed;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border: 5px solid #f3f3f3;
+    border-radius: 10px;
     margin: 5px;
+    color: white;
+    box-shadow: 0px 0px 15px 2px;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
 }
 
+main {
+    background-color: #007F7F;
+}
 
 .img0{
-
+    border: 5px solid #007F7F;
     width: 50%;
     background-color: white;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -38,7 +44,12 @@ article{
 }
 
 .caja2-main{
-    background-color:#ebebed
+    border: 5px solid #f3f3f3;
+    border-radius: 10px;
+    margin: 5px;
+    color: white;
+    box-shadow: 0px 0px 15px 2px;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
 }
 
 .img1{
@@ -64,7 +75,12 @@ button{
 
 .color{
     padding: 12px 15px;
-    background-color: #f7f7f7;
+    border: 5px solid #f3f3f3;
+    border-radius: 10px;
+    margin: 5px;
+    color: white;
+    box-shadow: 0px 0px 15px 2px;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
 }
 .botones{
     display: flex;
@@ -74,7 +90,12 @@ button{
     background-color: #ebebed;
     margin: 20px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border: 5px solid #f3f3f3;
+    border-radius: 10px;
+    margin: 5px;
+    color: white;
+    box-shadow: 0px 0px 15px 2px;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
 }
 
 @media (max-width:480px){
@@ -109,6 +130,7 @@ button{
     flex-direction: row;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
+
 .card-list-products{
     display: grid;      
     grid-template-columns: repeat(3, 1fr);
@@ -118,12 +140,22 @@ button{
 
 }
 .card{
-
+    border: 5px solid #f3f3f3;
+    border-radius: 10px;
+    margin: 5px;
+    color: white;
+    box-shadow: 0px 0px 15px 2px;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
     justify-content: center;
     background-color: #ebebed;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 
 }
+
+.p {
+    color: white;
+}
+
 .img2{
     width: 100%;
 }
@@ -136,11 +168,9 @@ h2 {
     display: flex;
     justify-content: center;
     padding: 10px;
+    color: white;
 }
 
-.p{
-    color: brown;
-}
 .cardPrice{
     display: flex;
     flex-direction: column;
