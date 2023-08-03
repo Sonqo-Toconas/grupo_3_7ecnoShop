@@ -63,7 +63,14 @@ body {
     width: 30vw;
     height: 7vh;
     font-weight: bold;
+    cursor: pointer;
+    transition: all 400ms;
+
 }
+.cambiar-Contra{
+    cursor: pointer;
+}
+
 .icon-F, .icon-T, .icon-G {
     border: none;
     border-radius: 50%;
@@ -71,6 +78,7 @@ body {
     height: 30px;
     margin: 0 20px;
     color: #1877F2;
+    cursor: pointer;
 }
 
 .icon-G{
@@ -78,8 +86,13 @@ body {
     color: black;
 }
 
-
 @media (min-width:700px){
+    .boton-IniSesion:hover {
+        background-color: black;
+        color: white;
+        scale: 1.05;
+    }
+
     .botones button {
         transition: all 500ms;
         color: black;
@@ -93,6 +106,7 @@ body {
     .icon-G:hover {
         background-color: rgb(222, 218, 218);
     }
+
     .icon-G:hover > #google{
         font-size: 25px;
         animation: color-icon 4s linear infinite;
@@ -101,6 +115,7 @@ body {
     .icon-F:hover{
         background-color: #1877F2;
     }
+
     .icon-F:hover > #facebook{
         font-size: 25px;
         color: #ffffff;
