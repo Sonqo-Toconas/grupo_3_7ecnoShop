@@ -8,18 +8,19 @@
 main {
     margin: 0;
     padding: 0;
-    text-align: center;
     padding-top: 120px;
     background-color: #007F7F;
+    text-align: center;
 }
-.titulo-datos{
-    font-size: 20px;
+
+.titulo-datos {
+    margin: 8px;
+    padding: 10px;
     color: #353839;
     font-family: 'Quicksand', sans-serif;
     font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;    
-    padding: 10px;
-    margin: 8px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
 }
 
 .contenedor-formulario {
@@ -30,9 +31,12 @@ main {
     padding-bottom: 1.5rem;
     width: 85%;
     max-width: 536px;
+    border: 5px solid #f3f3f3;
     border-radius: 10px;
-    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
+    color: white;
     text-align: center;
+    box-shadow: 0px 0px 15px 2px;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
 }
 
 h1 {
@@ -67,11 +71,29 @@ h1 {
     border-radius: 5px;
 }
 
-.botones {
+.botones2 {
     display: flex;
     justify-content: space-around;
 }
 
+.icon-F, .icon-T, .icon-G {
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0 20px;
+    color: #1877F2;
+    cursor: pointer;
+}
+.botones button {
+    transition: all 500ms;
+    color: black;
+}
+
+.botones button:hover {
+    width: 90px;
+    border-radius: 50px;
+}
 .boton-formulario {
     padding: 5px 10px;
     width: 30%;
