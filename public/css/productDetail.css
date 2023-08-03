@@ -6,21 +6,25 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
 }
-img{
-    width: 50%;
+
+.cajagrande1{
+    display:flex;
     background-color: #ebebed;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin: 5px;
 }
 
-.caja{
-    background-color: #ebebed;
-    border-top: solid 1px #ebebed;
-    padding: 15px;
+
+.img0{
+
+    width: 50%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin: 5px;
 }
 article{
     display: flex;
     padding: 5px;
-    background-color: #007F7F;
-    border: solid #007F7F 5px;
     margin-bottom: 3px;
 }
 .desplegable select{
@@ -33,18 +37,31 @@ article{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
+.caja2{
+    background-color:#ebebed
+}
+
+.img1{
+    display: flex;
+    width: 95%
+}
+.mas{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin: 5px;
+}
 button{
     background-color: none;
     color: #666;
     margin: 5px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    padding: 10px;
 
 }
-.mas{
-    display:flex;
-    background-color: #ebebed;
-    border: solid #666 1px;
-}
+
 .color{
     padding: 12px 15px;
     background-color: #f7f7f7;
@@ -55,11 +72,13 @@ button{
 }
 .informacion{
     background-color: #ebebed;
+    margin: 20px;
     padding: 20px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 @media (max-width:480px){
-    .cajagrande{
+    .cajagrande2{
         display: flex;
         flex-direction: column;
     }
@@ -71,8 +90,18 @@ button{
 @media (min-width:768px){
     .grande{
         display: flex;
+        flex-direction: row;
+
     }
-    
+    .caja2{
+        display: flex;
+        flex-direction: column;
+    }
+    .mas{
+        display: flex;
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .caja3{
@@ -103,15 +132,18 @@ button{
     align-items: center;
     margin: 10px;
 }
-h2, h3{
+h2 {
     display: flex;
     justify-content: center;
     padding: 10px;
 }
 
 .p{
-    display: flex;
-    padding: 10px;
-    justify-content: center;
     color: brown;
+}
+.cardPrice{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
 }
