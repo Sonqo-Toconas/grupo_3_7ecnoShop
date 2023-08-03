@@ -53,13 +53,13 @@ article{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     margin: 5px;
 }
+
 button{
     background-color: none;
     color: #666;
     margin: 5px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     padding: 10px;
-
 }
 
 .color{
