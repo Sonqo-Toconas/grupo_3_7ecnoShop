@@ -2,8 +2,11 @@
 
 - **Castañares Silvia**<br>
 ¿Qué se hizo bien?<br>
+Nos organizamos bien al momento de repartir los temas
 ¿Qué se hizo mal?<br>
+El no tener otras opciones en caso de que alguno no pudiera hacer su parte
 ¿Qué debería cambiar?<br>
+Comunicarnos mas
 
 - **Cruz Carina**<br>
 ¿Qué se hizo bien?<br>
