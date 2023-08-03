@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 main {
@@ -7,6 +10,7 @@ main {
     padding: 0;
     text-align: center;
     padding-top: 120px;
+    background-color: #007F7F;
 }
 .titulo-datos{
     font-size: 20px;
@@ -21,13 +25,13 @@ main {
 .contenedor-formulario {
     margin: auto;
     margin-top: 2rem;
-    margin-bottom: 1.875rem;
+    margin-bottom: 50px;
     padding: 20px 15px;
     padding-bottom: 1.5rem;
     width: 85%;
     max-width: 536px;
     border-radius: 10px;
-    background-color: #007F7F;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
     text-align: center;
 }
 
@@ -43,7 +47,7 @@ h1 {
 }
 
 .texto-formulario {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .barra-formulario {
