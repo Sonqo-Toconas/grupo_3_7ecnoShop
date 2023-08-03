@@ -86,10 +86,3 @@ h1 {
 .boton-formulario:hover {
     background-color: #0022AA;
 }
-
-hr {
-    margin: 0;
-    padding: 0;
-    height: 10px;
-    background-color: black;
-}
