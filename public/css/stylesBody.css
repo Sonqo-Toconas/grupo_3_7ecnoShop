@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 header {
@@ -18,28 +17,9 @@ header {
     align-items: center;
 }
 
-.contenedor1H{
-    text-align: center;
-}
-
 .logo-header {
-    justify-items: center;
-}
-
-#logoH {
     display: flex;
-    font-size: 150%;
     justify-items: center;
-
-}
-
-.titulo-logoH {
-    text-align: center;
-}
-
-.localizador{
-    width: 20%;
-    display: flex;
     text-align: center;
 }
 
@@ -48,36 +28,6 @@ header {
     font-size: medium;
     align-items: center;
 }
-
-.contenedor-provincias{
-    font-size: 13px;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
-    background-color: #000000;
-    color: #a8ab84;
-    padding: 5px;
-    text-align: center;
-    border-width: 0.1px;
-    outline: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.boton-localizacion{
-    background-color: #007F7F;
-    color: #ffffef;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    padding: 2px;
-    font-size: 10px;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
-    border-width: 0.1px;
-}
-
 
 .contenido-header {
     text-align: center;
@@ -126,11 +76,6 @@ header {
     color: #007F7F;
 }
 
-#icono:hover{
-    color: #0022AA;
-    font-size: 32px;
-}
-
 button {
     cursor: pointer;
 }
@@ -160,7 +105,6 @@ div {
     display: flex;
     flex-wrap: wrap;
     width: 60%;
-
 }
 
 .caja2 {
@@ -169,8 +113,6 @@ div {
     font-size: 16px;
     color: #a8ab84;
     line-height: 160%;
-
-
 }
 
 .TecnoShop {
