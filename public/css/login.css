@@ -12,7 +12,7 @@ body {
     font-weight: bold;
     padding: 10px;
     margin: 10% 20%;
-    animation: border-color 2s alternate-reverse infinite;
+    animation: border-color 2s linear alternate-reverse infinite;
 }
 
 
@@ -64,11 +64,15 @@ body {
     height: 7vh;
     font-weight: bold;
     cursor: pointer;
-    transition: all 400ms;
+    transition: all 150ms;
 
 }
-.cambiar-Contra{
+.cambiar-Contra {
+    padding: 10px 0;
+}
+.cambiar-Contra p{
     cursor: pointer;
+    display: inline;
 }
 
 .icon-F, .icon-T, .icon-G {
