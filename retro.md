@@ -55,3 +55,66 @@ Nada por el momento.
 ¿Qué se hizo bien?<br>
 ¿Qué se hizo mal?<br>
 ¿Qué debería cambiar?<br>
+
+
+## Segundo Sprint
+
+- **Cruz Carina**<br>
+¿Qué deberiamos comenzar a hacer?<br>
+
+¿Qué deberiamos hacer más?<br>
+
+¿Qué deberíamos seguir haciendo?<br>
+
+¿Qué deberiamos hacer menos?<br>
+
+¿Qué deberíamos dejar de hacer?<br>
+
+
+- **Cruz Max**<br>
+¿Qué deberiamos comenzar a hacer?<br>
+
+¿Qué deberiamos hacer más?<br>
+
+¿Qué deberíamos seguir haciendo?<br>
+
+¿Qué deberiamos hacer menos?<br>
+
+¿Qué deberíamos dejar de hacer?<br>
+
+
+- **Leiva Nayla**<br>
+¿Qué deberiamos comenzar a hacer?<br>
+
+¿Qué deberiamos hacer más?<br>
+
+¿Qué deberíamos seguir haciendo?<br>
+
+¿Qué deberiamos hacer menos?<br>
+
+¿Qué deberíamos dejar de hacer?<br>
+
+
+- **Rodríguez Roció**<br>
+¿Qué deberiamos comenzar a hacer?<br>
+
+¿Qué deberiamos hacer más?<br>
+
+¿Qué deberíamos seguir haciendo?<br>
+
+¿Qué deberiamos hacer menos?<br>
+
+¿Qué deberíamos dejar de hacer?<br>
+
+
+- **Toconas Luciano**<br>
+¿Qué deberiamos comenzar a hacer?<br>
+
+¿Qué deberiamos hacer más?<br>
+
+¿Qué deberíamos seguir haciendo?<br>
+
+¿Qué deberiamos hacer menos?<br>
+
+¿Qué deberíamos dejar de hacer?<br>
+
