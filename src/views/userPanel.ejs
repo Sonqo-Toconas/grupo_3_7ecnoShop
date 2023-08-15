@@ -10,73 +10,72 @@
     <link rel="stylesheet" href="css/userPanel.css">
 </head>
 
-<body>
+<%i=2%>
 
-    <main>
-
-        <div class="carteluser">
-            <p class="informacionCartel">Bienvenido <%=usuarios[0].nombre%>
-            </p>
-        </div>
-
-        <div class="carteluser">
-            <%if (usuarios[0].premium==true){%>
-                <p class="informacionCartel">Administrar</p>
-                <div class="botones2">
-                    <a href="/crear" class="botonuser">Subir Producto</a>
-                    <a href="/asd" class="botonuser">Editar Producto</a>
-                </div>
-                <%}%>
-        </div>
-
-        <div class="carteluser">
-            <p class="informacionCartel">Información de la cuenta</p>
-
-            <div class="contenedor-informacion">
-                <div class="informacionCuenta1">
-                    <p>Nombre</p>
-                    <p class="informacionCuenta2">
-                        <%=usuarios[0].nombre%>
-                    </p>
-                </div>
-
-                <div class="informacionCuenta1">
-                    <p>Correo</p>
-                    <p class="informacionCuenta2">
-                        <%=usuarios[0].correo%>
-                    </p>
-
-                </div>
-
-                <div class="informacionCuenta1">
-                    <p>Numero</p>
-                    <p class="informacionCuenta2">
-                        <%=usuarios[0].numero%>
-                    </p>
-
-                </div>
-
-                <div class="informacionCuenta1">
-                    <p>Contraseña</p>
-                    <p class="informacionCuenta2">
-                        <%=usuarios[0].contraseña%>
-                    </p>
-                </div>
+    <body>
+        <main>
+            <div class="carteluser">
+                <p class="informacionCartel">Bienvenido <%=usuarios[i].nombre%>
+                </p>
             </div>
-        </div>
 
-        <div class="carteluser">
-            <%if (usuarios[0].premium==true){%>
-                <p class="informacionCartel">Productos que publicaste</p>
-                <%}%>
-        </div>
+            <%if (usuarios[i].admin==true){%>
 
-        <div class="carteluser">
-            <%if (usuarios[0].premium==true){%>
-                <p class="informacionCartel">Productos que compraste</p>
+                <div class="carteluser">
+                    <p class="informacionCartel">Administrar</p>
+                    <div class="botones2">
+                        <a href="/crear" class="botonuser">Subir Producto</a>
+                        <a href="/asd" class="botonuser">Editar Producto</a>
+                    </div>
+                </div>
                 <%}%>
-        </div>
-    </main>
-</body>
+
+                    <div class="carteluser">
+                        <p class="informacionCartel">Información de la cuenta</p>
+
+                        <div class="contenedor-informacion">
+                            <div class="informacionCuenta1">
+                                <p>Nombre</p>
+                                <p class="informacionCuenta2">
+                                    <%=usuarios[i].nombre%>
+                                </p>
+                            </div>
+
+                            <div class="informacionCuenta1">
+                                <p>Correo</p>
+                                <p class="informacionCuenta2">
+                                    <%=usuarios[i].correo%>
+                                </p>
+
+                            </div>
+
+                            <div class="informacionCuenta1">
+                                <p>Numero</p>
+                                <p class="informacionCuenta2">
+                                    <%=usuarios[i].telefono%>
+                                </p>
+
+                            </div>
+
+                            <div class="informacionCuenta1">
+                                <p>Contraseña</p>
+                                <p class="informacionCuenta2">
+                                    <%=usuarios[i].contrasena%>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <%if (usuarios[i].admin==true){%>
+                        <div class="carteluser">
+                            <p class="informacionCartel">Productos que publicaste</p>
+                        </div>
+                        <%}%>
+
+                            <div class="carteluser">
+                                <p class="informacionCartel">Productos que compraste</p>
+                            </div>
+        </main>
+    </body>
 
 </html>
