@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
-const registerRoutes = require('./routes/register');
+const registerRoutes = require('./routes/registerRouter');
 const loginRoutes = require('./routes/loginRouter');
+const userPanelRoutes = require('./routes/userPanelRouter');
 
 app.use(express.static('public'));
 const path = require('path')
@@ -11,6 +12,7 @@ app.set('view engine', 'ejs');
 
 app.use('/login', loginRoutes);
 app.use('/registro', registerRoutes);
+app.use('/userpanel', userPanelRoutes);
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/index.html'));
