@@ -5,23 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="css/stylesBody.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/userPanel.css">
-    <link href="css/stylesBody.css" rel="stylesheet">
 </head>
 
 <body>
-    
-        <main>
-            <h2>
-                Bienvenido <%%>
-            </h2>
-            <a href="/asd" class="header-enlaces">Subir Producto</a>
-            <a href="/asd" class="header-enlaces">Editar Producto</a>
 
-        </main>
+    <main>
 
+        <div class="carteluser">
+            <p class="informacionCartel">Bienvenido <%=usuarios[0].nombre%>
+            </p>
+        </div>
 
+        <div class="carteluser">
+            <%if (usuarios[0].premium==true){%>
+                <p class="informacionCartel">Administrar</p>
+                <div class="botones2">
+                    <a href="/crear" class="botonuser">Subir Producto</a>
+                    <a href="/asd" class="botonuser">Editar Producto</a>
+                </div>
+                <%}%>
+        </div>
+
+        <div class="carteluser">
+            <p class="informacionCartel">Información de la cuenta</p>
+
+            <div class="contenedor-informacion">
+                <div class="informacionCuenta1">
+                    <p>Nombre</p>
+                    <p class="informacionCuenta2">
+                        <%=usuarios[0].nombre%>
+                    </p>
+                </div>
+
+                <div class="informacionCuenta1">
+                    <p>Correo</p>
+                    <p class="informacionCuenta2">
+                        <%=usuarios[0].correo%>
+                    </p>
+
+                </div>
+
+                <div class="informacionCuenta1">
+                    <p>Numero</p>
+                    <p class="informacionCuenta2">
+                        <%=usuarios[0].numero%>
+                    </p>
+
+                </div>
+
+                <div class="informacionCuenta1">
+                    <p>Contraseña</p>
+                    <p class="informacionCuenta2">
+                        <%=usuarios[0].contraseña%>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carteluser">
+            <%if (usuarios[0].premium==true){%>
+                <p class="informacionCartel">Productos que publicaste</p>
+                <%}%>
+        </div>
+
+        <div class="carteluser">
+            <%if (usuarios[0].premium==true){%>
+                <p class="informacionCartel">Productos que compraste</p>
+                <%}%>
+        </div>
+    </main>
 </body>
 
 </html>

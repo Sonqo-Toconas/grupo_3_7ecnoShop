@@ -4,6 +4,7 @@ const indexRoutes = require('./routes/indexRoutes');
 const registerRoutes = require('./routes/registerRouter');
 const loginRoutes = require('./routes/loginRouter');
 const userPanelRoutes = require('./routes/userPanelRouter');
+const creationRoutes = require('./routes/creationRouter');
 
 app.use(express.static('public'));
 const path = require('path')
@@ -14,6 +15,7 @@ app.set('view engine', 'ejs');
 app.get('/', indexRoutes);
 app.use('/login', loginRoutes);
 app.use('/registro', registerRoutes);
+app.use('/crear', creationRoutes);
 app.use('/userpanel', userPanelRoutes);
 
 app.get('/carrito', (req, res) => {

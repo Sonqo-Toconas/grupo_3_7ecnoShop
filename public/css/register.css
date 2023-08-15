@@ -9,6 +9,7 @@ main {
     margin: 0;
     padding: 0;
     padding-top: 120px;
+    padding-bottom: 20px;
     background-color: #007F7F;
     text-align: center;
 }
@@ -51,7 +52,7 @@ h1 {
 }
 
 .texto-formulario {
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .barra-formulario {
