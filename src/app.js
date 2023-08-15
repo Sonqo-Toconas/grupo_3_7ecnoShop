@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const indexRoutes = require('./routes/indexRoutes');
 const registerRoutes = require('./routes/registerRouter');
 const loginRoutes = require('./routes/loginRouter');
 const userPanelRoutes = require('./routes/userPanelRouter');
@@ -10,13 +11,11 @@ const path = require('path')
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
+app.get('/', indexRoutes);
 app.use('/login', loginRoutes);
 app.use('/registro', registerRoutes);
 app.use('/userpanel', userPanelRoutes);
 
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/index.html'));
-});
 app.get('/carrito', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/productCart.html'));
 });
