@@ -1,157 +1,60 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuario</title>
-    <link rel="stylesheet" href="css/normalize.css">
+<%- include('./partials/head') %>
     <link rel="stylesheet" href="css/register.css">
-    <link href="css/stylesBody.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/66475e2c73.js" crossorigin="anonymous"></script>
-</head>
+    </head>
 
-<body>
-    <header>
-        <div class="cajax">
-            <i class="fa-solid fa-microchip" id="logo"></i>
-            <h1 class="titulo-logo">7ecno Shop</h1>
-        </div>
-        </div>
+    <body>
 
-        <div class="contenido-header">
-            <i class="fa-solid fa-piggy-bank" id="icono"></i>
-            <a href="/" class="header-enlaces">Ofertas</a>
-        </div>
-        <div class="contenido-header">
-            <i class="fa-solid fa-mobile-screen-button" id="icono"></i>
-            <a href="/producto" class="header-enlaces">Celulares</a>
-        </div>
-        <div class="contenido-header">
-            <i class="fa-solid fa-headphones" id="icono"></i>
-            <a href="/producto" class="header-enlaces">Accesorios</a>
-        </div>
-        <div>
-            <form action="" method="POST" class="buscador">
-                <input type="search" name="barra-busqueda" placeholder="¿Qué estás buscando?" class="barra-busqueda">
-                <button type="submit" class="boton-busqueda"><i class="fa-brands fa-sistrix"></i></button>
-            </form>
-        </div>
-        <div class="contenido-header">
-            <i class="fa-solid fa-heart" id="icono"></i>
-            <a href="/registro" class="header-enlaces">Registro</a>
-        </div>
-        <div class="contenido-header">
-            <i class="fa-solid fa-cart-shopping" id="icono"></i>
-            <a href="/carrito" class="header-enlaces">Mi carrito</a>
-        </div>
-        <div class="contenido-header">
-            <i class="fa-regular fa-circle-user" id="icono"></i>
-            <a href="/login" class="header-enlaces">Mi cuenta</a>
-        </div>
-    </header>
+        <%- include('./partials/header') %>
 
-    <main>
-        <form action="/" method="GET" class="contenedor-formulario">
-            <h1>Completá los datos para crear tu cuenta</h1>
+            <main>
+                <form action="/" method="GET" class="contenedor-formulario">
+                    <h1>Completá los datos para crear tu cuenta</h1>
 
-            <div class="botones">
-                <button class="icon-G"><i class="fa-brands fa-google" id="google"></i></button>
-                <button class="icon-F"><i class="fa-brands fa-facebook" id="facebook"></i></button>
-                <button class="icon-T"><i class="fa-brands fa-twitter" id="twitter"></i></button>
-            </div>
+                    <div class="botones">
+                        <button class="icon-G"><i class="fa-brands fa-google" id="google"></i></button>
+                        <button class="icon-F"><i class="fa-brands fa-facebook" id="facebook"></i></button>
+                        <button class="icon-T"><i class="fa-brands fa-twitter" id="twitter"></i></button>
+                    </div>
 
-            <div class="formulario">
-                <label for="nombre" class="texto-formulario">
-                    Elegí tu nombre
-                </label>
-                <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3" class="barra-formulario"
-                    required>
+                    <div class="formulario">
+                        <label for="nombre" class="texto-formulario">
+                            Elegí tu nombre
+                        </label>
+                        <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3"
+                            class="barra-formulario" required>
 
-                <label for="email" class="texto-formulario">
-                    Agregá tu e-mail
-                </label>
-                <input type="email" name="email" placeholder="E-mail" class="barra-formulario" required>
+                        <label for="email" class="texto-formulario">
+                            Agregá tu e-mail
+                        </label>
+                        <input type="email" name="email" placeholder="E-mail" class="barra-formulario" required>
 
-                <label for="telefono" class="texto-formulario">
-                    Agregá tu celular
-                </label>
-                <input type="tel" name="telefono" placeholder="Teléfono" class="barra-formulario">
+                        <label for="telefono" class="texto-formulario">
+                            Agregá tu celular
+                        </label>
+                        <input type="tel" name="telefono" placeholder="Teléfono" class="barra-formulario">
 
-                <label for="contrasena" class="texto-formulario">
-                    Contraseña
-                </label>
-                <input type="password" name="contrasena" placeholder="Contraseña" class="barra-formulario2" required>
-                <input type="password" name="contrasena2" placeholder="Confirmar contraseña" class="barra-formulario2"
-                    required>
-            </div>
+                        <label for="contrasena" class="texto-formulario">
+                            Contraseña
+                        </label>
+                        <input type="password" name="contrasena" placeholder="Contraseña" class="barra-formulario2"
+                            required>
+                        <input type="password" name="contrasena2" placeholder="Confirmar contraseña"
+                            class="barra-formulario2" required>
+                    </div>
 
-            <div class="botones2">
-                <button type="submit" class="boton-formulario">Enviar</button>
-                <button type="reset" class="boton-formulario">Borrar</button>
-            </div>
+                    <div class="botones2">
+                        <button type="submit" class="boton-formulario">Enviar</button>
+                        <button type="reset" class="boton-formulario">Borrar</button>
+                    </div>
 
-        </form>
-        <hr>
-
-    </main>
-
-    <footer>
-        <div class="caja1">
-            <i class="fa-solid fa-microchip" id="logo"></i>
-            <h1 class="titulo-logo">7ecno Shop</h1>
-        </div>
-
-        <div class="caja2">
-            <div class="TecnoShop">
-                <h3 class="titulo">7ecno Shop</h3>
-                <a href="">Acerca de</a>
-                <a href="">Terminos y Condiciones</a>
-                <a href="">Privacidad</a>
-            </div>
-
-            <div class="Informacion">
-                <h3 class="titulo">Información</h3>
-
-                <a href="">Contactanos</a>
-                <a href="">Centro de Ayuda</a>
-                <a href="">Comunidad</a>
-                <a href="">Libro de Quejas Online</a>
-            </div>
-
-            <div class="Productos">
-                <h3 class="titulo">Productos</h3>
-                <a href="/">Inicio</a>
-                <a href="/producto">Celulares</a>
-                <a href="/producto">Acesorios</a>
-                <a href="/carrito">Botón de Arrepentimiento</a>
-            </div>
-
-            <div class="caja3">
-                <h3 class="titulo">Suscribite para recibir nuestras mejores ofertas y promociones</h3>
-                <form action="" method="POST" class="suscripcion">
-                    <input type="email" name="email" placeholder="Ingresá tu e-mail" class="email-sus">
-                    <button type="submit" class="boton-suscripcion"><i class="fa-solid fa-arrow-right"></i></button>
                 </form>
-                <div class="redes">
-                    <button class="boton-red"><a href=""><i class="fa-brands fa-facebook"
-                                id="icono-red"></i></a></button>
-                    <button class="boton-red"><a href=""><i class="fa-brands fa-instagram"
-                                id="icono-red"></i></a></button>
-                    <button class="boton-red"><a href=""><i class="fa-brands fa-twitter"
-                                id="icono-red"></i></a></button>
-                    <button class="boton-red"><a href=""><i class="fa-brands fa-youtube"
-                                id="icono-red"></i></a></button>
-                </div>
-            </div>
+                <hr>
 
-        </div>
+            </main>
 
-        <div class="caja4">
-            <p>Copyright © 2023 7ecno Shop. Todos los Derechos Reservados</p>
-        </div>
+            <%- include('./partials/footer') %>
 
-    </footer>
-</body>
+    </body>
 
-</html>
+    </html>

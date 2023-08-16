@@ -1,70 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script
-      src="https://kit.fontawesome.com/41f1ff2ee2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="css/stylesBody.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css" />
+<%- include('./partials/head') %>
+  <script src="https://kit.fontawesome.com/41f1ff2ee2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/index.css" />
   </head>
 
   <body>
-    <header>
-      <div class="cajax">
-        <i class="fa-solid fa-microchip" id="logo"></i>
-        <h1 class="titulo-logo">7ecno Shop</h1>
-    </div>
-      </div>
 
-      <div class="contenido-header">
-          <i class="fa-solid fa-piggy-bank" id="icono"></i>
-          <a href="/" class="header-enlaces">Ofertas</a>
-      </div>
-      <div class="contenido-header">
-          <i class="fa-solid fa-mobile-screen-button" id="icono"></i>
-          <a href="/producto" class="header-enlaces">Celulares</a>
-      </div>
-      <div class="contenido-header">
-          <i class="fa-solid fa-headphones" id="icono"></i>
-          <a href="/producto" class="header-enlaces">Accesorios</a>
-      </div>
-      <div>
-          <form action="" method="POST" class="buscador">
-              <input type="search" name="barra-busqueda" placeholder="¿Qué estás buscando?" class="barra-busqueda">
-              <button type="submit" class="boton-busqueda"><i class="fa-brands fa-sistrix"></i></button>
-          </form>
-      </div>
-      <div class="contenido-header">
-          <i class="fa-solid fa-heart" id="icono"></i>
-          <a href="/registro" class="header-enlaces">Registro</a>
-      </div>
-      <div class="contenido-header">
-          <i class="fa-solid fa-cart-shopping" id="icono"></i>
-          <a href="/carrito" class="header-enlaces">Mi carrito</a>
-      </div>
-      <div class="contenido-header">
-          <i class="fa-regular fa-circle-user" id="icono"></i>
-          <a href="/login" class="header-enlaces">Mi cuenta</a>
-      </div>
-  </header>
-    <main>
-      <!-- <h1>Bienvenido a 7ECNOSHOP</h1> -->
-      <div class="main-conteiner">
-        <section>
-          <div class="main-header">
-            <span class="fa-solid fa-circle-chevron-left" id="icon-left"></span>
-            <span
-              class="fa-solid fa-circle-chevron-right"
-              id="icon-right"
-            ></span>
-          </div>
-        </section>
-        <!-- <section class="button-coteiner">
+    <%- include('./partials/header') %>
+
+      <main>
+        <!-- <h1>Bienvenido a 7ECNOSHOP</h1> -->
+        <div class="main-conteiner">
+          <section>
+            <div class="main-header">
+              <span class="fa-solid fa-circle-chevron-left" id="icon-left"></span>
+              <span class="fa-solid fa-circle-chevron-right" id="icon-right"></span>
+            </div>
+          </section>
+          <!-- <section class="button-coteiner">
                 <button class="button">
                     boton
                 </button>
@@ -75,150 +27,77 @@
                     boton
                 </button>
             </section> -->
-        <section class="conteiner-filter">
-          <h3>Filtre su busqueda</h3>
-          <label for="order" class="label-order">
-            <select name="order" id="order">
-              <option value disabled selected>Elige el orden</option>
-              <option value="higher-price">Mayor precio</option>
-              <option value="lower-price">Menor precio</option>
-              <option value="on-sale">En ofertas</option>
-              <option value="latest">Recientes</option>
-            </select>
-          </label>
-          <label for="range-price" class="label-range">
-            Rango de precio
-            <input type="range" />
-          </label>
-        </section>
-        <section class="main-footer">
-          <div class="product">
-            <img
-              src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png"
-              alt="samsun-galaxy-a04e-azul"
-              class="smartphone"
-            />
-            <h2 class="tittle-for-product">Producto1</h2>
-            <p>Precio</p>
-          </div>
-          <div class="product">
-            <img
-              src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png"
-              alt="samsun-galaxy-a04e-azul"
-              class="smartphone"
-            />
-            <h2 class="tittle-for-product">Producto2</h2>
-            <p>Precio</p>
-          </div>
-          <div class="product">
-            <img
-              src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png"
-              alt="samsun-galaxy-a04e-azul"
-              class="smartphone"
-            />
-            <h2 class="tittle-for-product">Producto3</h2>
-            <p>Precio</p>
-          </div>
-          <div class="product">
-            <img
-              src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png"
-              alt="samsun-galaxy-a04e-azul"
-              class="smartphone"
-            />
-            <h2 class="tittle-for-product">Producto4</h2>
-            <p>Precio</p>
-          </div>
-          <div class="product">
-            <img
-              src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png"
-              alt="samsun-galaxy-a04e-azul"
-              class="smartphone"
-            />
-            <h2 class="tittle-for-product">Producto5</h2>
-            <p>Precio</p>
-          </div>
-          <div class="product">
-            <img
-              src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png"
-              alt="samsun-galaxy-a04e-azul"
-              class="smartphone"
-            />
-            <h2 class="tittle-for-product">Producto6</h2>
-            <p>Precio</p>
-          </div>
-          <div class="product">
-            <img
-              src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png"
-              alt="samsun-galaxy-a04e-azul"
-              class="smartphone"
-            />
-            <h2 class="tittle-for-product">Producto8</h2>
-            <p>Precio</p>
-          </div>
-          <div class="product">
-            <img
-              src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png"
-              alt="samsun-galaxy-a04e-azul"
-              class="smartphone"
-            />
-            <h2 class="tittle-for-product">Producto7</h2>
-            <p>Precio</p>
-          </div>
-        </section>
-      </div>
-    </main>
-    <footer>
-      <div class="caja1">
-          <i class="fa-solid fa-microchip" id="logo"></i>
-          <h1 class="titulo-logo">7ecno Shop</h1>
-      </div>
+          <section class="conteiner-filter">
+            <h3>Filtre su busqueda</h3>
+            <label for="order" class="label-order">
+              <select name="order" id="order">
+                <option value disabled selected>Elige el orden</option>
+                <option value="higher-price">Mayor precio</option>
+                <option value="lower-price">Menor precio</option>
+                <option value="on-sale">En ofertas</option>
+                <option value="latest">Recientes</option>
+              </select>
+            </label>
+            <label for="range-price" class="label-range">
+              Rango de precio
+              <input type="range" />
+            </label>
+          </section>
+          <section class="main-footer">
+            <div class="product">
+              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
+                class="smartphone" />
+              <h2 class="tittle-for-product">Producto1</h2>
+              <p>Precio</p>
+            </div>
+            <div class="product">
+              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
+                class="smartphone" />
+              <h2 class="tittle-for-product">Producto2</h2>
+              <p>Precio</p>
+            </div>
+            <div class="product">
+              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
+                class="smartphone" />
+              <h2 class="tittle-for-product">Producto3</h2>
+              <p>Precio</p>
+            </div>
+            <div class="product">
+              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
+                class="smartphone" />
+              <h2 class="tittle-for-product">Producto4</h2>
+              <p>Precio</p>
+            </div>
+            <div class="product">
+              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
+                class="smartphone" />
+              <h2 class="tittle-for-product">Producto5</h2>
+              <p>Precio</p>
+            </div>
+            <div class="product">
+              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
+                class="smartphone" />
+              <h2 class="tittle-for-product">Producto6</h2>
+              <p>Precio</p>
+            </div>
+            <div class="product">
+              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
+                class="smartphone" />
+              <h2 class="tittle-for-product">Producto8</h2>
+              <p>Precio</p>
+            </div>
+            <div class="product">
+              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
+                class="smartphone" />
+              <h2 class="tittle-for-product">Producto7</h2>
+              <p>Precio</p>
+            </div>
+          </section>
+        </div>
+      </main>
 
-      <div class="caja2">
-          <div class="TecnoShop">
-              <h3 class="titulo">7ecno Shop</h3>
-              <a href="">Acerca de</a>
-              <a href="">Terminos y Condiciones</a>
-              <a href="">Privacidad</a>
-          </div>
+      <%- include('./partials/footer') %>
 
-          <div class="Informacion">
-              <h3 class="titulo">Información</h3>
-              
-              <a href="">Contactanos</a>
-              <a href="">Centro de Ayuda</a>
-              <a href="">Comunidad</a>
-              <a href="">Libro de Quejas Online</a>
-          </div>
-
-          <div class="Productos">
-              <h3 class="titulo">Productos</h3>
-              <a href="/">Inicio</a>
-              <a href="/producto">Celulares</a>
-              <a href="/producto">Acesorios</a>
-              <a href="/carrito">Botón de Arrepentimiento</a>
-          </div>
-
-          <div class="caja3">
-              <h3 class="titulo">Suscribite para recibir nuestras mejores ofertas y promociones</h3>
-              <form action="" method="POST" class="suscripcion">
-                  <input type="email" name="email" placeholder="Ingresá tu e-mail" class="email-sus">
-                  <button type="submit" class="boton-suscripcion"><i class="fa-solid fa-arrow-right"></i></button>
-              </form>
-              <div class="redes">
-                  <button class="boton-red"><a href="" ><i class="fa-brands fa-facebook" id="icono-red"></i></a></button>
-                  <button class="boton-red"><a href=""><i class="fa-brands fa-instagram" id="icono-red"></i></a></button>
-                  <button class="boton-red"><a href=""><i class="fa-brands fa-twitter" id="icono-red"></i></a></button>
-                  <button class="boton-red"><a href=""><i class="fa-brands fa-youtube" id="icono-red"></i></a></button>
-              </div>
-          </div>
-          
-      </div>
-
-
-      <div class="caja4">
-          <p>Copyright © 2023 7ecno Shop. Todos los Derechos Reservados</p>
-      </div>
-
-  </footer>
   </body>
-</html>
+
+  </html>

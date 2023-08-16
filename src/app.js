@@ -10,7 +10,7 @@ const path = require('path')
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', indexRoutes);
+app.use('/', indexRoutes);
 app.use('/login', loginRoutes);
 app.use('/registro', registerRoutes);
 
