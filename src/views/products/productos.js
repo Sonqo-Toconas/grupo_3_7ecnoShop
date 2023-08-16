@@ -1,0 +1,45 @@
+let producto =[
+    {
+        nombre:'Samsung a52',
+        gama:'media',
+        descripcion:'telefono samsung de buena calidad, de la familia A con buena calificacion',
+        modelo:'X203OS',
+        id: 1,
+        precio: 120000,
+        frabricante:'Samsung',
+        oferta: true,
+        calificacion: 4.1,
+        ram: '4gb',
+        bateria: '5000mAh',
+        almacenamiento: '128gb',
+        procesador: 'snapdragon 480'
+    },{
+        nombre:'Motorola e30',
+        gama:'baja',
+        descripcion:'telefono motorola de buena calidad, de la familia e con mala calificacion',
+        modelo:'T330I',
+        id: 2,
+        precio: 40000,
+        frabricante:'MOTOROLA',
+        oferta: false,
+        calificacion: 2.1,
+        ram: '2gb',
+        bateria: '4000mAh',
+        almacenamiento: '64gb',
+        procesador: 'mediatek 280'
+    },{
+        nombre:'Iphone 8',
+        gama:'media',
+        descripcion:'telefono Iphone de buena calidad, con buena calificacion',
+        modelo:'P20X1',
+        id: 3,
+        precio: 140000,
+        frabricante:'IPHONE',
+        oferta: true,
+        calificacion: 4.5,
+        ram: '4gb',
+        bateria: '5000mAh',
+        almacenamiento: '64gb',
+        procesador: 'snapdragon 620'
+    },
+]
