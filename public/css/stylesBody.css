@@ -123,6 +123,8 @@ header div {
     font-size: 16px;
     color: #a8ab84;
     line-height: 160%;
+    margin: 5;
+    padding: 5;
 }
 
 .TecnoShop {
