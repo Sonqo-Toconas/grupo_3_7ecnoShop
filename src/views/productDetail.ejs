@@ -1,238 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('./partials/head') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/productDetail.css">
-    <link href="css/stylesBody.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/bd1cbc1938.js" crossorigin="anonymous"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    </head>
 
-</head>
+    <body>
 
-<body>
-    <header>
-        <div class="cajax">
-          <i class="fa-solid fa-microchip" id="logo"></i>
-          <h1 class="titulo-logo">7ecno Shop</h1>
-      </div>
-        </div>
-  
-        <div class="contenido-header">
-            <i class="fa-solid fa-piggy-bank" id="icono"></i>
-            <a href="/" class="header-enlaces">Ofertas</a>
-        </div>
-        <div class="contenido-header">
-            <i class="fa-solid fa-mobile-screen-button" id="icono"></i>
-            <a href="/producto" class="header-enlaces">Celulares</a>
-        </div>
-        <div class="contenido-header">
-            <i class="fa-solid fa-headphones" id="icono"></i>
-            <a href="/producto" class="header-enlaces">Accesorios</a>
-        </div>
-        <div>
-            <form action="" method="POST" class="buscador">
-                <input type="search" name="barra-busqueda" placeholder="¿Qué estás buscando?" class="barra-busqueda">
-                <button type="submit" class="boton-busqueda"><i class="fa-brands fa-sistrix"></i></button>
-            </form>
-        </div>
-        <div class="contenido-header">
-            <i class="fa-solid fa-heart" id="icono"></i>
-            <a href="/registro" class="header-enlaces">Registro</a>
-        </div>
-        <div class="contenido-header">
-            <i class="fa-solid fa-cart-shopping" id="icono"></i>
-            <a href="/carrito" class="header-enlaces">Mi carrito</a>
-        </div>
-        <div class="contenido-header">
-            <i class="fa-regular fa-circle-user" id="icono"></i>
-            <a href="/login" class="header-enlaces">Mi cuenta</a>
-        </div>
-    </header>
+        <%- include('./partials/header') %>
 
-    <main>
-        <div class="grande">
-            <article class="cajagrande1">
-                <div class="caja">
-                    <h1>Celular Samsung Galaxy A04</h1>
-                    <h3>Precio: <br>$69.999</h3>
-                    <div class="desplegable">
-                        <select name="forma" id="forma">
-                            <option disabled selected="formas de pago">Formas de Pago</option>
-                            <option value="tarjeta de credito">Tarjeta de credito</option>
-                            <option value="tarjeta de debi4to">Tarjeta de debito</option>
-                            <option value="efectivo">Efectivo</option>
-                            <option value="billetera virtual">Billetera virtual</option>
-                        </select>
-                    </div>
+            <main>
+                <div class="grande">
+                    <article class="cajagrande1">
+                        <div class="caja">
+                            <h1>Celular Samsung Galaxy A04</h1>
+                            <h3>Precio: <br>$69.999</h3>
+                            <div class="desplegable">
+                                <select name="forma" id="forma">
+                                    <option disabled selected="formas de pago">Formas de Pago</option>
+                                    <option value="tarjeta de credito">Tarjeta de credito</option>
+                                    <option value="tarjeta de debi4to">Tarjeta de debito</option>
+                                    <option value="efectivo">Efectivo</option>
+                                    <option value="billetera virtual">Billetera virtual</option>
+                                </select>
+                            </div>
 
+                        </div>
+                        <img class="img0" src="images/celulares/samsung/samsun-galaxy-a04e-cobre-frente.png"
+                            alt="Celular Samsung Cobre">
+                    </article>
+
+                    <!--Perspectivas y datos-->
+                    <article class="cajagrande2">
+                        <div class="caja2-main">
+                            <h2>Mas perspectivas:</h2>
+                            <div class="img1">
+                                <img class="mas" src="images/celulares/samsung/samsun-galaxy-a04e-cobre-perfil.png"
+                                    alt="Celular Samsung Cobre perfil">
+                                <img class="mas" src="images/celulares/samsung/samsun-galaxy-a04e-cobre-espalda.png"
+                                    alt="Celular Samsung Cobre espalda">
+                            </div>
+
+                        </div>
+                        <section>
+                            <div class="color">
+                                <h2>Seleccion de colores</h2>
+                                <div class="form-group">
+                                    <input type="radio" name="color" id="azul">
+                                    <label for="azul">Negro</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="radio" name="color" id="blanco">
+                                    <label for="blanco">Blanco</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="radio" name="color" id="cobre" checked>
+                                    <label for="cobre">Cobre</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="radio" name="color" id="verde">
+                                    <label for="verde">Verde</label>
+                                </div>
+                            </div>
+                            <div class="botones">
+                                <button class="comprar">
+                                    <h3>Comprar</h3>
+                                </button>
+                                <button class="añadir">
+                                    <h3>Añadir al carrito</h3>
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </section>
+                    </article>
                 </div>
-                <img class="img0" src="images/celulares/samsung/samsun-galaxy-a04e-cobre-frente.png" alt="Celular Samsung Cobre">
-            </article>
 
-            <!--Perspectivas y datos-->
-            <article class="cajagrande2">
-                <div class="caja2-main">
-                    <h2>Mas perspectivas:</h2>
-                    <div class="img1">
-                        <img class="mas" src="images/celulares/samsung/samsun-galaxy-a04e-cobre-perfil.png" alt="Celular Samsung Cobre perfil">
-                        <img class="mas" src="images/celulares/samsung/samsun-galaxy-a04e-cobre-espalda.png" alt="Celular Samsung Cobre espalda">
-                    </div>    
-                        
+                <!--Informacion-->
+                <div class="informacion-main">
+                    <h2>Informacion del producto</h2>
+                    <p>Doble cámara y más detalles
+                        Sus 2 cámaras traseras de 50 Mpx/2 Mpx te permitirán tomar imágenes con más detalles y lograr
+                        efectos
+                        únicos como el famoso modo retrato de poca profundidad de campo. Además, el dispositivo cuenta
+                        con
+                        cámara frontal de 5 Mpx para que puedas sacarte divertidas selfies o hacer videollamadas.<br>
+                        Con su pantalla PLS de 6.5", disfrutá de colores intensos y mayor nitidez en todos tus
+                        contenidos.<br>
+                        Mayor rendimiento:Su memoria RAM de 4 GB permite que tu smartphone funcione de manera fluida y
+                        sin
+                        demoras al realizar distintas tareas, jugar o navegar.<br>
+                        Batería de duración superior:¡Desenchufate! Con la súper batería de 5000 mAh tendrás energía por
+                        mucho
+                        más tiempo para jugar, ver series o trabajar sin necesidad de realizar recargas.<br>
+                        Gran capacidad de almacenamiento: Con su memoria interna de 128 GB podrás almacenar archivos y
+                        aplicaciones de gran tamaño sin necesidad de subirlos a la nube y aprovechar tus momentos sin
+                        conexión
+                        para darles el máximo uso.</p>
                 </div>
-                <section>
-                    <div class="color">
-                        <h2>Seleccion de colores</h2>
-                        <div class="form-group">
-                            <input type="radio" name="color" id="azul">
-                            <label for="azul">Negro</label>
+                <!--Productos destacados-->
+
+                <section class="productosDestacados">
+                    <h2>Productos destacados</h2>
+                    <div class="caja3-main">
+                        <div class="flecha">
+                            <i class="fa-solid fa-chevron-left"></i>
                         </div>
-                        <div class="form-group">
-                            <input type="radio" name="color" id="blanco">
-                            <label for="blanco">Blanco</label>
+
+                        <div class="card-list-products">
+                            <div class="card">
+                                <img class="img2" src="images/celulares/samsung/samsung-a14-frente-negro.png"
+                                    alt=" samsung galaxy A14">
+                                <div class="cardPrice">
+                                    <h3>Samsung Galaxy A14</h3>
+                                    <p class="p">Precio: $94.999</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="img2" src="images/celulares/xiaomi/Xiaomi-redmi-note-11-frente-negro.png"
+                                    alt=" xiaomi redmi note 11">
+                                <div class="cardPrice">
+                                    <h3>Xiaomi Redmi Note 11</h3>
+                                    <p class="p">Precio: $85999</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="img2" src="images/celulares/motorola/Motorola-moto-g72-frente-blanco.png"
+                                    alt=" motorola moto g72">
+                                <div class="cardPrice">
+                                    <h3>Motorola Moto G72</h3>
+                                    <p class="p">Precio: $125.999</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="radio" name="color" id="cobre" checked>
-                            <label for="cobre">Cobre</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="radio" name="color" id="verde">
-                            <label for="verde">Verde</label>
+                        <div class="flecha">
+                            <i class="fa-solid fa-chevron-right"></i>
                         </div>
                     </div>
-                    <div class="botones">
-                        <button class="comprar">
-                            <h3>Comprar</h3>
-                        </button>
-                        <button class="añadir">
-                            <h3>Añadir al carrito</h3>
-                            <i class="fa-solid fa-cart-plus"></i>
-                        </button>
-                    </div>
+
                 </section>
-            </article>
-        </div>
 
-        <!--Informacion-->
-        <div class="informacion-main">
-            <h2>Informacion del producto</h2>
-            <p>Doble cámara y más detalles
-                Sus 2 cámaras traseras de 50 Mpx/2 Mpx te permitirán tomar imágenes con más detalles y lograr efectos
-                únicos como el famoso modo retrato de poca profundidad de campo. Además, el dispositivo cuenta con
-                cámara frontal de 5 Mpx para que puedas sacarte divertidas selfies o hacer videollamadas.<br>
-                Con su pantalla PLS de 6.5", disfrutá de colores intensos y mayor nitidez en todos tus contenidos.<br>
-                Mayor rendimiento:Su memoria RAM de 4 GB permite que tu smartphone funcione de manera fluida y sin
-                demoras al realizar distintas tareas, jugar o navegar.<br>
-                Batería de duración superior:¡Desenchufate! Con la súper batería de 5000 mAh tendrás energía por mucho
-                más tiempo para jugar, ver series o trabajar sin necesidad de realizar recargas.<br>
-                Gran capacidad de almacenamiento: Con su memoria interna de 128 GB podrás almacenar archivos y
-                aplicaciones de gran tamaño sin necesidad de subirlos a la nube y aprovechar tus momentos sin conexión
-                para darles el máximo uso.</p>
-        </div>
-    <!--Productos destacados-->
+            </main>
 
-    <section class="productosDestacados">
-        <h2>Productos destacados</h2>
-        <div class="caja3-main">
-            <div class="flecha">
-                <i class="fa-solid fa-chevron-left"></i>
-            </div>
+            <%- include('./partials/footer') %>
 
-            <div class="card-list-products">
-                <div class="card">
-                        <img class="img2" src="images/celulares/samsung/samsung-a14-frente-negro.png" alt=" samsung galaxy A14">
-                    <div class="cardPrice">
-                        <h3>Samsung Galaxy A14</h3>
-                        <p class="p">Precio: $94.999</p>
-                    </div>
-                </div>
-                <div class="card">
-                        <img class="img2" src="images/celulares/xiaomi/Xiaomi-redmi-note-11-frente-negro.png" alt=" xiaomi redmi note 11">
-                    <div class="cardPrice">
-                        <h3>Xiaomi Redmi Note 11</h3>
-                        <p class="p">Precio: $85999</p>
-                    </div>
-                </div>
-                <div class="card">
-                        <img class="img2" src="images/celulares/motorola/Motorola-moto-g72-frente-blanco.png" alt=" motorola moto g72">
-                    <div class="cardPrice">
-                        <h3>Motorola Moto G72</h3>
-                        <p class="p">Precio: $125.999</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flecha">
-                <i class="fa-solid fa-chevron-right"></i>
-            </div>
-        </div>
+    </body>
 
-    </section>
-
-</main>
-
-
-
-
-
-
-
-    <footer>
-        <div class="caja1">
-            <i class="fa-solid fa-microchip" id="logo"></i>
-            <h1 class="titulo-logo">7ecno Shop</h1>
-        </div>
-
-        <div class="caja2">
-            <div class="TecnoShop">
-                <h3 class="titulo">7ecno Shop</h3>
-                <a href="">Acerca de</a>
-                <a href="">Terminos y Condiciones</a>
-                <a href="">Privacidad</a>
-            </div>
-
-            <div class="Informacion">
-                <h3 class="titulo">Información</h3>
-                
-                <a href="">Contactanos</a>
-                <a href="">Centro de Ayuda</a>
-                <a href="">Comunidad</a>
-                <a href="">Libro de Quejas Online</a>
-            </div>
-
-            <div class="Productos">
-                <h3 class="titulo">Productos</h3>
-                <a href="/">Inicio</a>
-                <a href="/producto">Celulares</a>
-                <a href="/producto">Acesorios</a>
-                <a href="/carrito">Botón de Arrepentimiento</a>
-            </div>
-
-            <div class="-main">
-                <h3 class="titulo">Suscribite para recibir nuestras mejores ofertas y promociones</h3>
-                <form action="" method="POST" class="suscripcion">
-                    <input type="email" name="email" placeholder="Ingresá tu e-mail" class="email-sus">
-                    <button type="submit" class="boton-suscripcion"><i class="fa-solid fa-arrow-right"></i></button>
-                </form>
-                <div class="redes">
-                    <button class="boton-red"><a href="" ><i class="fa-brands fa-facebook" id="icono-red"></i></a></button>
-                    <button class="boton-red"><a href=""><i class="fa-brands fa-instagram" id="icono-red"></i></a></button>
-                    <button class="boton-red"><a href=""><i class="fa-brands fa-twitter" id="icono-red"></i></a></button>
-                    <button class="boton-red"><a href=""><i class="fa-brands fa-youtube" id="icono-red"></i></a></button>
-                </div>
-            </div>
-            
-        </div>
-
-
-        <div class="caja4">
-            <p>Copyright © 2023 7ecno Shop. Todos los Derechos Reservados</p>
-        </div>
-
-    </footer>
-</body>
-
-</html>
+    </html>
