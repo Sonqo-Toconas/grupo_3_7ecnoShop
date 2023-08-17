@@ -1,6 +1,6 @@
-const pructCart = {
-    login:(req,res)=>{
-        return res.render('Cart');
+const productCart = {
+    index:(req,res)=>{
+        return res.render('productCart');
     }
 }
 
