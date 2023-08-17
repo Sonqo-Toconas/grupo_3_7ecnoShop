@@ -58,15 +58,15 @@ Nada por el momento.
 
 - **Cruz Carina**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
-
+Deberiamos o por mi parte organizar mas los tiempos para no terminar siempre a ultima hora
     - ¿Qué deberiamos hacer más?<br>
-
+Deberiamos comunicarnos que es lo mas importante 
     - ¿Qué deberíamos seguir haciendo?<br>
-
+Debemos seguir con la organización inmediata apenas empieza el sprint
     - ¿Qué deberiamos hacer menos?<br>
-
+Debemos dejar de descuidarnos dejando las cosas a último momento
     - ¿Qué deberíamos dejar de hacer?<br>
-
+Solo no dejar las cosas a último momento, fuera de eso nada
 
 - **Cruz Max**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
@@ -92,27 +92,27 @@ Nada por el momento.
 
 - **Leiva Nayla**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
-
+    Llevar control diario de los avances y problemas con los sprints.
     - ¿Qué deberiamos hacer más?<br>
-
+    Comunicarnos y organizarnos.
     - ¿Qué deberíamos seguir haciendo?<br>
-
+    Organizar y distribuir las tareas.
     - ¿Qué deberiamos hacer menos?<br>
-
+    Confiarnos con los tiempos.
     - ¿Qué deberíamos dejar de hacer?<br>
+    Creo que nada mas aparte de lo mencionado.
 
-
-- **Rodríguez Roció**<br>
+- **Rodríguez Rocio**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
-
+    Por el momento nadap
     - ¿Qué deberiamos hacer más?<br>
-
+    Organizarlos
     - ¿Qué deberíamos seguir haciendo?<br>
-
+    Las reuniones por zoom o meet para poder ir viendo nuestros avances y sacarnos dudas 
     - ¿Qué deberiamos hacer menos?<br>
-
+    No estar a ultimo momento terminando las partes
     - ¿Qué deberíamos dejar de hacer?<br>
-
+    Nadap
 
 - **Toconas Luciano**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>

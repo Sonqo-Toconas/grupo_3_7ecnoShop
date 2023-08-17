@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productEdition</title>
+    <link rel="stylesheet" href="css/productEdition.css">
+</head>
+<body>
+    <main>
+        <div class="formulario">
+            <h1 class>Editar producto</h1>
+            <form action="/editar-producto" method="POST">
+                <div class>
+                    <label for="newName">Nuevo nombre del producto:</label>
+                    <input type="text" id="newName" name="newName" required>
+                </div class>
+    
+                <div class>
+                    <label for="NewDescription">Nueva Descripción:</label>
+                    <textarea id="NewDescription" name="newDescription" required></textarea>
+                </div>
+    
+                <div class>
+                    <label for="newImage">Nuevas Imagenes:</label>
+                    <input type="file" id="newImage" name="newImage" accept=".jpg, .png" multiple required>
+                </div>
+    
+                <div class>
+                    <label for="category">Categoría a cambiar:</label>
+                    <select id="category" name="category" required>
+                        <option disabled selected="formas de pago">Seleccionar nueva categoria</option>
+                        <option value="Celulares">Celulares</option>
+                        <option value="Accesorios">Accesorios</option>
+                    </select>
+                </div>
+    
+                <div class>
+                    <label for="colors">Nuevos Colores:</label>
+                    <input type="text" id="colors" name="colors" required>
+                </div>
+    
+                <div class>
+                    <label for="price">Nuevo Precio:</label>
+                    <input type="number" id="price" name="price" min="0" step=".01" required>
+                </div>
+            
+                <button type="submit">Confirmar edicion de producto</button>
+
+                <div class="botones">
+                    <button class="icon-G"><i class="fa-brands fa-google" id="google"></i></button>
+                    <button class="icon-F"><i class="fa-brands fa-facebook" id="facebook"></i></button>
+                    <button class="icon-T"><i class="fa-brands fa-twitter" id="twitter"></i></button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    
+</body>
+</html>
