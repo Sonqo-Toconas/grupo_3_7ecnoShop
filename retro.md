@@ -58,15 +58,15 @@ Nada por el momento.
 
 - **Cruz Carina**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
-
+Deberiamos o por mi parte organizar mas los tiempos para no terminar siempre a ultima hora
     - ¿Qué deberiamos hacer más?<br>
-
+Deberiamos comunicarnos que es lo mas importante 
     - ¿Qué deberíamos seguir haciendo?<br>
-
+Debemos seguir con la organización inmediata apenas empieza el sprint
     - ¿Qué deberiamos hacer menos?<br>
-
+Debemos dejar de descuidarnos dejando las cosas a último momento
     - ¿Qué deberíamos dejar de hacer?<br>
-
+Solo no dejar las cosas a último momento, fuera de eso nada
 
 - **Cruz Max**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
