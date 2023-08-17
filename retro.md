@@ -82,15 +82,15 @@ Nada por el momento.
 
 - **Leiva Nayla**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
-
+    Llevar control diario de los avances y problemas con los sprints.
     - ¿Qué deberiamos hacer más?<br>
-
+    Comunicarnos y organizarnos.
     - ¿Qué deberíamos seguir haciendo?<br>
-
+    Organizar y distribuir las tareas.
     - ¿Qué deberiamos hacer menos?<br>
-
+    Confiarnos con los tiempos.
     - ¿Qué deberíamos dejar de hacer?<br>
-
+    Creo que nada mas aparte de lo mencionado.
 
 - **Rodríguez Roció**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
