@@ -7,6 +7,7 @@ const userPanelRoutes = require('./routes/userPanelRouter');
 const creationRoutes = require('./routes/creationRouter');
 const productCartRouter = require('./routes/productCartRouter');
 const productDetailRoutes = require('./routes/productDetailRouter');
+const productEditionRoutes = require('./routes/productEditionRouter');
 
 app.use(express.static('public'));
 const path = require('path')
@@ -21,6 +22,7 @@ app.use('/crear', creationRoutes);
 app.use('/userpanel', userPanelRoutes);
 app.use('/carrito', productCartRouter);
 app.use('/producto', productDetailRoutes);
+app.use('/editar', productEditionRoutes);
 
 
 app.listen(3030, () => {
