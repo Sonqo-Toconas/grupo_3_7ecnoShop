@@ -1,89 +1,152 @@
 body {
+  background-color: #007F7F;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  padding-top: 120px;
+  padding-bottom: 20px;
+  background-color: #007F7F;
+  text-align: center;
+}
+
+.formulario {
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 50px;
+  padding: 20px 15px;
+  padding-bottom: 1.5rem;
+  width: 85%;
+  max-width: 536px;
+  border: 5px solid #f3f3f3;
+  border-radius: 10px;
+  color: white;
+  background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
+  text-align: center;
+  box-shadow: 0px 0px 15px 2px;
+}
+
+.formulario div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.formulario div label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.formulario div input[type="text"],
+.formulario div input[type="number"],
+.formulario div select,
+.formulario div textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.formulario div input[type="file"] {
+  width: auto;
+}
+
+.formulario div input[type="submit"] {
     background-color: #007F7F;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-  }
-  
-  header h1 {
     color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .main-container {
-    border: 15px solid rgba(0, 212, 255, 1);
-    background: radial-gradient(circle, rgba(9, 21, 130, 1) 0%, rgba(9, 21, 130, 1) 0%, rgba(0, 212, 255, 1) 100%);
-    text-align: center;
-    color: black;
-    font-weight: bold;
+    border-radius: 5px;
     padding: 10px;
-    margin: 10% 20%;
-    animation: border-color 2s linear alternate-reverse infinite;
-  }
-  
-  @keyframes border-color {
-    0% {
-      border-top-color: #ffffff;
-    }
-    25% {
-      border-right-color: #ffffff;
-    }
-    50% {
-      border-bottom-color: #ffffff;
-    }
-    100% {
-      border-left-color: #ffffff;
-    }
-  }
-  
-  .formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-  }
-  
-  .formulario div {
-    display: flex;
-    flex-direction: column;
-    margin: 5px 0;
-  }
-  
-  .formulario div input {
-    width: 80%;
-    margin: 0 auto;
-    background: none;
+    font-size: 18px;
+    font-weight: bold;
     border: none;
-    border-bottom: 3px solid rgb(241, 241, 241);
-    outline: none;
-    color: rgb(0,0,0);
-  }
-  
-  button[type="submit"] {
-      border-radius: 50px;
-      background-color: white;
-      outline: none;
-      border: none;
-      width: 30vw;
-      height: 7vh;
-      font-weight: bold;
-      cursor: pointer;
-      transition-duration:.5s
-  }
-  
-  button[type="submit"]:hover {
-      background-color: rgba(0,212,255,1);
-      color: white;
-      transform: scale(1.05);
-      transition-duration: all .15s ease-in-out; 
-  }
-  
-  @media (min-width:700px){
-      button[type="submit"]:hover{
-          width:90px;border-radius:
-          50px;transform-origin:center;transform:
-          scale(1.2);transition-duration:.5s
-      }
-  }
-  
-  
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.formulario div input[type="submit"]:hover,
+.formulario div input[type="file"]:focus {
+    background-color: #1259c3;
+}
+
+.botones {
+    display: flex;
+    justify-content: center; /* Cambio a "center" para alinear horizontalmente */
+    width: calc(100% - 20px);
+    margin-top: 10px;
+}
+
+.botones button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.botones button:hover {
+    transform: scale(1.2);
+}
+
+.icon-F, .icon-T, .icon-G {
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0 20px;
+    color: #1877F2;
+    cursor: pointer;
+}
+
+.icon-G{
+    background-color: white;
+    color: black;
+}
+
+@media (min-width:700px){
+    .boton-IniSesion:hover {
+        background-color: rgb(0,212,255,1);
+        color: white;
+        scale: 1.05;
+    }
+
+    .botones button {
+        transition: all 500ms;
+        color: black;
+    }
+
+    .botones button:hover {
+        width: 90px;
+        border-radius: 50px;
+    }
+
+    .icon-G:hover {
+        background-color: rgb(222, 218, 218);
+    }
+
+    .icon-G:hover > #google{
+        font-size: 25px;
+        animation: color-icon 4s linear infinite;
+    }
+
+    .icon-F:hover{
+        background-color: #1877F2;
+    }
+
+    .icon-F:hover > #facebook{
+        font-size: 25px;
+        color: #ffffff;
+    }
+
+    .icon-T:hover > #twitter {
+        font-size: 25px;
+        color: #1D9BF0;
+    }
+}

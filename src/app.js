@@ -5,6 +5,7 @@ const registerRoutes = require('./routes/registerRouter');
 const loginRoutes = require('./routes/loginRouter');
 const userPanelRoutes = require('./routes/userPanelRouter');
 const creationRoutes = require('./routes/creationRouter');
+const productCartRouter = require('./routes/productCartRouter');
 
 app.use(express.static('public'));
 const path = require('path')
@@ -17,10 +18,8 @@ app.use('/login', loginRoutes);
 app.use('/registro', registerRoutes);
 app.use('/crear', creationRoutes);
 app.use('/userpanel', userPanelRoutes);
+app.use('/carrito', productCartRouter);
 
-app.get('/carrito', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productCart.html'));
-});
 app.get('/producto', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/productDetail.html'));
 });
