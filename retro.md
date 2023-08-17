@@ -71,13 +71,23 @@ Nada por el momento.
 - **Cruz Max**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
 
+    deberiamos compartir tips entre los integrantes
+
     - ¿Qué deberiamos hacer más?<br>
+
+    deberiamos hacer mas reuniones 
 
     - ¿Qué deberíamos seguir haciendo?<br>
 
+    creo que nos organizamos bien y deberiamos seguir asi
+
     - ¿Qué deberiamos hacer menos?<br>
 
+    creer que tendremos tiempo
+    
     - ¿Qué deberíamos dejar de hacer?<br>
+
+    no encuentro un punto negativo en nuestro trabajo como para dejar de hacerlo
 
 
 - **Leiva Nayla**<br>
