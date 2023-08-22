@@ -1,8 +1,8 @@
-let producto =[
+let productos =[
     {
-        nombre:'Samsung a52',
+        nombre:'Samsung a04e',
         gama:'media',
-        descripcion:'telefono samsung de buena calidad, de la familia A con buena calificacion',
+        descripcion:'telefono samsung de buena calidad, de la familia A0 con buena calificacion',
         modelo:'X203OS',
         id: 1,
         precio: 120000,
@@ -12,9 +12,10 @@ let producto =[
         ram: '4gb',
         bateria: '5000mAh',
         almacenamiento: '128gb',
-        procesador: 'snapdragon 480'
+        procesador: 'snapdragon 480',
+        imagen:"samsung/samsung-galaxi-a04e-frente-negro.png"
     },{
-        nombre:'Motorola e30',
+        nombre:'Motorola g52',
         gama:'baja',
         descripcion:'telefono motorola de buena calidad, de la familia e con mala calificacion',
         modelo:'T330I',
@@ -26,20 +27,23 @@ let producto =[
         ram: '2gb',
         bateria: '4000mAh',
         almacenamiento: '64gb',
-        procesador: 'mediatek 280'
+        procesador: 'mediatek 280',
+        imagen:"motorola/g52-azul-frente.png"
     },{
-        nombre:'Iphone 8',
+        nombre:'Xiaomi redmi note11',
         gama:'media',
-        descripcion:'telefono Iphone de buena calidad, con buena calificacion',
-        modelo:'P20X1',
+        descripcion:'telefono motorola de buena calidad, de la familia note con mala calificacion',
+        modelo:'T1740I',
         id: 3,
-        precio: 140000,
-        frabricante:'IPHONE',
-        oferta: true,
-        calificacion: 4.5,
-        ram: '4gb',
+        precio: 240000,
+        frabricante:'XIAOMI',
+        oferta: false,
+        calificacion: 4.1,
+        ram: '6gb',
         bateria: '5000mAh',
-        almacenamiento: '64gb',
-        procesador: 'snapdragon 620'
-    },
+        almacenamiento: '128gb',
+        procesador: 'snapdragon 480',
+        imagen:"xiaomi/Xiaomi-redmi-note-11-frente-negro.png"
+    }
 ]
+module.exports = productos
