@@ -31,55 +31,15 @@
               <input type="range" />
             </label>
           </section>
-          <section class="main-footer">
-            <div class="product">
-              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
-                class="smartphone" />
-              <h2 class="tittle-for-product">Producto1</h2>
-              <p>Precio</p>
-            </div>
-            <div class="product">
-              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
-                class="smartphone" />
-              <h2 class="tittle-for-product">Producto2</h2>
-              <p>Precio</p>
-            </div>
-            <div class="product">
-              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
-                class="smartphone" />
-              <h2 class="tittle-for-product">Producto3</h2>
-              <p>Precio</p>
-            </div>
-            <div class="product">
-              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
-                class="smartphone" />
-              <h2 class="tittle-for-product">Producto4</h2>
-              <p>Precio</p>
-            </div>
-            <div class="product">
-              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
-                class="smartphone" />
-              <h2 class="tittle-for-product">Producto5</h2>
-              <p>Precio</p>
-            </div>
-            <div class="product">
-              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
-                class="smartphone" />
-              <h2 class="tittle-for-product">Producto6</h2>
-              <p>Precio</p>
-            </div>
-            <div class="product">
-              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
-                class="smartphone" />
-              <h2 class="tittle-for-product">Producto8</h2>
-              <p>Precio</p>
-            </div>
-            <div class="product">
-              <img src="images/celulares/samsung/samsun-galaxy-a04e-azul-frente.png" alt="samsun-galaxy-a04e-azul"
-                class="smartphone" />
-              <h2 class="tittle-for-product">Producto7</h2>
-              <p>Precio</p>
-            </div>
+          <section class="main-footer" onclick="irProducto">
+            <% for( let i = 0; i < productos.length; i++ ) { %>
+              <div class="product">
+                  <img src="/images/celulares/<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>"
+                      class="smartphone" />
+                  <h2 class="tittle-for-product"><%= productos[i].nombre %></h2>
+                  <p>$<%= productos[i].precio %></p>
+              </div>
+          <% } %>
           </section>
         </div>
       </main>

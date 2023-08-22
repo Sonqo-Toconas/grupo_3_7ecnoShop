@@ -30,6 +30,10 @@ body {
     margin-top: 20px;
 }
 
+.product p {
+    padding: 10px 0;
+}
+
 @media (min-width: 380px) {
     .product-conteiner {
         display: flex;

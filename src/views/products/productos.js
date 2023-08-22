@@ -8,12 +8,13 @@ let productos =[
         precio: 120000,
         frabricante:'Samsung',
         oferta: true,
-        calificacion: 4.1,
+        calificacion: 4.3,
         ram: '4gb',
         bateria: '5000mAh',
         almacenamiento: '128gb',
         procesador: 'snapdragon 480',
-        imagen:"samsung/samsung-galaxi-a04e-frente-negro.png"
+        imagen:"samsung/samsung-galaxi-a04e-frente-negro.png",
+        ventas: 23
     },{
         nombre:'Motorola g52',
         gama:'baja',
@@ -28,7 +29,8 @@ let productos =[
         bateria: '4000mAh',
         almacenamiento: '64gb',
         procesador: 'mediatek 280',
-        imagen:"motorola/g52-azul-frente.png"
+        imagen:"motorola/g52-azul-frente.png",
+        ventas: 3
     },{
         nombre:'Xiaomi redmi note11',
         gama:'media',
@@ -43,7 +45,8 @@ let productos =[
         bateria: '5000mAh',
         almacenamiento: '128gb',
         procesador: 'snapdragon 480',
-        imagen:"xiaomi/Xiaomi-redmi-note-11-frente-negro.png"
+        imagen:"xiaomi/Xiaomi-redmi-note-11-frente-negro.png",
+        ventas: 10
     }
 ]
 module.exports = productos
