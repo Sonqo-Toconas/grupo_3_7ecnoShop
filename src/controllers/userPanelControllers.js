@@ -1,9 +1,10 @@
-const express = require('express');
-const usuarios = require('../views/users/usuarios');
+const fs = require('fs');
+const path = require('path');
+/* const usersFilePath = path.join(__dirname, '../views/users/usuarios.json') */
 
 let userPanelController = {
     index: (req, res) => {
-        res.render('userPanel', { 'usuarios': usuarios })
+        res.render('userPanel'/* , { 'usuarios': usuarios } */)
     }
 };
 

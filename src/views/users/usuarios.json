@@ -11,7 +11,8 @@
         "contrasena": "contrasena",
         "admin": true,
         "dni": 46598460
-    }, {
+    },
+    {
         "nombre": "Luciano",
         "apellido": "Toconas",
         "fechaDeNacimiento": "09/03/2001",
@@ -23,7 +24,9 @@
         "contrasena": "contrasena",
         "admin": false,
         "dni": 41039299
-    }, {
+    },
+    {
+        "id": 3,
         "nombre": "Nayla",
         "apellido": "Leiva",
         "fechaDeNacimiento": "01/13/1989",
@@ -35,5 +38,17 @@
         "contrasena": "contrasena",
         "admin": true,
         "dni": 42092029
+    },
+    {
+        "id": 4,
+        "nombre": "asd",
+        "email": "asd@asd",
+        "telefono": 123
+    },
+    {
+        "id": 5,
+        "nombre": "asd",
+        "email": "asd@asd",
+        "telefono": 123
     }
 ]

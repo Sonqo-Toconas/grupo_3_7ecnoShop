@@ -7,7 +7,7 @@
         <%- include('./partials/header') %>
 
             <main>
-                <form action="/" method="GET" class="contenedor-formulario">
+                <form action="/registro" method="POST" class="contenedor-formulario">
                     <h1>Completá los datos para crear tu cuenta</h1>
 
                     <div class="botones">
@@ -20,24 +20,25 @@
                         <label for="nombre" class="texto-formulario">
                             Elegí tu nombre
                         </label>
-                        <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3"
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellido" minlength="3"
                             class="barra-formulario" required>
 
                         <label for="email" class="texto-formulario">
                             Agregá tu e-mail
                         </label>
-                        <input type="email" name="email" placeholder="E-mail" class="barra-formulario" required>
+                        <input type="email" id="email" name="email" placeholder="E-mail" class="barra-formulario"
+                            required>
 
                         <label for="telefono" class="texto-formulario">
                             Agregá tu celular
                         </label>
-                        <input type="tel" name="telefono" placeholder="Teléfono" class="barra-formulario">
+                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" class="barra-formulario">
 
                         <label for="contrasena" class="texto-formulario">
                             Contraseña
                         </label>
-                        <input type="password" name="contrasena" placeholder="Contraseña" class="barra-formulario2"
-                            required>
+                        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña"
+                            class="barra-formulario2" required>
                         <input type="password" name="contrasena2" placeholder="Confirmar contraseña"
                             class="barra-formulario2" required>
                     </div>
@@ -48,7 +49,7 @@
                     </div>
 
                 </form>
-          
+
             </main>
 
             <%- include('./partials/footer') %>
