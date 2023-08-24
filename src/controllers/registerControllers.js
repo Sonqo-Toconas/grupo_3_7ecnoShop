@@ -15,7 +15,7 @@ let registerController = {
             nombre: data.nombre,
             email: data.email,
             telefono: parseInt(data.telefono),
-            contraseña: data.contraseña,
+            contraseña: data.contrasena,
         }
         users.push(nuevoUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "))
