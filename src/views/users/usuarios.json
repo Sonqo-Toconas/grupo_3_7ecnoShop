@@ -38,5 +38,12 @@
   "contrasena": "contrasena",
   "admin": true,
   "dni": 42092029
+ },
+ {
+  "id": 4,
+  "nombre": "asd123",
+  "email": "asd@asd",
+  "telefono": 123,
+  "contraseña": "asd"
  }
 ]

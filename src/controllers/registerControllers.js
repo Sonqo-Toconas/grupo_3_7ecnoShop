@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../views/users/usuarios.json')
 
-let registerController = {
+let registerControllers = {
     index: (req, res) => {
         res.render('register')
     },
@@ -23,4 +23,4 @@ let registerController = {
     },
 }
 
-module.exports = registerController;
+module.exports = registerControllers;

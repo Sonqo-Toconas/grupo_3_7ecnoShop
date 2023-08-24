@@ -5,6 +5,4 @@ const indexControllers = require('../controllers/indexControllers');
 
 router.get('/', indexControllers.index);
 
-router.get('/productos', indexControllers.showAllProducts);
-
 module.exports = router
