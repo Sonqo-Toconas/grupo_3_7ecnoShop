@@ -52,5 +52,19 @@
   "email": "asd@asd",
   "telefono": 123,
   "contraseña": "asd"
+ },
+ {
+  "id": 6,
+  "nombre": "asd",
+  "email": "asasdasdd@asdasd.com",
+  "telefono": 123,
+  "contraseña": "asd"
+ },
+ {
+  "id": 7,
+  "nombre": "ASD",
+  "email": "asd@asd.com",
+  "telefono": 123,
+  "contraseña": "$2a$10$1HuvL3TBij0ca95Om7HjzOShgnoN590cc7RtFgcXg1UJFR6kMBMca"
  }
 ]

@@ -7,7 +7,7 @@
         <%- include('./partials/header') %>
 
             <main>
-                <form action="/registro/crear" method="POST" class="contenedor-formulario">
+                <form action="/registro" method="POST" class="contenedor-formulario">
                     <h1>Completá los datos para crear tu cuenta</h1>
 
                     <div class="botones">
@@ -21,13 +21,13 @@
                             Elegí tu nombre
                         </label>
                         <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3"
-                            class="barra-formulario" required>
+                            class="barra-formulario" value="<%=locals.old ? old.nombre : null %>">
 
                         <label for="email" class="texto-formulario">
                             Agregá tu e-mail
                         </label>
                         <input type="email" name="email" placeholder="E-mail" class="barra-formulario"
-                            required>
+                            value="<%=locals.old ? old.email : null %>">
 
                         <label for="telefono" class="texto-formulario">
                             Agregá tu celular
@@ -37,16 +37,19 @@
                         <label for="contrasena" class="texto-formulario">
                             Contraseña
                         </label>
-                        <input type="password" name="contrasena" placeholder="Contraseña"
-                            class="barra-formulario2" required>
+                        <input type="password" name="contrasena" placeholder="Contraseña" class="barra-formulario2">
                         <input type="password" name="contrasena2" placeholder="Confirmar contraseña"
-                            class="barra-formulario2" required>
+                            class="barra-formulario2">
                     </div>
-
-                    <div class="botones2">
-                        <button type="submit" class="boton-formulario">Enviar</button>
-                        <button type="reset" class="boton-formulario">Borrar</button>
-                    </div>
+                    <% if (locals.errors) { errors.forEach(error=> { %>
+                        <p class="mensajeError">
+                            <%= error.msg%>
+                        </p>
+                        <%}) }%>
+                            <div class="botones2">
+                                <button type="submit" class="boton-formulario">Enviar</button>
+                                <button type="reset" class="boton-formulario">Borrar</button>
+                            </div>
 
                 </form>
 

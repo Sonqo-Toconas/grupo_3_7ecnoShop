@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
+const session = require('express-session')
 
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(session({ secret: "Secreto" }))
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -20,13 +22,15 @@ const productCartRoutes = require('./routes/productCartRouter');
 const productDetailRoutes = require('./routes/productDetailRouter');
 const productEditionRoutes = require('./routes/productEditionRouter');
 
+
+
 app.use('/', indexRoutes);
 app.use('/login', loginRoutes);
 app.use('/registro', registerRoutes);
 app.use('/crear', creationRoutes);
 app.use('/userpanel', userPanelRoutes);
 app.use('/carrito', productCartRoutes);
-app.use('/productos', productRoutes);
+app.use('/producto', productRoutes);
 app.use('/editar', productEditionRoutes);
 app.use('/productosDetail', productDetailRoutes);
 
