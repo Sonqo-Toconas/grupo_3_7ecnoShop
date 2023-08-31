@@ -22,8 +22,6 @@ const productCartRoutes = require('./routes/productCartRouter');
 const productDetailRoutes = require('./routes/productDetailRouter');
 const productEditionRoutes = require('./routes/productEditionRouter');
 
-
-
 app.use('/', indexRoutes);
 app.use('/login', loginRoutes);
 app.use('/registro', registerRoutes);
