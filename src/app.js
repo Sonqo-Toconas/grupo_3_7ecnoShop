@@ -30,7 +30,6 @@ app.use('/userpanel', userPanelRoutes);
 app.use('/carrito', productCartRoutes);
 app.use('/producto', productRoutes);
 app.use('/editar', productEditionRoutes);
-app.use('/productosDetail', productDetailRoutes);
 
 app.listen(3030, () => {
     console.log('Servidor corriendo en el puerto http://localhost:3030');

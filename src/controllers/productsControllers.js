@@ -15,6 +15,13 @@ const products = {
         })
         fs.writeFileSync(productsFilePath, JSON.stringify(filteredProducts, null, " "))
         res.redirect("/productos");
+    },
+    detalle: (req, res) => {
+        const productos = require('../views/products/productos.json')
+        let idProducto = productos.find(producto=>{
+            return req.params.id == producto.id;
+        })
+        res.render('productDetail',{producto:idProducto})
     }
 }
 
