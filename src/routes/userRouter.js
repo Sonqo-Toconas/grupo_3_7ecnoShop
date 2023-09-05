@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const registerControllers = require('../controllers/registerControllers');
+const loginControllers = require('../controllers/loginControllers');
 const multer = require('multer');
 const { body } = require('express-validator')
 
@@ -25,7 +26,8 @@ const validaciones = [
 ];
 
 router.get('/', registerControllers.index);
-router.post('/', fileUpload.single('imagen'), validaciones, registerControllers.procesoCrear);
-
+router.post('/registro', fileUpload.single('imagen'), validaciones, registerControllers.procesoCrear);
+router.get('/login', loginControllers.login);
+router.post('/login', loginControllers.processLogin);
 
 module.exports = router;

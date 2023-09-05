@@ -41,30 +41,10 @@
  },
  {
   "id": 4,
-  "nombre": "asd123",
-  "email": "asd@asd",
-  "telefono": 123,
-  "contraseña": "asd"
- },
- {
-  "id": 5,
-  "nombre": "asd1234",
-  "email": "asd@asd",
-  "telefono": 123,
-  "contraseña": "asd"
- },
- {
-  "id": 6,
-  "nombre": "asd",
-  "email": "asasdasdd@asdasd.com",
-  "telefono": 123,
-  "contraseña": "asd"
- },
- {
-  "id": 7,
-  "nombre": "ASD",
-  "email": "asd@asd.com",
-  "telefono": 123,
-  "contraseña": "$2a$10$1HuvL3TBij0ca95Om7HjzOShgnoN590cc7RtFgcXg1UJFR6kMBMca"
+  "nombre": "Sonqo",
+  "email": "sonqo@gmail.com",
+  "telefono": 123456,
+  "contraseña": "$2a$10$kBDefSnuYq5e9bpXLf/d0esj432WvTpv1caUccZYQ4BgqCqqJdwDa",
+  "imagen": "user-1693926212547.png"
  }
 ]
