@@ -20,7 +20,6 @@ const creationRoutes = require('./routes/creationRouter');
 const productRoutes = require('./routes/productsRouter');
 const productCartRoutes = require('./routes/productCartRouter');
 const productEditionRoutes = require('./routes/productEditionRouter');
-const userRoutes = require('./routes/userRouter');
 
 app.use('/', indexRoutes);
 app.use('/login', loginRoutes);
@@ -30,7 +29,6 @@ app.use('/userpanel', userPanelRoutes);
 app.use('/carrito', productCartRoutes);
 app.use('/producto', productRoutes);
 app.use('/editar', productEditionRoutes);
-app.use('/usuario', userRoutes);
 
 app.listen(3030, () => {
     console.log('Servidor corriendo en el puerto http://localhost:3030');
