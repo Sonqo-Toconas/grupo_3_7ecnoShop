@@ -6,14 +6,8 @@ const { body } = require('express-validator')
 const path = require('path');
 
 
-const validaciones = [
-    body('email').isEmail().withMessage('Debes completar el campo de email'),
-    body('password').notEmpty().withMessage('Debes completar el campo de contraseña')
-];
-
-
 router.get('/', loginControllers.login);
-router.post('/', validaciones, loginControllers.processLogin);
+router.post('/', loginControllers.processLogin);
 
 
 module.exports = router

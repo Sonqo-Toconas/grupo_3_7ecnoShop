@@ -4,12 +4,15 @@ const path = require('path');
 const usersFilePath = path.join(__dirname, '../views/users/usuarios.json')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
+const { error } = require('console');
+
 
 
 const controller = {
     login:(req,res)=>{
         res.render('login', {
-            mensaje: false
+            mensajeP: false,
+            mensajeEmail: false,
         })
     },
     processLogin:(req,res)=>{
@@ -19,26 +22,28 @@ const controller = {
             if (usuario) {
                 let validadContra = bcrypt.compareSync(req.body.password, usuario.contraseña);
                 if (validadContra) {
-                    console.log('Datos correctos');
                     return res.redirect('/')
+                }else{
+                    return  res.render('login', {
+                        errors: errors.array(),
+                        old: req.body,
+                        mensajeEmail:false,
+                        mensajeP: 'contraseña es invalida'
+                    })
                 }
-                console.log('datos incorrecto')
-                return  res.render('login', {
-                    errors: errors.array(),
-                    old: req.body,
-                    mensaje: 'contraseña es invalida'
-                })
             }else{
                 res.render('login', {
-                    mensaje: 'email es invalido'
+                    mensajeP: false,
+                    mensajeEmail: 'email es invalido'
                 })
             }
         }
         else {
             res.render('login', {
-                errors: errors.array(),
+                errors: errors.errors,
                 old: req.body,
-                mensaje: false
+                mensajeP: false,
+                mensajeEmail: 'email es invalido'
             })
         }
     }
