@@ -10,7 +10,6 @@ const productCart = {
   },
 
   carrito: (req, res) => {
-    /* const productos2 = obtenerProductos().producto1; */
     res.render('carrito', { productos });
   },
 

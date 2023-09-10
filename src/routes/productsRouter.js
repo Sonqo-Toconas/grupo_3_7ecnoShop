@@ -3,12 +3,8 @@ const router = express.Router();
 const productsControllers = require('../controllers/productsControllers');
 
 
-/* router.get('/crear', productsController.mostrarFormularioCreacion);
-
-router.get('/', productsController.mostrarProductos);
-router.get('/:id', productsController.mostrarProducto);
-router.post('/', productsController.crearProducto); */
-
+router.get('/crear', productsControllers.mostrarFormularioCreacion);
+router.post('/crear', productsControllers.crear);
 
 router.get('/', productsControllers.index);
 router.delete('/:id/delete', productsControllers.delete);
