@@ -1,23 +1,19 @@
 const fs = require('fs');
-
-
-const obtenerProductos = () => {
-  const rutaArchivo = path.join(__dirname, '../views/productos/productos.json');
-  const archivo = fs.readFileSync(rutaArchivo);
-  const productos = JSON.parse(archivo);
-  return productos;
-};
-
-const carrito = (req, res) => {
-  const productos = obtenerProductos().productos;
-
-  res.render('carrito', { productos });
-};
+const path = require('path');
+const rutaArchivo = path.join(__dirname, '../views/products/productos.json');
+const archivo = fs.readFileSync(rutaArchivo);
+const productos1 = JSON.parse(archivo);
 
 const productCart = {
-    index:(req,res)=>{
-        return res.render('productCart');
-    }
+  index: (req, res) => {
+    return res.render('productCart');
+  },
+
+  carrito: (req, res) => {
+    /* const productos2 = obtenerProductos().producto1; */
+    res.render('carrito', { productos });
+  },
+
 }
 
 module.exports = productCart

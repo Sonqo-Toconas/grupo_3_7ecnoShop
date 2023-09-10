@@ -7,12 +7,12 @@ const bcrypt = require('bcryptjs');
 
 
 const controller = {
-    login:(req,res)=>{
+    login: (req, res) => {
         res.render('login', {
             mensaje: false
         })
     },
-    processLogin:(req,res)=>{
+    processLogin: (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
             let usuario = users.buscarPorPropiedad('email', req.body.email)
@@ -23,12 +23,12 @@ const controller = {
                     return res.redirect('/')
                 }
                 console.log('datos incorrecto')
-                return  res.render('login', {
+                return res.render('login', {
                     errors: errors.array(),
                     old: req.body,
                     mensaje: 'contraseña es invalida'
                 })
-            }else{
+            } else {
                 res.render('login', {
                     mensaje: 'email es invalido'
                 })

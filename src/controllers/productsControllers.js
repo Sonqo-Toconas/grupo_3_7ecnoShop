@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const productsFilePath = path.join(__dirname, '../views/users/productos.json')
+const productsFilePath = path.join(__dirname, '../views/products/productos.json')
 
 const products = {
     index: (req, res) => {
@@ -16,13 +16,13 @@ const products = {
         fs.writeFileSync(productsFilePath, JSON.stringify(filteredProducts, null, " "))
         res.redirect("/productos");
     },
-    
+
     detalle: (req, res) => {
         const productos = require('../views/products/productos.json')
-        let idProducto = productos.find(producto=>{
+        let idProducto = productos.find(producto => {
             return req.params.id == producto.id;
         })
-        res.render('productDetail',{producto:idProducto})
+        res.render('productDetail', { producto: idProducto })
     }
 }
 
