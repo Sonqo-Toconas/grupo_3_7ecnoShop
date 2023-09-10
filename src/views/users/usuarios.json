@@ -1,52 +1,60 @@
 [
-    {
-    "id": 1,
-    "nombre": "Nicolas",
-    "apellido": "Cruz",
-    "fechaDeNacimiento": "07/08/2005",
-    "telefono": 388291328,
-    "pais": "Argentina",
-    "provincia": "Jujuy",
-    "codigoPostal": "460Y",
-    "correo": "nicolascruz@gmail.com",
-    "contrasena": "contrasena",
-    "admin": true,
-    "dni": 46598460
-    },
-    {
-    "id": 2,
-    "nombre": "Luciano",
-    "apellido": "Toconas",
-    "fechaDeNacimiento": "09/03/2001",
-    "telefono": 388293328,
-    "pais": "Argentina",
-    "provincia": "Jujuy",
-    "codigoPostal": "460Y",
-    "correo": "lucianotoco@gmail.com",
-    "contrasena": "contrasena",
-    "admin": false,
-    "dni": 41039299
-    },
-    {
-    "id": 3,
-    "nombre": "Nayla",
-    "apellido": "Leiva",
-    "fechaDeNacimiento": "01/13/1989",
-    "telefono": 388294328,
-    "pais": "Argentina",
-    "provincia": "Jujuy",
-    "codigoPostal": "460Y",
-    "correo": "naylaleiva@gmail.com",
-    "contrasena": "contrasena",
-    "admin": true,
-    "dni": 42092029
-    },
-    {
-    "id": 4,
-    "nombre": "Sonqo",
-    "email": "sonqo@gmail.com",
-    "telefono": 123456,
-    "contraseña": "$2a$10$kBDefSnuYq5e9bpXLf/d0esj432WvTpv1caUccZYQ4BgqCqqJdwDa",
-    "imagen": "user-1693926212547.png"
-    }
+ {
+  "id": 1,
+  "nombre": "Nicolas",
+  "apellido": "Cruz",
+  "fechaDeNacimiento": "07/08/2005",
+  "telefono": 388291328,
+  "pais": "Argentina",
+  "provincia": "Jujuy",
+  "codigoPostal": "460Y",
+  "correo": "nicolascruz@gmail.com",
+  "contrasena": "contrasena",
+  "admin": true,
+  "dni": 46598460
+ },
+ {
+  "id": 2,
+  "nombre": "Luciano",
+  "apellido": "Toconas",
+  "fechaDeNacimiento": "09/03/2001",
+  "telefono": 388293328,
+  "pais": "Argentina",
+  "provincia": "Jujuy",
+  "codigoPostal": "460Y",
+  "correo": "lucianotoco@gmail.com",
+  "contrasena": "contrasena",
+  "admin": false,
+  "dni": 41039299
+ },
+ {
+  "id": 3,
+  "nombre": "Nayla",
+  "apellido": "Leiva",
+  "fechaDeNacimiento": "01/13/1989",
+  "telefono": 388294328,
+  "pais": "Argentina",
+  "provincia": "Jujuy",
+  "codigoPostal": "460Y",
+  "correo": "naylaleiva@gmail.com",
+  "contrasena": "contrasena",
+  "admin": true,
+  "dni": 42092029
+ },
+ {
+  "id": 4,
+  "nombre": "Sonqo",
+  "email": "sonqo@gmail.com",
+  "telefono": 123456,
+  "contraseña": "$2a$10$kBDefSnuYq5e9bpXLf/d0esj432WvTpv1caUccZYQ4BgqCqqJdwDa",
+  "imagen": "user-1693926212547.png"
+ },
+ {
+  "id": 5,
+  "nombre": "awdawd",
+  "email": "aaaaa@gmai.com",
+  "telefono": 1213,
+  "contraseña": "$2a$10$L5q6PA1/iwhkCLXqWAHsqOdAWXC9fl6JIghIG.b9qypc0EWICs/um",
+  "imagen": "default.png"
+ }
 ]

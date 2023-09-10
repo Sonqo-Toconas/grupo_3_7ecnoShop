@@ -147,3 +147,12 @@ body {
         75%{color: rgb(0, 247, 255);}
     }
 }
+
+.mensajeError {
+    color: #ffffff;
+    font-size: 15px;
+    margin: 5px 5%;
+    display: inline-block;
+    border: 2px black solid;
+    padding: 5px;
+}
