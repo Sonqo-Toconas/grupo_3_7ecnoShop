@@ -1,6 +1,6 @@
 const userPanel = {
-    index:(req,res)=>{
-        return res.render('userPanel');
+    index: (req, res) => {
+        res.render('userPanel');
     }
 }
 

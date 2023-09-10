@@ -9,13 +9,13 @@ const { error } = require('console');
 
 
 const controller = {
-    login:(req,res)=>{
+    login: (req, res) => {
         res.render('login', {
             mensajeP: false,
             mensajeEmail: false,
         })
     },
-    processLogin:(req,res)=>{
+    processLogin: (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
             let usuario = users.buscarPorPropiedad('email', req.body.email)
