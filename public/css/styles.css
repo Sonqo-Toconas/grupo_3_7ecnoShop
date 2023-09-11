@@ -1,3 +1,82 @@
+/* HEADER */
+
+/* FOOTER */
+.footer-box {
+    background-color: black;
+    color: white;
+    padding: 10px, 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-box-1 {
+    box-sizing: border-box;
+    display: block;
+    width: 40%;
+    font-family: 'Poppins', sans-serif;
+}
+
+#footer-logo {
+    font-size: 40px;
+    padding: 10px;
+}
+
+.footer-title-logo {
+    font-size: 40px;
+    text-align: center;
+}
+
+.footer-box-2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-box-3 {}
+
+.footer-title-2 {}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-box-4 {
+    
+}
+
+.footer-title-3 {
+    font-size: 22px;
+}
+
+.footer-form-suscription {}
+
+.footer-email-suscription {
+    
+}
+
+#footer-button-suscription {}
+
+.footer-social {
+    
+}
+
+.footer-button-social {
+
+}
+
+#footer-icon-social {
+}
+
+.footer-box-5 {
+    font-family: 'Poppins', 'sans-serif';
+    font-style: italic;
+    font-size: 14px;
+    padding: 0.4rem;
+    text-align: center;
+}
+
 * {
     margin: 0;
     padding: 0;
