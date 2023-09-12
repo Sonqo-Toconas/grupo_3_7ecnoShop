@@ -50,14 +50,6 @@
   "imagen": "user-1693926212547.png"
  },
  {
-  "id": 5,
-  "nombre": "awdawd",
-  "email": "aaaaa@gmai.com",
-  "telefono": 1213,
-  "contraseña": "$2a$10$L5q6PA1/iwhkCLXqWAHsqOdAWXC9fl6JIghIG.b9qypc0EWICs/um",
-  "imagen": "default.png"
- },
- {
   "id": 6,
   "nombre": "Carina Cruz",
   "email": "karina.bel.cruz.1234@gmail.com",

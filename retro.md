@@ -141,14 +141,15 @@ Deberiamos dejar de retrasarnos con los temas
 Deberiamos dejar de confiarnos mucho y tratar de organizar nuestros tiempos para seguir avanzando 
 - **Cruz Max**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
-    
+    deberiamos replantear mas ideas para mejorar el front
     - ¿Qué deberiamos hacer más?<br>
-    
+    deberiamos mejorar la comunicacion y organizacion grupal
     - ¿Qué deberíamos seguir haciendo?<br>
-    
+    deberiamos continuar aportanto lo necesario 
     - ¿Qué deberiamos hacer menos?<br>
-    
+    deberiamos dejar de atrasarnos con algunos temas
     - ¿Qué deberíamos dejar de hacer?<br>
+    deberiamos dejar de presentar las tareas al ultimo momento
 
 - **Leiva Nayla**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
