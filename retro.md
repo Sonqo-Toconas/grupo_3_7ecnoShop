@@ -125,3 +125,61 @@ Seguir teniendo la buena comunicacion que tenemos
 Dejar las cosas para despues, a veces se nos va de las manos
     - ¿Qué deberíamos dejar de hacer?<br>
 Nada por el momento, no llevamos conductas negativas
+
+## Tercer Sprint
+
+- **Cruz Carina**<br>
+    - ¿Qué deberiamos comenzar a hacer?<br>
+    
+    - ¿Qué deberiamos hacer más?<br>
+    
+    - ¿Qué deberíamos seguir haciendo?<br>
+    
+    - ¿Qué deberiamos hacer menos?<br>
+    
+    - ¿Qué deberíamos dejar de hacer?<br>
+
+- **Cruz Max**<br>
+    - ¿Qué deberiamos comenzar a hacer?<br>
+    
+    - ¿Qué deberiamos hacer más?<br>
+    
+    - ¿Qué deberíamos seguir haciendo?<br>
+    
+    - ¿Qué deberiamos hacer menos?<br>
+    
+    - ¿Qué deberíamos dejar de hacer?<br>
+
+- **Leiva Nayla**<br>
+    - ¿Qué deberiamos comenzar a hacer?<br>
+    
+    - ¿Qué deberiamos hacer más?<br>
+    
+    - ¿Qué deberíamos seguir haciendo?<br>
+    
+    - ¿Qué deberiamos hacer menos?<br>
+    
+    - ¿Qué deberíamos dejar de hacer?<br>
+
+- **Rodríguez Rocio**<br>
+    - ¿Qué deberiamos comenzar a hacer?<br>
+    
+    - ¿Qué deberiamos hacer más?<br>
+    
+    - ¿Qué deberíamos seguir haciendo?<br>
+    
+    - ¿Qué deberiamos hacer menos?<br>
+    
+    - ¿Qué deberíamos dejar de hacer?<br>
+    
+- **Toconas Luciano**<br>
+    - ¿Qué deberiamos comenzar a hacer?<br>
+Podriamos comenzar a tener momentos de reflexion
+    - ¿Qué deberiamos hacer más?<br>
+Tener momentos de descanso despues de trabajar en grupo
+    - ¿Qué deberíamos seguir haciendo?<br>
+Seguir teniendo el buen desarrollo que tenemos como grupo
+    - ¿Qué deberiamos hacer menos?<br>
+Dejar que el tiempo pase y no avanzar mientras tanto
+    - ¿Qué deberíamos dejar de hacer?<br>
+Por el momento no hay malos habitos
