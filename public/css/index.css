@@ -93,6 +93,10 @@ main {
     margin-top: 20px;
 }
 
+.product p {
+    padding: 10px 0;
+}
+
 @media (min-width:380px) {
     .label-order select option:hover{
         background-color: var(--celeste-blaco);

@@ -1,0 +1,22 @@
+<%- include('./partials/head') %>
+    <link rel="stylesheet" href="css/productos.css" />
+    </head>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <section class="product-conteiner">
+                <% for( let i = 0; i < productos.length; i++ ) { %>
+                    <div class="product">
+                        <img src="/images/celulares/<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>"
+                            class="smartphone" />
+                        <h2 class="tittle-for-product"><%= productos[i].nombre %></h2>
+                        <p>$<%= productos[i].precio %></p>
+                    </div>
+                <% } %>
+                </section>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+    </html>

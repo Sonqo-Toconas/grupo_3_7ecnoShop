@@ -2,76 +2,73 @@
     <link rel="stylesheet" href="css/userPanel.css">
     </head>
 
-    <%i=2%>
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <div class="carteluser">
+                    <p class="informacionCartel">Bienvenido
+                    </p>
+                </div>
 
-        <body>
-            <%- include('./partials/header') %>
-                <main>
+
+                <div class="carteluser">
+                    <p class="informacionCartel">Administrar</p>
+                    <div class="botones2">
+                        <a href="/crear" class="botonuser">Subir Producto</a>
+                        <a href="/editar" class="botonuser">Editar Producto</a>
+                    </div>
+                </div>
+
+
+                <div class="carteluser">
+                    <p class="informacionCartel">Información de la cuenta</p>
+
+                    <div class="contenedor-informacion">
+                        <div class="informacionCuenta1">
+                            <p>Nombre</p>
+                            <p class="informacionCuenta2">
+
+                            </p>
+                        </div>
+
+                        <div class="informacionCuenta1">
+                            <p>Correo</p>
+                            <p class="informacionCuenta2">
+
+                            </p>
+
+                        </div>
+
+                        <div class="informacionCuenta1">
+                            <p>Numero</p>
+                            <p class="informacionCuenta2">
+
+                            </p>
+
+                        </div>
+
+                        <div class="informacionCuenta1">
+                            <p>Contraseña</p>
+                            <p class="informacionCuenta2">
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
                     <div class="carteluser">
-                        <p class="informacionCartel">Bienvenido <%=usuarios[i].nombre%>
-                        </p>
+                        <p class="informacionCartel">Productos que publicaste</p>
                     </div>
 
-                    <%if (usuarios[i].admin==true){%>
 
                         <div class="carteluser">
-                            <p class="informacionCartel">Administrar</p>
-                            <div class="botones2">
-                                <a href="/crear" class="botonuser">Subir Producto</a>
-                                <a href="/editar" class="botonuser">Editar Producto</a>
-                            </div>
+                            <p class="informacionCartel">Productos que compraste</p>
                         </div>
-                        <%}%>
+            </main>
 
-                            <div class="carteluser">
-                                <p class="informacionCartel">Información de la cuenta</p>
+            <%- include('./partials/footer') %>
 
-                                <div class="contenedor-informacion">
-                                    <div class="informacionCuenta1">
-                                        <p>Nombre</p>
-                                        <p class="informacionCuenta2">
-                                            <%=usuarios[i].nombre%>
-                                        </p>
-                                    </div>
+    </body>
 
-                                    <div class="informacionCuenta1">
-                                        <p>Correo</p>
-                                        <p class="informacionCuenta2">
-                                            <%=usuarios[i].correo%>
-                                        </p>
-
-                                    </div>
-
-                                    <div class="informacionCuenta1">
-                                        <p>Numero</p>
-                                        <p class="informacionCuenta2">
-                                            <%=usuarios[i].telefono%>
-                                        </p>
-
-                                    </div>
-
-                                    <div class="informacionCuenta1">
-                                        <p>Contraseña</p>
-                                        <p class="informacionCuenta2">
-                                            <%=usuarios[i].contrasena%>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <%if (usuarios[i].admin==true){%>
-                                <div class="carteluser">
-                                    <p class="informacionCartel">Productos que publicaste</p>
-                                </div>
-                                <%}%>
-
-                                    <div class="carteluser">
-                                        <p class="informacionCartel">Productos que compraste</p>
-                                    </div>
-                </main>
-
-                <%- include('./partials/footer') %>
-
-        </body>
-
-        </html>
+    </html>

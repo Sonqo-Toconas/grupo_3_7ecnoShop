@@ -1,10 +1,7 @@
-const express = require('express');
-const usuarios = require('../views/users/usuarios');
-
-let userPanelController = {
+const userPanel = {
     index: (req, res) => {
-        res.render('userPanel', { 'usuarios': usuarios })
+        res.render('userPanel');
     }
-};
+}
 
-module.exports = userPanelController;
+module.exports = userPanel

@@ -5,5 +5,4 @@ const productEdition = require('../controllers/productEditionControllers');
 
 router.get('/', productEdition.index);
 
-
 module.exports = router

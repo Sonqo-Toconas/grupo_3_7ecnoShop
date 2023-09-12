@@ -12,15 +12,25 @@
             <h2>Iniciar sesion</h2>
             <p>Inicie sesion para acceder a su cuenta</p>
           </div>
-          <form>
+          <form action="" method="post">
             <div class="formulario">
               <div>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" id="email" value="<%=locals.old ? old.email : null %>"/>
+                <% if (mensajeEmail) { %>
+                  <p class="mensajeError">
+                  <%= mensajeEmail %>
+                </p>
+                <% } %>
               </div>
               <div>
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" />
+                <% if (mensajeP) { %>
+                  <p class="mensajeError">
+                  <%= mensajeP %>
+                </p>
+                <% } %>
               </div>
             </div>
             <button class="boton-IniSesion">Iniciar Sesion</button>
@@ -29,6 +39,7 @@
             <p><a href="#">Olvidaste tu Contraseña</a></p>
             <p><a href="/registro">Todavia no tiene cuenta?</a></p>
           </div>
+              
           <div class="botones">
             <button class="icon-G"><i class="fa-brands fa-google" id="google"></i></button>
             <button class="icon-F"><i class="fa-brands fa-facebook" id="facebook"></i></button>
