@@ -130,15 +130,15 @@ Nada por el momento, no llevamos conductas negativas
 
 - **Cruz Carina**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
-    
+  Por ahora yo diria que nada
     - ¿Qué deberiamos hacer más?<br>
-    
+  Deberíamos ponerle mas entusiasmo
     - ¿Qué deberíamos seguir haciendo?<br>
-    
+Seguir con la cominicacion y organizacion 
     - ¿Qué deberiamos hacer menos?<br>
-    
+Deberiamos dejar de retrasarnos con los temas   
     - ¿Qué deberíamos dejar de hacer?<br>
-
+Deberiamos dejar de confiarnos mucho y tratar de organizar nuestros tiempos para seguir avanzando 
 - **Cruz Max**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
     
