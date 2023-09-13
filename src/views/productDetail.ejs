@@ -73,6 +73,19 @@
                     </article>
                 </div>
 
+                <div class="carteluser">
+                    <p class="informacionCartel">Administrar</p>
+                    <div class="botones2">
+                        <a href="/producto/editar/<%= producto.id %>" class="botonuser">Editar Producto</a>
+                        <form action="/producto/delete/<%= producto.id %>?_method=DELETE" method="POST">
+							<button type="submit" class="botonuser">Eliminar</button>
+						</form>
+                    </div>
+                </div>
+
+               
+
+
                 <!--Informacion-->
                 <div class="informacion-main">
                     <h2>Informacion del producto</h2>

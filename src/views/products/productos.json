@@ -48,24 +48,11 @@
  },
  {
   "id": 4,
-  "imagen": "producto.png"
- },
- {
-  "id": 5,
-  "nombre": "Celular",
-  "descripcion": "asdasd",
-  "categoria": "Celulares",
-  "color": "asdasd",
-  "price": "56545",
-  "imagen": "producto.png"
- },
- {
-  "id": 6,
-  "nombre": "Celular",
-  "descripcion": "asdasd",
-  "categoria": "Celulares",
-  "color": "asdasd",
-  "price": "56545",
+  "nombre": "Ejemplo funcional",
+  "descripcion": "Primer agregado",
+  "categoria": "Accesorios",
+  "color": "Negro",
+  "price": "999",
   "imagen": "producto.png"
  }
 ]

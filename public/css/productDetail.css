@@ -178,3 +178,40 @@ h2 {
     padding: 10px;
     align-items: center;
 }
+
+.botones2 {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.carteluser {
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+    padding-bottom: 1.5rem;
+    max-width: 500px;
+    border: 5px solid #f3f3f3;
+    border-radius: 10px;
+    color: white;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
+    font-size: 20px;
+    box-shadow: 0px 0px 15px 2px;
+}
+
+.botonuser {
+    padding: 5px 10px;
+    width: 30%;
+    border: none;
+    border-radius: 5px;
+    transition: all 450ms;
+    color: white;
+    background-color: #1259c3;
+    font-size: 16px;
+}
+
+.botonuser:hover {
+    background-color: #0022AA;
+}

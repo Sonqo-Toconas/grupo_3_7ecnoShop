@@ -29,5 +29,6 @@ router.get('/registro', userControllers.registro);
 router.post('/registro', fileUpload.single('imagen'), validaciones, userControllers.procesoCrear);
 router.get('/login', userControllers.login);
 router.post('/login', userControllers.processLogin);
+router.get('/carrito', userControllers.carrito);
 
 module.exports = router;
