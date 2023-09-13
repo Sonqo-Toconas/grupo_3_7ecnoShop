@@ -1,22 +1,12 @@
 [
  {
-  "nombre": "Samsung a04e",
-  "gama": "media",
-  "descripcion": "telefono samsung de buena calidad, de la familia A0 con buena calificacion",
-  "modelo": "X203OS",
   "id": 1,
-  "precio": 120000,
-  "frabricante": "Samsung",
-  "oferta": true,
-  "calificacion": 4.3,
-  "ram": "4gb",
-  "bateria": "5000mAh",
-  "almacenamiento": "128gb",
-  "procesador": "snapdragon 480",
+  "nombre": "producto",
+  "precio": 990000,
+  "descripcion": "5555555555555555555555555ty",
   "imagen": "samsung/samsung-galaxi-a04e-frente-negro.png",
-  "imagen2": "samsung/samsung-galaxi-a04e-espalda-negro.png",
-  "imagen3": "samsung/samsung-galaxi-a04e-perfil-negro.png",
-  "ventas": 23
+  "categoria": "Accesorios",
+  "color": "rojo"
  },
  {
   "nombre": "Motorola g52",
