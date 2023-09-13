@@ -56,18 +56,20 @@
  },
  {
   "id": 5,
+  "nombre": "Celular",
+  "descripcion": "asdasd",
+  "categoria": "Celulares",
+  "color": "asdasd",
+  "price": "56545",
   "imagen": "producto.png"
  },
  {
   "id": 6,
-  "imagen": "producto.png"
- },
- {
-  "id": 7,
-  "imagen": "producto.png"
- },
- {
-  "id": 8,
+  "nombre": "Celular",
+  "descripcion": "asdasd",
+  "categoria": "Celulares",
+  "color": "asdasd",
+  "price": "56545",
   "imagen": "producto.png"
  }
 ]

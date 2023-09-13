@@ -25,42 +25,45 @@ const products = {
         })
         res.render('productDetail', { producto: idProducto })
     },
+
     mostrarFormularioCreacion: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('creation');
     },
+    
     crear: (req, res) => {
-            const data = req.body;
+        const data = req.body;
 
-            if (req.file) {
-                var imagen = req.file.filename
-            } else {
-                var imagen = "producto.png"
-            }
+        if (req.file) {
+            var imagen = req.file.filename
+        } else {
+            var imagen = "producto.png"
+        }
 
-            const producto = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-            const nuevoProducto = {
-                id: producto[producto.length - 1].id + 1,
-                nombre: data.name,
-               // descripcion: data.description,
-                //categoria: data.category,
-              //  color: data.colors,
-               // price: data.price,
-                imagen: imagen
-            }
+        const producto = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        const nuevoProducto = {
+            id: producto[producto.length - 1].id + 1,
+            nombre: data.name,
+            descripcion: data.description,
+            categoria: data.category,
+            color: data.colors,
+            price: data.price,
+            imagen: imagen
+        }
 
-            producto.push(nuevoProducto);
-            fs.writeFileSync(productsFilePath, JSON.stringify(producto, null, " "))
-            res.redirect('/');
-        },
+        producto.push(nuevoProducto);
+        fs.writeFileSync(productsFilePath, JSON.stringify(producto, null, " "))
+        res.redirect('/');
+    },
 
-        editar:(req, res) => {
-            const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-            const producto = productos.find(producto =>{
-                return producto.id == req.params.id
-            });
+    editarProducto: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		const product = products.find(product => {
+			return product.id == req.params.id
+		});
 
-            res.render();
-    }}
+		res.render("/producto/editar", {editarProducto: productos});
+	}
+}
 
 module.exports = products

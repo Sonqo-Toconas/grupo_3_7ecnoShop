@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 <%- include('./partials/head') %>
     <link rel="stylesheet" href="css/productEdition.css">
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productEdition</title>
+    <link rel="stylesheet" href="/css/productEdition.css">
+>>>>>>> 9a04450197a3d7d8d7c6ca92ed2571d4ea1e51ed
 </head>
 <body>
     <%- include('./partials/header') %>
     <main>
         <div class="formulario">
             <h1 class>Editar producto</h1>
-            <form action="/editar-producto" method="POST">
+            <form action="/producto/editar" method="POST">
                 <div class>
                     <label for="newName">Nuevo nombre del producto:</label>
                     <input type="text" id="newName" name="newName" required>

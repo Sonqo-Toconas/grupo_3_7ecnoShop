@@ -50,19 +50,19 @@
   "imagen": "user-1693926212547.png"
  },
  {
-  "id": 5,
-  "nombre": "awdawd",
-  "email": "aaaaa@gmai.com",
-  "telefono": 1213,
-  "contraseña": "$2a$10$L5q6PA1/iwhkCLXqWAHsqOdAWXC9fl6JIghIG.b9qypc0EWICs/um",
-  "imagen": "default.png"
- },
- {
   "id": 6,
   "nombre": "Carina Cruz",
   "email": "karina.bel.cruz.1234@gmail.com",
   "telefono": 3885406933,
   "contraseña": "$2a$10$CwP0rxITXYplf4wPb4IcLei6FoA79xl9UdZ/QQUtvMZeINpaEvKXC",
+  "imagen": "default.png"
+ },
+ {
+  "id": 7,
+  "nombre": "Ejemplo",
+  "email": "Ejemplo@ejemplo.com",
+  "telefono": 12345,
+  "contraseña": "$2a$10$YNNR63/uJNKauOhKTFfn1.0y2PpDYsEW55sZqJtF3fUxD/8iSLBvm",
   "imagen": "default.png"
  }
 ]
