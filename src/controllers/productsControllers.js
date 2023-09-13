@@ -52,7 +52,15 @@ const products = {
             producto.push(nuevoProducto);
             fs.writeFileSync(productsFilePath, JSON.stringify(producto, null, " "))
             res.redirect('/');
-        }
-    }
+        },
+
+        editar:(req, res) => {
+            const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+            const producto = productos.find(producto =>{
+                return producto.id == req.params.id
+            });
+
+            res.render();
+    }}
 
 module.exports = products
