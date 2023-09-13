@@ -14,6 +14,8 @@
   "almacenamiento": "128gb",
   "procesador": "snapdragon 480",
   "imagen": "samsung/samsung-galaxi-a04e-frente-negro.png",
+  "imagen2": "samsung/samsung-galaxi-a04e-espalda-negro.png",
+  "imagen3": "samsung/samsung-galaxi-a04e-perfil-negro.png",
   "ventas": 23
  },
  {
@@ -31,6 +33,8 @@
   "almacenamiento": "64gb",
   "procesador": "mediatek 280",
   "imagen": "motorola/g52-azul-frente.png",
+  "imagen2": "motorola/g52-azul-espalda.png",
+  "imagen3": "motorola/g52-azul-perfil.png",
   "ventas": 3
  },
  {
@@ -48,6 +52,8 @@
   "almacenamiento": "128gb",
   "procesador": "snapdragon 480",
   "imagen": "xiaomi/Xiaomi-redmi-note-11-frente-negro.png",
+  "imagen2": "xiaomi/Xiaomi-redmi-note-11-espalda-negro.png",
+  "imagen3": "xiaomi/Xiaomi-redmi-note-11-perfil-negro.png",
   "ventas": 10
  },
  {

@@ -56,6 +56,14 @@ const products = {
         res.redirect('/');
     },
 
+    formularioEditar: (req, res) => {
+		const productos = require('../views/products/productos.json')
+        let idProducto = productos.find(producto => {
+            return req.params.id == producto.id;
+        })
+        res.render('productEdition', { producto: idProducto })
+	},
+
     editarProducto: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		const product = products.find(product => {
@@ -63,7 +71,6 @@ const products = {
 		});
 
 		res.render("/producto/editar", {editarProducto: productos});
-	}
 }
-
+}
 module.exports = products
