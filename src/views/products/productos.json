@@ -45,5 +45,14 @@
   "imagen2": "xiaomi/Xiaomi-redmi-note-11-espalda-negro.png",
   "imagen3": "xiaomi/Xiaomi-redmi-note-11-perfil-negro.png",
   "ventas": 10
+ },
+ {
+  "id": 4,
+  "nombre": "Ejemplo funcional",
+  "descripcion": "Primer agregado",
+  "categoria": "Accesorios",
+  "color": "Negro",
+  "price": "999",
+  "imagen": "producto.png"
  }
 ]

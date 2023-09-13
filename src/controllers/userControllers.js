@@ -1,12 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../views/users/usuarios.json')
+const productsFilePath = path.join(__dirname, '../views/products/productos.json')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 
 const usuario = {
     index: (req, res) => {
-        res.render('userPanel');
+        const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('userPanel', { products: users });
     },
 
     registro: (req, res) => {
@@ -93,8 +95,9 @@ const usuario = {
     },
 
     carrito: (req, res) => {
-        res.render('carrito');
-      },
+        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('productCart', { productos: productos });
+    },
 }
 
 module.exports = usuario
