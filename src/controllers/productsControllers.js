@@ -65,12 +65,33 @@ const products = {
 	},
 
     editarProducto: (req, res) => {
+		const data = req.body;
+
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		const product = products.find(product => {
+
+		const oldProduct = products.find(product => {
 			return product.id == req.params.id
 		});
 
-		res.render("/producto/editar", {editarProducto: productos});
-}
+		const editedProduct = {
+			id: oldProduct.id,
+			nombre: data.newName,
+			precio: parseInt(data.price),
+			descripcion: data.newDescription,
+			imagen: req.file ? req.file.filename : oldProduct.imagen,
+            categoria: data.category,
+            color: data.colors,
+		}
+
+		const index = products.findIndex(product => {
+			return product.id == req.params.id
+		})
+
+		products[index] = editedProduct;
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "))
+
+		res.redirect("/producto");
+    }
 }
 module.exports = products
