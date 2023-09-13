@@ -90,7 +90,11 @@ const usuario = {
                 mensajeEmail: 'email es invalido'
             })
         }
-    }
+    },
+
+    carrito: (req, res) => {
+        res.render('carrito');
+      },
 }
 
 module.exports = usuario

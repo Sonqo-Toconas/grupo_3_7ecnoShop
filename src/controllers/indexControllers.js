@@ -7,7 +7,7 @@ const controller = {
         })
         return res.render('index', { productos: productosDestacados });
     },
-    
+
     showAllProducts: (req, res) => {
         return res.render('producto', { productos: productos });
     }
