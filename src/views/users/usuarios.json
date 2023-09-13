@@ -1,68 +1,26 @@
 [
  {
-  "id": 1,
-  "nombre": "Nicolas",
-  "apellido": "Cruz",
-  "fechaDeNacimiento": "07/08/2005",
-  "telefono": 388291328,
-  "pais": "Argentina",
-  "provincia": "Jujuy",
-  "codigoPostal": "460Y",
-  "correo": "nicolascruz@gmail.com",
-  "contrasena": "contrasena",
-  "admin": true,
-  "dni": 46598460
- },
- {
-  "id": 2,
-  "nombre": "Luciano",
-  "apellido": "Toconas",
-  "fechaDeNacimiento": "09/03/2001",
-  "telefono": 388293328,
-  "pais": "Argentina",
-  "provincia": "Jujuy",
-  "codigoPostal": "460Y",
-  "correo": "lucianotoco@gmail.com",
-  "contrasena": "contrasena",
-  "admin": false,
-  "dni": 41039299
- },
- {
-  "id": 3,
-  "nombre": "Nayla",
-  "apellido": "Leiva",
-  "fechaDeNacimiento": "01/13/1989",
-  "telefono": 388294328,
-  "pais": "Argentina",
-  "provincia": "Jujuy",
-  "codigoPostal": "460Y",
-  "correo": "naylaleiva@gmail.com",
-  "contrasena": "contrasena",
-  "admin": true,
-  "dni": 42092029
- },
- {
-  "id": 4,
-  "nombre": "Sonqo",
-  "email": "sonqo@gmail.com",
-  "telefono": 123456,
-  "contraseña": "$2a$10$kBDefSnuYq5e9bpXLf/d0esj432WvTpv1caUccZYQ4BgqCqqJdwDa",
-  "imagen": "user-1693926212547.png"
- },
- {
-  "id": 6,
-  "nombre": "Carina Cruz",
-  "email": "karina.bel.cruz.1234@gmail.com",
-  "telefono": 3885406933,
-  "contraseña": "$2a$10$CwP0rxITXYplf4wPb4IcLei6FoA79xl9UdZ/QQUtvMZeINpaEvKXC",
-  "imagen": "default.png"
- },
- {
-  "id": 7,
+  "id": 0,
   "nombre": "Ejemplo",
   "email": "Ejemplo@ejemplo.com",
   "telefono": 12345,
   "contraseña": "$2a$10$YNNR63/uJNKauOhKTFfn1.0y2PpDYsEW55sZqJtF3fUxD/8iSLBvm",
   "imagen": "default.png"
+ },
+ {
+  "id": 1,
+  "nombre": "Goku ",
+  "email": "gokugamer09@gmail.com",
+  "telefono": 3912301,
+  "contraseña": "$2a$10$0kXIHuJTwAH89TX0B2sZ2.HD3mGKO9X0KGSaYow/d36EnM9eoNOV2",
+  "imagen": "user-1694576600311.webp"
+ },
+ {
+  "id": 2,
+  "nombre": "elber galarga",
+  "email": "elber388@gmail.com",
+  "telefono": 22992381,
+  "contraseña": "$2a$10$kmVcvP7WzFXbETqD5bjKkeRWql0hteqqRAC4gw5Yx0lnnxWFzaX7K",
+  "imagen": "user-1694576729557.webp"
  }
 ]

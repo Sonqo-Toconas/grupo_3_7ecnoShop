@@ -8,7 +8,7 @@ router.post('/crear', productsControllers.crear);
 router.get('/editar/:id', productsControllers.formularioEditar);
 router.get('/', productsControllers.index);
 router.delete('/delete/:id', productsControllers.delete);
-router.get('/:id', productsControllers.detalle);
+router.get('/detalle/:id', productsControllers.detalle);
 
 router.put('/editar/:id', productsControllers.editarProducto);
 
