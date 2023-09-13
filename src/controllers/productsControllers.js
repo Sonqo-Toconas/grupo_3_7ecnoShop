@@ -54,7 +54,15 @@ const products = {
         producto.push(nuevoProducto);
         fs.writeFileSync(productsFilePath, JSON.stringify(producto, null, " "))
         res.redirect('/');
-    }
+    },
+
+    formularioEditar: (req, res) => {
+		const productos = require('../views/products/productos.json')
+        let idProducto = productos.find(producto => {
+            return req.params.id == producto.id;
+        })
+        res.render('productEdition', { producto: idProducto })
+	}
 }
 
 module.exports = products
