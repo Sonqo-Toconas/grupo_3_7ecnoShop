@@ -6,5 +6,21 @@
   "telefono": 12345,
   "contraseña": "$2a$10$YNNR63/uJNKauOhKTFfn1.0y2PpDYsEW55sZqJtF3fUxD/8iSLBvm",
   "imagen": "default.png"
+ },
+ {
+  "id": 1,
+  "nombre": "Goku ",
+  "email": "gokugamer09@gmail.com",
+  "telefono": 3912301,
+  "contraseña": "$2a$10$0kXIHuJTwAH89TX0B2sZ2.HD3mGKO9X0KGSaYow/d36EnM9eoNOV2",
+  "imagen": "user-1694576600311.webp"
+ },
+ {
+  "id": 2,
+  "nombre": "elber galarga",
+  "email": "elber388@gmail.com",
+  "telefono": 22992381,
+  "contraseña": "$2a$10$kmVcvP7WzFXbETqD5bjKkeRWql0hteqqRAC4gw5Yx0lnnxWFzaX7K",
+  "imagen": "user-1694576729557.webp"
  }
 ]
