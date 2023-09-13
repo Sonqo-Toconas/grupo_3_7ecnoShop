@@ -15,7 +15,7 @@ const products = {
             return product.id != req.params.id
         })
         fs.writeFileSync(productsFilePath, JSON.stringify(filteredProducts, null, " "))
-        res.redirect("/productos");
+        res.redirect("/producto");
     },
 
     detalle: (req, res) => {
