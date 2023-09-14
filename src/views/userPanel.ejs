@@ -3,72 +3,83 @@
     </head>
 
     <body>
-        <%- include('./partials/header') %>
+        <section> <%- include('./partials/header') %>
+
             <main>
                 <div class="carteluser">
                     <p class="informacionCartel">Bienvenido
                     </p>
-                </div>
 
-
-                <div class="carteluser">
-                    <p class="informacionCartel">Administrar</p>
-                    <div class="botones2">
-                        <a href="/producto/crear" class="botonuser">Subir Producto</a>
-                        <a href="/producto/editar" class="botonuser">Editar Producto</a>
-                    </div>
-                </div>
-
-
-                <div class="carteluser">
-                    <p class="informacionCartel">Información de la cuenta</p>
-
-                    <div class="contenedor-informacion">
-                        <div class="informacionCuenta1">
-                            <p>Nombre</p>
-                            <p class="informacionCuenta2">
-
-                            </p>
-                        </div>
-
-                        <div class="informacionCuenta1">
-                            <p>Correo</p>
-                            <p class="informacionCuenta2">
-
-                            </p>
-
-                        </div>
-
-                        <div class="informacionCuenta1">
-                            <p>Numero</p>
-                            <p class="informacionCuenta2">
-
-                            </p>
-
-                        </div>
-
-                        <div class="informacionCuenta1">
-                            <p>Contraseña</p>
-                            <p class="informacionCuenta2">
-
-                            </p>
+                
+                                    <div class="carteluser">
+                        <p class="informacionCartel">Administrar</p>
+                        <div class="botones2">
+                            <a href="/producto/crear" class="botonuser">Subir Producto</a>
+                        <a href="/producto" class="botonuser">Editar Producto</a>
                         </div>
                     </div>
-                </div>
 
 
                     <div class="carteluser">
+                        <p class="informacionCartel">Información de la cuenta</p>
+
+                        <div class="contenedor-informacion">
+                            <div class="informacionCuenta1">
+                                <p>Nombre</p>
+                                <p class="informacionCuenta2">
+
+                                </p>
+                            </div>
+
+                            <div class="informacionCuenta1">
+                                <p>Correo</p>
+                                <p class="informacionCuenta2">
+                                </p>
+
+                            </div>
+
+                            <div class="informacionCuenta1">
+                                <p>Numero</p>
+                                <p class="informacionCuenta2">
+
+                                </p>
+
+                            </div>
+
+                            <div class="informacionCuenta1">
+                                <p>Contraseña</p>
+                                <p class="informacionCuenta2">
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carteluser">
                         <p class="informacionCartel">Productos que publicaste</p>
+                        <% products.forEach(product => { %>
+                            <div class="products-image">
+                                <img src="/images/celulares/<%= product.imagen %>" alt="image-product">
+                            </div>
+                        <div class="product-box">
+                                <p> <%= product.nombre %> </p>
+                                <p> <%= product.precio %> </p>
+                            </div>
+                       <% }); %>
+
                     </div>
 
 
-                        <div class="carteluser">
-                            <p class="informacionCartel">Productos que compraste</p>
+                    <div class="carteluser">
+                        <p class="informacionCartel">Productos que compraste</p>
+                        <div class="products-box">
+
                         </div>
-            </main>
+                    </div>
+                </main>
 
-            <%- include('./partials/footer') %>
-
+                <%- include('./partials/footer') %>
+        </section>
     </body>
 
     </html>

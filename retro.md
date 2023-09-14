@@ -154,15 +154,15 @@ Deberiamos dejar de confiarnos mucho y tratar de organizar nuestros tiempos para
 
 - **Leiva Nayla**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
-    
+    Organizarnos más.
     - ¿Qué deberiamos hacer más?<br>
-    
+    No estoy segura, creo que nada.
     - ¿Qué deberíamos seguir haciendo?<br>
-    
+    Comunicarnos más.
     - ¿Qué deberiamos hacer menos?<br>
-    
+    Confiarnos con los tiempos.
     - ¿Qué deberíamos dejar de hacer?<br>
-
+    Dejar todo a última hora.
 - **Rodríguez Rocio**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
     
