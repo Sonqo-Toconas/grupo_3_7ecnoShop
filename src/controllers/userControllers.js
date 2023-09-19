@@ -57,7 +57,7 @@ const usuario = {
 
     processLogin: (req, res) => {
         let buscarPorPropiedad = function (propiedad, texto) {
-            let usuarios = this.datos()
+            let usuarios = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
             let usuarioEncontrado = usuarios.find(usuario => usuario[propiedad] == texto)
             return usuarioEncontrado
         }
