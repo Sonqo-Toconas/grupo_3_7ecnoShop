@@ -22,5 +22,13 @@
   "telefono": 22992381,
   "contraseña": "$2a$10$kmVcvP7WzFXbETqD5bjKkeRWql0hteqqRAC4gw5Yx0lnnxWFzaX7K",
   "imagen": "user-1694576729557.webp"
+ },
+ {
+  "id": 3,
+  "nombre": "Sonqo",
+  "email": "sonqo@gmail.com",
+  "telefono": 123456,
+  "contraseña": "$2a$10$ICT9EivGTqiYfZ/I8ud50.kXiPe/zbQW4Ul2nAz5u9v8xAhPqdVNG",
+  "imagen": "default.png"
  }
 ]

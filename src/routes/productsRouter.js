@@ -10,9 +10,4 @@ router.put('/editar/:id', productsControllers.editarProducto);
 router.get('/detalle/:id', productsControllers.detalle);
 router.delete('/delete/:id', productsControllers.delete);
 
-//router.post('/agregar-al-carrito/:id', productsControllers.agregarAlCarrito);
-
-const middleware = require ('../middlewares/authMiddleware')
-router.get('/carrito', middleware , productsControllers.mostrarCarrito);
-
 module.exports = router;

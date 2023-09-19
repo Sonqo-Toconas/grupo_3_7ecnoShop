@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const userControllers = require('../controllers/userControllers');
+const middleware = require('../middlewares/authMiddleware')
 const multer = require('multer');
 const { body } = require('express-validator')
 
@@ -29,6 +30,8 @@ router.get('/registro', userControllers.registro);
 router.post('/registro', fileUpload.single('imagen'), validaciones, userControllers.procesoCrear);
 router.get('/login', userControllers.login);
 router.post('/login', userControllers.processLogin);
-router.get('/carrito', userControllers.carrito);
+router.get('/carrito', middleware, userControllers.carrito);
+
+//router.post('/agregar-al-carrito/:id', productsControllers.agregarAlCarrito);
 
 module.exports = router;

@@ -1,12 +1,12 @@
-const isLoggedIn = (req, res, next) => {
-    if (req.session.isEmpty) {
-      
-      res.redirect('/usuario/login');
-      next()  
-    }
-    else{
-    next()
-    }
-  }
+const express = require('express')
 
-  module.exports = isLoggedIn
+const isLoggedIn = (req, res, next) => {
+  const user = req.user;
+  if (!user) {
+    res.redirect('/usuario/login');
+  } else {
+    next();
+  }
+};
+
+module.exports = isLoggedIn
