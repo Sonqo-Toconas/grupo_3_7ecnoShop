@@ -92,6 +92,23 @@ const products = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "))
 
         res.redirect("/producto");
-    }
+    },
+
+    agregarAlCarrito : (req, res) => {
+        const productId = req.params.id;
+        const carrito = req.session.carrito || [];
+        carrito.push(productId); 
+        req.session.carrito = carrito; 
+        res.redirect('/carrito'); 
+      },
+      
+    mostrarCarrito: (req, res) => {
+        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        const carrito = req.session.carrito || [];
+        const productosEnCarrito = productos.filter(producto => {
+          return carrito.includes(producto.id);
+        });
+        res.render('productCart', { productos: productosEnCarrito });
+      }
 }
 module.exports = products
