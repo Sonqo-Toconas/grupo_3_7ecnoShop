@@ -6,6 +6,9 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 
 const usuario = {
+    datos: function(){
+        return JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    },
     index: (req, res) => {
         const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('userPanel', { products: users });
