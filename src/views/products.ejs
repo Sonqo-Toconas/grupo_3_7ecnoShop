@@ -5,12 +5,28 @@
     <body>
         <%- include('./partials/header') %>
             <main>
+                <section class="conteiner-filter">
+                    <h3>Filtre su busqueda</h3>
+                    <label for="order" class="label-order">
+                        <select name="order" id="order">
+                            <option value disabled selected>Elige el orden</option>
+                            <option value="higher-price">Mayor precio</option>
+                            <option value="lower-price">Menor precio</option>
+                            <option value="on-sale">En ofertas</option>
+                            <option value="latest">Recientes</option>
+                        </select>
+                    </label>
+                    <label for="range-price" class="label-range">
+                        Rango de precio
+                        <input type="range" />
+                    </label>
+                </section>
                 <section class="product-conteiner">
                     <% for( let i=0; i < productos.length; i++ ) { %>
                         <div class="product">
                             <a href="/producto/detalle/<%=productos[i].id%>">
-                            <img src="/images/celulares/<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>"
-                                class="smartphone" />
+                                <img src="/images/celulares/<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>"
+                                    class="smartphone" />
                             </a>
                             <h2 class="tittle-for-product">
                                 <%= productos[i].nombre %>
