@@ -4,6 +4,10 @@ body {
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .contenedor-main {
     border: 15px rgb(0,212,255,1) solid;
     background: radial-gradient(circle, rgba(9,21,130,1) 0%, rgba(9,21,130,1) 0%, rgba(0,212,255,1) 100%);
