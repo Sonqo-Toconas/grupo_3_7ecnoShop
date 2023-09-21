@@ -60,11 +60,11 @@ const usuario = {
 
     processLogin: (req, res) => {
         let buscarPorPropiedad = function (propiedad, texto) {
-            let usuarios = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+            let usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+            console.log(usuario)
             let usuarioEncontrado = usuarios.find(usuario => usuario[propiedad] == texto)
             return usuarioEncontrado
         }
-
         let errors = validationResult(req)
         if (errors.isEmpty()) {
             let usuario = buscarPorPropiedad('email', req.body.email)
