@@ -7,19 +7,18 @@
             <main>
                 <section class="conteiner-filter">
                     <h3>Filtre su busqueda</h3>
+                    <form action="/producto" method="post">
                     <label for="order" class="label-order">
                         <select name="order" id="order">
                             <option value disabled selected>Elige el orden</option>
-                            <option value="higher-price">Mayor precio</option>
-                            <option value="lower-price">Menor precio</option>
-                            <option value="on-sale">En ofertas</option>
-                            <option value="latest">Recientes</option>
+                            <option value="mayor-precio">Mayor precio </option>
+                            <option value="menor-precio">Menor precio</option>
+                            <option value="ofertas">En ofertas</option>
+                            <option value="ventas">Ventas</option>
                         </select>
+                        <input type="submit" value="aceptar" class="boton-filtro">
                     </label>
-                    <label for="range-price" class="label-range">
-                        Rango de precio
-                        <input type="range" />
-                    </label>
+                </form>
                 </section>
                 <section class="product-conteiner">
                     <% for( let i=0; i < productos.length; i++ ) { %>
@@ -31,7 +30,7 @@
                             <h2 class="tittle-for-product">
                                 <%= productos[i].nombre %>
                             </h2>
-                            <p>$<%= productos[i].precio %>
+                            <p>$<%= productos[i].price %>
                             </p>
                         </div>
                         <% } %>
@@ -39,5 +38,4 @@
             </main>
             <%- include('./partials/footer') %>
     </body>
-
     </html>

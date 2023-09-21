@@ -29,7 +29,11 @@ main {
     flex-direction: column;
     align-items: center;
 }
-
+.label-order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .label-order select {
     margin-bottom: 10px;
     border: 2px solid white;
@@ -43,16 +47,15 @@ main {
     outline: none;
 }
 
-.label-range {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.label-range input {
-    padding: 10px;
-    color: #4FC3F7;
-    transition: all 400ms;
+.boton-filtro {
+    border: 2px solid white;
+    max-width: 160px;
+    background-color: var(--celeste-claro);
+    color: white;
+    border-radius: 30px;
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
 }
 
 .product {

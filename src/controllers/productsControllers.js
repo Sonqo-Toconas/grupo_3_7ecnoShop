@@ -9,6 +9,57 @@ const products = {
         res.render('products', { productos: productos });
     },
 
+    filtrosIndex:(req, res) => {
+        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let valor = req.body.order;
+        switch (valor) {
+            case 'mayor-precio':
+                productos.sort(function(a, b){
+                    if (a.price < b.price) {
+                        return 1
+                    }
+                    if (a.price > b.price) {
+                        return -1
+                    }
+                    return 0
+                })
+                res.render('products',{ productos: productos})
+                break;
+            case 'menor-precio':
+                productos.sort(function(a, b){
+                    if (a.price > b.price) {
+                        return 1
+                    }
+                    if (a.price < b.price) {
+                        return -1
+                    }
+                    return 0
+                })
+                res.render('products',{ productos: productos})
+                break;
+            case 'ofertas':
+                let productosEnOfertas = productos.filter(producto =>{
+                    return producto.oferta == true
+                })
+                res.render('products',{ productos: productosEnOfertas})
+                break;
+            case 'ventas':
+                productos.sort(function(a, b){
+                    if (a.ventas < b.ventas) {
+                        return 1
+                    }
+                    if (a.ventas > b.ventas) {
+                        return -1
+                    }
+                    return -1
+                })
+                res.render('products',{ productos: productos})
+                break;
+            default:
+                break;
+        }
+    },
+
     delete: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         const filteredProducts = productos.filter(product => {
