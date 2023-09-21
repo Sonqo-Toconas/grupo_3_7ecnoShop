@@ -12,7 +12,7 @@
                     <article class="cajagrande1">
                         <div class="caja">
                             <h1><%= producto.nombre %></h1>
-                            <h3>Precio: <br>$<%= producto.precio %></h3>
+                            <h3>Precio: <br>$<%= producto.price%></h3>
                             <div class="desplegable">
                                 <select name="forma" id="forma">
                                     <option disabled selected="formas de pago">Formas de Pago</option>
@@ -99,32 +99,17 @@
                         <div class="flecha">
                             <i class="fa-solid fa-chevron-left"></i>
                         </div>
-
                         <div class="card-list-products">
-                            <div class="card">
-                                <img class="img2" src="images/celulares/samsung/samsung-a14-frente-negro.png"
-                                    alt=" samsung galaxy A14">
-                                <div class="cardPrice">
-                                    <h3>Samsung Galaxy A14</h3>
-                                    <p class="p">Precio: $94.999</p>
+                            <% for( let i = 0; i < otrosProductos.length; i++ ) { %>
+                                <div class="card">
+                                    <img class="img2" src="/images/celulares/<%= otrosProductos[i].imagen%>"
+                                        alt="<%= otrosProductos[i].nombre %>">
+                                    <div class="cardPrice">
+                                        <h3>$<%= otrosProductos[i].nombre %></h3>
+                                        <p class="p">$<%= otrosProductos[i].price %></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <img class="img2" src="images/celulares/xiaomi/Xiaomi-redmi-note-11-frente-negro.png"
-                                    alt=" xiaomi redmi note 11">
-                                <div class="cardPrice">
-                                    <h3>Xiaomi Redmi Note 11</h3>
-                                    <p class="p">Precio: $85999</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img class="img2" src="images/celulares/motorola/Motorola-moto-g72-frente-blanco.png"
-                                    alt=" motorola moto g72">
-                                <div class="cardPrice">
-                                    <h3>Motorola Moto G72</h3>
-                                    <p class="p">Precio: $125.999</p>
-                                </div>
-                            </div>
+                            <% } %>
                         </div>
                         <div class="flecha">
                             <i class="fa-solid fa-chevron-right"></i>

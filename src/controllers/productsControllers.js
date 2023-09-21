@@ -74,7 +74,10 @@ const products = {
         let idProducto = productos.find(producto => {
             return req.params.id == producto.id;
         })
-        res.render('productDetail', { producto: idProducto })
+        let otrosProductos = productos.filter(producto =>{
+            return req.params.id != producto.id
+        })
+        res.render('productDetail', { producto: idProducto, otrosProductos: otrosProductos})
     },
 
     mostrarFormularioCreacion: (req, res) => {

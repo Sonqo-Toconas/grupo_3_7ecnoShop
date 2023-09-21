@@ -61,7 +61,6 @@ const usuario = {
     processLogin: (req, res) => {
         let buscarPorPropiedad = function (propiedad, texto) {
             let usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-            console.log(usuario)
             let usuarioEncontrado = usuarios.find(usuario => usuario[propiedad] == texto)
             return usuarioEncontrado
         }
@@ -71,6 +70,7 @@ const usuario = {
             if (usuario) {
                 let validadContra = bcrypt.compareSync(req.body.password, usuario.contraseña);
                 if (validadContra) {
+                    req.session.userLogin = true
                     return res.redirect('/')
                 } else {
                     return res.render('login', {
