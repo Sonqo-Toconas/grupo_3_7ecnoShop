@@ -185,3 +185,38 @@ Seguir teniendo el buen desarrollo que tenemos como grupo
 Dejar que el tiempo pase y no avanzar mientras tanto
     - ¿Qué deberíamos dejar de hacer?<br>
 Por el momento no hay malos habitos
+
+## Cuarto Sprint
+
+- **Cruz Carina**<br>
+    - ¿Qué deberiamos comenzar a hacer?<br>
+    - ¿Qué deberiamos hacer más?<br>
+    - ¿Qué deberíamos seguir haciendo?<br>
+    - ¿Qué deberiamos hacer menos?<br>
+    - ¿Qué deberíamos dejar de hacer?<br>
+
+- **Cruz Max**<br>
+    - ¿Qué deberiamos comenzar a hacer?<br>
+    - ¿Qué deberiamos hacer más?<br>
+    - ¿Qué deberíamos seguir haciendo?<br>
+    - ¿Qué deberiamos hacer menos?<br>
+    - ¿Qué deberíamos dejar de hacer?<br>
+
+- **Leiva Nayla**<br>
+    - ¿Qué deberiamos comenzar a hacer?<br>
+    - ¿Qué deberiamos hacer más?<br>
+    - ¿Qué deberíamos seguir haciendo?<br>
+    - ¿Qué deberiamos hacer menos?<br>
+    - ¿Qué deberíamos dejar de hacer?<br>
+    
+- **Toconas Luciano**<br>
+    - ¿Qué deberiamos comenzar a hacer?<br>
+Nada por el momento, vamos bien como equipo
+    - ¿Qué deberiamos hacer más?<br>
+Quizas pensar en como agregar mas funciones
+    - ¿Qué deberíamos seguir haciendo?<br>
+Llevarnos bien como grupo
+    - ¿Qué deberiamos hacer menos?<br>
+Dudar en guardar el codigo con errores
+    - ¿Qué deberíamos dejar de hacer?<br>
+Por el momento llevamos conductas positivas
