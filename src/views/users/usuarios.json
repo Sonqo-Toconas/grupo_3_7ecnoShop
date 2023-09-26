@@ -30,5 +30,13 @@
   "telefono": 123456,
   "contraseña": "$2a$10$ICT9EivGTqiYfZ/I8ud50.kXiPe/zbQW4Ul2nAz5u9v8xAhPqdVN",
   "imagen": "default.png"
+ },
+ {
+  "id": 4,
+  "nombre": "Nayla Leiva",
+  "email": "naylaaixa8990@gmail.com",
+  "telefono": 543885708554,
+  "contraseña": "$2a$10$N5YZDqYkVLRj50JMj6uK8.RU4.9V7x7Fbny635SJXuJobLbn/BK3q",
+  "imagen": "user-1695437438016.jpg"
  }
 ]
