@@ -30,5 +30,45 @@
   "telefono": 123456,
   "contraseña": "$2a$10$ICT9EivGTqiYfZ/I8ud50.kXiPe/zbQW4Ul2nAz5u9v8xAhPqdVN",
   "imagen": "default.png"
+ },
+ {
+  "id": 4,
+  "nombre": "Sonqo",
+  "email": "sonqo@gmail.com",
+  "telefono": 123456,
+  "contraseña": "$2a$10$A/IfHK3yNAlC37qiw.S0V.Bx/.9zJlEsjJ3zQQNJF2v11GC1PO4KK",
+  "imagen": "default.png"
+ },
+ {
+  "id": 5,
+  "nombre": "Sonqo",
+  "email": "sonqo@gmail.com",
+  "telefono": 123456,
+  "contraseña": "$2a$10$ibAnFtUSYOfRAT5jcIjCE.BWLLiDYGxEaVGwkYne/1y4smC8nGKU.",
+  "imagen": "default.png"
+ },
+ {
+  "id": 6,
+  "nombre": "ASD",
+  "email": "asd@asd.com",
+  "telefono": 123456,
+  "contraseña": "$2a$10$W1L3apvqLwYqbihiiqGtrujVNAlORKWtQYXpLSHlbnkPPW7Ua6N5a",
+  "imagen": "default.png"
+ },
+ {
+  "id": 7,
+  "nombre": "ASD2",
+  "email": "asd@asd.com",
+  "telefono": 123456,
+  "contraseña": "$2a$10$./orKXcAp4E7f82dFa5gyOHxfC8qzWjxzLC6DnyRdCg/6auNY2f1y",
+  "imagen": "default.png"
+ },
+ {
+  "id": 8,
+  "nombre": "Sonqo 2",
+  "email": "asd2@asd.com",
+  "telefono": 123456,
+  "contraseña": "$2a$10$UezwVhNoanor3h.ZZgkN3OGX4UluMC2AdezXst16XzNipg45X5QGC",
+  "imagen": "default.png"
  }
 ]
