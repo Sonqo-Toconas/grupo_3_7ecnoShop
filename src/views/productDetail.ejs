@@ -4,15 +4,16 @@
     </head>
 
     <body>
-
         <%- include('./partials/header') %>
-
             <main>
                 <div class="grande">
                     <article class="cajagrande1">
                         <div class="caja">
-                            <h1><%= producto.nombre %></h1>
-                            <h3>Precio: <br>$<%= producto.price%></h3>
+                            <h1>
+                                <%= producto.nombre %>
+                            </h1>
+                            <h3>Precio: <br>$<%= producto.price%>
+                            </h3>
                             <div class="desplegable">
                                 <select name="forma" id="forma">
                                     <option disabled selected="formas de pago">Formas de Pago</option>
@@ -22,12 +23,9 @@
                                     <option value="billetera virtual">Billetera virtual</option>
                                 </select>
                             </div>
-
                         </div>
-                        <img class="img0" src="/images/celulares/<%= producto.imagen%>"
-                            alt="Celular Samsung Cobre">
+                        <img class="img0" src="/images/celulares/<%= producto.imagen%>" alt="Celular Samsung Cobre">
                     </article>
-
                     <!--Perspectivas y datos-->
                     <article class="cajagrande2">
                         <div class="caja2-main">
@@ -38,7 +36,6 @@
                                 <img class="mas" src="/images/celulares/<%= producto.imagen3%>"
                                     alt="Celular Samsung Cobre espalda">
                             </div>
-
                         </div>
                         <section>
                             <div class="color">
@@ -72,27 +69,23 @@
                         </section>
                     </article>
                 </div>
-
                 <div class="carteluser">
                     <p class="informacionCartel">Administrar</p>
                     <div class="botones2">
                         <a href="/producto/editar/<%= producto.id %>" class="botonuser">Editar Producto</a>
                         <form action="/producto/delete/<%= producto.id %>?_method=DELETE" method="POST">
-							<button type="submit" class="botonuser">Eliminar</button>
-						</form>
+                            <button type="submit" class="botonuser">Eliminar</button>
+                        </form>
                     </div>
                 </div>
-
-               
-
-
                 <!--Informacion-->
                 <div class="informacion-main">
                     <h2>Informacion del producto</h2>
-                    <p><%= producto.descripcion%></p>
+                    <p>
+                        <%= producto.descripcion%>
+                    </p>
                 </div>
                 <!--Productos destacados-->
-
                 <section class="productosDestacados">
                     <h2>Productos destacados</h2>
                     <div class="caja3-main">
@@ -100,28 +93,27 @@
                             <i class="fa-solid fa-chevron-left"></i>
                         </div>
                         <div class="card-list-products">
-                            <% for( let i = 0; i < otrosProductos.length; i++ ) { %>
+                            <% for( let i=0; i < otrosProductos.length; i++ ) { %>
+                                <a href="/producto/detalle/<%= otrosProductos[i].id %>">
                                 <div class="card">
                                     <img class="img2" src="/images/celulares/<%= otrosProductos[i].imagen%>"
                                         alt="<%= otrosProductos[i].nombre %>">
                                     <div class="cardPrice">
-                                        <h3>$<%= otrosProductos[i].nombre %></h3>
-                                        <p class="p">$<%= otrosProductos[i].price %></p>
+                                        <h3><%= otrosProductos[i].nombre %>
+                                        </h3>
+                                        <p class="p">$<%= otrosProductos[i].price %>
+                                        </p>
                                     </div>
                                 </div>
-                            <% } %>
+                                </a>
+                                <% } %>
                         </div>
                         <div class="flecha">
                             <i class="fa-solid fa-chevron-right"></i>
                         </div>
                     </div>
-
                 </section>
-
             </main>
-
             <%- include('./partials/footer') %>
-
     </body>
-
     </html>

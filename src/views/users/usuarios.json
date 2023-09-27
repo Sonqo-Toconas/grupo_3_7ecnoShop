@@ -77,5 +77,22 @@
   "telefono": 123456,
   "contraseña": "$2a$10$UezwVhNoanor3h.ZZgkN3OGX4UluMC2AdezXst16XzNipg45X5QGC",
   "imagen": "default.png"
+ },
+ {
+  "id": 9,
+  "nombre": "la contra es 1",
+  "email": "1@gmai.com",
+  "telefono": 10201,
+  "contraseña": "$2a$10$LWEKUhEnsh3cPfsIf/Kkn.sGc2F59z7uZKjiOGujEUWzGOD6gb0rW",
+  "imagen": "default.png",
+  "admin": true
+ },
+ {
+  "id": 10,
+  "nombre": "la contra es 2",
+  "email": "2@gmail.com",
+  "telefono": 2010,
+  "contraseña": "$2a$10$j2MgEG5ybPY2hccE3S/T9eYo4DHboqJUIm4p/Ktrm/ZFhTaQa1L0K",
+  "imagen": "default.png"
  }
 ]
