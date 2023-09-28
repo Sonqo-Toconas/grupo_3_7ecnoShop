@@ -189,6 +189,7 @@ Por el momento no hay malos habitos
 ## Cuarto Sprint
 
 - **Cruz Carina**<br>
+
     - ¿Qué deberiamos comenzar a hacer?<br>
     Dejar de conformarnos y empezar a mejorar mucho mas
     - ¿Qué deberiamos hacer más?<br>

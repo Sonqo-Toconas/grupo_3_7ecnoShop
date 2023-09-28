@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const models = require('../models/users')
+const models = require('../modelosRuta/users')
 
 const adminPermiso = (req, res, next) => {
     let usuario = models.buscarPorId(req.session.userLogin)
