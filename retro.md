@@ -190,10 +190,15 @@ Por el momento no hay malos habitos
 
 - **Cruz Carina**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
+    Dejar de conformarnos y empezar a mejorar mucho mas
     - ¿Qué deberiamos hacer más?<br>
+    Deberiamos buscar como seguir mejorando
     - ¿Qué deberíamos seguir haciendo?<br>
+    Seguir organizados y con buena comunicacion
     - ¿Qué deberiamos hacer menos?<br>
+      Talves deberiamos dejar de tener miedo a equivocarnos.
     - ¿Qué deberíamos dejar de hacer?<br>
+       Dejar de retrasarme tanto que a aveces perjudica al grupo. 
 
 - **Cruz Max**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
