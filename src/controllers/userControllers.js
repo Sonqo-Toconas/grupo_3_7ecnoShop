@@ -36,7 +36,8 @@ const usuario = {
                 email: data.email,
                 telefono: parseInt(data.telefono),
                 contraseña: bcrypt.hashSync(req.body.contrasena, 10),
-                imagen: usarImage
+                imagen: usarImage,
+                admin: false
             }
 
             users.push(nuevoUser);
@@ -72,6 +73,7 @@ const usuario = {
                 if (validadContra) {
                     req.session.userLogin = usuario.id
                     //Para usar en el header
+                    req.session.admin = usuario.admin
                     //req.session.nombre = usuario.nombre
                     //req.session.imagen = usuario.imagen
                     
