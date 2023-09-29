@@ -71,6 +71,10 @@ const usuario = {
                 let validadContra = bcrypt.compareSync(req.body.password, usuario.contraseña);
                 if (validadContra) {
                     req.session.userLogin = usuario.id
+                    //Para usar en el header
+                    //req.session.nombre = usuario.nombre
+                    //  req.session.imagen = usuario.imagen
+                    
                     return res.redirect('/')
                 } else {
                     return res.render('login', {

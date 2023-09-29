@@ -2,12 +2,14 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 const session = require('express-session');
+//const headerMiddleware = require('sessionUser');
 
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({ secret: "Secreto" }));
+//app.use(headerMiddleware);
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
