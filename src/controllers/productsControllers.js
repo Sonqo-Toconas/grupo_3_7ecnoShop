@@ -80,6 +80,8 @@ const products = {
         res.render('productDetail', { producto: idProducto, otrosProductos: otrosProductos})
     },
 
+    
+
     mostrarFormularioCreacion: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('creation');

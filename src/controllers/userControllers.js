@@ -73,7 +73,7 @@ const usuario = {
                     req.session.userLogin = usuario.id
                     //Para usar en el header
                     //req.session.nombre = usuario.nombre
-                    //  req.session.imagen = usuario.imagen
+                    //req.session.imagen = usuario.imagen
                     
                     return res.redirect('/')
                 } else {
