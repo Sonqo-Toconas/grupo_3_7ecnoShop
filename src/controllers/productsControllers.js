@@ -81,7 +81,7 @@ const products = {
             //return.res.render('usuario', {
                 //Para usar en el header
               //  req.session.admin: usuario.admin
-        }
+        
         res.render('productDetail', { producto: idProducto, otrosProductos: otrosProductos})
     },
 
