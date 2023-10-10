@@ -210,11 +210,16 @@ Por el momento no hay malos habitos
 
 - **Leiva Nayla**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
+    En lo personal, deberia dejar de dudar cuando quiero hacer consultas con respecto a los problemas o interrogantes que me surjan.
     - ¿Qué deberiamos hacer más?<br>
+    Creo que nada.
     - ¿Qué deberíamos seguir haciendo?<br>
+    Creo que vamos bien con la mayoria de cosas que venimos haciendo.
     - ¿Qué deberiamos hacer menos?<br>
+    Creo que nada.
     - ¿Qué deberíamos dejar de hacer?<br>
-    
+    Nuevamente en lo personal, deberia dejar de dudar si actualizar mis partes, por miedo a romper el código.
+
 - **Toconas Luciano**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
 Nada por el momento, vamos bien como equipo

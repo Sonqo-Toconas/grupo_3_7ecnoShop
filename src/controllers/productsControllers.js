@@ -77,6 +77,11 @@ const products = {
         let otrosProductos = productos.filter(producto =>{
             return req.params.id != producto.id
         })
+        //const permisoBotones = (req, res) =>{
+            //return.res.render('usuario', {
+                //Para usar en el header
+              //  req.session.admin: usuario.admin
+        
         res.render('productDetail', { producto: idProducto, otrosProductos: otrosProductos})
     },
 
