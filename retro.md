@@ -203,10 +203,15 @@ Por el momento no hay malos habitos
 
 - **Cruz Max**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
+    comenzar a aprender fuera del bootcamp para expandir aun mas nuestros conocimientos
     - ¿Qué deberiamos hacer más?<br>
+    deberiamos tener mas confianza entre los integrantes
     - ¿Qué deberíamos seguir haciendo?<br>
+    seguir practicando todo lo que nos den en la cursada
     - ¿Qué deberiamos hacer menos?<br>
+    vamos bien
     - ¿Qué deberíamos dejar de hacer?<br>
+    dejar de encerrarse y hacer solo que te piden sino que agregar mas de nuestra creatividad
 
 - **Leiva Nayla**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>

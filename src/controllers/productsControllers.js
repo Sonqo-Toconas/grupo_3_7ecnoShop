@@ -2,11 +2,18 @@ const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../views/products/productos.json')
 const { validationResult } = require('express-validator');
+const db = require('../database/models')
+
 
 const products = {
     index: (req, res) => {
-        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('products', { productos: productos });
+        db.Producto.findAll()
+        .then(result =>{
+            res.render('products', { productos: result });
+        })
+        
+        // const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        // res.render('products', { productos: productos });
     },
 
     filtrosIndex:(req, res) => {
