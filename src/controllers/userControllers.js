@@ -4,6 +4,7 @@ const usersFilePath = path.join(__dirname, '../views/users/usuarios.json')
 const productsFilePath = path.join(__dirname, '../views/products/productos.json')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
+const db = require ('../database/models')
 
 const usuario = {
     datos: function(){
