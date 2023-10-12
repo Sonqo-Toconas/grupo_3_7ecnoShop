@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../views/products/productos.json')
+let db = require ('../../models')
 const { validationResult } = require('express-validator');
 const db = require('../database/models')
 

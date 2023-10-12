@@ -40,6 +40,6 @@ app.use(function(err, req, res, next) {
     res.render('error');
   });
   
-app.listen(3030, () => {
+  app.listen(3030, () => {
     console.log('Servidor corriendo en el puerto http://localhost:3030');
 });
