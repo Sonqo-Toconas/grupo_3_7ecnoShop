@@ -10,7 +10,7 @@
                     <article class="cajagrande1">
                         <div class="caja">
                             <h1>
-                                <%= producto.nombre %>
+                                <%= producto.name %>
                             </h1>
                             <h3>Precio: <br>$<%= producto.price%>
                             </h3>
@@ -24,7 +24,7 @@
                                 </select>
                             </div>
                         </div>
-                        <img class="img0" src="/images/celulares/<%= producto.imagen%>" alt="Celular Samsung Cobre">
+                        <img class="img0" src="/images/celulares/<%= producto.image%>" alt="Celular Samsung Cobre">
                     </article>
                     <!--Perspectivas y datos-->
                     <article class="cajagrande2">
@@ -93,7 +93,8 @@
                             <i class="fa-solid fa-chevron-left"></i>
                         </div>
                         <div class="card-list-products">
-                            <% for( let i=0; i < otrosProductos.length; i++ ) { %>
+                            <% if (otrosProductos) { %>
+                                <% for( let i=0; i < otrosProductos.length; i++ ) { %>
                                 <a href="/producto/detalle/<%= otrosProductos[i].id %>">
                                 <div class="card">
                                     <img class="img2" src="/images/celulares/<%= otrosProductos[i].imagen%>"
@@ -107,6 +108,8 @@
                                 </div>
                                 </a>
                                 <% } %>
+                            <% } %>
+                            
                         </div>
                         <div class="flecha">
                             <i class="fa-solid fa-chevron-right"></i>

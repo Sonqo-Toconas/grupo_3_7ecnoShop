@@ -10,9 +10,14 @@ const usuario = {
     datos: function(){
         return JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     },
-    index: (req, res) => {
-        const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('userPanel', { products: users });
+    index: async (req, res) => {
+        let producto = undefined
+        if (req.session.userLogin) {// el userLogin debe contener el id del usuario
+            res.send('usted no se encuentra en la base de datos de mysql')
+        }else{
+            let datosDelUsuario = await db.Usuario.findByPk(req.session.userLogin)
+            res.render('userPanel', {usuario: datosDelUsuario, product:producto})
+        }
     },
 
     registro: (req, res) => {

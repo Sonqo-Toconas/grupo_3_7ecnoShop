@@ -1,20 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../views/products/productos.json')
-let db = require ('../../models')
 const { validationResult } = require('express-validator');
 const db = require('../database/models')
 
 
 const products = {
-    index: (req, res) => {
-        db.Producto.findAll()
-        .then(result =>{
-            res.render('products', { productos: result });
-        })
-        
-        // const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        // res.render('products', { productos: productos });
+    index: async (req, res) => {
+        let productos = await db.Producto.findAll()
+        res.render('products', { productos: productos });
     },
 
     filtrosIndex:(req, res) => {
@@ -77,20 +71,14 @@ const products = {
         res.redirect("/producto");
     },
 
-    detalle: (req, res) => {
-        const productos = require('../views/products/productos.json')
-        let idProducto = productos.find(producto => {
-            return req.params.id == producto.id;
-        })
-        let otrosProductos = productos.filter(producto =>{
-            return req.params.id != producto.id
-        })
-        //const permisoBotones = (req, res) =>{
-            //return.res.render('usuario', {
-                //Para usar en el header
-              //  req.session.admin: usuario.admin
+    detalle: async (req, res) => {
+
+        let data = await db.Producto.findAll({
+            where : {idproducts : {[db.Sequelize.Op.ne]: req.params.id}
+        }})
+        let producto = await db.Producto.findByPk(req.params.id)
         
-        res.render('productDetail', { producto: idProducto, otrosProductos: otrosProductos})
+        res.render('productDetail', { producto: producto, otrosProductos: data})
     },
 
     mostrarFormularioCreacion: (req, res) => {
