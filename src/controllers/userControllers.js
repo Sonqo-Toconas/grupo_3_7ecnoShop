@@ -12,9 +12,8 @@ const usuario = {
     },
     index: async (req, res) => {
         let producto = undefined
-        if (req.session.userLogin) {// el userLogin debe contener el id del usuario
-            res.send('usted no se encuentra en la base de datos de mysql')
-        }else{
+        console.log(req.session.userLogin)
+        if (req.session.userLogin) {
             let datosDelUsuario = await db.Usuario.findByPk(req.session.userLogin)
             res.render('userPanel', {usuario: datosDelUsuario, product:producto})
         }
@@ -65,26 +64,24 @@ const usuario = {
         })
     },
 
-    processLogin: (req, res) => {
-        let usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        let buscarPorPropiedad = function (propiedad, texto) {
-            let usuarioEncontrado = usuarios.find(usuario => usuario[propiedad] == texto)
-            return usuarioEncontrado
-        }
+    processLogin: async (req, res) => {
+
         let errors = validationResult(req)
+
         if (errors.isEmpty()) {
-            let usuario = buscarPorPropiedad('email', req.body.email)
-            if (usuario) {
-                let validadContra = bcrypt.compareSync(req.body.password, usuario.contraseña);
-                if (validadContra) {
-                    req.session.userLogin = usuario.id
-                    //Para usar en el header
-                    req.session.admin = usuario.admin
-                    //req.session.nombre = usuario.nombre
-                    //req.session.imagen = usuario.imagen
-                    
-                    return res.redirect('/')
-                } else {
+            let dataUsers = await db.Usuario.findOne({
+                where:{
+                    email : req.body.email
+                }
+            })
+            if (dataUsers) {
+                // let validadContra = bcrypt.compareSync(req.body.password, dataUsers.password);
+                let validarContra = req.body.password == dataUsers.password
+                if (validarContra) {
+                    req.session.userLogin = await dataUsers.idusers
+                    req.session.admin = await dataUsers.admin
+                    return res.redirect('/usuario')
+                }else{
                     return res.render('login', {
                         errors: errors.array(),
                         old: req.body,
@@ -92,14 +89,13 @@ const usuario = {
                         mensajeP: 'contraseña es invalida'
                     })
                 }
-            } else {
+            }else{
                 res.render('login', {
                     mensajeP: false,
                     mensajeEmail: 'email es invalido'
                 })
             }
-        }
-        else {
+        }else{
             res.render('login', {
                 errors: errors.errors,
                 old: req.body,

@@ -25,7 +25,7 @@ const validaciones = [
     body('contrasena').notEmpty().withMessage('Debes completar el campo de contraseña')
 ];
 
-router.get('/', middleware, userControllers.index);
+router.get('/', middleware,userControllers.index);
 router.get('/registro', userControllers.registro);
 router.post('/registro', fileUpload.single('imagen'), validaciones, userControllers.procesoCrear);
 router.get('/login', userControllers.login);
