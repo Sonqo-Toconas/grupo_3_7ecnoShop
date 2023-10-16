@@ -86,28 +86,23 @@ const products = {
         res.render('creation');
     },
 
-    crear: (req, res) => {
+    crear: async (req, res) => {
         const data = req.body;
-
         if (req.file) {
             var imagen = req.file.filename
         } else {
             var imagen = "producto.png"
         }
 
-        const producto = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        const nuevoProducto = {
-            id: producto[producto.length - 1].id + 1,
-            nombre: data.name,
-            descripcion: data.description,
-            categoria: data.category,
+        const data2 = await db.Producto.create({
+            name: data.name,
+            description: data.description,
+            image: imagen,
+            category: data.category,
             color: data.colors,
-            price: data.price,
-            imagen: imagen
-        }
+            price: data.price
+        })
 
-        producto.push(nuevoProducto);
-        fs.writeFileSync(productsFilePath, JSON.stringify(producto, null, " "))
         res.redirect('/');
     },
 

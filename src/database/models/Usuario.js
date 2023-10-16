@@ -8,22 +8,22 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         user: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(45)
         },
         email: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(45)
         },
         phone: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(45)
         },
         img: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(45)
         },
         admin: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(45)
         },
         password: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(45)
         }
     }
 
@@ -34,12 +34,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const Usuario = sequelize.define(alias, cols, config);
 
-    Usuario.associate = function(models) {
+    /* Usuario.associate = function(models) {
         Usuario.hasMany(models.Carrito, {
             as: "carritouser",
             foreignKey: "users"
         })
-    }
+    } */
 
     return Usuario;
 }

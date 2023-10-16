@@ -8,34 +8,35 @@
                 <section class="conteiner-filter">
                     <h3>Filtre su busqueda</h3>
                     <form action="/producto" method="post">
-                    <label for="order" class="label-order">
-                        <select name="order" id="order">
-                            <option value disabled selected>Elige el orden</option>
-                            <option value="mayor-precio">Mayor precio </option>
-                            <option value="menor-precio">Menor precio</option>
-                            <option value="ofertas">En ofertas</option>
-                            <option value="ventas">Ventas</option>
-                        </select>
-                        <input type="submit" value="Filtrar" class="boton-filtro">
-                    </label>
-                </form>
+                        <label for="order" class="label-order">
+                            <select name="order" id="order">
+                                <option value disabled selected>Elige el orden</option>
+                                <option value="mayor-precio">Mayor precio </option>
+                                <option value="menor-precio">Menor precio</option>
+                                <option value="ofertas">En ofertas</option>
+                                <option value="ventas">Ventas</option>
+                            </select>
+                            <input type="submit" value="Filtrar" class="boton-filtro">
+                        </label>
+                    </form>
                 </section>
                 <section class="product-conteiner">
                     <% for( let i=0; i < productos.length; i++ ) { %>
-                        <div class="product">
-                            <a href="/producto/detalle/<%=productos[i].id%>">
+                        <a href="/producto/detalle/<%=productos[i].idproducts%>">
+                            <div class="product">
                                 <img src="/images/celulares/<%= productos[i].image %>" alt="<%= productos[i].nombre %>"
-                                    class="smartphone" />
-                            </a>
-                            <h2 class="tittle-for-product">
-                                <%= productos[i].nombre %>
-                            </h2>
-                            <p>$<%= productos[i].price %>
-                            </p>
-                        </div>
+                                    class="smartphone">
+                                <h2 class="tittle-for-product">
+                                    <%= productos[i].name %>
+                                </h2>
+                                <p>$<%= productos[i].price %>
+                                </p>
+                            </div>
+                        </a>
                         <% } %>
                 </section>
             </main>
             <%- include('./partials/footer') %>
     </body>
+
     </html>
