@@ -2,7 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../views/products/productos.json')
 const { validationResult } = require('express-validator');
-const db = require('../database/models')
+const db = require('../database/models');
+const Sequelize = require('sequelize')
+const { where } = require('sequelize');
 
 
 const products = {
@@ -11,12 +13,22 @@ const products = {
         res.render('products', { productos: productos });
     },
 
-    filtrosIndex:(req, res) => {
+    buscar: async (req, res) => {
+        let productos = await db.Producto.findAll({
+            where: {
+                name: {[Sequelize.Op.like]: `%${req.body.barra}%`}
+            }
+        })
+
+        res.render('products', { productos: productos });
+    },
+
+    filtrosIndex: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let valor = req.body.order;
         switch (valor) {
             case 'mayor-precio':
-                productos.sort(function(a, b){
+                productos.sort(function (a, b) {
                     if (a.price < b.price) {
                         return 1
                     }
@@ -25,10 +37,10 @@ const products = {
                     }
                     return 0
                 })
-                res.render('products',{ productos: productos})
+                res.render('products', { productos: productos })
                 break;
             case 'menor-precio':
-                productos.sort(function(a, b){
+                productos.sort(function (a, b) {
                     if (a.price > b.price) {
                         return 1
                     }
@@ -37,16 +49,16 @@ const products = {
                     }
                     return 0
                 })
-                res.render('products',{ productos: productos})
+                res.render('products', { productos: productos })
                 break;
             case 'ofertas':
-                let productosEnOfertas = productos.filter(producto =>{
+                let productosEnOfertas = productos.filter(producto => {
                     return producto.oferta == true
                 })
-                res.render('products',{ productos: productosEnOfertas})
+                res.render('products', { productos: productosEnOfertas })
                 break;
             case 'ventas':
-                productos.sort(function(a, b){
+                productos.sort(function (a, b) {
                     if (a.ventas < b.ventas) {
                         return 1
                     }
@@ -55,7 +67,7 @@ const products = {
                     }
                     return -1
                 })
-                res.render('products',{ productos: productos})
+                res.render('products', { productos: productos })
                 break;
             default:
                 break;
@@ -74,11 +86,13 @@ const products = {
     detalle: async (req, res) => {
 
         let data = await db.Producto.findAll({
-            where : {idproducts : {[db.Sequelize.Op.ne]: req.params.id}
-        }})
+            where: {
+                idproducts: { [db.Sequelize.Op.ne]: req.params.id }
+            }
+        })
         let producto = await db.Producto.findByPk(req.params.id)
-        
-        res.render('productDetail', { producto: producto, otrosProductos: data})
+
+        res.render('productDetail', { producto: producto, otrosProductos: data })
     },
 
     mostrarFormularioCreacion: (req, res) => {
@@ -144,21 +158,21 @@ const products = {
         res.redirect("/producto");
     },
 
-    agregarAlCarrito : (req, res) => {
+    agregarAlCarrito: (req, res) => {
         const productId = req.params.id;
         const carrito = req.session.carrito || [];
-        carrito.push(productId); 
-        req.session.carrito = carrito; 
-        res.redirect('/carrito'); 
-      },
-      
+        carrito.push(productId);
+        req.session.carrito = carrito;
+        res.redirect('/carrito');
+    },
+
     mostrarCarrito: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         const carrito = req.session.carrito || [];
         const productosEnCarrito = productos.filter(producto => {
-          return carrito.includes(producto.id);
+            return carrito.includes(producto.id);
         });
         res.render('productCart', { productos: productosEnCarrito });
-      }
+    }
 }
 module.exports = products
