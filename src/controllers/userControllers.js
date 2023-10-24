@@ -29,19 +29,19 @@ const usuario = {
             const data = req.body;
 
             if (req.file) {
-                var usarImage = req.file.filename
+                var userImage = req.file.filename
             } else {
-                var usarImage = "default.png"
+                var userImage = "default.png"
             }
 
             const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
             const nuevoUser = {
                 id: users[users.length - 1].id + 1,
-                nombre: data.nombre,
+                name: data.name,
                 email: data.email,
-                telefono: parseInt(data.telefono),
-                contraseña: bcrypt.hashSync(req.body.contrasena, 10),
-                imagen: usarImage,
+                phone: parseInt(data.phone),
+                password: bcrypt.hashSync(req.body.password, 10),
+                imagen: userImage,
                 admin: false
             }
 
