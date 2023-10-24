@@ -17,10 +17,10 @@
                     </div>
 
                     <div class="formulario">
-                        <label for="nombre" class="texto-formulario">
+                        <label for="name" class="texto-formulario">
                             Elegí tu nombre
                         </label>
-                        <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3"
+                        <input type="text" name="name" placeholder="Nombre y apellido" minlength="3"
                             class="barra-formulario" value="<%=locals.old ? old.nombre : null %>">
 
                         <label for="email" class="texto-formulario">
@@ -29,10 +29,10 @@
                         <input type="email" name="email" placeholder="E-mail" class="barra-formulario"
                             value="<%=locals.old ? old.email : null %>">
 
-                        <label for="telefono" class="texto-formulario">
+                        <label for="phone" class="texto-formulario">
                             Agregá tu celular
                         </label>
-                        <input type="tel" name="telefono" placeholder="Teléfono" class="barra-formulario"
+                        <input type="tel" name="phone" placeholder="Teléfono" class="barra-formulario"
                             value="<%=locals.old ? old.telefono : null %>">
 
 
@@ -41,11 +41,11 @@
                         </label>
                         <input type="file" name="imagen" accept=".jpg, .png" class="barra-formulario"></input>
 
-                        <label for="contrasena" class="texto-formulario">
+                        <label for="password" class="texto-formulario">
                             Contraseña
                         </label>
-                        <input type="password" name="contrasena" placeholder="Contraseña" class="barra-formulario2">
-                        <input type="password" name="contrasena2" placeholder="Confirmar contraseña"
+                        <input type="password" name="password" placeholder="Contraseña" class="barra-formulario2">
+                        <input type="password" name="password2" placeholder="Confirmar contraseña"
                             class="barra-formulario2">
                     </div>
                     <% if (locals.errors) { errors.forEach(error=> { %>
