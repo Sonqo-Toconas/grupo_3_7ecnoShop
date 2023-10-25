@@ -31,6 +31,7 @@ router.post('/registro', fileUpload.single('imagen'), validaciones, userControll
 router.get('/login', userControllers.login);
 router.post('/login', userControllers.processLogin);
 router.get('/carrito', middleware, userControllers.carrito);
+//router.get('/:id', userControllers.verDetalleUsuario);
 
 //router.post('/agregar-al-carrito/:id', productsControllers.agregarAlCarrito);
 

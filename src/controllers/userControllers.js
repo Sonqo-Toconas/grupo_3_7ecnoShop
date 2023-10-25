@@ -56,7 +56,42 @@ const usuario = {
             })
         }
     },
-
+    //procesoCrear: (req, res) => {
+        //let errors = validationResult(req);
+        //if (errors.isEmpty()) {
+          //const data = req.body;
+      
+          //if (req.file) {
+            //var usarImage = req.file.filename;
+          //} else {
+            //var usarImage = "default.png";
+          //}
+      
+          //Usuario.create({
+            //nombre: data.nombre,
+            //email: data.email,
+            //telefono: parseInt(data.telefono),
+            //contraseña: bcrypt.hashSync(req.body.contrasena, 10),
+            //imagen: usarImage,
+            //admin: false
+          //})
+          //.then(() => {
+            //res.redirect('/');
+          //})
+          //.catch(error => {
+            //console.error(error);
+            //res.render('register', {
+             // errors: [{ msg: 'Error al crear el usuario' }],
+              //old: req.body
+            //});
+          //});
+        //} else {
+          //res.render('register', {
+            //errors: errors.array(),
+            //old: req.body
+          //});
+        //}
+      //},
     login: (req, res) => {
         res.render('login', {
             mensajeP: false,
@@ -109,6 +144,35 @@ const usuario = {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('productCart', { productos: productos });
     },
-}
 
+    //verDetalleUsuario: async (req, res) => {
+      //  let data = await db.Usuario.findAll({
+        //    where: {
+          //      idusers: { [db.Sequelize.Op.ne]: req.params.id }
+            //}
+       // })
+        //let usuario = await db.Usuario.findByPk(req.params.id)
+
+        //res.render('', { usuario: usuario, otrosUsuarios: data })
+    //},
+    //verDetalleUsuario: (req, res) => {
+        //let dataPromise = db.Usuario.findAll({
+          //where: {
+            //idusers: { [db.Sequelize.Op.ne]: req.params.id }
+          //}
+        //});
+      
+        //let usuarioPromise = db.Usuario.findByPk(req.params.id);
+      
+        //Promise.all([dataPromise, usuarioPromise])
+          //.then(([data, usuario]) => {
+            //res.render('userPanel', { usuario: usuario, otrosUsuarios: data });
+          //})
+          //.catch((error) => {
+            //console.error(error);
+            //res.status(500).send('Error al obtener el detalle del usuario');
+          //});
+      //}
+      
+  }
 module.exports = usuario

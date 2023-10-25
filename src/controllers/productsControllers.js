@@ -82,6 +82,18 @@ const products = {
         fs.writeFileSync(productsFilePath, JSON.stringify(filteredProducts, null, " "))
         res.redirect("/producto");
     },
+    //delete: (req, res) => {
+        //Producto.destroy({
+          //  where: {
+            //    id: req.params.id
+            //}
+        //}).then(() => {
+          //  res.redirect('/producto');
+        //}).catch(error => {
+          //  console.log(error);
+            //res.status(500).send('Ha ocurrido un error al eliminar el producto');
+        //});
+    //},
 
     detalle: async (req, res) => {
 
@@ -173,6 +185,13 @@ const products = {
             return carrito.includes(producto.id);
         });
         res.render('productCart', { productos: productosEnCarrito });
-    }
+    },
+    //deleteProduct: (req, res) =>{
+       //let idproducts = req.params.id;
+        //db.Productos.findByPk(idproducts)
+        //.then (producto) => {
+        //res.render ('', {product: product});
+        //}
+    //}
 }
 module.exports = products
