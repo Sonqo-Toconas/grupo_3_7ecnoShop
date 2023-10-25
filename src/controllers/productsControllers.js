@@ -13,14 +13,14 @@ const products = {
         res.render('products', { productos: productos });
     },
 
-    buscar: async (req, res) => {
-        let productos = await db.Producto.findAll({
+    search: async (req, res) => {
+        let products = await db.Product.findAll({
             where: {
-                name: {[Sequelize.Op.like]: `%${req.body.barra}%`}
+                name: { [Sequelize.Op.like]: `%${req.body.barra}%` }
             }
         })
 
-        res.render('products', { productos: productos });
+        res.render('products', { products: products });
     },
 
     filtrosIndex: (req, res) => {
@@ -112,21 +112,22 @@ const products = {
         res.render('creation');
     },
 
-    crear: async (req, res) => {
+    create: async (req, res) => {
         const data = req.body;
+        
         if (req.file) {
-            var imagen = req.file.filename
+            var productImage = req.file.filename
         } else {
-            var imagen = "producto.png"
+            var productImage = "producto.png"
         }
 
-        const data2 = await db.Producto.create({
+        const products = await db.Product.create({
             name: data.name,
             description: data.description,
-            image: imagen,
+            price: data.price,
+            image: productImage,
             category: data.category,
-            color: data.colors,
-            price: data.price
+            color: data.color
         })
 
         res.redirect('/');

@@ -5,10 +5,10 @@ const middleware = require('../middlewares/authMiddleware')
 const adminPermiso = require('../middlewares/adminPermiso')
 
 router.get('/', productsControllers.index);
-router.post('/', productsControllers.buscar);
+router.post('/', productsControllers.search);
 router.post('/', productsControllers.filtrosIndex);
 router.get('/crear', productsControllers.mostrarFormularioCreacion);
-router.post('/crear', productsControllers.crear);
+router.post('/crear', productsControllers.create);
 router.get('/editar/:id', productsControllers.formularioEditar);
 router.put('/editar/:id', productsControllers.editarProducto);
 router.get('/detalle/:id', productsControllers.detalle);
