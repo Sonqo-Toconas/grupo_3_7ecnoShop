@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Producto';
     
     let cols = {
-        idproducts:{
+        id_product:{
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
@@ -17,19 +17,19 @@ module.exports = (sequelize, dataTypes) => {
         image:{
             type: dataTypes.STRING(45)
         },
-        category:{
+        category_id:{
             type: dataTypes.BIGINT(10)
         },
-        color:{
+        color_id:{
             type: dataTypes.BIGINT(10)
         },
         price:{
             type: dataTypes.STRING(45)
         }
-        
+
     }
     let config = {
-        tableName: 'products',
+        tableName: 'product',
         timestamps: false,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
