@@ -9,7 +9,7 @@ const { where } = require('sequelize');
 
 const products = {
     index: async (req, res) => {
-        let productos = await db.Producto.findAll()
+        let productos = await db.Product.findAll()
         res.render('products', { productos: productos });
     },
 
@@ -89,13 +89,14 @@ const products = {
 
     detalle: async (req, res) => {
 
-        let data = await db.Producto.findAll({
+        let data = await db.Product.findAll({
             where: {
-                idproducts: { [db.Sequelize.Op.ne]: req.params.id }
+                id_product: { [db.Sequelize.Op.ne]: req.params.id }
             }
         })
-        let producto = await db.Producto.findByPk(req.params.id)
-
+        let producto = await db.Product.findByPk(req.params.id)
+        
+        console.log(producto)
         res.render('productDetail', { producto: producto, otrosProductos: data })
     },
 
@@ -113,7 +114,7 @@ const products = {
             var productImage = "producto.png"
         }
 
-        const products = await db.Producto.create({
+        const products = await db.Product.create({
             name: data.name,
             description: data.description,
             price: data.price,
