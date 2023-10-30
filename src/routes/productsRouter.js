@@ -14,6 +14,5 @@ router.put('/editar/:id', productsControllers.editarProducto);
 router.get('/detalle/:id', productsControllers.detalle);
 router.delete('/delete/:id', middleware, adminPermiso,productsControllers.delete);
 
-//router.delete('/delete/:id', productsControllers.deleteProduct);
 
 module.exports = router;

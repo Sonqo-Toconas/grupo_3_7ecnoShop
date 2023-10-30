@@ -75,25 +75,17 @@ const products = {
     },
 
     delete: (req, res) => {
-        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        const filteredProducts = productos.filter(product => {
-            return product.id != req.params.id
-        })
-        fs.writeFileSync(productsFilePath, JSON.stringify(filteredProducts, null, " "))
-        res.redirect("/producto");
+        Producto.destroy({
+            where: {
+                id_product: req.params.id
+            }
+        }).then(() => {
+            res.redirect('/producto');
+        }).catch(error => {
+            console.log(error);
+            res.status(500).send('Ha ocurrido un error al eliminar el producto');
+        });
     },
-    //delete: (req, res) => {
-        //Producto.destroy({
-          //  where: {
-            //    id: req.params.id
-            //}
-        //}).then(() => {
-          //  res.redirect('/producto');
-        //}).catch(error => {
-          //  console.log(error);
-            //res.status(500).send('Ha ocurrido un error al eliminar el producto');
-        //});
-    //},
 
     detalle: async (req, res) => {
 
@@ -186,13 +178,6 @@ const products = {
             return carrito.includes(producto.id);
         });
         res.render('productCart', { productos: productosEnCarrito });
-    },
-    //deleteProduct: (req, res) =>{
-       //let idproducts = req.params.id;
-        //db.Productos.findByPk(idproducts)
-        //.then (producto) => {
-        //res.render ('', {product: product});
-        //}
-    //}
+    }
 }
 module.exports = products
