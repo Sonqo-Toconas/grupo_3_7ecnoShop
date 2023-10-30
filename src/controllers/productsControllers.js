@@ -121,7 +121,7 @@ const products = {
             var productImage = "producto.png"
         }
 
-        const products = await db.Product.create({
+        const products = await db.Producto.create({
             name: data.name,
             description: data.description,
             price: data.price,
