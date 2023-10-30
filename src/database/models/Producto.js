@@ -1,35 +1,43 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Producto';
-    
+
     let cols = {
-        id_product:{
+        id_product: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            notNull: true,
+            allowNull: true,
         },
-        name:{
-            type: dataTypes.STRING(45)
+        name: {
+            type: dataTypes.STRING(45),
+            allowNull: true,
+            unique: true,
         },
-        description:{
-            type: dataTypes.STRING(45)
+        description: {
+            type: dataTypes.STRING(45),
+            allowNull: true,
         },
-        image:{
-            type: dataTypes.STRING(45)
+        price: {
+            type: dataTypes.INTEGER,
+            allowNull: true,
         },
-        category_id:{
-            type: dataTypes.BIGINT(10)
+        image: {
+            type: dataTypes.STRING(45),
+            allowNull: true,
         },
-        color_id:{
-            type: dataTypes.BIGINT(10)
+        category_id: {
+            type: dataTypes.INTEGER,
+            allowNull: true,
         },
-        price:{
-            type: dataTypes.STRING(45)
+        color_id: {
+            type: dataTypes.INTEGER,
+            allowNull: true,
         }
-
     }
+
+
     let config = {
-        tableName: 'product',
+        tableName: 'products',
         timestamps: false,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
@@ -37,6 +45,7 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Producto = sequelize.define(alias, cols, config);
+
 
     // Producto.associate = function(models) {
 
@@ -50,10 +59,6 @@ module.exports = (sequelize, dataTypes) => {
     //         foreignKey: "category"
     //     })
     // }
+
     return Producto
 }
-
-
-// crear modelo productos
-// crud usuarios editar
-// crud productos ver detalle
