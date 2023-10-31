@@ -25,7 +25,7 @@
   "contraseña": "$2a$10$kmVcvP7WzFXbETqD5bjKkeRWql0hteqqRAC4gw5Yx0lnnxWFzaX7K",
   "imagen": "user-1694576729557.webp",
   "admin": false
-},
+ },
  {
   "id": 3,
   "nombre": "Sonqo",
@@ -103,6 +103,15 @@
   "email": "2@gmail.com",
   "telefono": 2010,
   "contraseña": "$2a$10$j2MgEG5ybPY2hccE3S/T9eYo4DHboqJUIm4p/Ktrm/ZFhTaQa1L0K",
+  "imagen": "default.png",
+  "admin": false
+ },
+ {
+  "id": 11,
+  "nombre": "belen",
+  "email": "agus@gmail.com",
+  "telefono": 5192989,
+  "contraseña": "$2a$10$IxAK3nUqZV2rvEquIBVTrOyl3oVVjhdfffvc7smiiz6rMmF06JVTy",
   "imagen": "default.png",
   "admin": false
  }

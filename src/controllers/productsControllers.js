@@ -1,17 +1,22 @@
 const fs = require('fs');
 const path = require('path');
-const productsFilePath = path.join(__dirname, '../views/products/productos.json')
+const productsFilePath = path.join(__dirname, '../views/products/productos.json');
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
-const Sequelize = require('sequelize')
+const Sequelize = require('sequelize') 
 const { where } = require('sequelize');
 
 
 const products = {
     index: async (req, res) => {
         let productos = await db.Producto.findAll()
-        res.render('products', { productos: productos });
+        res.render('products', { productos });
     },
+    //indexx: (req,res) => {
+ //let phone = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../products/productos.json")));
+   // res.render(path.resolve(__dirname, "../views/products/productos"), {phone})
+    // }, 
 
     search: async (req, res) => {
         let products = await db.Product.findAll({
