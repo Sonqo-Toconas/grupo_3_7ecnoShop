@@ -11,7 +11,7 @@ const { where } = require('sequelize');
 const products = {
     index: async (req, res) => {
         let productos = await db.Product.findAll()
-        res.render('products', { productos });
+        res.render('products', { productos: productos });
     },
     //indexx: (req,res) => {
  //let phone = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../products/productos.json")));
