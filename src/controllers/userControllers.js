@@ -4,10 +4,10 @@ const usersFilePath = path.join(__dirname, '../views/users/usuarios.json')
 const productsFilePath = path.join(__dirname, '../views/products/productos.json')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
-const db = require ('../database/models')
+const db = require('../database/models')
 
 const usuario = {
-    datos: function(){
+    datos: function () {
         return JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     },
     index: async (req, res) => {
@@ -15,13 +15,31 @@ const usuario = {
         console.log(req.session.userLogin)
         if (req.session.userLogin) {
             let datosDelUsuario = await db.Usuario.findByPk(req.session.userLogin)
-            res.render('userPanel', {usuario: datosDelUsuario, product:producto})
+            res.render('userPanel', { usuario: datosDelUsuario, product: producto })
         }
     },
 
     registro: (req, res) => {
         res.render('register')
     },
+
+    /*-- CRUD USUARIO CREAR --*/
+    //Create: function(req, res) => {
+    //db.User.create({
+    //name: req.body.name,
+    //email: req.body.email,
+    //phone: req.body.phone,
+    //password: req.body.password,
+    //image:req.body.image,
+    //id y admin no son introducidos por el usuario...    
+    //});
+    //}
+
+    //edit: function(req, res) =>{
+    //db.User.7
+    //}
+
+    /*-- CRUD USUARIO ELIMINAR --*/
 
     procesoCrear: (req, res) => {
         let errors = validationResult(req)
@@ -56,7 +74,7 @@ const usuario = {
             })
         }
     },
-  
+
     login: (req, res) => {
         res.render('login', {
             mensajeP: false,
@@ -70,8 +88,8 @@ const usuario = {
 
         if (errors.isEmpty()) {
             let dataUsers = await db.Usuario.findOne({
-                where:{
-                    email : req.body.email
+                where: {
+                    email: req.body.email
                 }
             })
             if (dataUsers) {
@@ -81,7 +99,7 @@ const usuario = {
                     req.session.userLogin = await dataUsers.idusers
                     req.session.admin = await dataUsers.admin
                     return res.redirect('/usuario')
-                }else{
+                } else {
                     return res.render('login', {
                         errors: errors.array(),
                         old: req.body,
@@ -89,13 +107,13 @@ const usuario = {
                         mensajeP: 'contraseña es invalida'
                     })
                 }
-            }else{
+            } else {
                 res.render('login', {
                     mensajeP: false,
                     mensajeEmail: 'email es invalido'
                 })
             }
-        }else{
+        } else {
             res.render('login', {
                 errors: errors.errors,
                 old: req.body,
@@ -109,5 +127,5 @@ const usuario = {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('productCart', { productos: productos });
     },
-  }
+}
 module.exports = usuario
