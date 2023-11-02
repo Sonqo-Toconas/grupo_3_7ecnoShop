@@ -4,7 +4,7 @@ const productsFilePath = path.join(__dirname, '../views/products/productos.json'
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
-const Sequelize = require('sequelize') 
+const Sequelize = require('sequelize')
 const { where } = require('sequelize');
 
 
@@ -14,8 +14,8 @@ const products = {
         res.render('products', { productos: productos });
     },
     //indexx: (req,res) => {
- //let phone = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../products/productos.json")));
-   // res.render(path.resolve(__dirname, "../views/products/productos"), {phone})
+    //let phone = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../products/productos.json")));
+    // res.render(path.resolve(__dirname, "../views/products/productos"), {phone})
     // }, 
 
     search: async (req, res) => {
@@ -25,7 +25,7 @@ const products = {
             }
         })
 
-        res.render('products', { products: products });
+        res.render('products', { productos: products });
     },
 
     filtrosIndex: (req, res) => {
@@ -100,7 +100,7 @@ const products = {
             }
         })
         let producto = await db.Product.findByPk(req.params.id)
-        
+
         console.log(producto)
         res.render('productDetail', { producto: producto, otrosProductos: data })
     },
@@ -112,7 +112,7 @@ const products = {
 
     create: async (req, res) => {
         const data = req.body;
-        
+
         if (req.file) {
             var productImage = req.file.filename
         } else {
@@ -124,8 +124,8 @@ const products = {
             description: data.description,
             price: data.price,
             image: productImage,
-            category: data.category,
-            color: data.color
+            category_id: data.category,
+            color_id: data.color
         })
 
         res.redirect('/');
