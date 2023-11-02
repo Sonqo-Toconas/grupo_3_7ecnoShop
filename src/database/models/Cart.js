@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
    
-    let alias = 'Carrito';
+    let alias = 'Cart';
     let cols ={
         id_cart: {
           type: dataTypes.INTEGER,
@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
-        tableName: 'carrito',
+        tableName: 'carts',
         timestamps: false
       };
       
@@ -32,6 +32,7 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "id_product"
         })
     },
+    
     Carrito.associate = function(models) {
       Carrito.belongsTo(models.User, {
           as: "user_id",
