@@ -15,7 +15,7 @@ const usuario = {
         let producto = undefined
         console.log(req.session.userLogin)
         if (req.session.userLogin) {
-            let datosDelUsuario = await db.Usuario.findByPk(req.session.userLogin)
+            let datosDelUsuario = await db.User.findByPk(req.session.userLogin)
             res.render('userPanel', { usuario: datosDelUsuario, product: producto })
         }
     },
