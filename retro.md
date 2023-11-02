@@ -203,7 +203,7 @@ Por el momento no hay malos habitos
 
 - **Cruz Max**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
-    comenzar a aprender fuera del bootcamp para expandir aun mas nuestros conocimientos
+    comenzar a aprender fuera del curso para expandir aun mas nuestros conocimientos
     - ¿Qué deberiamos hacer más?<br>
     deberiamos tener mas confianza entre los integrantes
     - ¿Qué deberíamos seguir haciendo?<br>
@@ -248,10 +248,15 @@ Por el momento llevamos conductas positivas
 
 - **Cruz Max**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
+        implementar mas funcionalidades
     - ¿Qué deberiamos hacer más?<br>
+        mas reuniones grupales
     - ¿Qué deberíamos seguir haciendo?<br>
+        revisiones de errores o problemas que tengamos en grupo
     - ¿Qué deberiamos hacer menos?<br>
+        dejar de reservarse problemas que tengamos con el codigo
     - ¿Qué deberíamos dejar de hacer?<br>
+        no nos tenemos que quedar callado si algo no nos gusta
 
 - **Leiva Nayla**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>

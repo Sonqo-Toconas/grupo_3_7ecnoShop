@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
 
 
     let config = {
-        tableName: 'products',
+        tableName: 'product',
         timestamps: false,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
