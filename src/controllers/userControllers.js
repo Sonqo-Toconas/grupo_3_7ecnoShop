@@ -4,7 +4,8 @@ const usersFilePath = path.join(__dirname, '../views/users/usuarios.json')
 const productsFilePath = path.join(__dirname, '../views/products/productos.json')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
-const db = require('../database/models')
+const db = require('../database/models');
+const { Console } = require('console');
 
 const usuario = {
     datos: function () {
@@ -41,7 +42,7 @@ const usuario = {
 
     /*-- CRUD USUARIO ELIMINAR --*/
 
-    procesoCrear: (req, res) => {
+    procesoCrear: async (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
             const data = req.body;
@@ -52,19 +53,21 @@ const usuario = {
                 var userImage = "default.png"
             }
 
-            const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-            const nuevoUser = {
-                id: users[users.length - 1].id + 1,
+            const users = await db.User.create({
+                //const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+                //const nuevoUser = {
+                //id: users[users.length - 1].id + 1,
                 name: data.name,
                 email: data.email,
                 phone: parseInt(data.phone),
                 password: bcrypt.hashSync(req.body.password, 10),
-                imagen: userImage,
-                admin: false
-            }
+                image: userImage,
+                admin: 0
+            })
 
-            users.push(nuevoUser);
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "))
+            //users.push(nuevoUser);
+            //fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "))
             res.redirect('/');
         }
         else {
@@ -87,18 +90,21 @@ const usuario = {
         let errors = validationResult(req)
 
         if (errors.isEmpty()) {
-            let dataUsers = await db.Usuario.findOne({
+            let dataUsers = await db.User.findOne({
                 where: {
                     email: req.body.email
                 }
             })
+
             if (dataUsers) {
                 // let validadContra = bcrypt.compareSync(req.body.password, dataUsers.password);
-                let validarContra = req.body.password == dataUsers.password
-                if (validarContra) {
-                    req.session.userLogin = await dataUsers.idusers
-                    req.session.admin = await dataUsers.admin
-                    return res.redirect('/usuario')
+                //let validarContra = req.body.password == dataUsers.password
+                if (bcrypt.compareSync(req.body.password, dataUsers.dataValues.password)) {
+                    //bcrypt.compareSync(req.body.password, users[i].password)
+                    req.session.userLogin = dataUsers.idusers
+                    req.session.admin = dataUsers.admin
+                    res.redirect('/usuario')
+                    
                 } else {
                     return res.render('login', {
                         errors: errors.array(),
@@ -121,6 +127,7 @@ const usuario = {
                 mensajeEmail: 'email es invalido'
             })
         }
+
     },
 
     carrito: (req, res) => {

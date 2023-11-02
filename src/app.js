@@ -3,7 +3,6 @@ const app = express();
 const methodOverride = require('method-override');
 const session = require('express-session');
 
-
 //const headerMiddleware = require('sessionUser');
 
 app.use(express.static('public'));
@@ -23,8 +22,6 @@ const productRoutes = require('./routes/productsRouter');
 app.use('/', indexRoutes);
 app.use('/usuario', userRoutes);
 app.use('/producto', productRoutes);
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
