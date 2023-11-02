@@ -36,12 +36,6 @@ const usuario = {
     //});
     //}
 
-    //edit: function(req, res) =>{
-    //db.User.7
-    //}
-
-    /*-- CRUD USUARIO ELIMINAR --*/
-
     procesoCrear: async (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
@@ -69,6 +63,7 @@ const usuario = {
             //users.push(nuevoUser);
             //fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "))
             res.redirect('/');
+            //....NO ESTA CORRIENDO LINEA 65....
         }
         else {
             res.render('register', {

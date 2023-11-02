@@ -27,6 +27,7 @@ const validaciones = [
 
 router.get('/', middleware,userControllers.index);
 router.get('/registro', userControllers.registro);
+
 router.post('/registro', fileUpload.single('imagen'), userControllers.procesoCrear);
 router.get('/login', userControllers.login);
 router.post('/login', userControllers.processLogin);

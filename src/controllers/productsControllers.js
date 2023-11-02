@@ -139,34 +139,47 @@ const products = {
         res.render('productEdition', { producto: idProducto })
     },
 
-    editarProducto: (req, res) => {
+    editarProducto: async (req, res) => {
         const data = req.body;
 
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-        const oldProduct = products.find(product => {
-            return product.id == req.params.id
-        });
+        //const oldProduct = products.find(product => {
+          //  return product.id == req.params.id
+        //});
 
-        const editedProduct = {
-            id: oldProduct.id,
+        db.Product.findByPk(req.params.id)
+        .then(function(oldProduct){
+            res.render("ProductEdition",
+            {oldProduct : oldProduct})
+        })
+        
+        const editedProduct = await db.Product.update({
+        //id: oldProduct.id
             nombre: data.newName,
             precio: parseInt(data.price),
             descripcion: data.newDescription,
             imagen: req.file ? req.file.filename : oldProduct.imagen,
             categoria: data.category,
             color: data.colors,
-        }
-
-        const index = products.findIndex(product => {
-            return product.id == req.params.id
+        },{
+            where: {
+                id : req.params.id
+            }
         })
 
-        products[index] = editedProduct;
+        //const index = products.findIndex(product => {
+          //  return product.id == req.params.id
+        //})
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "))
+        //products[index] = editedProduct;
 
-        res.redirect("/producto");
+        //fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "))
+
+        //where : {
+
+        //}
+        res.redirect("/producto/" + req.params.id);
     },
 
     agregarAlCarrito: (req, res) => {
