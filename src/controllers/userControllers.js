@@ -24,18 +24,6 @@ const usuario = {
         res.render('register')
     },
 
-    /*-- CRUD USUARIO CREAR --*/
-    //Create: function(req, res) => {
-    //db.User.create({
-    //name: req.body.name,
-    //email: req.body.email,
-    //phone: req.body.phone,
-    //password: req.body.password,
-    //image:req.body.image,
-    //id y admin no son introducidos por el usuario...    
-    //});
-    //}
-
     procesoCrear: async (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
@@ -48,20 +36,17 @@ const usuario = {
             }
 
             const users = await db.User.create({
-                //const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-                //const nuevoUser = {
-                //id: users[users.length - 1].id + 1,
+                
                 name: data.name,
                 email: data.email,
                 phone: parseInt(data.phone),
                 password: bcrypt.hashSync(req.body.password, 10),
                 image: userImage,
+                category: data.category,
+                color: data.color,
                 admin: 0
             })
 
-            //users.push(nuevoUser);
-            //fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "))
             res.redirect('/');
         }
         else {
@@ -91,10 +76,7 @@ const usuario = {
             })
 
             if (dataUsers) {
-                // let validadContra = bcrypt.compareSync(req.body.password, dataUsers.password);
-                //let validarContra = req.body.password == dataUsers.password
                 if (bcrypt.compareSync(req.body.password, dataUsers.dataValues.password)) {
-                    //bcrypt.compareSync(req.body.password, users[i].password)
                     req.session.userLogin = dataUsers.idusers
                     req.session.admin = dataUsers.admin
                     res.redirect('/usuario')
