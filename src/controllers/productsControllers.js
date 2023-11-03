@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../views/products/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const multer = require('multer');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const Sequelize = require('sequelize')
@@ -114,7 +115,11 @@ const products = {
     create: async (req, res) => {
         const data = req.body;
 
-        if (req.file) {
+
+        //usar multer para el nombre de la imagen
+        //nombre del producto + tipocolor + id_ascendente + jpg/png
+        //SamsungA4Azul01.jpg
+        if (req.file ) {
             var productImage = req.file.filename
         } else {
             var productImage = "producto.png"
