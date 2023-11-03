@@ -63,7 +63,6 @@ const usuario = {
             //users.push(nuevoUser);
             //fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "))
             res.redirect('/');
-            //....NO ESTA CORRIENDO LINEA 65....
         }
         else {
             res.render('register', {
@@ -99,7 +98,7 @@ const usuario = {
                     req.session.userLogin = dataUsers.idusers
                     req.session.admin = dataUsers.admin
                     res.redirect('/usuario')
-                    
+
                 } else {
                     return res.render('login', {
                         errors: errors.array(),

@@ -4,9 +4,5 @@ module.exports = {
 config: path.resolve('./database/config', 'config.js'), 
 'models-path': path.resolve('./database/models'),
 'seeders-path': path.resolve('./database/seeders'),
-<<<<<<< HEAD:src/views/.sequelizerc
-'migrations-path': path.resolve('./database/migrations')
-=======
 'migrations-path': path.resolve('./database/migrations'),
->>>>>>> 9242e8652a066908cc8544d52a11a4a5bb9a613a:.sequelizerc
 }
