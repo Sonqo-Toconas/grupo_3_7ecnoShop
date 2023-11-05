@@ -13,10 +13,10 @@ const products = {
         let productos = await db.Product.findAll()
         res.render('products', { productos: productos });
     },
-    //indexx: (req,res) => {
- //let phone = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../products/productos.json")));
-   // res.render(path.resolve(__dirname, "../views/products/productos"), {phone})
-    // }, 
+    //index: (req,res) => {
+ //let phone = JSON.parse(fs.readFileSync(path.resolve(__dirname,"./products/productos.json")));
+    //res.render(path.resolve(__dirname, "./views/products/productos"), {phone})
+     //}, 
 
     search: async (req, res) => {
         let products = await db.Product.findAll({
