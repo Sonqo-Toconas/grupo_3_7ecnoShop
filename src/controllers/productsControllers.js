@@ -2,9 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../views/products/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const multer = require('multer');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
-const Sequelize = require('sequelize') 
+const Sequelize = require('sequelize')
 const { where } = require('sequelize');
 
 
@@ -12,11 +13,16 @@ const products = {
     index: async (req, res) => {
         let productos = await db.Product.findAll()
         res.render('products', { productos: productos });
+
     },
     //index: (req,res) => {
  //let phone = JSON.parse(fs.readFileSync(path.resolve(__dirname,"./products/productos.json")));
     //res.render(path.resolve(__dirname, "./views/products/productos"), {phone})
      //}, 
+    //indexx: (req,res) => {
+    //let phone = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../products/productos.json")));
+    // res.render(path.resolve(__dirname, "../views/products/productos"), {phone})
+    // }, 
 
     search: async (req, res) => {
         let products = await db.Product.findAll({
@@ -25,7 +31,7 @@ const products = {
             }
         })
 
-        res.render('products', { products: products });
+        res.render('products', { productos: products });
     },
 
     filtrosIndex: (req, res) => {
@@ -100,7 +106,7 @@ const products = {
             }
         })
         let producto = await db.Product.findByPk(req.params.id)
-        
+
         console.log(producto)
         res.render('productDetail', { producto: producto, otrosProductos: data })
     },
@@ -112,8 +118,12 @@ const products = {
 
     create: async (req, res) => {
         const data = req.body;
-        
-        if (req.file) {
+
+
+        //usar multer para el nombre de la imagen
+        //nombre del producto + tipocolor + id_ascendente + jpg/png
+        //SamsungA4Azul01.jpg
+        if (req.file ) {
             var productImage = req.file.filename
         } else {
             var productImage = "producto.png"
@@ -124,49 +134,46 @@ const products = {
             description: data.description,
             price: data.price,
             image: productImage,
-            category: data.category,
-            color: data.color
+            category_id: data.category,
+            color_id: data.color
         })
 
         res.redirect('/');
     },
 
-    formularioEditar: (req, res) => {
-        const productos = require('../views/products/productos.json')
-        let idProducto = productos.find(producto => {
-            return req.params.id == producto.id;
-        })
-        res.render('productEdition', { producto: idProducto })
+    formularioEditar: async (req, res) => {
+        const oldProduct = await db.Product.findByPk(req.params.id);
+        res.render("productEdition", { oldProduct: oldProduct })
     },
 
-    editarProducto: (req, res) => {
-        const data = req.body;
+    editarProducto: async (req, res) => {
 
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+            const data = req.body;
 
-        const oldProduct = products.find(product => {
-            return product.id == req.params.id
-        });
+            const oldProduct = await db.Product.findByPk(req.params.id);
 
-        const editedProduct = {
-            id: oldProduct.id,
-            nombre: data.newName,
-            precio: parseInt(data.price),
-            descripcion: data.newDescription,
-            imagen: req.file ? req.file.filename : oldProduct.imagen,
-            categoria: data.category,
-            color: data.colors,
+            const editedProduct = await db.Product.update({
+                name: data.newName,
+                description: data.newDescription,
+                price: parseInt(data.price),
+                image: req.file ? req.file.filename : oldProduct.image,
+                category_id: data.category,
+                color_id: data.colors,
+            }, {
+                where: {
+                    id_product: req.params.id
+                }
+
+            })
+            res.redirect("/producto/detalle/" + oldProduct.id_product);
+        } else {
+            res.render('productEdition', {
+                errors: errors.array(),
+                old: req.body
+            })
         }
-
-        const index = products.findIndex(product => {
-            return product.id == req.params.id
-        })
-
-        products[index] = editedProduct;
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "))
-
-        res.redirect("/producto");
     },
 
     agregarAlCarrito: (req, res) => {

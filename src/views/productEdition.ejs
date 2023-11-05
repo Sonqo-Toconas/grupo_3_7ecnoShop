@@ -7,15 +7,19 @@
             <main>
                 <div class="formulario">
                     <h1 class>Editar producto</h1>
-                    <form action="/producto/editar/<%= producto.id %>?_method=PUT" method="POST">
+                    <form action="/producto/editar/<%= oldProduct.id_product %>?_method=PUT" method="POST">
                         <div class>
                             <label for="newName">Nuevo nombre del producto:</label>
-                            <input type="text" id="newName" name="newName" required>
+                            <input type="text" id="newName" name="newName" required
+                                value="<%=locals.old ? old.newName : oldProduct.name %>">
+
                         </div class>
 
                         <div class>
                             <label for="NewDescription">Nueva Descripción:</label>
-                            <textarea id="NewDescription" name="newDescription" required></textarea>
+                            <textarea id="NewDescription" name="newDescription"
+                                value=" <%=locals.old ? old.newDescription : oldProduct.newDescription %>"
+                                required></textarea>
                         </div>
 
                         <div class>
@@ -25,10 +29,11 @@
 
                         <div class>
                             <label for="category">Categoría a cambiar:</label>
+
                             <select id="category" name="category" required>
                                 <option disabled selected="formas de pago">Seleccionar nueva categoria</option>
-                                <option value="Celulares">Celulares</option>
-                                <option value="Accesorios">Accesorios</option>
+                                <option value="1">Celulares</option>
+                                <option value="2">Accesorios</option>
                             </select>
                         </div>
 
