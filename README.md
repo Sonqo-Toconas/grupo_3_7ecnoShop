@@ -29,7 +29,7 @@ Edad: 22, estudiante de la Tec. Sup. en Gestión y Mantenimiento de Equipamiento
 18 años, estudiante de E.E.T N°1 - Esp Construcciones.
 
 - **Mamaní Agustina Belén**<br>
-23 años, estudiante de la Lic. en Administración.
+23 años, estudiante de Lic. en Administración.
 
 
 <hr>
