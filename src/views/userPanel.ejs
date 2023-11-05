@@ -3,83 +3,88 @@
     </head>
 
     <body>
-        <section> <%- include('./partials/header') %>
+        <section>
+            <%- include('./partials/header') %>
 
-            <main>
-                <div class="carteluser">
-                    <p class="informacionCartel">Bienvenido
-                    </p>
-
-                
-                                    <div class="carteluser">
-                        <p class="informacionCartel">Administrar</p>
-                        <div class="botones2">
-                            <a href="/producto/crear" class="botonuser">Subir Producto</a>
-                        <a href="/producto" class="botonuser">Editar Producto</a>
-                        </div>
-                    </div>
-
-
+                <main>
                     <div class="carteluser">
-                        <p class="informacionCartel">Información de la cuenta</p>
+                        <p class="informacionCartel">Bienvenido
+                        </p>
 
-                        <div class="contenedor-informacion">
-                            <div class="informacionCuenta1">
-                                <p>Nombre</p>
-                                <p class="informacionCuenta2">
-                                    <%= usuario.user %>
-                                </p>
-                            </div>
 
-                            <div class="informacionCuenta1">
-                                <p>Correo</p>
-                                <p class="informacionCuenta2">
-                                    <%= usuario.email %>
-                                </p>
-
-                            </div>
-
-                            <div class="informacionCuenta1">
-                                <p>Numero</p>
-                                <p class="informacionCuenta2">
-                                    <%= usuario.phone %>
-                                </p>
-
-                            </div>
-
-                            <div class="informacionCuenta1">
-                                <p>Contraseña</p>
-                                <p class="informacionCuenta2">
-                                    censored
-                                </p>
+                        <div class="carteluser">
+                            <p class="informacionCartel">Administrar</p>
+                            <div class="botones2">
+                                <a href="/producto/crear" class="botonuser">Subir Producto</a>
+                                <a href="/producto" class="botonuser">Editar Producto</a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="carteluser">
-                        <p class="informacionCartel">Productos que publicaste</p>
-                        <% if (product) { %>
-                            <% products.forEach(product => { %>
-                                <div class="products-image">
-                                    <img src="/images/celulares/<%= product.imagen %>" alt="image-product">
+
+                        <div class="carteluser">
+                            <p class="informacionCartel">Información de la cuenta</p>
+
+                            <div class="contenedor-informacion">
+                                <div class="informacionCuenta1">
+                                    <p>Nombre</p>
+                                    <p class="informacionCuenta2">
+                                        <%= usuario.user %>
+                                    </p>
                                 </div>
-                            <div class="product-box">
-                                    <p> <%= product.nombre %> </p>
-                                    <p> <%= product.precio %> </p>
+
+                                <div class="informacionCuenta1">
+                                    <p>Correo</p>
+                                    <p class="informacionCuenta2">
+                                        <%= usuario.email %>
+                                    </p>
+
                                 </div>
-                            <% }); %>
-                        <% } %>
-                        
 
-                    </div>
+                                <div class="informacionCuenta1">
+                                    <p>Numero</p>
+                                    <p class="informacionCuenta2">
+                                        <%= usuario.phone %>
+                                    </p>
 
+                                </div>
 
-                    <div class="carteluser">
-                        <p class="informacionCartel">Productos que compraste</p>
-                        <div class="products-box">
+                                <div class="informacionCuenta1">
+                                    <p>Contraseña</p>
+                                    <p class="informacionCuenta2">
+                                        censored
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carteluser">
+                            <p class="informacionCartel">Productos que publicaste</p>
+                            <% if (product) { %>
+                                <% products.forEach(product=> { %>
+                                    <div class="products-image">
+                                        <img src="/images/celulares/<%= product.imagen %>" alt="image-product">
+                                    </div>
+                                    <div class="product-box">
+                                        <p>
+                                            <%= product.nombre %>
+                                        </p>
+                                        <p>
+                                            <%= product.precio %>
+                                        </p>
+                                    </div>
+                                    <% }); %>
+                                        <% } %>
+
 
                         </div>
-                    </div>
+
+
+                        <div class="carteluser">
+                            <p class="informacionCartel">Productos que compraste</p>
+                            <div class="products-box">
+
+                            </div>
+                        </div>
                 </main>
 
                 <%- include('./partials/footer') %>

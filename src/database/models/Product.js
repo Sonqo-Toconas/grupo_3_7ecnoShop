@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: true,
         },
-        id_color: {
+        color_id: {
             type: dataTypes.INTEGER,
             allowNull: true,
         }

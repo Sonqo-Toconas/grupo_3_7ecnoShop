@@ -1,56 +1,55 @@
 <%- include('./partials/head') %>
   <link rel="stylesheet" href="/css/creation.css" />
   </head>
-  <form action="/crear" method="POST" enctype="multipart/form-data"></form>
 
   <body>
 
     <%- include('./partials/header') %>
 
-     <main>
-      <div class="formulario">
-        <h1 class>Formulario de carga de productos</h1>
-        <form action="/producto/crear" method="POST" >
-          <div class>
-            <label for="name">Nombre del producto:</label>
-            <input type="text" id="name" name="name" required>
-          </div class>
+      <main>
+        <div class="formulario">
+          <h1 class>Formulario de carga de productos</h1>
+          <form action="/producto/crear" method="POST" enctype="multipart/form-data">
+            <div class>
+              <label for="name">Nombre del producto:</label>
+              <input type="text" id="name" name="name" required>
+            </div class>
 
-          <div class>
-            <label for="description">Descripción:</label>
-            <textarea id="description" name="description" rows="3" required></textarea>
-          </div>
+            <div class>
+              <label for="description">Descripción:</label>
+              <textarea id="description" name="description" rows="3" required></textarea>
+            </div>
 
-          <div class>
-            <label for="image">Imagen:</label>
-            <input type="file" id="image" name="image" accept="image/*" required>
-          </div>
+            <div class>
+              <label for="image">Imagen:</label>
+              <input type="file" id="image" name="image" accept=".jpg, .png" required>
+            </div>
 
-          <div class>
-            <label for="category">Categoría:</label>
-            <select id="category" name="category" required>
-              <option value="0">Seleccionar</option>
-              <option value="1">Celulares</option>
-              <option value="2">Accesorios</option>
-            </select>
-          </div>
+            <div class>
+              <label for="category">Categoría:</label>
+              <select id="category" name="category" required>
+                <option value="0">Seleccionar</option>
+                <option value="1">Celulares</option>
+                <option value="2">Accesorios</option>
+              </select>
+            </div>
 
-          <div class>
-            <label for="colors">Colores:</label>
-            <input type="text" id="colors" name="color" required>
-          </div>
+            <div class>
+              <label for="colors">Colores:</label>
+              <input type="text" id="colors" name="color" required>
+            </div>
 
-          <div class>
-            <label for="price">Precio:</label>
-            <input type="number" id="price" name="price" min="0" step=".01" required>
-          </div>
-        
-          <button type="submit">Cargar producto</button>
-        </form>
-      </div>
-    </main>
+            <div class>
+              <label for="price">Precio:</label>
+              <input type="number" id="price" name="price" min="0" step=".01" required>
+            </div>
 
-    <%- include('./partials/footer') %>
+            <button type="submit">Cargar producto</button>
+          </form>
+        </div>
+      </main>
+
+      <%- include('./partials/footer') %>
 
   </body>
 

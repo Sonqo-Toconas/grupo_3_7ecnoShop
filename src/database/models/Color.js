@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: true,
             unique: true,
         }
-       
+
     }
 
 
@@ -26,13 +26,14 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Color = sequelize.define(alias, cols, config);
-    Color.associate = function (models) {
-        Color.hasMany(models.Product, {
-            as: "Product",
-            foreignKey: "id_color"
-        })
-    }
 
+    /*     Color.associate = function (models) {
+            Color.hasMany(models.Product, {
+                as: "Product",
+                foreignKey: "id_color"
+            })
+        }
+     */
 
     return Color
 }

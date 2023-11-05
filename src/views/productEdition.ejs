@@ -7,7 +7,7 @@
             <main>
                 <div class="formulario">
                     <h1 class>Editar producto</h1>
-                    <form action="/producto/editar/<%= oldProduct.id_product %>?_method=PUT" method="POST">
+                    <form action="/producto/editar/<%= oldProduct.id_product %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <div class>
                             <label for="newName">Nuevo nombre del producto:</label>
                             <input type="text" id="newName" name="newName" required

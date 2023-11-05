@@ -272,7 +272,12 @@ Por el momento llevamos conductas positivas
 
 - **Toconas Luciano**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
+Nada por el momento, vamos bien como equipo
     - ¿Qué deberiamos hacer más?<br>
+Pensar nuevas ideas, para el proyecto
     - ¿Qué deberíamos seguir haciendo?<br>
+Llevarnos muy bien como grupo
     - ¿Qué deberiamos hacer menos?<br>
+Equivocarnos al aceptar o recharzar cambios
     - ¿Qué deberíamos dejar de hacer?<br>
+Por el momento llevamos conductas positivas
