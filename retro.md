@@ -204,7 +204,7 @@ Por el momento no hay malos habitos
 - **Cruz Max**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
     comenzar a aprender fuera del curso para expandir aun mas nuestros conocimientos
-    - ¿Qué deberiamos hacer más?<br>
+    - ¿Qué deberiamos hacer más?<br
     deberiamos tener mas confianza entre los integrantes
     - ¿Qué deberíamos seguir haciendo?<br>
     seguir practicando todo lo que nos den en la cursada
@@ -241,10 +241,15 @@ Por el momento llevamos conductas positivas
 
 - **Cruz Carina**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
+    Deberiamos comenzar a mejorar el proyecto, agregarle mas funcionalidades
     - ¿Qué deberiamos hacer más?<br>
+    reuniones grupales
     - ¿Qué deberíamos seguir haciendo?<br>
+    seguir comunicándonos 
     - ¿Qué deberiamos hacer menos?<br>
+      dejar de tener miedo a equivocarnos 
     - ¿Qué deberíamos dejar de hacer?<br>
+      conformarnos con cumplir nuestra parte, sino poner mas
 
 - **Cruz Max**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
