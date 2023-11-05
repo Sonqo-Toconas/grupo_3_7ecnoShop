@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
 
 
     let config = {
-        tableName: 'color',
+        tableName: 'colors',
         timestamps: false,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
     Color.associate = function (models) {
         Color.hasMany(models.Product, {
             as: "Product",
-            foreignKey: "color_id"
+            foreignKey: "id_color"
         })
     }
 

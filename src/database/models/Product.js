@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: true,
         },
-        color_id: {
+        id_color: {
             type: dataTypes.INTEGER,
             allowNull: true,
         }
@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
 
 
     let config = {
-        tableName: 'product',
+        tableName: 'products',
         timestamps: false,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
