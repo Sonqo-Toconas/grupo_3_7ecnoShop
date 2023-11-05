@@ -21,11 +21,11 @@
           <section class="main-footer" onclick="irProducto">
             <% for( let i=0; i < productos.length; i++ ) { %>
               <div class="product">
-                <a href="/producto/detalle/<%= productos[i].id %>">
-                  <img src="/images/celulares/<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>"
+                <a href="/producto/detalle/<%= productos[i].id_product %>">
+                  <img src="/images/celulares/<%= productos[i].image %>" alt="<%= productos[i].name %>"
                     class="smartphone" />
                   <h2 class="tittle-for-product">
-                    <%= productos[i].nombre %>
+                    <%= productos[i].name %>
                   </h2>
                   <p>$<%= productos[i].price %>
                   </p>

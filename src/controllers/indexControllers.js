@@ -1,11 +1,11 @@
-const productos = require('../views/products/productos')
+const db = require('../database/models');
+
 
 const controller = {
-    index: (req, res) => {
-        let productosDestacados = productos.filter(cel => {
-            return cel.ventas >= 10;
-        })
-        return res.render('index', { productos: productosDestacados });
+    index: async (req, res) => {
+        let productos = await db.Product.findAll()
+
+        return res.render('index', { productos: productos });
     },
 
     showAllProducts: (req, res) => {
