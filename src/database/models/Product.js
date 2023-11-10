@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: true,
         },
         price: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.DECIMAL,
             allowNull: true,
         },
         image: {
@@ -46,18 +46,22 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(alias, cols, config);
 
-    /* Product.associate = function (models) {
+    Product.associate = function (models) {
         Product.belongsTo(models.Category, {
             as: "category",
             foreignKey: "category_id"
         })
 
         Product.belongsTo(models.Color, {
-            as: "Color",
-            foreignKey: "id_color"
+            as: "color",
+            foreignKey: "color_id"
         });
-    } */
 
+        Product.hasMany(models.Cart, {
+            as: "cart",
+            foreignKey: "product_id"
+        })
+    }
 
     return Product
 }

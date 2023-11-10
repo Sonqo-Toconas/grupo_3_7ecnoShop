@@ -25,21 +25,19 @@ module.exports = (sequelize, dataTypes) => {
     timestamps: false
   };
 
-  const Carrito = sequelize.define(alias, cols, config);
+  const Cart = sequelize.define(alias, cols, config);
 
-  /*   Carrito.associate = function(models) {
-       Carrito.hasMany(models.Producto, {
-           as: "product_id",
-           foreignKey: "id_product"
-       })
-   },
-   
-   Carrito.associate = function(models) {
-     Carrito.belongsTo(models.User, {
-         as: "user_id",
-         foreignKey: "id_user"
-     })
-   } */
+  Cart.associate = function (models) {
+    Cart.belongsTo(models.Product, {
+      as: "product",
+      foreignKey: "product_id"
+    })
+    Cart.belongsTo(models.User, {
+      as: "user",
+      foreignKey: "user_id"
+    })
+  }
 
-  return Carrito;
+  return Cart;
+
 }

@@ -85,18 +85,22 @@ const products = {
         }
     },
 
-    delete: (req, res) => {
-        Producto.destroy({
+    delete: function (req, res) {
+        db.Product.destroy({
             where: {
                 id_product: req.params.id
             }
         }).then(() => {
-            res.redirect('/producto');
-        }).catch(error => {
+        
+            res.redirect('/');
+            console.log(req.params.id)
+        })
+        .catch(error => {
             console.log(error);
             res.status(500).send('Ha ocurrido un error al eliminar el producto');
         });
     },
+
 
     detalle: async (req, res) => {
 
@@ -118,7 +122,6 @@ const products = {
 
     create: async (req, res) => {
         const data = req.body;
-
 
         //usar multer para el nombre de la imagen
         //nombre del producto + tipocolor + id_ascendente + jpg/png
@@ -157,7 +160,7 @@ const products = {
             const editedProduct = await db.Product.update({
                 name: data.newName,
                 description: data.newDescription,
-                price: parseInt(data.price),
+                price: parseFloat(data.price),
                 image: req.file ? req.file.filename : oldProduct.image,
                 category_id: data.category,
                 color_id: data.colors,

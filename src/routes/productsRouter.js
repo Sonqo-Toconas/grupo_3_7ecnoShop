@@ -27,7 +27,7 @@ router.get('/editar/:id', productsControllers.formularioEditar);
 router.put('/editar/:id', fileUpload.single('newImage'), productsControllers.editarProducto);
 router.get('/detalle/:id', productsControllers.detalle);
 router.get("/producto", productsControllers.index);
-router.delete('/delete/:id', middleware, adminPermiso, productsControllers.delete);
+router.post('/delete/:id', productsControllers.delete);
 
 
 module.exports = router;

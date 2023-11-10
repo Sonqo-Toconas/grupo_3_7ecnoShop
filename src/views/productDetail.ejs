@@ -1,3 +1,4 @@
+
 <%- include('./partials/head') %>
 
     <link rel="stylesheet" href="/css/productDetail.css">
@@ -73,7 +74,7 @@
                     <p class="informacionCartel">Administrar</p>
                     <div class="botones2">
                         <a href="/producto/editar/<%= producto.id_product %>" class="botonuser">Editar Producto</a>
-                        <form action="/producto/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                        <form action="/producto/delete/<%= producto.id_product %>" method="POST">
                             <button type="submit" class="botonuser">Eliminar</button>
                         </form>
                     </div>
