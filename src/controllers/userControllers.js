@@ -42,8 +42,6 @@ const usuario = {
                 phone: parseInt(data.phone),
                 password: bcrypt.hashSync(req.body.password, 10),
                 image: userImage,
-                category: data.category,
-                color: data.color,
                 admin: 0
             })
 
@@ -67,45 +65,39 @@ const usuario = {
     processLogin: async (req, res) => {
 
         let errors = validationResult(req)
-
+        console.log(errors.errors);
+        let {email, password} = req.body;
         if (errors.isEmpty()) {
             let dataUsers = await db.User.findOne({
                 where: {
-                    email: req.body.email
+                    email: email
                 }
             })
 
             if (dataUsers) {
-                if (bcrypt.compareSync(req.body.password, dataUsers.dataValues.password)) {
-                    req.session.userLogin = dataUsers.idusers
+                let validPassword = await bcrypt.compare(password, dataUsers.password);
+                if (validPassword) {
+                    req.session.userLogin = dataUsers.id_user
                     req.session.admin = dataUsers.admin
-                    res.redirect('/usuario')
+                    res.redirect('/')
 
                 } else {
                     return res.render('login', {
                         errors: errors.array(),
-                        old: req.body,
-                        mensajeEmail: false,
-                        mensajeP: 'contraseña es invalida'
+                        old: req.body
                     })
                 }
             } else {
                 res.render('login', {
-                    mensajeP: false,
-                    mensajeEmail: 'email es invalido'
                 })
             }
         } else {
             res.render('login', {
                 errors: errors.errors,
                 old: req.body,
-                mensajeP: false,
-                mensajeEmail: 'email es invalido'
             })
         }
-
     },
-
     carrito: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('productCart', { productos: productos });
