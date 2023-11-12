@@ -8,7 +8,7 @@
 
             <main>
                 <form action="/usuario/registro" method="POST" class="contenedor-formulario"
-                    enctype="multipart/form-data">
+                    enctype="multipart/form-data" id="form">
                     <h1>Completá los datos para crear tu cuenta</h1>
 
                     <div class="botones">
@@ -21,50 +21,57 @@
                         <label for="name" class="texto-formulario">
                             Elegí tu nombre
                         </label>
-                        <input type="text" name="name" placeholder="Nombre y apellido" minlength="3"
-                            class="barra-formulario" value="<%=locals.old ? old.nombre : null %>">
+                        <input type="text" name="name" placeholder="Nombre y apellido" class="barra-formulario"
+                            value="<%=locals.old ? old.name : null %>" id="name">
+                        <div class="Error" id="nameError"></div>
 
                         <label for="email" class="texto-formulario">
                             Agregá tu e-mail
                         </label>
                         <input type="email" name="email" placeholder="E-mail" class="barra-formulario"
-                            value="<%=locals.old ? old.email : null %>">
+                            value="<%=locals.old ? old.email : null %>" id="email">
+                        <div class="Error" id="emailError"></div>
 
                         <label for="phone" class="texto-formulario">
                             Agregá tu celular
                         </label>
                         <input type="tel" name="phone" placeholder="Teléfono" class="barra-formulario"
-                            value="<%=locals.old ? old.telefono : null %>">
-
+                            value="<%=locals.old ? old.phone : null %>" id="phone">
+                        <div class="Error" id="phoneError"></div>
 
                         <label for="imagen" class="texto-formulario">
                             (Opcional) Agregá una foto de perfil
                         </label>
-                        <input type="file" name="imagen" accept=".jpg, .png" class="barra-formulario"></input>
+                        <input type="file" name="imagen" accept=".jpg, .png" class="barra-formulario"
+                            id="image"></input>
+                            <div class="Error" id="imageError"></div>
 
                         <label for="password" class="texto-formulario">
                             Contraseña
                         </label>
-                        <input type="password" name="password" placeholder="Contraseña" class="barra-formulario2">
-                        <input type="password" name="password2" placeholder="Confirmar contraseña"
-                            class="barra-formulario2">
+                        <input type="password" name="password2" placeholder="Contraseña" class="barra-formulario2"
+                            id="password">
+                        <div class="Error2" id="passwordError"></div>
+
+                        <input type="password" name="password" placeholder="Confirmar contraseña"
+                            class="barra-formulario2" id="password2">
+                        <div class="Error2" id="passwordError2"></div>
                     </div>
+
                     <% if (locals.errors) { errors.forEach(error=> { %>
                         <p class="mensajeError">
                             <%= error.msg%>
                         </p>
                         <%}) }%>
+
                             <div class="botones2">
                                 <button type="submit" class="boton-formulario">Enviar</button>
                                 <button type="reset" class="boton-formulario">Borrar</button>
                             </div>
-
                 </form>
-
             </main>
-
             <%- include('./partials/footer') %>
-
+                <script src="/js/userRegister.js"></script>
     </body>
 
     </html>
