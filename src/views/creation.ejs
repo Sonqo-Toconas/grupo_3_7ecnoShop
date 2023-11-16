@@ -9,20 +9,23 @@
       <main>
         <div class="formulario">
           <h1 class>Formulario de carga de productos</h1>
-          <form action="/producto/crear" method="POST" enctype="multipart/form-data">
+          <form action="/producto/crear" method="POST" enctype="multipart/form-data" id="form">
             <div class>
               <label for="name">Nombre del producto:</label>
               <input type="text" id="name" name="name" required>
+              <div class="Error" id="nameError"></div>
             </div class>
 
             <div class>
               <label for="description">Descripción:</label>
               <textarea id="description" name="description" rows="3" required></textarea>
+              <div class="Error" id="descriptionError"></div>
             </div>
 
             <div class>
               <label for="image">Imagen:</label>
               <input type="file" id="image" name="image" accept=".jpg, .png" required>
+              <div class="Error" id="imageError"></div>
             </div>
 
             <div class>
@@ -50,6 +53,7 @@
       </main>
 
       <%- include('./partials/footer') %>
+      <script src="/js/creationEdition.js"></script>
 
   </body>
 

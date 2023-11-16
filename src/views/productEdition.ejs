@@ -10,21 +10,24 @@
                     <form action="/producto/editar/<%= oldProduct.id_product %>?_method=PUT" method="POST"
                         enctype="multipart/form-data">
                         <div class>
-                            <label for="newName">Nuevo nombre del producto:</label>
-                            <input type="text" id="newName" name="newName"
-                                value="<%=locals.old ? old.newName : oldProduct.name %>">
+                            <label for="name">Nuevo nombre del producto:</label>
+                            <input type="text" id="name" name="name"
+                                value="<%=locals.old ? old.name : oldProduct.name %>">
+                                <div class="Error" id="nameError"></div>
 
                         </div class>
 
                         <div class>
-                            <label for="NewDescription">Nueva Descripción:</label>
-                            <input type="text" id="NewDescription" name="newDescription"
-                                value="<%=locals.old ? old.newDescription : oldProduct.description %>"></i>
+                            <label for="description">Nueva Descripción:</label>
+                            <input type="text" id="description" name="description"
+                                value="<%=locals.old ? old.description : oldProduct.description %>"></i>
+                                <div class="Error" id="descriptionError"></div>
                         </div>
 
                         <div class>
-                            <label for="newImage">Nuevas Imagenes:</label>
-                            <input type="file" id="newImage" name="newImage" accept=".jpg, .png">
+                            <label for="image">Nuevas Imagenes:</label>
+                            <input type="file" id="image" name="image" accept=".jpg, .png">
+                            <div class="Error" id="imageError"></div>
                         </div>
 
                         <div class>
@@ -54,6 +57,7 @@
                 </div>
             </main>
 
+            <script src="/js/creationEdition.js"></script>
 
     </body>
 
