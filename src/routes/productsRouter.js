@@ -5,6 +5,7 @@ const productsControllers = require('../controllers/productsControllers');
 const middleware = require('../middlewares/authMiddleware')
 const adminPermiso = require('../middlewares/adminPermiso')
 const multer = require('multer');
+const validationProducts = require('../middlewares/validatorProduct/validatorProduct');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -22,9 +23,9 @@ router.get('/', productsControllers.index);
 router.post('/', productsControllers.search);
 router.post('/', productsControllers.filtrosIndex);
 router.get('/crear', productsControllers.mostrarFormularioCreacion);
-router.post('/crear', fileUpload.single('image'), productsControllers.create);
+router.post('/crear', fileUpload.single('image'), validationProducts, productsControllers.create);
 router.get('/editar/:id', productsControllers.formularioEditar);
-router.put('/editar/:id', fileUpload.single('newImage'), productsControllers.editarProducto);
+router.post('/editar/:id', fileUpload.single('image'),validationProducts ,productsControllers.editarProducto);
 router.get('/detalle/:id', productsControllers.detalle);
 router.get("/producto", productsControllers.index);
 router.post('/delete/:id', productsControllers.delete);

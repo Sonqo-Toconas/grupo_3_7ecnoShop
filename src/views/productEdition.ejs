@@ -7,13 +7,21 @@
             <main>
                 <div class="formulario">
                     <h1 class>Editar producto</h1>
-                    <form action="/producto/editar/<%= oldProduct.id_product %>?_method=PUT" method="POST"
+                    <form action="/producto/editar/<%= oldProduct.id_product %>" method="POST"
                         enctype="multipart/form-data">
                         <div class>
                             <label for="name">Nuevo nombre del producto:</label>
                             <input type="text" id="name" name="name"
                                 value="<%=locals.old ? old.name : oldProduct.name %>">
+                                <%if (locals.errors) { errors.forEach(error=> { %>
+                                    <% if(error.path == "name") {%>
+                                    <p class="errorMessage">
+                                      <%= error.msg%>
+                                    </p>
+                                    <% } %>
+                                    <%}) }%>
                                 <div class="Error" id="nameError"></div>
+
 
                         </div class>
 
@@ -21,12 +29,26 @@
                             <label for="description">Nueva Descripción:</label>
                             <input type="text" id="description" name="description"
                                 value="<%=locals.old ? old.description : oldProduct.description %>"></i>
+                                <%if (locals.errors) { errors.forEach(error=> { %>
+                                    <% if(error.path == "description") {%>
+                                    <p class="errorMessage">
+                                      <%= error.msg%>
+                                    </p>
+                                    <% } %>
+                                    <%}) }%>
                                 <div class="Error" id="descriptionError"></div>
                         </div>
 
                         <div class>
                             <label for="image">Nuevas Imagenes:</label>
                             <input type="file" id="image" name="image" accept=".jpg, .png">
+                            <%if (locals.errors) { errors.forEach(error=> { %>
+                                <% if(error.path == "image") {%>
+                                <p class="errorMessage">
+                                  <%= error.msg%>
+                                </p>
+                                <% } %>
+                                <%}) }%>
                             <div class="Error" id="imageError"></div>
                         </div>
 
@@ -37,18 +59,39 @@
                                 <option value="1">Celulares</option>
                                 <option value="2">Accesorios</option>
                             </select>
+                            <%if (locals.errors) { errors.forEach(error=> { %>
+                                <% if(error.path == "category") {%>
+                                <p class="errorMessage">
+                                  <%= error.msg%>
+                                </p>
+                                <% } %>
+                                <%}) }%>
                         </div>
 
                         <div class>
                             <label for="colors">Nuevos Colores:</label>
                             <input type="text" id="colors" name="color"
                                 value="<%=locals.old ? old.color : oldProduct.color_id%>">
+                                <%if (locals.errors) { errors.forEach(error=> { %>
+                                    <% if(error.path == "color") {%>
+                                    <p class="errorMessage">
+                                      <%= error.msg%>
+                                    </p>
+                                    <% } %>
+                                    <%}) }%>
                         </div>
 
                         <div class>
                             <label for="price">Nuevo Precio:</label>
                             <input type="text" id="price" name="price" min="0" step=".01"
                                 value="<%=locals.old ? old.price : oldProduct.price%>">
+                                <%if (locals.errors) { errors.forEach(error=> { %>
+                                    <% if(error.path == "price") {%>
+                                    <p class="errorMessage">
+                                      <%= error.msg%>
+                                    </p>
+                                    <% } %>
+                                    <%}) }%>
                         </div>
 
                         <button type="submit">Confirmar edicion de producto</button>
@@ -57,7 +100,7 @@
                 </div>
             </main>
 
-            <script src="/js/creationEdition.js"></script>
+            <!-- <script src="/js/creationEdition.js"></script> -->
 
     </body>
 

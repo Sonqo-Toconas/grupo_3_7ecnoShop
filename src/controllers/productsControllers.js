@@ -7,6 +7,7 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const Sequelize = require('sequelize')
 const { where } = require('sequelize');
+const { createConnection } = require('net');
 
 
 const products = {
@@ -15,14 +16,6 @@ const products = {
         res.render('products', { productos: productos });
 
     },
-    //index: (req,res) => {
- //let phone = JSON.parse(fs.readFileSync(path.resolve(__dirname,"./products/productos.json")));
-    //res.render(path.resolve(__dirname, "./views/products/productos"), {phone})
-     //}, 
-    //indexx: (req,res) => {
-    //let phone = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../products/productos.json")));
-    // res.render(path.resolve(__dirname, "../views/products/productos"), {phone})
-    // }, 
 
     search: async (req, res) => {
         let products = await db.Product.findAll({
@@ -91,14 +84,14 @@ const products = {
                 id_product: req.params.id
             }
         }).then(() => {
-        
+
             res.redirect('/');
             console.log(req.params.id)
         })
-        .catch(error => {
-            console.log(error);
-            res.status(500).send('Ha ocurrido un error al eliminar el producto');
-        });
+            .catch(error => {
+                console.log(error);
+                res.status(500).send('Ha ocurrido un error al eliminar el producto');
+            });
     },
 
 
@@ -122,26 +115,36 @@ const products = {
 
     create: async (req, res) => {
         const data = req.body;
-
-        //usar multer para el nombre de la imagen
-        //nombre del producto + tipocolor + id_ascendente + jpg/png
-        //SamsungA4Azul01.jpg
-        if (req.file ) {
-            var productImage = req.file.filename
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+            if (req.file) {
+            
+                var productImage = req.file.filename
+                
+            } else {
+                var productImage = "producto.png"
+            }
+    
+            const products = await db.Product.create({
+                name: data.name,
+                description: data.description,
+                price: data.price,
+                image: productImage,
+                category_id: data.category,
+                color_id: data.color
+            })
+    
+            res.redirect('/');
         } else {
-            var productImage = "producto.png"
+            //si hay errores
+            console.log(errors)
+            res.render('creation', {
+                errors: errors.array(),
+                old: req.body
+            }) 
+            //y que no se suba el archivo
         }
-
-        const products = await db.Product.create({
-            name: data.name,
-            description: data.description,
-            price: data.price,
-            image: productImage,
-            category_id: data.category,
-            color_id: data.color
-        })
-
-        res.redirect('/');
+        
     },
 
     formularioEditar: async (req, res) => {
@@ -150,18 +153,22 @@ const products = {
     },
 
     editarProducto: async (req, res) => {
-
+        const data = req.body;
         let errors = validationResult(req)
-        if (errors.isEmpty()) {
-            const data = req.body;
-
-            const oldProduct = await db.Product.findByPk(req.params.id);
-
+        const oldProduct = await db.Product.findByPk(req.params.id);
+        if (errors.isEmpty()) {           
+            if (req.file) {
+            
+                var productNewImage = req.file.filename
+                
+            } else {
+                var productNewImage = "producto.png"
+            }
             const editedProduct = await db.Product.update({
                 name: data.newName,
                 description: data.newDescription,
                 price: parseFloat(data.price),
-                image: req.file ? req.file.filename : oldProduct.image,
+                image: req.file ? productNewImage : oldProduct.image,
                 category_id: data.category,
                 color_id: data.colors,
             }, {
@@ -170,10 +177,11 @@ const products = {
                 }
 
             })
-            res.redirect("/producto/detalle/" + oldProduct.id_product);
+            res.redirect("/");
         } else {
             res.render('productEdition', {
                 errors: errors.array(),
+                oldProduct: oldProduct,
                 old: req.body
             })
         }

@@ -11,6 +11,11 @@ window.addEventListener('load', function () {
     let valid1 = false;
     let valid2 = false;
 
+    description.addEventListener('load', function () {
+            description.innerHTML = 'des';
+        
+    });
+
     name.addEventListener('blur', function () {
         if (this.value.trim().length < 5) {
             nameError.innerHTML = 'El nombre debe tener al menos 5 caracteres.';

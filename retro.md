@@ -265,10 +265,15 @@ Por el momento llevamos conductas positivas
 
 - **Leiva Nayla**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>
+    No se me ocurre algo que deberiamos comenzar a hacer.
     - ¿Qué deberiamos hacer más?<br>
+    Hablar mas como grupo.
     - ¿Qué deberíamos seguir haciendo?<br>
+    Seguir organizandonos y repartiendonos como ahora.
     - ¿Qué deberiamos hacer menos?<br>
+    En lo personal dejar de dudar tanto en todo.
     - ¿Qué deberíamos dejar de hacer?<br>
+    No se me ocurre que deberiamos dejar de hacer, por el momento creo que estamos bien.
 
 - **Toconas Luciano**<br>
     - ¿Qué deberiamos comenzar a hacer?<br>

@@ -1,10 +1,10 @@
-body {
+.formProductCreation {
   background-color: #007F7F;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
-h1 {
+.TitleFormCreation {
   color: white;
   font-size: 1.5rem;
 }
@@ -18,7 +18,7 @@ main {
   text-align: center;
 }
 
-.formulario {
+.formProductCreation {
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 50px;
@@ -34,21 +34,21 @@ main {
   box-shadow: 0px 0px 15px 2px;
 }
 
-.formulario div {
+.formProductCreation div {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
 
-.formulario div label {
+.formProductCreation div label {
   font-size: 18px;
   font-weight: bold;
 }
 
-.formulario div input[type="text"],
-.formulario div input[type="number"],
-.formulario div select,
-.formulario div textarea {
+.formProductCreation div input[type="text"],
+.formProductCreation div input[type="number"],
+.formProductCreation div select,
+.formProductCreation div textarea {
   width: calc(100% - 20px);
   padding: 10px;
   border-radius: 5px;
@@ -56,11 +56,11 @@ main {
   background-color: #f2f2f2;
 }
 
-.formulario div input[type="file"] {
+.formProductCreation div input[type="file"] {
   width: auto;
 }
 
-.formulario div input[type="submit"] {
+.formProductCreation div input[type="submit"] {
     background-color: #007F7F;
     color: white;
     border-radius: 5px;
@@ -72,8 +72,8 @@ main {
     transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
-.formulario div input[type="submit"]:hover,
-.formulario div input[type="file"]:focus {
+.formProductCreation div input[type="submit"]:hover,
+.formProductCreation div input[type="file"]:focus {
     background-color: #1259c3;
 }
 
@@ -150,3 +150,9 @@ main {
         color: #1D9BF0;
     }
 }
+
+.errorMessage{
+  color: red;
+}
+/* CSS CREATION RESPONSIVE */
+

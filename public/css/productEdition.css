@@ -150,3 +150,6 @@ main {
         color: #1D9BF0;
     }
 }
+.errorMessage{
+    color: red;
+  }

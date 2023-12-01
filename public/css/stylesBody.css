@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
 
 main{        
     padding-top: 120px;
-}
+} */
 header {
     z-index:10;
     width: 100%;
@@ -21,17 +21,17 @@ header {
     align-items: center;
 }
 
-.logo-header {
+/* .logo-header {
     display: flex;
     justify-items: center;
     text-align: center;
-}
+} */
 
-#iconoL{
+/* #iconoL{
     display: flex;
     font-size: medium;
     align-items: center;
-}
+} */
 
 .contenido-header {
     text-align: center;
@@ -234,3 +234,38 @@ a:hover {
     background-color: #ffffef;
     color: #007F7F;
 }
+
+/* HEADER RESPONSIVE */
+header{
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.logo-header{
+    background-color: brown;
+    /* width: 4px; */
+    height: 9px;
+}
+
+.image-logo{
+
+}
+
+.content-header{
+
+}
+
+.icon-header{
+    align-items: center;
+}
+
+.link-header{
+
+}
+
+
+/* FOOTER RESPONSIVE */
+
