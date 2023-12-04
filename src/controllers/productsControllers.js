@@ -27,55 +27,52 @@ const products = {
         res.render('products', { productos: products });
     },
 
-    filtrosIndex: (req, res) => {
-        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        let valor = req.body.order;
-        switch (valor) {
-            case 'mayor-precio':
-                productos.sort(function (a, b) {
-                    if (a.price < b.price) {
-                        return 1
-                    }
-                    if (a.price > b.price) {
-                        return -1
-                    }
-                    return 0
-                })
-                res.render('products', { productos: productos })
-                break;
-            case 'menor-precio':
-                productos.sort(function (a, b) {
-                    if (a.price > b.price) {
-                        return 1
-                    }
-                    if (a.price < b.price) {
-                        return -1
-                    }
-                    return 0
-                })
-                res.render('products', { productos: productos })
-                break;
-            case 'ofertas':
-                let productosEnOfertas = productos.filter(producto => {
-                    return producto.oferta == true
-                })
-                res.render('products', { productos: productosEnOfertas })
-                break;
-            case 'ventas':
-                productos.sort(function (a, b) {
-                    if (a.ventas < b.ventas) {
-                        return 1
-                    }
-                    if (a.ventas > b.ventas) {
-                        return -1
-                    }
-                    return -1
-                })
-                res.render('products', { productos: productos })
-                break;
-            default:
-                break;
+    filtrosIndex: async (req, res) => {
+        if (req.body.order == 'mayor-precio') {
+            let products = await db.Product.findAll({
+                order: [
+                    ['price', 'DESC'] // Ordenar por el campo 'price' de manera descendente (mayor a menor)
+                ]
+            });
+            res.render('products', { productos: products });
+        }else if (req.body.order == 'menor-precio') {
+            let products = await db.Product.findAll({
+                order: [
+                    ['price', 'ASC'] // Ordenar por el campo 'price' de manera ascendete (mayor a menor)
+                ]
+            });
+            res.render('products', { productos: products });
+        }else if (req.body.order == 'accesorios') {
+            let products = await db.Product.findAll({
+                include: [
+                    {
+                        model: db.Category,
+                        as:'category',
+                        where: {
+                            name:'Accesorios'
+                        }
+                    },
+                ],
+            });
+            res.render('products', { productos: products });
+        }else if (req.body.order == 'celulares') {
+            let products = await db.Product.findAll({
+                include: [
+                    {
+                        model: db.Category,
+                        as:'category',
+                        where: {
+                            name:'Celulares'
+                        }
+                    },
+                ],
+            });
+            res.render('products', { productos: products });
         }
+        else {
+            res.redirect('/producto')
+        }
+        
     },
 
     delete: function (req, res) {

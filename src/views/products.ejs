@@ -7,23 +7,22 @@
             <main>
                 <section class="conteiner-filter">
                     <h3>Filtre su busqueda</h3>
-                    <form action="/producto" method="post">
+                    <form action="/producto/filtro" method="post">
                         <label for="order" class="label-order">
                             <select name="order" id="order">
                                 <option value disabled selected>Elige el orden</option>
                                 <option value="mayor-precio">Mayor precio </option>
                                 <option value="menor-precio">Menor precio</option>
-                                <option value="ofertas">En ofertas</option>
-                                <option value="ventas">Ventas</option>
+                                <option value="accesorios">Accesorios </option>
+                                <option value="celulares">Celulares </option>
                             </select>
                             <input type="submit" value="Filtrar" class="boton-filtro">
                         </label>
                 </section>
                 <section class="product-conteiner">
                     <% for( let i=0; i < productos.length; i++ ) { %>
-                        <a href="/producto/detalle/<%=productos[i].id_product%>">
-                            <div class="product">
-                                <img src="/images/celulares/<%= productos[i].image %>" alt="<%= productos[i].nombre %>"
+                            <div class="product" key="<%= productos[i].id_product %>">
+                                <img src="/images/celulares/<%= productos[i].image %>" alt="<%= productos[i].nombre %>" 
                                     class="smartphone">
                                 <h2 class="tittle-for-product">
                                     <%= productos[i].name %>
@@ -31,10 +30,20 @@
                                 <p>$<%= productos[i].price %>
                                 </p>
                             </div>
-                        </a>
                         <% } %>
                 </section>
             </main>
+            <script>
+                let productos = document.querySelectorAll('.product')
+                
+                console.log(productos);
+                for (let i = 0; i < productos.length; i++) {
+                    productos[i].addEventListener('click',(e) => {
+                        console.log(productos[i].attributes.key.value);
+                        window.location.href = `http://localhost:3030/producto/detalle/${productos[i].attributes.key.value}`
+                    })
+                }
+            </script>
             <%- include('./partials/footer') %>
     </body>
 

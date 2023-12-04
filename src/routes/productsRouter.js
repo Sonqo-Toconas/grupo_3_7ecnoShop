@@ -21,7 +21,7 @@ let fileUpload = multer({ storage: storage });
 
 router.get('/', productsControllers.index);
 router.post('/', productsControllers.search);
-router.post('/', productsControllers.filtrosIndex);
+router.post('/filtro', productsControllers.filtrosIndex);
 router.get('/crear', productsControllers.mostrarFormularioCreacion);
 router.post('/crear', fileUpload.single('image'), validationProducts, productsControllers.create);
 router.get('/editar/:id', productsControllers.formularioEditar);
