@@ -27,6 +27,7 @@ router.post('/crear', fileUpload.single('image'), validationProducts, productsCo
 router.get('/editar/:id', productsControllers.formularioEditar);
 router.post('/editar/:id', fileUpload.single('image'),validationProducts ,productsControllers.editarProducto);
 router.get('/detalle/:id', productsControllers.detalle);
+router.post('/compra/:id', middleware, productsControllers.purchase);
 router.get("/producto", productsControllers.index);
 router.post('/delete/:id', productsControllers.delete);
 

@@ -18,10 +18,12 @@ app.set('view engine', 'ejs');
 const indexRoutes = require('./routes/indexRouter');
 const userRoutes = require('./routes/userRouter');
 const productRoutes = require('./routes/productsRouter');
+const pdfRoute = require('./routes/pdfRouter');
 
 app.use('/', indexRoutes);
 app.use('/usuario', userRoutes);
 app.use('/producto', productRoutes);
+app.use('/comprobante', pdfRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

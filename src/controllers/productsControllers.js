@@ -103,11 +103,36 @@ const products = {
             }
         })
         let producto = await db.Product.findByPk(req.params.id)
-
-        console.log(producto)
         res.render('productDetail', { producto: producto, otrosProductos: data })
     },
+    purchase: async(req, res) => {
+        
+        let methodPay = {
+            1 : 'tarjeta de credito',
+            2: 'Tarjeta de debito',
+            3: 'Efectivo',
+            4: 'Billetera virtual'
+        }
+        let selectedMethod = methodPay[req.body.formaDePago];
 
+        let producto = await db.Product.findByPk(req.params.id)
+        let idUser = req.session.userLogin
+        console.log(idUser);
+        let user = await db.User.findByPk(idUser)
+        db.Invoice.create({
+            id_user: await user.id_user,
+            invoice_date: new Date(),
+            id_product: producto.id_product,
+            method_pay: selectedMethod
+        })
+        .then(invoice => {
+            res.render('succesBuy',{factura: invoice, nameUser : user.name})
+        })
+        .catch(err => {
+            console.log(err);
+            res.render('error')
+        })
+    },
     mostrarFormularioCreacion: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('creation');
