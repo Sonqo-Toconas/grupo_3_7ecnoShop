@@ -24,6 +24,10 @@
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" />
               </div>
+              <div class="btnCheck">
+                <input type="checkbox" name="passwordRemember" id="passwordRemember"/>
+                <label for="passwordRemember">Recordar Contraseña</label>
+              </div>
             </div>
             <div class="errores" id="passwordError"></div>
             <% if (locals.errors) { errors.forEach(error=> { %>

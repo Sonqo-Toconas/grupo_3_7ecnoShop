@@ -13,13 +13,21 @@ const usuario = {
     },
     index: async (req, res) => {
         let producto = undefined
-        console.log(req.session.userLogin)
-        if (req.session.userLogin) {
-            let datosDelUsuario = await db.User.findByPk(req.session.userLogin)
-            res.render('userPanel', { usuario: datosDelUsuario, product: producto })
+        if (req.cookies.cookieLogin) {
+            [password,id] = req.cookies.cookieLogin.split('id')
+        }else if (req.session.userLogin ) {
+            [password,id] = req.session.userLogin.split('id')
+        }
+        if (req.session.userLogin || req.cookies.cookieLogin) {
+            let datosDelUsuario = await db.User.findByPk(id)
+            res.render('userPanel', { usuario: datosDelUsuario, product: producto, password: password})
         }
     },
-
+    logout: (req, res) => {
+        res.clearCookie('cookieLogin');
+        req.session.userLogin = null;
+        res.redirect('/')
+    },
     registro: (req, res) => {
         res.render('register')
     },
@@ -63,10 +71,8 @@ const usuario = {
     },
 
     processLogin: async (req, res) => {
-
         let errors = validationResult(req)
-        console.log(errors.errors);
-        let {email, password} = req.body;
+        let {email, password, passwordRemember} = req.body;
         if (errors.isEmpty()) {
             let dataUsers = await db.User.findOne({
                 where: {
@@ -77,8 +83,12 @@ const usuario = {
             if (dataUsers) {
                 let validPassword = await bcrypt.compare(password, dataUsers.password);
                 if (validPassword) {
-                    req.session.userLogin = dataUsers.id_user
+                    req.session.userLogin = `${password}id${dataUsers.id_user}`
                     req.session.admin = dataUsers.admin
+                    if (passwordRemember == 'on') {
+                        res.cookie('cookieLogin', `${password}id${dataUsers.id_user}`, {maxAge: 24 * 60 * 60 * 1000});
+                        
+                    }
                     res.redirect('/')
 
                 } else {

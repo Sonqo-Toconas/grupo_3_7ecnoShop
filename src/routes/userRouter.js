@@ -23,6 +23,7 @@ let fileUpload = multer({ storage: storage });
 
 
 router.get('/', middleware,userControllers.index);
+router.get('/logout', middleware,userControllers.logout);
 router.get('/registro', userControllers.registro);
 
 router.post('/registro', fileUpload.single('imagen'), validationRegister, userControllers.procesoCrear);

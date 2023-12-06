@@ -28,7 +28,7 @@
                                 <div class="informacionCuenta1">
                                     <p>Nombre</p>
                                     <p class="informacionCuenta2">
-                                        <%= usuario.user %>
+                                        <%= usuario.name %>
                                     </p>
                                 </div>
 
@@ -40,19 +40,30 @@
 
                                 </div>
 
-                                <div class="informacionCuenta1">
+                                <div class="informacionCuenta1 conteinerLogout">
                                     <p>Numero</p>
                                     <p class="informacionCuenta2">
                                         <%= usuario.phone %>
                                     </p>
+                                    <div>
+                                        <button onclick="logout()">
+                                            Cerrar Session<i class="fa-solid fa-right-from-bracket"></i>
+                                        </button>
+                                    </div>
 
                                 </div>
 
                                 <div class="informacionCuenta1">
                                     <p>Contraseña</p>
-                                    <p class="informacionCuenta2">
-                                        censored
+                                    <p class="informacionCuenta2 password" id="password">
+                                        **** <!-- Aquí podrías colocar la variable de la contraseña -->
                                     </p>
+                                    <div class="showPassword">
+                                        <% if (password) { %>
+                                            <i onclick="getPassword('<%= JSON.stringify(password) %>')" class="fa-solid fa-eye-slash"></i>
+                                        <% } %>
+                                        <p>Mostrar</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +97,55 @@
                             </div>
                         </div>
                 </main>
+                <script>
+                    let password = document.querySelector('#password')
+                    let conteinerIcon = document.querySelector('.showPassword')
+                    let ocultar = true
+                    conteinerIcon.children[0].addEventListener('click', () => {
+                        if (getCookie('cookieLogin')) {
+                            if (ocultar) {
+                            conteinerIcon.children[0].classList.remove('fa-eye');
+                            conteinerIcon.children[0].classList.add('fa-eye-slash');
+                            conteinerIcon.children[1].innerText = 'Mostrar';
+                            password.innerText = getCookie('cookieLogin')
+                            ocultar = false;
+                        }else {
+                            conteinerIcon.children[0].classList.remove('fa-eye-slash');
+                            conteinerIcon.children[0].classList.add('fa-eye');
+                            conteinerIcon.children[1].innerText = 'Ocultar';
+                            password.innerText = '*****'
+                            ocultar = true;
+                        }
+                        }
+                    })
 
+                    function getCookie(name) {
+                        const cookieArray = document.cookie.split('; ');
+                        for (let cookie of cookieArray) {
+                            const [cookieName, cookieValue] = cookie.split('=');
+                            if (cookieName === name) {
+                                [cookieValuePart] = cookieValue.split('id')
+                                return cookieValuePart;
+                            }
+                        }
+                        return null;
+                    }
+
+                    function getPassword(passwordParameter) {
+                        if (!getCookie('cookieLogin')) {
+                            if (ocultar) {
+                                password.innerText = passwordParameter
+                                ocultar = false
+                            }else {
+                                password.innerText = '*****'
+                                ocultar = true
+                            }
+                        }
+                    }
+                    function logout() {
+                        window.location.href = 'http://localhost:3030/usuario/logout'
+                    }
+                </script>
                 <%- include('./partials/footer') %>
         </section>
     </body>

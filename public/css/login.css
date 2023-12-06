@@ -99,6 +99,18 @@ body {
     color: black;
 }
 
+.formulario .btnCheck{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.formulario .btnCheck label{
+    margin-bottom: 10px;
+}
+
+
 @media (min-width:700px){
     .boton-IniSesion:hover {
         background-color: rgb(0,212,255,1);

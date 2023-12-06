@@ -79,3 +79,43 @@ h1 {
     display: flex;
     justify-content: space-around;
 }
+
+
+.password {
+    display: flex;
+    margin-bottom: -10px;
+}
+
+.showPassword {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.showPassword i {
+    font-size: 0.8em;
+    cursor: pointer;
+    color: #efeff1;
+    margin-right: 5px;
+}
+
+.showPassword p{
+    cursor: default;
+    font-size: 0.8em;
+}
+.conteinerLogout div{
+    text-align: center;
+}
+.conteinerLogout button{
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid white;
+    background: #256fe100;
+    color: white;
+    padding: 5px;
+}
+
+.conteinerLogout i {
+    margin-left: 5px;
+}
