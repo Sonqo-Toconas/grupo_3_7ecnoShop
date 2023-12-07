@@ -30,6 +30,8 @@ router.post('/registro', fileUpload.single('imagen'), validationRegister, userCo
 router.get('/login', userControllers.login);
 router.post('/login',validationLogin, userControllers.processLogin);
 router.get('/carrito', middleware, userControllers.carrito);
+router.get('/users', middleware,userControllers.showUsers);
+router.patch('/users/:id', userControllers.changeAdmin);
 
 //router.post('/agregar-al-carrito/:id', productsControllers.agregarAlCarrito);
 

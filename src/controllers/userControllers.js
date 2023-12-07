@@ -112,5 +112,47 @@ const usuario = {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('productCart', { productos: productos });
     },
+    showUsers: async (req, res) => {
+        if (req.session.superAdmin) {
+            let users = await db.User.findAll();
+            return res.render('usersPage' , {users : users})
+        }
+        res.redirect('/')
+    },
+    changeAdmin: async (req, res) => {
+        let user = await db.User.findByPk(req.params.id)
+        let adminChange = user.admin == 1 ? 0 : 1
+            db.User.update({
+                admin : adminChange
+            },{
+                where :{
+                    id_user : req.params.id
+                }
+            }).then(confirm => {
+                let respuesta;
+                if (confirm) {
+                    respuesta = {
+                        meta: {
+                            status: 200,
+                            total: confirm,
+                            url: 'http://localhost:3030/usuario/users/:id'
+                        },
+                        data: confirm
+                    }
+                } else {
+                    respuesta = {
+                        meta: {
+                            status: 204,
+                            total: confirm.length,
+                            url: 'http://localhost:3030/usuario/users/:id'
+                        },
+                        data: confirm
+                    }
+                }
+                res.json(respuesta);
+            })
+            .catch(error => res.send(error))
+        
+    }
 }
 module.exports = usuario

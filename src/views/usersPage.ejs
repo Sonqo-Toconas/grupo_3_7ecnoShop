@@ -1,0 +1,45 @@
+<%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/usersPage.css" />
+    </head>
+
+    <body>
+        <%- include('./partials/header') %>
+
+        <main>
+            <div class="conteinerAll">
+                <div class="conteinerCardUsers">
+                    <% users.forEach((user, )=> { %>
+                        <div class="card">
+                            <div class="image-user">
+                                <img src="/images/users/<%= user.image %>" alt="usuario imagen">
+                            </div>
+                            <p>id:  <strong> <%= user.id_user %> </strong></p>
+                            <p>Nombre: <strong> <%= user.name %> </strong></p>
+                            <p>Email: <strong> <%= user.email %> </strong></p>
+                            <p>Telefono: <strong> <%= user.phone %> </strong></p>
+                            <% if (user.admin == 1) { %>
+                                <p >Admin: <strong style="color: rgb(79, 211, 101);"> Verdadero </strong></p>
+                            <% } else{ %>
+                                <p >Admin: <strong style="color: rgb(211, 79, 79);"> Falso </strong></p>
+                            <% } %>
+                            <div>
+                                <% if (user.admin == 1) { %>
+                                    <button onclick="changeAdmin('<%= user.id_user %>')" class="btnAdmin">Quitar Admin</button>
+                                <% }else { %>
+                                    <button onclick="changeAdmin('<%= user.id_user %>')" class="btnAdmin">Dar admin</button>
+                                <% } %> 
+                            </div>
+                        </div>
+                    <% }) %>
+                    
+                </div>
+            </div>
+        </main>
+        <script src="/js/usersPage.js">
+
+        </script>
+        <%- include('./partials/footer') %>
+
+    </body>
+
+    </html>
