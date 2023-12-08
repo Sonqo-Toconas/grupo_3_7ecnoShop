@@ -167,10 +167,11 @@ body {
 .mensajeError {
     color: #ffffff;
     font-size: 15px;
-    margin: 5px 5%;
+    margin: 10px 5%;
     display: inline-block;
     border: 2px black solid;
     padding: 5px;
+    border-radius: 5px;
 }
 div.errores {
     color: red;

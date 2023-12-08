@@ -32,6 +32,8 @@ router.post('/login',validationLogin, userControllers.processLogin);
 router.get('/carrito', middleware, userControllers.carrito);
 router.get('/users', middleware,userControllers.showUsers);
 router.patch('/users/:id', userControllers.changeAdmin);
+router.get('/password', userControllers.password);
+router.patch('/password', userControllers.changePassword);
 
 //router.post('/agregar-al-carrito/:id', productsControllers.agregarAlCarrito);
 

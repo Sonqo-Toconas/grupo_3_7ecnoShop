@@ -153,6 +153,57 @@ const usuario = {
             })
             .catch(error => res.send(error))
         
+    },
+    password: (req, res) => {
+        res.render('changePassword',{
+            msgError:{},
+            oldData: false
+        })
+    },
+    changePassword: async (req, res) => {
+        let {email, password, phone} = req.body
+        let errors = [
+            {msg: false},
+            {msg: false},
+            {msg: false},
+        ]
+        let user = await db.User.findOne({
+            where : {
+                email : email
+            }
+        })
+        if (!user) {
+            errors[0].msg = 'email invalido'
+            return res.render('changePassword', {
+                errors: errors
+                })
+        }else{
+            if (user.phone != phone) {
+                errors[1].msg = 'Telefono Invalido'
+                return res.render('changePassword', {
+                    errors: errors,
+                    old: req.body
+                    })
+            }else{
+                if (password.length < 8) {
+                    errors[2].msg = 'Contraseña debe tener 8 caracteres'
+                    return res.render('changePassword', {
+                        errors: errors,
+                        old: req.body
+                        })
+                }else{
+                    let hashPassword = bcrypt.hashSync(password, 10)
+                    db.User.update({
+                        password : hashPassword
+                    }, {
+                        where : {
+                            email : email
+                        }
+                    })
+                    res.redirect('/')
+                }
+            }
+        }
     }
 }
 module.exports = usuario
