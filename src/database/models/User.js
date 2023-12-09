@@ -47,6 +47,17 @@ module.exports = (sequelize, dataTypes) => {
             as: "user",
             foreignKey: "user_id"
         })
+
+        User.hasMany(models.Sold, {
+            as: "sold",
+            foreignKey: "user_id"
+        })
+
+        User.hasMany(models.Product, {
+            as: 'product',
+            foreignKey: 'uploader_user'
+        })
+
         User.hasMany(models.Invoice, {
             as: 'invoices',
             foreignKey: 'id_user'
