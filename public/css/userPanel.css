@@ -20,7 +20,22 @@ main {
     margin-bottom: 20px;
     padding: 20px 15px;
     padding-bottom: 1.5rem;
-    max-width: 500px;
+    max-width: 85%;
+    border: 5px solid #f3f3f3;
+    border-radius: 10px;
+    color: white;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
+    font-size: 20px;
+    box-shadow: 0px 0px 15px 2px;
+}
+
+.carteluser3 {
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+    padding-bottom: 1.5rem;
+    max-width: 400px;
     border: 5px solid #f3f3f3;
     border-radius: 10px;
     color: white;
@@ -56,18 +71,20 @@ main {
 }
 
 .informacionCuenta1 {
-    margin: 5px;
-    width: 45%;
+    padding-left: 40px;
+    width: 280px;
     text-align: left;
 }
 
 .informacionCuenta2 {
     width: 100%;
+    width: 200px;
     border: 5px solid #f3f3f3;
     border-radius: 5px;
     color: black;
     background-color: white;
 }
+
 
 h1 {
     color: white;
@@ -78,4 +95,131 @@ h1 {
     margin-top: 15px;
     display: flex;
     justify-content: space-around;
+}
+
+
+.password {
+    margin-bottom: -10px;
+    display: flex;
+}
+
+.showPassword {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.showPassword i {
+    margin-right: 5px;
+    color: #efeff1;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.showPassword p {
+    font-size: 0.8em;
+    cursor: default;
+}
+
+.conteinerLogout div {
+    text-align: center;
+
+}
+
+.conteinerLogout button {
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    background: #256fe100;
+    text-align: center;
+}
+
+.botoneditar {
+    padding: 5px;
+    width: 153px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    background: #256fe100;
+    text-align: center;
+}
+
+.conteinerLogout {
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.conteinerLogout i {
+    margin-left: 5px;
+}
+
+.productosminiatura {
+    margin: auto;
+    margin-top: 2rem;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+    padding-bottom: 1.5rem;
+    width: 200px;
+    height: 270px;
+    max-width: 200px;
+    border: 5px solid #f3f3f3;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 0px 0px 15px 2px;
+}
+
+.products-image {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+
+.botonminiatura {
+    margin: auto;
+    padding: 5px 10px;
+    width: 125px;
+    border-radius: 5px;
+    border: 1px solid #f3f3f3;
+    color: white;
+    background-color: #1259c3;
+    font-size: 16px;
+}
+
+.carteluser2 {
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+    padding-bottom: 1.5rem;
+    max-width: 85%;
+    border: 5px solid #f3f3f3;
+    border-radius: 10px;
+    color: white;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
+    font-size: 20px;
+    box-shadow: 0px 0px 15px 2px;
+}
+
+.listaproductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.botonminiatura2 {
+    margin: auto;
+    padding: 5px 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #f3f3f3;
+    color: white;
+    background-color: #1259c3;
+    font-size: 32px;
 }

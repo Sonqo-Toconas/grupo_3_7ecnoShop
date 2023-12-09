@@ -5,88 +5,198 @@
     <body>
         <section>
             <%- include('./partials/header') %>
-
                 <main>
-                    <div class="carteluser">
-                        <p class="informacionCartel">Bienvenido
+                    <div class="carteluser3">
+                        <p class="informacionCartel">Bienvenido <%= usuario.name %>
                         </p>
+                    </div>
 
+                    <div class="carteluser">
+                        <p class="informacionCartel">Información de la cuenta</p>
 
-                        <div class="carteluser">
-                            <p class="informacionCartel">Administrar</p>
-                            <div class="botones2">
-                                <a href="/producto/crear" class="botonuser">Subir Producto</a>
-                                <a href="/producto" class="botonuser">Editar Producto</a>
+                        <div class="contenedor-informacion">
+                            <div class="informacionCuenta1">
+                                <p>Nombre</p>
+                                <p class="informacionCuenta2">
+                                    <%= usuario.name %>
+                                </p>
                             </div>
-                        </div>
 
-
-                        <div class="carteluser">
-                            <p class="informacionCartel">Información de la cuenta</p>
-
-                            <div class="contenedor-informacion">
-                                <div class="informacionCuenta1">
-                                    <p>Nombre</p>
-                                    <p class="informacionCuenta2">
-                                        <%= usuario.user %>
-                                    </p>
-                                </div>
-
-                                <div class="informacionCuenta1">
-                                    <p>Correo</p>
-                                    <p class="informacionCuenta2">
-                                        <%= usuario.email %>
-                                    </p>
-
-                                </div>
-
-                                <div class="informacionCuenta1">
-                                    <p>Numero</p>
-                                    <p class="informacionCuenta2">
-                                        <%= usuario.phone %>
-                                    </p>
-
-                                </div>
-
-                                <div class="informacionCuenta1">
-                                    <p>Contraseña</p>
-                                    <p class="informacionCuenta2">
-                                        censored
-                                    </p>
-                                </div>
+                            <div class="informacionCuenta1">
+                                <p>Correo</p>
+                                <p class="informacionCuenta2">
+                                    <%= usuario.email %>
+                                </p>
                             </div>
-                        </div>
 
-                        <div class="carteluser">
-                            <p class="informacionCartel">Productos que publicaste</p>
-                            <% if (product) { %>
-                                <% products.forEach(product=> { %>
-                                    <div class="products-image">
-                                        <img src="/images/celulares/<%= product.imagen %>" alt="image-product">
-                                    </div>
-                                    <div class="product-box">
-                                        <p>
-                                            <%= product.nombre %>
-                                        </p>
-                                        <p>
-                                            <%= product.precio %>
-                                        </p>
-                                    </div>
-                                    <% }); %>
+                            <div class="informacionCuenta1">
+                                <p>Numero</p>
+                                <p class="informacionCuenta2">
+                                    <%= usuario.phone %>
+                                </p>
+                            </div>
+
+                            <div class="informacionCuenta1">
+                                <p>Contraseña</p>
+                                <p class="informacionCuenta2 password" id="password">
+                                    ****
+                                    <!-- Aquí podrías colocar la variable de la contraseña -->
+                                </p>
+                                <div class="showPassword">
+                                    <% if (password) { %>
+                                        <i onclick="getPassword('<%= JSON.stringify(password) %>')"
+                                            class="fa-solid fa-eye-slash"></i>
                                         <% } %>
-
-
-                        </div>
-
-
-                        <div class="carteluser">
-                            <p class="informacionCartel">Productos que compraste</p>
-                            <div class="products-box">
-
+                                            <p>Mostrar</p>
+                                </div>
                             </div>
                         </div>
-                </main>
 
+                        <div class="conteinerLogout">
+                            <a href="/usuario/editar/<%= usuario.id_user %>" class="botoneditar">Editar
+                                Datos</a>
+
+                            <button onclick="logout()">
+                                Cerrar Session<i class="fa-solid fa-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <% if (usuario.admin==1) { %>
+                        <div class="carteluser2">
+                            <p class="informacionCartel">Productos que publicaste </p>
+
+                            <div class="listaproductos">
+                                <% if (upload) { %>
+                                    <% upload.forEach(upload=> { %>
+
+                                        <div class="productosminiatura">
+                                            <div class="products-image">
+                                                <img src="/images/celulares/<%= upload.image%>" alt="image-product"
+                                                    class="products-image">
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <%= upload.name %>
+                                                </p>
+                                                <a href="/producto/editar/<%= product.id_product %>"
+                                                    class="botonminiatura">Editar Producto</a>
+                                            </div>
+                                        </div>
+
+                                        <% }); %>
+                                            <% } %>
+
+                            </div>
+                            <a href="/producto/crear" class="botonminiatura2">Subir Producto</a>
+                        </div>
+                        <% } %>
+
+                            <div class="carteluser2">
+                                <p class="informacionCartel">Carrito de compras</p>
+
+                                <div class="listaproductos">
+                                    <% if (cart) { %>
+                                        <% cart.forEach(cart=> { %>
+
+                                            <div class="productosminiatura">
+                                                <div class="products-image">
+                                                    <img src="/images/celulares/<%= cart.image%>" alt="image-product"
+                                                        class="products-image">
+                                                </div>
+                                                <div>
+                                                    <p>
+                                                        <%= cart.name %>
+                                                    </p>
+                                                    <a href="/producto/detalle/<%= cart.id_product %>"
+                                                        class="botonminiatura">Visitar</a>
+                                                </div>
+                                            </div>
+                                            <% }); %>
+                                                <% } %>
+
+                                </div>
+                                <a href="/usuario/carrito" class="botonminiatura2">Abrir Carrito</a>
+                            </div>
+
+                            <div class="carteluser2">
+                                <p class="informacionCartel">Productos que compraste</p>
+
+                                <div class="listaproductos">
+                                    <% if (product) { %>
+                                        <% product.forEach(product=> { %>
+
+                                            <div class="productosminiatura">
+                                                <div class="products-image">
+                                                    <img src="/images/celulares/<%= product.image%>" alt="image-product"
+                                                        class="products-image">
+                                                </div>
+                                                <div>
+                                                    <p>
+                                                        <%= product.name %>
+                                                    </p>
+                                                    <a href="/producto/detalle/<%= product.id_product %>"
+                                                        class="botonminiatura">Visitar</a>
+                                                </div>
+                                            </div>
+                                            <% }); %>
+                                                <% } %>
+
+                                </div>
+                            </div>
+
+
+
+                </main>
+                <script>
+                    let password = document.querySelector('#password')
+                    let conteinerIcon = document.querySelector('.showPassword')
+                    let ocultar = true
+                    conteinerIcon.children[0].addEventListener('click', () => {
+                        if (getCookie('cookieLogin')) {
+                            if (ocultar) {
+                                conteinerIcon.children[0].classList.remove('fa-eye');
+                                conteinerIcon.children[0].classList.add('fa-eye-slash');
+                                conteinerIcon.children[1].innerText = 'Mostrar';
+                                password.innerText = getCookie('cookieLogin')
+                                ocultar = false;
+                            } else {
+                                conteinerIcon.children[0].classList.remove('fa-eye-slash');
+                                conteinerIcon.children[0].classList.add('fa-eye');
+                                conteinerIcon.children[1].innerText = 'Ocultar';
+                                password.innerText = '*****'
+                                ocultar = true;
+                            }
+                        }
+                    })
+
+                    function getCookie(name) {
+                        const cookieArray = document.cookie.split('; ');
+                        for (let cookie of cookieArray) {
+                            const [cookieName, cookieValue] = cookie.split('=');
+                            if (cookieName === name) {
+                                [cookieValuePart] = cookieValue.split('id')
+                                return cookieValuePart;
+                            }
+                        }
+                        return null;
+                    }
+
+                    function getPassword(passwordParameter) {
+                        if (!getCookie('cookieLogin')) {
+                            if (ocultar) {
+                                password.innerText = passwordParameter
+                                ocultar = false
+                            } else {
+                                password.innerText = '*****'
+                                ocultar = true
+                            }
+                        }
+                    }
+                    function logout() {
+                        window.location.href = 'http://localhost:3030/usuario/logout'
+                    }
+                </script>
                 <%- include('./partials/footer') %>
         </section>
     </body>

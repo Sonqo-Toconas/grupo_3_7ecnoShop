@@ -2,14 +2,15 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 const session = require('express-session');
+const cookie = require('cookie-parser');
 
 //const headerMiddleware = require('sessionUser');
-
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({ secret: "Secreto" }));
+app.use(cookie())
 //app.use(headerMiddleware);
 
 app.set('views', __dirname + '/views');
@@ -38,7 +39,7 @@ app.use(function(err, req, res, next) {
   
     // render the error page
     res.status(err.status || 500);
-    res.render('notFound', {errorMsg : err.stack});
+    res.render('notFound', {errorMsg : JSON.stringify(err.stack)});
   });
   
   app.listen(3030, () => {

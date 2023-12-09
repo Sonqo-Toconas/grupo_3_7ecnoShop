@@ -7,16 +7,15 @@
             <main>
                 <section class="conteiner-filter">
                     <h3>Filtre su busqueda</h3>
-                    <form action="/producto/filtro" method="post">
+                    <form action="" >
                         <label for="order" class="label-order">
-                            <select name="order" id="order">
+                            <select name="order" id="order"  onclick="filter('<%= JSON.stringify(productos) %>')">
                                 <option value disabled selected>Elige el orden</option>
-                                <option value="mayor-precio">Mayor precio </option>
-                                <option value="menor-precio">Menor precio</option>
-                                <option value="accesorios">Accesorios </option>
-                                <option value="celulares">Celulares </option>
+                                <option value="highPrice">Mayor precio </option>
+                                <option value="lowPrice">Menor precio</option>
+                                <option value="accesories">Accesorios </option>
+                                <option value="cell">Celulares </option>
                             </select>
-                            <input type="submit" value="Filtrar" class="boton-filtro">
                         </label>
                 </section>
                 <section class="product-conteiner">
@@ -33,16 +32,7 @@
                         <% } %>
                 </section>
             </main>
-            <script>
-                let productos = document.querySelectorAll('.product')
-                
-                console.log(productos);
-                for (let i = 0; i < productos.length; i++) {
-                    productos[i].addEventListener('click',(e) => {
-                        console.log(productos[i].attributes.key.value);
-                        window.location.href = `http://localhost:3030/producto/detalle/${productos[i].attributes.key.value}`
-                    })
-                }
+            <script src="/js/productsFilter.js">
             </script>
             <%- include('./partials/footer') %>
     </body>

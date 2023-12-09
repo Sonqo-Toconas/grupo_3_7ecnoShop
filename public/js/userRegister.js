@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
     let valid0 = false;
     let valid1 = false;
     let valid2 = false;
-    let valid3 = false;
+    let valid3 = true;
     let valid4 = false;
     let valid5 = false;
 

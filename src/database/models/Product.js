@@ -32,6 +32,10 @@ module.exports = (sequelize, dataTypes) => {
         color_id: {
             type: dataTypes.INTEGER,
             allowNull: true,
+        },
+        uploader_user: {
+            type: dataTypes.INTEGER,
+            allowNull: true,
         }
     }
 
@@ -57,8 +61,18 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "color_id"
         });
 
+        Product.belongsTo(models.User, {
+            as: "user",
+            foreignKey: "uploader_user"
+        });
+
         Product.hasMany(models.Cart, {
             as: "cart",
+            foreignKey: "product_id"
+        })
+
+        Product.hasMany(models.Sold, {
+            as: "sold",
             foreignKey: "product_id"
         })
 

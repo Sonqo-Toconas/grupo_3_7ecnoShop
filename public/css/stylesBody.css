@@ -423,10 +423,7 @@ a {
     font-size: 40px;
 }
 
-a:hover {
-    color: #0022AA;
-    font-size: 19px;
-}
+
 
 .boton-suscripcion:hover {
     background-color: #ffffef;
