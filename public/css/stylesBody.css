@@ -1,13 +1,211 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    height: 100px;
+    margin: auto;
+    align-items: center;
+    padding: 15px;
+    background-color: #E8E8F0;
+    border: 1px solid #0c047c;
+}
+
+.logo-header {
+    width: 15%;
+    align-items: center;
+    align-content: center;
+    padding-top: 20px;
+}
+
+.logo-image {
+    height: 140px;
+}
+
+.search-header {
+    position: relative;
+    width: 30%;
+}
+
+.search-bar {
+    background-color: #E8E8F0;
+    color: black;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    padding-right: 35px;
+    border: 1px solid #0c047c;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.search-button {
+    background-color:#0c047c;
+    color: white;
+    margin: auto;
+    position: absolute;
+    right: -9%;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: 1px solid #0c047c;
+    border-radius: 0 5px 5px 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #4941d5;
+    color: white;
+}
+
+.search-microphone{
+    background-color: #E8E8F0;
+    color:#0c047c;
+    margin: auto;
+    position: absolute;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: 1px solid #0c047c;
+    border-right: none;
+    border-left: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.search-microphone:hover {
+    background-color:#E8E8F0;
+    color:#4941d5;
+}
+
+.menu-header{
+    width: 50%;
+    text-align: center;
+    padding: 0 40px 0 40px;
+    align-items: center;
+}
+
+.menu-header li a {
+    display: block;
+    background-color: #E8E8F0;
+    color: #0c047c;
+    text-decoration: none;
+    list-style: none;
+    padding: 10px 5px;
+}
+
+.horizontal-menu {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul{
+    list-style: none;
+}
+
+.menu-header li a:hover {
+    background-color: #0c047c;
+    color: white;
+    
+}
+
+.menu-header li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+
+}
+
+.menu-header li:hover > ul {
+    display: block;
+}
+
+/* Submenus */
+.menu-header li ul li {
+    position: relative;
+}
+
+.menu-header li ul li ul {
+    right: -140px;
+    top: 0px;
+}
+
+/* .logo-mobile{
+    color:#0c047c;
+    align-items: center;
+    align-content: center;
+    padding-top: 2px;
+    padding-right: 5px;
+    height: 18px;
+} */
+
+header i{
+    padding-right: 5px;
+}
+
+.toggle{
+    width: 5%;
+    color: #0c047c;
+    cursor: pointer;
+}
+
+/* 
+
+.horizontal-menu > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.horizontal-menu > li:hover{
+    background-color: aqua;
+}
+
+.vertical-menu{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.horizontal-menu li:hover, .vertical-menu{
+    display: block;
+}
+
+.vertical-menu li:hover{
+    background-color: black;
+}
+
+.vertical-menu li a {
+    display: block;
+    color: white;
+    padding: 15px, 15px, 15px, 20px;
+    text-decoration: none;
+} */
+
+/* @media (max-width: 600px) {
+    header
+} */
+
+/* * 
 }
 
 main{        
     padding-top: 120px;
 } */
-header {
+/* header {
     z-index:10;
     width: 100%;
     display: flex;
@@ -19,7 +217,7 @@ header {
     font-family: 'Roboto Condensed', sans-serif;
     justify-content: space-around;
     align-items: center;
-}
+} */
 
 /* .logo-header {
     display: flex;
@@ -32,7 +230,7 @@ header {
     font-size: medium;
     align-items: center;
 } */
-
+/* 
 .contenido-header {
     text-align: center;
     align-items: center;
@@ -179,8 +377,8 @@ a {
     text-align: center;
     border-width: 0.1px;
 
-}
-
+} */
+/* 
 .boton-suscripcion {
     background-color: #007F7F;
     color: #ffffef;
@@ -233,10 +431,10 @@ a:hover {
 .boton-suscripcion:hover {
     background-color: #ffffef;
     color: #007F7F;
-}
+} */
 
 /* HEADER RESPONSIVE */
-header{
+/* header{
     align-items: center;
     height: 90px;
     width: 100%;
@@ -246,7 +444,7 @@ header{
 
 .logo-header{
     background-color: brown;
-    /* width: 4px; */
+    
     height: 9px;
 }
 
@@ -265,7 +463,10 @@ header{
 .link-header{
 
 }
-
+ */
 
 /* FOOTER RESPONSIVE */
-
+/* .footer{
+    position: absolute;
+    padding-bottom: 0;
+} */

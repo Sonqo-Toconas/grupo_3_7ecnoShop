@@ -9,92 +9,87 @@
       <main>
         <div class="formProductCreation">
 
-          <h1 class="TitleFormCreation"> Formulario de carga de productos </h1>
+          <h1 class="CreationFormTitle">Cargar producto: </h1>
           <form action="/producto/crear" method="POST" enctype="multipart/form-data" id="form">
 
-            <div class="nameProduct">
+            <div class="productField">
               <label for="name"> Nombre del producto: </label>
-              <input type="text" id="name" name="name" class="form-control"
-              value="<%=locals.old ? old.name : ""%>">
+              <input type="text" id="name" name="name" class="form-control" value="<%=locals.old ? old.name : "" %>">
               <%if (locals.errors) { errors.forEach(error=> { %>
-                <% if(error.path == "name") {%>
-                <p class="errorMessage">
-                  <%= error.msg%>
-                </p>
-                <% } %>
-                <%}) }%>              
-            </div class>
-
-            <div class>
-              <label for="description">Descripción:</label>
-              <input type="text" id="description" name="description" rows="3"
-              value="<%=locals.old ? old.description : "" %>">
-              <div class="Error" id="descriptionError"></div>
-              <%if (locals.errors) { errors.forEach(error=> { %>
-                <% if(error.path == "description") {%>
-                <p class="errorMessage">
-                  <%= error.msg%>
-                </p>
-                <% } %>
-                <%}) }%>
+                <% if(error.path=="name" ) {%>
+                  <p class="errorMessage">
+                    <%= error.msg%>
+                  </p>
+                  <% } %>
+                    <%}) }%>
             </div>
 
-            <div class>
+            <div class="productField">
+              <label for="description">Descripción:</label>
+              <input type="text" id="description" name="description" class="form-control"
+                value="<%=locals.old ? old.description : "" %>">
+              <%if (locals.errors) { errors.forEach(error=> { %>
+                <% if(error.path=="description" ) {%>
+                  <p class="errorMessage">
+                    <%= error.msg%>
+                  </p>
+                  <% } %>
+                    <%}) }%>
+            </div>
+
+            <div class="productField">
               <label for="image">Imagen:</label>
               <input type="file" id="image" name="image" accept=".jpg, .png">
-              <div class="Error" id="imageError"></div>
               <%if (locals.errors) { errors.forEach(error=> { %>
-                <% if(error.path == "image") {%>
-                <p class="errorMessage">
-                  <%= error.msg%>
-                </p>
-                <% } %>
-                <%}) }%>
+                <% if(error.path=="image" ) {%>
+                  <p class="errorMessage">
+                    <%= error.msg%>
+                  </p>
+                  <% } %>
+                    <%}) }%>
             </div>
 
-            <div class>
+            <div class="productField">
               <label for="category">Categoría:</label>
               <select id="category" name="category">
-                <option disabled selected="0">Seleccionar</option>
-                <option value="1">Celulares</option>
-                <option value="2">Accesorios</option>
+                <option disabled selected= "0">Seleccionar</option>
+                <option value= "1">Celulares</option>
+                <option value= "2">Accesorios</option>
               </select>
               <%if (locals.errors) { errors.forEach(error=> { %>
-                <% if(error.path == "category") {%>
-                <p class="errorMessage">
-                  <%= error.msg%>
-                </p>
-                <% } %>
-                <%}) }%>
+                <% if(error.path=="category" ) {%>
+                  <p class="errorMessage">
+                    <%= error.msg%>
+                  </p>
+                  <% } %>
+                    <%}) }%>
             </div>
 
-            <div class>
-              <label for="colors">Colores:</label>
-              <input type="text" id="colors" name="color"
-              value="<%=locals.old ? old.color : "" %>">
+            <div class="productField">
+              <label for="colors"> Colores disponibles: </label>
+              <input type="text" id="colors" name="color" value="<%=locals.old ? old.color : "" %>">
               <%if (locals.errors) { errors.forEach(error=> { %>
-                <% if(error.path == "color") {%>
-                <p class="errorMessage">
-                  <%= error.msg%>
-                </p>
-                <% } %>
-                <%}) }%>
+                <% if(error.path=="color" ) {%>
+                  <p class="errorMessage">
+                    <%= error.msg%>
+                  </p>
+                  <% } %>
+                    <%}) }%>
             </div>
 
-            <div class>
+            <div class="productField">
               <label for="price">Precio:</label>
-              <input type="number" id="price" name="price" min="0" step=".01"
-              value="<%=locals.old ? old.price : "" %>">
+              <input type="number" id="price" name="price" min="0" step=".01" value="<%=locals.old ? old.price : "" %>">
               <%if (locals.errors) { errors.forEach(error=> { %>
-                <% if(error.path == "price") {%>
-                <p class="errorMessage">
-                  <%= error.msg%>
-                </p>
-                <% } %>
-                <%}) }%>
+                <% if(error.path=="price" ) {%>
+                  <p class="errorMessage">
+                    <%= error.msg%>
+                  </p>
+                  <% } %>
+                    <%}) }%>
             </div>
 
-            <button type="submit">Cargar producto</button>
+            <button type="submit" class="buttonCreation"> Cargar producto </button>
           </form>
         </div>
       </main>
