@@ -8,6 +8,7 @@ const db = require('../database/models');
 const Sequelize = require('sequelize')
 const { where } = require('sequelize');
 const { createConnection } = require('net');
+const e = require('express');
 
 
 const products = {
@@ -18,13 +19,19 @@ const products = {
     },
 
     search: async (req, res) => {
+        console.log(req.body);
         let products = await db.Product.findAll({
             where: {
-                name: { [Sequelize.Op.like]: `%${req.body.barra}%` }
+                name: { [Sequelize.Op.like]: `%${req.body.searchBar}%` }
             }
         })
 
         res.render('products', { productos: products });
+        
+    },
+
+    voiceSearch: async(req, res) =>{
+
     },
 
     filtrosIndex: async (req, res) => {
