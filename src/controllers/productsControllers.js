@@ -97,7 +97,9 @@ const products = {
         let data = await db.Product.findAll({
             where: {
                 id_product: { [db.Sequelize.Op.ne]: req.params.id }
-            }
+        
+            },
+            limit:4
         })
         let producto = await db.Product.findByPk(req.params.id)
         res.render('productDetail', { producto: producto, otrosProductos: data })

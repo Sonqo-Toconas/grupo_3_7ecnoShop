@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0">
     </head>
     
+    
        <body>
             <main class="main">
                 <div class="contenedor">  
@@ -31,7 +32,7 @@
                            
                             <div class="botones">
                                 
-                                <button class="añadir">
+                                <button class="añadir" onclick="redirec()">
                                     <h4>Añadir al carrito</h4>
                                     <i class="fa-solid fa-cart-plus"></i>
                                 </button>
@@ -101,39 +102,28 @@
                     <h2>Productos destacados</h2>
                     <div class="slider-box">
                         <ul>
-                            <li>
-                                <img src="https://www.notebookcheck.org/fileadmin/_processed_/3/1/csm_pms_1643375300.10087734_c41c7026cd.png" alt="1">
+                            <% otrosProductos.forEach (producto => { %>
+                               <li>
+                                <img src="/images/celulares/<%= producto.image%>" alt="<%=producto.name %>">
                                 <div class="text">
-                                    <h3>Xiaomi Redmi Note 11</h3>
+                                    <h3><%=producto.name%></h3>
                                 </div>
-                            </li>
-                            <li>
-                                <img src="https://images.samsung.com/is/image/samsung/p6pim/co/sm-a045mzggltc/gallery/co-galaxy-a04-sm-a045-sm-a045mzggltc-534750946?$650_519_PNG$" alt="2">
-                                <div class="text">
-                                    <h3>Samsung Galaxy a04</h3>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="https://www.atacadogames.com/imagem/smartphones/celular-motorola-g52-xt-2221-1-128gb-4gb-ram-dual-sim-tela-6-6%27%27-cameras-50mp-8mp-2mp-e-16mp-cinza/2/167568.jpg?pfdrid_c=true" alt="3">
-                                <div class="text">
-                                    <h3>Motorola g52</h3>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="https://d23hwmpje67tm.cloudfront.net/326524-medium_default/cargador-magntico-puregear-wireless-15w.jpg" alt="4">
-                                <div class="text">
-                                    <h3>PureGear Cargador Inálambrico Magnético</h3>
-                                </div>
-                            </li>
+                            </li> 
+                            <% }); %>
+                             
+            
+                          
                         </ul>
                     </div>   
                 </section>
               </div>
             </div>
             </main>
-        
-            <%- include('./partials/footer') %>
-            
+        <script>
+            function redirec (){
+                window.location.href="http://localhost:3030/usuario/carrito"
+            }
+        </script>
        </body>
     
     </html>
