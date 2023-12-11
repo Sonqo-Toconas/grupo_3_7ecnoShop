@@ -13,37 +13,11 @@
     color: var(--celeste-claro);
     font-family: Arial, sans-serif;
   }
-  
-
-  header h1 {
-    font-size: 30px;
-    color: #bdcdd1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    transition: color 0.3s ease;
-  }
-  
-  section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-  }
-  
-  section h2 {
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: var(--azul-oscuro);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  }
-  
   .product {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 300px;
+    width: 610px;
     margin: 20px;
     padding: 10px;
     color: white;
@@ -55,7 +29,7 @@
   }
   
   .product img {
-    width: 100px;
+    width: 250px;
     border-image: 50%;
     border: 5px solid var(--celeste-medio-oscuro);
     box-shadow: 0px 0px 10px rgba(232, 22, 40, 0.5);
@@ -67,7 +41,9 @@
   }
   
   .product div {
-    margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+    margin-left: 20px;
   }
   
   .product h3 {
@@ -81,7 +57,7 @@
   }
   
   .product input {
-    width: 50px;
+    width: 10px;
     text-align: center;
   }
   
@@ -126,5 +102,169 @@
   .total button:hover {
     background-color: var(--celeste-claro);
   }
+  .resumen-compra {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    justify-content: space;
+    align-items: center;
+    width: 500px;
+    margin: 50px;
+    padding: 0px; 
+    color: white;
+    border-radius: 5px; 
+    border: 6px solid #f3f3f3;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
+}
+.cartbody {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 20px solid var(--celeste-medio-oscuro);
+  border-radius: 10px;
+  padding: 20px;
+}
+.cartmain {
+  text-align: right;
+}
+.headercarrito {
+  text-align: center;
+  font-size: 25px;
+  color: #bdcdd1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease;
+}
+.carrito-conteiner
+.cartside {
+  position: relative;
+  margin-left: 20px;
+  width: 380px;
+  border: 20px solid var(--celeste-medio-oscuro);
+  border-radius: 10px;
+  padding: 20px;
+  height: 100vh; 
+}
 
-  
+
+.product div {
+  display: flex;
+  flex-direction: column;
+}
+
+.product h3 {
+  margin-bottom: 5px;
+}
+
+.product p {
+  margin-bottom: 10px;
+}
+
+.product input[type="number"] {
+  width: 50px;
+}
+
+.resumen-compra h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.resumen-compra p {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+.resumen-compra select {
+  margin-bottom: 10px;
+}
+.container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  text-align: right;
+ }
+ 
+ .comprar {
+  background-color: var(--celeste-medio-oscuro);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  margin: auto;
+  text-align: center; 
+ }
+
+.comprar:hover {
+  background-color: black;
+  color: white;
+}
+
+.comprar:active {
+  background-color: var(--celeste-medio-oscuro);
+  color: white;
+}
+.select-container label {
+  font-size: 16px;
+  color: var(--celeste-claro);
+}
+.cartTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: -50px;
+}
+
+.cartTable th, .cartTable td  {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  color: black; 
+}
+
+.cartTable th {
+  background-color: #f2f2f2;
+}
+
+.cartTable td {
+  vertical-align: middle;
+}
+
+.cartTable tbody tr:hover {
+  background-color: #f5f5f5;
+}
+/* Estilos generales */
+.select-container {
+  width: 200px;
+  margin: 0 auto;
+ }
+ 
+ select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+ }
+ 
+ .btn-payment {
+  width: 200px;
+  height: 40px;
+  margin: 10px auto;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+ }
+ 
+ .btn-payment:hover {
+  background-color: #0056b3;
+ }
