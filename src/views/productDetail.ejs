@@ -2,19 +2,19 @@
 <%- include('./partials/head') %>
 
     <link rel="stylesheet" href="/css/productDetail.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0">
     </head>
-
-    <body>
-        <%- include('./partials/header') %>
-            <main>
-                <div class="grande">
-                    <article class="cajagrande1">
-                        <div class="caja">
-                            <h1>
+    
+    
+       <body>
+            <main class="main">
+                <div class="contenedor">  
+                <div class="contenedor-orden">
+                <section class="izquierdo">
+                            <h1 class="titulo">
                                 <%= producto.name %>
                             </h1>
-                            <h3>Precio: <br>$<%= producto.price%>
-                            </h3>
+                            <h3 class="precio">Precio: <br>$<%= producto.price%></h3>
                             <div class="desplegable">
                             <form action="/producto/compra/<%= producto.id_product %>" method="POST">
                                 <select name="formaDePago" id="formaDePago">
@@ -24,27 +24,30 @@
                                     <option value="3">Efectivo</option>
                                     <option value="4">Billetera virtual</option>
                                 </select>
-                                
+                            </div>   
                             <button class="comprar" type="submit">
-                                <h3>Comprar</h3>
+                                <h4>Comprar</h4>
                             </button>
                             </form>
-
-                            </div>
+                           
                             <div class="botones">
                                 
-                                <button class="añadir">
-                                    <h3>Añadir al carrito</h3>
+                                <button class="añadir" onclick="redirec()">
+                                    <h4>Añadir al carrito</h4>
                                     <i class="fa-solid fa-cart-plus"></i>
                                 </button>
                             </div>
-                        </div>
-                        <img class="img0" src="/images/celulares/<%= producto.image%>" alt="Celular Samsung Cobre">
-                    </article>
+                </section>
+            <div class="contenedor-derecho">
+                <section >
+                        <img class="img0" src="/images/celulares/<%= producto.image%>"  alt="Celular Samsung Cobre">
+                </section>
+            </div>   
+            </div>
                     <!--Perspectivas y datos-->
                     <article class="cajagrande2">
                         <div class="caja2-main">
-                            <h2>Mas perspectivas:</h2>
+                            <h2>Más perspectivas:</h2>
                             <div class="img1">
                                 <img class="mas" src="/images/celulares/<%= producto.imagen2%>"
                                     alt="Celular Samsung Cobre perfil">
@@ -72,20 +75,22 @@
                                     <label for="plateado">Plateado</label>
                                 </div>
                             </div>
-                            
+                        </div>
                         </section>
                     </article>
                 </div>
                 <div class="carteluser">
                     <p class="informacionCartel">Administrar</p>
-                    <div class="botones2">
+                    <div class="conteiner-editar">
                         <a href="/producto/editar/<%= producto.id_product %>" class="botonuser">Editar Producto</a>
-                        <form action="/producto/delete/<%= producto.id_product %>" method="POST">
-                            <button type="submit" class="botonuser">Eliminar</button>
-                        </form>
-                    </div>
+                    </div> 
+                     <form  action="/producto/delete/<%= producto.id_product %>"   method="POST">
+                            <button type="submit" class="eliminar" >Eliminar</button>
+                        </form> 
+                      
                 </div>
                 <!--Informacion-->
+                <div class="conteiner1">
                 <div class="informacion-main">
                     <h2>Informacion del producto</h2>
                     <p>
@@ -95,35 +100,30 @@
                 <!--Productos destacados-->
                 <section class="productosDestacados">
                     <h2>Productos destacados</h2>
-                    <div class="caja3-main">
-                        <div class="flecha">
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </div>
-                        <div class="card-list-products">
-                            <% if (otrosProductos) { %>
-                                <% for( let i=0; i < otrosProductos.length; i++ ) { %>
-                                <a href="/producto/detalle/<%= otrosProductos[i].id %>">
-                                <div class="card">
-                                    <img class="img2" src="/images/celulares/<%= otrosProductos[i].imagen%>"
-                                        alt="<%= otrosProductos[i].nombre %>">
-                                    <div class="cardPrice">
-                                        <h3><%= otrosProductos[i].nombre %>
-                                        </h3>
-                                        <p class="p">$<%= otrosProductos[i].price %>
-                                        </p>
-                                    </div>
+                    <div class="slider-box">
+                        <ul>
+                            <% otrosProductos.forEach (producto => { %>
+                               <li>
+                                <img src="/images/celulares/<%= producto.image%>" alt="<%=producto.name %>">
+                                <div class="text">
+                                    <h3><%=producto.name%></h3>
                                 </div>
-                                </a>
-                                <% } %>
-                            <% } %>
-                            
-                        </div>
-                        <div class="flecha">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                    </div>
+                            </li> 
+                            <% }); %>
+                             
+            
+                          
+                        </ul>
+                    </div>   
                 </section>
+              </div>
+            </div>
             </main>
-            <%- include('./partials/footer') %>
-    </body>
+        <script>
+            function redirec (){
+                window.location.href="http://localhost:3030/usuario/carrito"
+            }
+        </script>
+       </body>
+    
     </html>

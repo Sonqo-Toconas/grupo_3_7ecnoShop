@@ -7,6 +7,12 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.contenedor{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
 .cajagrande1{
     display:flex;
     border: 5px solid #f3f3f3;
@@ -16,36 +22,86 @@
     box-shadow: 0px 0px 15px 2px;
     background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
 }
-
-main {
-    background-color: #007F7F;
-    margin-bottom: auto;
+.cajagrande2{
+    display:flex;
+    width: 1000px;
+    
 }
-
+main {
+    background-color: #007f7f;
+    margin-bottom: auto;
+    width: 100%;
+}
+.contenedor-orden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.izquierdo{
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #f3f3f3;
+    border-radius: 10px;
+    margin: 30px;
+    margin-left: 50px;
+    color: white;
+    box-shadow: 0px 0px 15px 2px;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
+}
+.contenedor-derecho{
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid #f3f3f3;
+        margin-block: 50px;
+        margin-left: 80px;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 0px 0px 15px 2px;
+        background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
+}
 .img0{
-    width: 50%;
-    margin: 5px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
 }
 article{
     display: flex;
     padding: 5px;
     margin-bottom: 3px;
 }
+.desplegable{
+    margin-left: 20px;
+}
 
 .desplegable select{
+    justify-content: center;
+    align-items: center;
     width: 200px;
     border: none;
-    margin-top: 10px;
+    border-radius: 15px;
+    margin-top: 20px;
     padding: 12px 15px;
     background-color: #f7f7f7;
     color: #666;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-
+.comprar{
+    border-radius: 10px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
 .caja2-main{
     border: 5px solid #f3f3f3;
     border-radius: 10px;
     margin: 5px;
+    margin-inline: 80px;
+    width: 500px;
+    height: 350px;
     color: white;
     box-shadow: 0px 0px 15px 2px;
     background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
@@ -68,8 +124,9 @@ button{
     background-color: none;
     color: #666;
     margin: 5px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     padding: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .color{
@@ -85,9 +142,18 @@ button{
 .botones{
     display: flex;
     justify-content: center;
+    
+
+}
+.añadir{
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    outline: none;
 }
 
 .informacion-main{
+    flex-basis: 100%;
     background-color: #ebebed;
     margin: 20px;
     padding: 20px;
@@ -97,33 +163,6 @@ button{
     color: white;
     box-shadow: 0px 0px 15px 2px;
     background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
-}
-
-@media (max-width:480px){
-    .cajagrande2{
-        display: flex;
-        flex-direction: column;
-    }
-    button{
-        margin-left: 30px;
-    }
-}
-
-@media (min-width:768px){
-    .grande{
-        display: flex;
-        flex-direction: row;
-
-    }
-    .caja2-main{
-        display: flex;
-        flex-direction: column;
-    }
-    .mas{
-        display: flex;
-        width: 100px;
-        height: 100px;
-    }
 }
 
 .caja3-main{
@@ -165,11 +204,29 @@ button{
     align-items: center;
     margin: 10px;
 }
+.titulo{
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
 h2 {
     display: flex;
     justify-content: center;
     padding: 10px;
     color: white;
+}
+h3{
+    margin-left: 20px;
+    font-size: 20px;
+}
+h4{
+   font-size: 20px ; 
+}
+.precio{
+    font-size: 30px;
 }
 
 .cardPrice{
@@ -179,12 +236,31 @@ h2 {
     align-items: center;
 }
 
-.botones2 {
+.conteiner-editar {
     margin-top: 15px;
     display: flex;
     justify-content: space-around;
+    transition: all 2ms;
 }
 
+
+.eliminar{
+    padding: 5px 10px;
+    width: 40%;
+    border: none;
+    margin: 5px;
+    border-radius: 10px;
+    transition: all 600ms;
+    color: white;
+    background-color: #1259c3;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+}
+.eliminar:hover{
+    background-color: tomato;
+    transition: background-color 2s;
+}
 .carteluser {
     text-align: center;
     margin: auto;
@@ -203,15 +279,176 @@ h2 {
 
 .botonuser {
     padding: 5px 10px;
-    width: 30%;
+    width: 40%;
     border: none;
-    border-radius: 5px;
-    transition: all 450ms;
+    margin: 5px;
+    border-radius: 10px;
+    transition-duration:  500ms;
     color: white;
     background-color: #1259c3;
     font-size: 16px;
+    text-align: center;
+    justify-content: center;
 }
 
-.botonuser:hover {
-    background-color: #0022AA;
+.botonuser:hover{
+    transition-delay: ease-out;
+    background-color: rgb(69, 152, 182);
+}
+
+.slider-box{
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+    background-color: #ebebed;
+    border: 5px solid #f3f3f3;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 15px 2px;
+    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
+}
+    
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li {
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    text-align: center;
+    padding: 0 250px;
+    top: 150px;
+    color: #FFFFFF;
+}
+.text h3 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    -webkit-text-stroke-color: #007f7f;
+    -webkit-text-stroke-width: 1px;
+}
+
+.slider-box img {
+    width: 100%;
+}
+
+@keyframes slide{
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+
+    75% { margin-left: -300%; }
+    100% { margin-left: -300%; }
+}
+
+@media screen and (max-width:380px){
+    .contenedor{
+        width: 80%;
+    }
+   
+    .main {
+        margin-bottom: auto;
+        width: 200%;
+    }
+    .contenedor-orden{
+        display: flex;
+        width:100%;
+        flex-direction: column;
+    }
+    
+    .contenedor-derecho{
+        width: 50%;
+        margin: 0 auto;
+       display: flex;
+    }
+    div .caja2-main{
+        display: none;
+    }
+    .cajagrande2{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    
+    button{
+        margin-left: 30px;
+        align-items: center;
+    justify-content: center;
+    }
+    .cajagrande1 {
+       display: flex; 
+    }
+    .color {
+        width: 50%;
+        height: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 140px;
+    }
+    .carteluser{
+        width: 40%;
+        height: 60%;
+        align-items: center;
+        justify-content: center;
+    }
+    .informacion-main{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .conteiner1{
+        width: 100%;
+    }
+    .slider-box{
+        width: 30%;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width:800px){
+
+.contenedor-orden{
+        display: flex;
+        width:100%;
+        flex-direction: column;
+    }
+
+
+.cajagrande2{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    flex-direction: flex;
+}
+
+ .caja2-main{
+        display: flex;
+        flex-direction: column;
+    }
+.mas{
+        display: flex;
+        width: 100px;
+        height: 100px;
+    }
+    
 }
