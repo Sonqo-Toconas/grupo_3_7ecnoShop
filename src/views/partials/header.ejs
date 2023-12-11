@@ -1,105 +1,75 @@
 <header>
-    <div class="logo-header">
-        <a href="/"><img class="logo-image" src="../images/7ecnoShop_Logo.png" alt="image-logo"></a>
+    <div class="logoHeader">
+        <a href="/"><img class="logoImage" src="../images/7ecnoShop_Logo.png" alt="logo"></a>
     </div>
 
-    <!-- NO BUSCA -->
-    <div class="search-header">
+    <div class="logoHeaderDarkMode">
+        <a href="/"><img class="logoImage" src="../images/7ecnoShop_Logo_2.png" alt="logo"></a>
+    </div>
+
+    <div class="searchHeader">
         <form action="/producto" method="POST" class="search">
-            <input type="search" name="searchBar" placeholder="¿Qué estás buscando?" class="search-bar">
-            <button type="submit" class="search-microphone"><i class="fa-solid fa-microphone"></i></button>
-            <button type="submit" class="search-button"><i class="fa-brands fa-sistrix"></i></button>
+            <input type="search" name="searchBar" placeholder="¿Qué estás buscando?" class="searchBar">
+            <button type="submit" class="searchMicrophone" id="searchMicrophone"><i
+                    class="fa-solid fa-microphone"></i></button>
+            <button type="submit" class="searchButton"><i class="fa-brands fa-sistrix"></i></button>
         </form>
     </div>
-        <!-- SI BUSCA -->
-        <!-- <div>
-            <form action="/producto" method="POST" class="buscador">
-                <input type="search" name="barra" placeholder="¿Qué estás buscando?" class="barra-busqueda">
-                <button type="submit" class="boton-busqueda"><i class="fa-brands fa-sistrix"></i></button>
-            </form>
-        </div> -->
-    
 
-    <nav class="menu-header">
-        <ul class="horizontal-menu">
-            <li id="horizontal-menu-option"><a href=""><i class="fa-solid fa-box-open"></i> Productos</a>
-                <ul class="vertical-menu">
+    <div class="voiceSearch" id="voiceSearch">
+        <aside class="floatWindows" id="floatWindows">
+            <span>Escuchando...</span>
+            <div class="voiceSearchIcon">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+        </aside>
+    </div>
+
+    <div class="searchScreen">
+
+    </div>
+
+
+    <nav class="menuHeader">
+        <ul class="horizontalMenu">
+            <li id="horizontalMenuOption"><a href=""><i class="fa-solid fa-box-open"></i> Productos</a>
+                <ul class="verticalMenu">
                     <li>
-                        <a href=""><i class="fa-solid fa-mobile-screen-button"></i> Celulares</a>
-                        <ul>
-                            <li><a href="">Apple</a></li>
-                            <li><a href="">Huawei</a></li>
-                            <li><a href="">Motorola</a></li>
-                            <li><a href="">Quantum</a></li>
-                            <li><a href="">Samsung</a></li>
-                            <li><a href="">TLC</a></li>
-                            <li><a href="">Xiaomi</a></li>
-                            <li><a href="">ZTE</a></li>
-                        </ul>
-                    <li><a href=""><i class="fa-solid fa-icons"></i> Accesorios</a>
-                        <ul class="vertical-menu2">
-                            <li><a href=""><i class="fa-solid fa-headphones"></i> Auriculares</a>
-                                <ul>
-                                    <li><a
-                                            href=""><!-- <img src="../images/apple-logo.ico" class="logo-mobile"> -->Apple</a>
-                                    </li>
-                                    <li><a href="">Daewoo</a></li>
-                                    <li><a href="">JBL</a></li>
-                                    <li><a href="">Lenovo</a></li>
-                                    <li><a href="">Motorola</a></li>
-                                    <li><a href="">Philips</a></li>
-                                    <li><a href="">Samsung</a></li>
-                                    <li><a href="">Sony</a></li>
-                                    <li><a href="">Xiaomi</a></li>
-                                </ul>
-                            </li>
-                            <li><a href=""><i class="fa-solid fa-plug"></i> Cables</a>
-                                <ul>
-                                    <li><a href="">Apple</a></li>
-                                    <li><a href="">Motorola</a></li>
-                                    <li><a href="">Samsung</a></li>
-                                </ul>
-                            </li>
-                            <li><a href=""><i class="fa-solid fa-plug-circle-bolt"></i> Cargadores</a>
-                                <ul>
-                                    <li><a href="">Apple</a></li>
-                                    <li><a href="">Motorola</a></li>
-                                    <li><a href="">Philips</a></li>
-                                    <li><a href="">Samsung</a></li>
-                                    <li><a href="">Xiaomi</a></li>
-                                </ul>
-                            </li>
-                            <li><a href=""><i class="fa-solid fa-mobile"></i> Fundas</a>
-                                <ul>
-                                    <li><a href="">Apple</a></li>
-                                    <li><a href="">Motorola</a></li>
-                                    <li><a href="">Samsung</a></li>
-                                    <li><a href="">Xiaomi</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                            <form action="">
+                                <button><i class="fa-solid fa-mobile-screen-button"></i> Celulares</button>
+                                <!-- <i class="fa-solid fa-mobile-screen-button"></i> Celulares -->
+                        </form>
+                    </li>
+                    <li>
+                        <form action="">
+                            <i class="fa-solid fa-icons"></i> Accesorios
+                        </form>
+                    
                     </li>
             </li>
         </ul>
         </li>
 
-        <li id="vertical-menu-option"><a href=""><i class="fa-solid fa-star"></i> Favoritos</a></li>
-        <li id="vertical-menu-option"><a href="/usuario/carrito"><i class="fa-solid fa-cart-shopping"></i> Carrito</a>
+        <li id="horizontalMenuOption"><a href="/usuario/carrito"><i class="fa-solid fa-cart-shopping"></i> Carrito</a>
         </li>
-        <li id="vertical-menu-option"><a href=""><i class="fa-solid fa-circle-user"></i> Mi cuenta</a>
-            <ul class="vertical-menu">
+        <li id="horizontalMenuOption"><a href="/usuario/"><i class="fa-solid fa-circle-user"></i> Mi cuenta</a>
+            <ul class="verticalMenu" id="Outline">
                 <li><a href="/usuario/registro"><i class="fa-solid fa-user-plus"></i> Registrarme</a></li>
                 <li><a href="/usuario/login"><i class="fa-solid fa-user"></i> Iniciar Sesión</a></li>
-                <li><a href="/usuario/login"><i class="fa-solid fa-user-tie"></i> Iniciar Sesión como vendedor</a></li>
-            </ul>
+        </li>
+        </ul>
+        <!-- 
+            <ul class="verticalMenu" id="Online">
+                <li><a href="/"><i class="fa-solid fa-user"></i> Cerrar Sesión</a></li>
+                </li>
+            </ul> -->
         </li>
         </ul>
     </nav>
 
-    <div class="toggle">
-        <i class="fa-regular fa-moon" id="moon-icon"></i>
-        <i class="fa-solid fa-toggle-off" id="toggle-icon"></i>
-        <!-- <i class="fa-solid fa-sun" id="sun-icon"></i>
-        <i class="fa-solid fa-toggle-on" id="toggle-icon"></i> -->
-    </div>
+    <button class="darkMode" id="darkMode">
+        <span><i class="fa-solid fa-sun" id="mode1"></i></span>
+        <span><i class="fa-solid fa-moon" id="mode2"></i></span>
+    </button>
+    <script src="/js/partial.js"></script>
 </header>

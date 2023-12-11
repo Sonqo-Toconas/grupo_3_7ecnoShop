@@ -26,6 +26,7 @@ const usuario = {
                     uploader_user: datosDelUsuario.id_user
                 }
             })
+
             let carritoUsuario = await db.Cart.findAll({
                 where: {
                     user_id: datosDelUsuario.id_user
@@ -91,6 +92,13 @@ const usuario = {
             mensajeP: false,
             mensajeEmail: false,
         })
+    },
+
+    showLogin: async (req, res) =>{
+        if(req.session.userLogin = true){
+            
+        }
+        res.render('userPanel')
     },
 
     processLogin: async (req, res) => {

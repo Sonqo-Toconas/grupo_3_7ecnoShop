@@ -2,11 +2,10 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const userControllers = require('../controllers/userControllers');
-const middleware = require('../middlewares/authMiddleware')
+const middleware = require('../middlewares/authMiddleware');
 const multer = require('multer');
-const validationRegister = require('../middlewares/validatorUser/validatorRegister')
-const validationLogin = require('../middlewares/validatorUser/validatorLogin')
-
+const validationRegister = require('../middlewares/validatorUser/validatorRegister');
+const validationLogin = require('../middlewares/validatorUser/validatorLogin');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -35,6 +34,7 @@ router.get('/password', userControllers.password);
 router.patch('/password', userControllers.changePassword);
 router.get('/editar/:id', userControllers.userEdit);
 router.post('/editar/:id', fileUpload.single('image'), userControllers.processUserEdit);
+
 
 //router.post('/agregar-al-carrito/:id', productsControllers.agregarAlCarrito);
 

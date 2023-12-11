@@ -4,6 +4,7 @@ const session = require('express-session');
 const fs = require('fs');
 const path = require('path')
 
+console.log("Vamos")
 
 const sessionUser = {
     //Lee la lista de usuarios
@@ -41,4 +42,4 @@ let userLog = function (req, res, next) {
     //next();
 }
 console.log(sessionUser.login());
-module.exports = sessionUser;
+module.exports = headerMiddleware;
