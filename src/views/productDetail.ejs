@@ -2,19 +2,18 @@
 <%- include('./partials/head') %>
 
     <link rel="stylesheet" href="/css/productDetail.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0">
     </head>
-
-    <body>
-        <%- include('./partials/header') %>
-            <main>
-                <div class="grande">
-                    <article class="cajagrande1">
-                        <div class="caja">
-                            <h1>
+    
+       <body>
+            <main class="main">
+                <div class="contenedor">  
+                <div class="contenedor-orden">
+                <section class="izquierdo">
+                            <h1 class="titulo">
                                 <%= producto.name %>
                             </h1>
-                            <h3>Precio: <br>$<%= producto.price%>
-                            </h3>
+                            <h3 class="precio">Precio: <br>$<%= producto.price%></h3>
                             <div class="desplegable">
                             <form action="/producto/compra/<%= producto.id_product %>" method="POST">
                                 <select name="formaDePago" id="formaDePago">
@@ -24,27 +23,30 @@
                                     <option value="3">Efectivo</option>
                                     <option value="4">Billetera virtual</option>
                                 </select>
-                                
+                            </div>   
                             <button class="comprar" type="submit">
-                                <h3>Comprar</h3>
+                                <h4>Comprar</h4>
                             </button>
                             </form>
-
-                            </div>
+                           
                             <div class="botones">
                                 
                                 <button class="añadir">
-                                    <h3>Añadir al carrito</h3>
+                                    <h4>Añadir al carrito</h4>
                                     <i class="fa-solid fa-cart-plus"></i>
                                 </button>
                             </div>
-                        </div>
-                        <img class="img0" src="/images/celulares/<%= producto.image%>" alt="Celular Samsung Cobre">
-                    </article>
+                </section>
+            <div class="contenedor-derecho">
+                <section >
+                        <img class="img0" src="/images/celulares/<%= producto.image%>"  alt="Celular Samsung Cobre">
+                </section>
+            </div>   
+            </div>
                     <!--Perspectivas y datos-->
                     <article class="cajagrande2">
                         <div class="caja2-main">
-                            <h2>Mas perspectivas:</h2>
+                            <h2>Más perspectivas:</h2>
                             <div class="img1">
                                 <img class="mas" src="/images/celulares/<%= producto.imagen2%>"
                                     alt="Celular Samsung Cobre perfil">
@@ -72,20 +74,22 @@
                                     <label for="plateado">Plateado</label>
                                 </div>
                             </div>
-                            
+                        </div>
                         </section>
                     </article>
                 </div>
                 <div class="carteluser">
                     <p class="informacionCartel">Administrar</p>
-                    <div class="botones2">
+                    <div class="conteiner-editar">
                         <a href="/producto/editar/<%= producto.id_product %>" class="botonuser">Editar Producto</a>
-                        <form action="/producto/delete/<%= producto.id_product %>" method="POST">
-                            <button type="submit" class="botonuser">Eliminar</button>
-                        </form>
-                    </div>
+                    </div> 
+                     <form  action="/producto/delete/<%= producto.id_product %>"   method="POST">
+                            <button type="submit" class="eliminar" >Eliminar</button>
+                        </form> 
+                      
                 </div>
                 <!--Informacion-->
+                <div class="conteiner1">
                 <div class="informacion-main">
                     <h2>Informacion del producto</h2>
                     <p>
@@ -95,35 +99,41 @@
                 <!--Productos destacados-->
                 <section class="productosDestacados">
                     <h2>Productos destacados</h2>
-                    <div class="caja3-main">
-                        <div class="flecha">
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </div>
-                        <div class="card-list-products">
-                            <% if (otrosProductos) { %>
-                                <% for( let i=0; i < otrosProductos.length; i++ ) { %>
-                                <a href="/producto/detalle/<%= otrosProductos[i].id %>">
-                                <div class="card">
-                                    <img class="img2" src="/images/celulares/<%= otrosProductos[i].imagen%>"
-                                        alt="<%= otrosProductos[i].nombre %>">
-                                    <div class="cardPrice">
-                                        <h3><%= otrosProductos[i].nombre %>
-                                        </h3>
-                                        <p class="p">$<%= otrosProductos[i].price %>
-                                        </p>
-                                    </div>
+                    <div class="slider-box">
+                        <ul>
+                            <li>
+                                <img src="https://www.notebookcheck.org/fileadmin/_processed_/3/1/csm_pms_1643375300.10087734_c41c7026cd.png" alt="1">
+                                <div class="text">
+                                    <h3>Xiaomi Redmi Note 11</h3>
                                 </div>
-                                </a>
-                                <% } %>
-                            <% } %>
-                            
-                        </div>
-                        <div class="flecha">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                    </div>
+                            </li>
+                            <li>
+                                <img src="https://images.samsung.com/is/image/samsung/p6pim/co/sm-a045mzggltc/gallery/co-galaxy-a04-sm-a045-sm-a045mzggltc-534750946?$650_519_PNG$" alt="2">
+                                <div class="text">
+                                    <h3>Samsung Galaxy a04</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="https://www.atacadogames.com/imagem/smartphones/celular-motorola-g52-xt-2221-1-128gb-4gb-ram-dual-sim-tela-6-6%27%27-cameras-50mp-8mp-2mp-e-16mp-cinza/2/167568.jpg?pfdrid_c=true" alt="3">
+                                <div class="text">
+                                    <h3>Motorola g52</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="https://d23hwmpje67tm.cloudfront.net/326524-medium_default/cargador-magntico-puregear-wireless-15w.jpg" alt="4">
+                                <div class="text">
+                                    <h3>PureGear Cargador Inálambrico Magnético</h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>   
                 </section>
+              </div>
+            </div>
             </main>
+        
             <%- include('./partials/footer') %>
-    </body>
+            
+       </body>
+    
     </html>
