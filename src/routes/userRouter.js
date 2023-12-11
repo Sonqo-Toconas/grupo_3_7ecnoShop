@@ -35,7 +35,7 @@ router.get('/password', userControllers.password);
 router.patch('/password', userControllers.changePassword);
 router.get('/editar/:id', userControllers.userEdit);
 router.post('/editar/:id', fileUpload.single('image'), userControllers.processUserEdit);
-
+router.post('/carrito/add/:id',middleware, userControllers.carritoProcess);
 //router.post('/agregar-al-carrito/:id', productsControllers.agregarAlCarrito);
 
 module.exports = router;
