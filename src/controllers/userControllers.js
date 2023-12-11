@@ -26,6 +26,7 @@ const usuario = {
                     uploader_user: datosDelUsuario.id_user
                 }
             })
+
             let carritoUsuario = await db.Cart.findAll({
                 where: {
                     user_id: datosDelUsuario.id_user
@@ -93,6 +94,13 @@ const usuario = {
         })
     },
 
+    showLogin: async (req, res) =>{
+        if(req.session.userLogin = true){
+            
+        }
+        res.render('userPanel')
+    },
+
     processLogin: async (req, res) => {
         let errors = validationResult(req)
         let { email, password, passwordRemember } = req.body;
@@ -131,9 +139,37 @@ const usuario = {
             })
         }
     },
-    carrito: (req, res) => {
-        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('productCart', { productos: productos });
+    carrito: async (req, res) => {
+        let producto = await db.Product.findAll()
+        if (req.cookies.cookieLogin) {
+            [password, id] = req.cookies.cookieLogin.split('id')
+        } else if (req.session.userLogin) {
+            [password, id] = req.session.userLogin.split('id')
+        }
+        let datosDelUsuario = await db.User.findByPk(id)
+
+        let carritoUsuario = await db.Cart.findAll({
+            where: {
+                user_id: datosDelUsuario.dataValues.id_user
+            }
+            
+        })
+        let numerosCarrito = carritoUsuario.map(cart => cart.dataValues.product_id);
+        let datosCarrito = carritoUsuario.map(cart => cart.dataValues.id_cart);
+        let carritoFiltrados = producto.filter(producto => numerosCarrito.includes(producto.dataValues.id_product));
+        let carrito= carritoUsuario.map(cart => cart.dataValues.amount);
+        
+        res.render('productCart', { productos: carritoFiltrados, datos: datosCarrito, cantidad:carrito});
+    },
+    eliminarDelCarrito: function (req, res) {
+        db.Cart.destroy({
+            where: {
+                id_cart: req.params.id
+            }
+        })
+            .then(() => {
+                res.redirect('/usuario/carrito');
+            })
     },
     showUsers: async (req, res) => {
         if (req.session.superAdmin) {

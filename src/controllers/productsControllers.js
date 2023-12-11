@@ -8,6 +8,8 @@ const db = require('../database/models');
 const Sequelize = require('sequelize')
 const { where } = require('sequelize');
 const { createConnection } = require('net');
+const e = require('express');
+const { type } = require('os');
 
 
 const products = {
@@ -17,14 +19,19 @@ const products = {
 
     },
 
+    
+
     search: async (req, res) => {
+        console.log(req.body);
+
         let products = await db.Product.findAll({
             where: {
-                name: { [Sequelize.Op.like]: `%${req.body.barra}%` }
+                name: { [Sequelize.Op.like]: `%${req.body.searchBar}%` }
             }
         })
 
         res.render('products', { productos: products });
+
     },
 
     filtrosIndex: async (req, res) => {
@@ -35,34 +42,34 @@ const products = {
                 ]
             });
             res.render('products', { productos: products });
-        }else if (req.body.order == 'menor-precio') {
+        } else if (req.body.order == 'menor-precio') {
             let products = await db.Product.findAll({
                 order: [
                     ['price', 'ASC'] // Ordenar por el campo 'price' de manera ascendete (mayor a menor)
                 ]
             });
             res.render('products', { productos: products });
-        }else if (req.body.order == 'accesorios') {
+        } else if (req.body.order == 'accesorios') {
             let products = await db.Product.findAll({
                 include: [
                     {
                         model: db.Category,
-                        as:'category',
+                        as: 'category',
                         where: {
-                            name:'Accesorios'
+                            name: 'Accesorios'
                         }
                     },
                 ],
             });
             res.render('products', { productos: products });
-        }else if (req.body.order == 'celulares') {
+        } else if (req.body.order == 'celulares') {
             let products = await db.Product.findAll({
                 include: [
                     {
                         model: db.Category,
-                        as:'category',
+                        as: 'category',
                         where: {
-                            name:'Celulares'
+                            name: 'Celulares'
                         }
                     },
                 ],
@@ -72,7 +79,7 @@ const products = {
         else {
             res.redirect('/producto')
         }
-        
+
     },
 
     delete: function (req, res) {
@@ -117,10 +124,10 @@ admin=false
         }
         res.render('productDetail', { producto: producto, otrosProductos: data, admin:admin })
     },
-    purchase: async(req, res) => {
-        
+    purchase: async (req, res) => {
+
         let methodPay = {
-            1 : 'tarjeta de credito',
+            1: 'tarjeta de credito',
             2: 'Tarjeta de debito',
             3: 'Efectivo',
             4: 'Billetera virtual'
@@ -137,13 +144,13 @@ admin=false
             id_product: producto.id_product,
             method_pay: selectedMethod
         })
-        .then(invoice => {
-            res.render('succesBuy',{factura: invoice, nameUser : user.name})
-        })
-        .catch(err => {
-            console.log(err);
-            res.render('error')
-        })
+            .then(invoice => {
+                res.render('succesBuy', { factura: invoice, nameUser: user.name })
+            })
+            .catch(err => {
+                console.log(err);
+                res.render('error')
+            })
     },
     mostrarFormularioCreacion: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -155,13 +162,13 @@ admin=false
         let errors = validationResult(req)
         if (errors.isEmpty()) {
             if (req.file) {
-            
+
                 var productImage = req.file.filename
-                
+
             } else {
                 var productImage = "producto.png"
             }
-    
+
             const products = await db.Product.create({
                 name: data.name,
                 description: data.description,
@@ -170,7 +177,7 @@ admin=false
                 category_id: data.category,
                 color_id: data.color
             })
-    
+
             res.redirect('/');
         } else {
             //si hay errores
@@ -178,10 +185,10 @@ admin=false
             res.render('creation', {
                 errors: errors.array(),
                 old: req.body
-            }) 
+            })
             //y que no se suba el archivo
         }
-        
+
     },
 
     formularioEditar: async (req, res) => {
@@ -193,11 +200,11 @@ admin=false
         const data = req.body;
         let errors = validationResult(req)
         const oldProduct = await db.Product.findByPk(req.params.id);
-        if (errors.isEmpty()) {           
+        if (errors.isEmpty()) {
             if (req.file) {
-            
+
                 var productNewImage = req.file.filename
-                
+
             } else {
                 var productNewImage = "producto.png"
             }

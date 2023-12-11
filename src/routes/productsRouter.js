@@ -30,6 +30,7 @@ router.get('/detalle/:id', productsControllers.detalle);
 router.post('/compra/:id', middleware, productsControllers.purchase);
 router.get("/producto", productsControllers.index);
 router.post('/delete/:id', productsControllers.delete);
+/* router.post('/producto/agregar-al-carrito/:id', productsControllers.agregarAlCarrito); */
 
 
 module.exports = router;

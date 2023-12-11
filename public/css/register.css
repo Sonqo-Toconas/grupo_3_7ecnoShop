@@ -1,9 +1,69 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
+/* *{
+    padding: 0;
+    margin: 0;
 }
+
+body{
+    background-color: #e8e8f0;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+h1{
+    font-family: sans-serif;
+    font-size: 28px;
+}
+
+.buttonRegister{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.formButtonRegister{
+    padding: 5px 10px;
+    transition: all 450ms;
+    width: 30%;
+    background-color: #0c047c;
+    color: #e8e8f0;
+    border: #0c047c solid 1px;
+    border-radius: 15px;
+}
+
+.registerContainer{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10%;
+    padding:  40px ;
+    border: #0c047c solid 1px;
+    border-radius: 25px;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 2;
+} ;
+
+
+
+@media (min-width: 320px){
+
+
+    .formText .formBarRegister {
+        
+    }
+
+
+}
+
+@media (min-width: 768px){
+  
+}
+
+
+@media (min-width: 1024px) {} */
 
 main {
     margin: 0;
@@ -24,7 +84,7 @@ main {
     font-size: 20px;
 }
 
-.contenedor-formulario {
+.registerForm {
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 50px;
@@ -51,11 +111,11 @@ h1 {
     text-align: left;
 }
 
-.texto-formulario {
+.formText {
     font-size: 18px;
 }
 
-.barra-formulario {
+.formBarRegister {
     margin-top: 8px;
     padding: 8px;
     width: 88.5%;
@@ -63,7 +123,7 @@ h1 {
     border-radius: 5px;
 }
 
-.barra-formulario2 {
+.formBarRegister2 {
     margin-top: 8px;
     padding: 8px;
     width: 88.5%;
@@ -72,7 +132,7 @@ h1 {
 }
 
 
-.botones2 {
+.buttonRegister {
     margin-top: 15px;
     display: flex;
     justify-content: space-around;
@@ -101,7 +161,7 @@ h1 {
     border-radius: 50px;
 }
 
-.boton-formulario {
+.formButtonRegister {
     padding: 5px 10px;
     width: 30%;
     border: none;
@@ -116,7 +176,7 @@ h1 {
     background-color: #0022AA;
 }
 
-.mensajeError {
+.errorMessageRegister {
     margin-top: 10px;
     margin-left: 10%;
     text-align: left;

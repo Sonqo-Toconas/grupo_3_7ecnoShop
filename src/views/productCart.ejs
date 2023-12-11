@@ -1,70 +1,111 @@
 <%- include('./partials/head') %>
 
-    <link rel="stylesheet" href="/css/productCart.css">
-    </head>
-        
+<link rel="stylesheet" href="/css/productCart.css">
+</head>
 
-    <body>
+<body>
 
-        <%- include('./partials/header') %>
+  <%- include('./partials/header') %>
 
-            <main>
-                <section>
-                    <h2>Resumen de Compra</h2>
+  <main>
+    <section>
 
-                    <div class="product">
-                        <img src="/images/celulares/samsung/samsun-galaxy-a04e-cobre-frente.png"
-                            alt="Celular Samsung Cobre">
-                        <div>
-                            <h3>Celular Samsung</h3>
-                            <p>Precio: $69999</p>
-                            <input type="number" min="0" value="1">
-                            <button>Eliminar</button>
-                        </div>
-                    </div>
+      <div class="cartbody">
+        <div class="cartmain">
+          <div class="headercarrito">
+            <h2>Productos seleccionados</h2>
+          </div>
 
-                    <div class="product">
-                        <img src="/images/celulares/xiaomi/Xiaomi-redmi-note-11-frente-negro.png"
-                            alt="Celular Xiaomi note 11">
-                        <div>
-                            <h3>Celular Xiaomi</h3>
-                            <p>Precio: $85999</p>
-                            <input type="number" min="0" value="1">
-                            <button>Eliminar</button>
-                        </div>
-                    </div>
+          <div class="carrito-container">
+            <% let totalCompra=0; %>
+            <% let i=0; %> <% let c=0; %> 
+            <% productos.forEach(item=> { %>
+            <div class="product">
+              <% if (item) { %>
+                <img src="/images/celulares/<%= item.image %>" alt="<%= item.name %>">
+                <div>
+                  <h3><%= item.name %></h3>
+                  <p>Precio: $<%= item.price %></p>
+                  <p>Cantidad: <input type="number" min="0" value="<%= cantidad[c] %>"></p>
+                  <p>Total: $<%= item.price * cantidad[c] %></p>
+                </div>
+              <% } else { %>
+                <p>Producto no disponible</p>
+              <% } %>
+              <form action="/usuario/carrito/<%= datos[i] %>" method="POST">
+                <button type="submit">Eliminar</button>
+              </form>
+            </div>
 
-                    <div class="product">
-                        <img src="/images/producto-para-celulares/PureGear-Cargador-Inálambrico-Magnético-uso.webp"
-                            alt="Cargador Inalambrico Magnetico">
-                        <div>
-                            <h3>Cargador Inalambrico</h3>
-                            <p>Precio: $5000</p>
-                            <input type="number" min="0" value="1">
-                            <button>Eliminar</button>
-                        </div>
-                    </div>
+            <% if (item) { %>
+              <% totalCompra +=item.price * cantidad[c]; %>
+            <% } %>
+            <% i++; %> <% c++; %>
+            <% }); %>
+          </div>
+        </div>
 
-                    <div class="product">
-                        <img src="/images/producto-para-celulares/funda-Samsung-Galaxy-A04.webp"
-                            alt="Funda Samsung Galaxi A04">
-                        <div>
-                            <h3>Funda Samsung</h3>
-                            <p>Precio: $1999</p>
-                            <input type="number" min="0" value="1">
-                            <button>Eliminar</button>
-                        </div>
-                    </div>
+        <!-- Resumen de la compra -->
+        <div class="cartside">
+          <div class="resumen">
+            <h2>Resumen de Compra</h2>
+          </div>
+          <div class="resumen-compra">
+            
+            <div class="cartTable">
+              <table>
+                <tr>
+                  <th>Cantidad</th>
+                  <th>Producto</th>
+                  <th>Precio Unitario</th>
+                  <th>Total</th>
+                </tr>
+                <%  let total= 0 %>
+                <%  let total2= 0%>
+                <% let f=0; %>
+                <% productos.forEach(item=> { %>
+                  <% if (item) { %>
+                    <tr>
+                      <td><%= cantidad[f] %></td>
+                      <td><%= item.name %></td>
+                      <td>$<%= item.price %></td>
+                      <% total= item.price * cantidad[f]%>
+                      <td>$<%= total %></td>
+                    </tr>
+                    <%totalCompra= totalCompra + total %>
+                  <% } %>
+                  <% f++; %>
+                <% }); %>
+                <tr>
+                  <td colspan="3">TOTAL</td>
+                  <td>$<%= totalCompra / 2 %></td>
+                </tr>
+              </table>
+            </div>
 
-                    <div class="total">
-                        <p>Total: $240999</p>
-                        <button>Realizar Pago</button>
-                    </div>
-                </section>
-            </main>
+            <form>
+              <div class="select-container">
+                <select name="formaDePago" id="formaDePago">
+                  <option disabled selected>Formas de Pago</option>
+                  <option value="1">Tarjeta de crédito</option>
+                  <option value="2">Tarjeta de débito</option>
+                  <option value="3">Efectivo</option>
+                  <option value="4">Billetera virtual</option>
+                </select>
+              </div>
 
-            <%- include('./partials/footer') %>
+              <div class="container">
+                <button class="comprar">Comprar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    </body>
+  <%- include('./partials/footer') %>
 
-    </html>
+</body>
+
+</html>

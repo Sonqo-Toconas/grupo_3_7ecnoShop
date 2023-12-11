@@ -2,11 +2,10 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const userControllers = require('../controllers/userControllers');
-const middleware = require('../middlewares/authMiddleware')
+const middleware = require('../middlewares/authMiddleware');
 const multer = require('multer');
-const validationRegister = require('../middlewares/validatorUser/validatorRegister')
-const validationLogin = require('../middlewares/validatorUser/validatorLogin')
-
+const validationRegister = require('../middlewares/validatorUser/validatorRegister');
+const validationLogin = require('../middlewares/validatorUser/validatorLogin');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -29,6 +28,7 @@ router.post('/registro', fileUpload.single('imagen'), validationRegister, userCo
 router.get('/login', userControllers.login);
 router.post('/login', validationLogin, userControllers.processLogin);
 router.get('/carrito', middleware, userControllers.carrito);
+router.post('/carrito/:id', userControllers.eliminarDelCarrito);
 router.get('/users', middleware, userControllers.showUsers);
 router.patch('/users/:id', userControllers.changeAdmin);
 router.get('/password', userControllers.password);
@@ -37,5 +37,6 @@ router.get('/editar/:id', userControllers.userEdit);
 router.post('/editar/:id', fileUpload.single('image'), userControllers.processUserEdit);
 router.post('/carrito/add/:id',middleware, userControllers.carritoProcess);
 //router.post('/agregar-al-carrito/:id', productsControllers.agregarAlCarrito);
+
 
 module.exports = router;
