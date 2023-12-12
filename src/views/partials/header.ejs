@@ -10,35 +10,77 @@
     <div class="searchHeader">
         <form action="/producto" method="POST" class="search">
             <input type="search" name="searchBar" placeholder="¿Qué estás buscando?" class="searchBar">
-            <button type="submit" class="searchMicrophone" id="searchMicrophone"><i
-                    class="fa-solid fa-microphone"></i></button>
             <button type="submit" class="searchButton"><i class="fa-brands fa-sistrix"></i></button>
         </form>
     </div>
-
-    <div class="voiceSearch" id="voiceSearch">
-        <aside class="floatWindows" id="floatWindows">
-            <span>Escuchando...</span>
-            <div class="voiceSearchIcon">
-                <i class="fa-solid fa-microphone"></i>
-            </div>
-        </aside>
-    </div>
-
-    <div class="searchScreen">
-
-    </div>
-
-
     <nav class="menuHeader">
-        <ul class="horizontalMenu">
-            <li id="horizontalMenuOption"><a href=""><i class="fa-solid fa-box-open"></i> Productos</a>
-                <ul class="verticalMenu">
+    <!-- 
+
+        <div class="menuHeaderIcon">
+            <input type="checkbox" id="menuCheck">
+            <label for="menuCheck" class="checkButton">
+                <i class="fa-solid fa-bars" id="menuIcon"></i>
+            </label>
+        </div>
+
+        <ul>
+            <li class="optionMenu"><button>
+                    <p><i class="fa-solid fa-box-open"></i> Productos</p>
+                </button>
+                <ul>
                     <li>
-                            <form action="">
-                                <button><i class="fa-solid fa-mobile-screen-button"></i> Celulares</button>
-                                <!-- <i class="fa-solid fa-mobile-screen-button"></i> Celulares -->
+                        <form action="">
+                            <a href=""> <i class="fa-solid fa-mobile-screen-button"></i> Celulares</a>
                         </form>
+                    </li>
+                    <li>
+                        <form action="">
+                            <a href=""> <i class="fa-solid fa-icons"></i> Accesorios</a>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+            <li class="optionMenu"><button>
+                    <p><a href="/usuario/carrito"><i class="fa-solid fa-cart-shopping"></i> Carrito</a>
+                </button></li>
+                <li class="optionMenu"><button>
+                    <p><i class="fa-solid fa-circle-user"></i>Mi cuenta</a>
+                </button>
+                <ul>
+                    <li>
+                        <form action="">
+                            <a href="/usuario/registro"><i class="fa-solid fa-user-plus"></i> Registrarme</a>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="">
+                            <a href="/usuario/login"><i class="fa-solid fa-user"></i> Iniciar Sesión</a>
+                        </form>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <form action="">
+                            <a href="/usuario/"><i class="fa-solid fa-clipboard-user"></i> Mi cuenta</a>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="">
+                            <a href="/usuario/login"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+                        </form>
+                    </li>
+                </ul>
+            </li> -->
+
+
+
+            <li id="horizontalMenuOption"><a href=""><i class="fa-solid fa-box-open"></i> Productos</a>
+                <ul class="productMenuHeader">
+                    <li>
+                            <!-- <form action="">
+                                <button><i class="fa-solid fa-mobile-screen-button"></i> Celulares</button> </form> -->
+            <i class="fa-solid fa-mobile-screen-button"></i> Celulares
+                   
                     </li>
                     <li>
                         <form action="">
@@ -47,6 +89,7 @@
                     
                     </li>
             </li>
+
         </ul>
         </li>
 
@@ -58,12 +101,13 @@
                 <li><a href="/usuario/login"><i class="fa-solid fa-user"></i> Iniciar Sesión</a></li>
         </li>
         </ul>
-        <!-- 
+            
             <ul class="verticalMenu" id="Online">
                 <li><a href="/"><i class="fa-solid fa-user"></i> Cerrar Sesión</a></li>
                 </li>
-            </ul> -->
+            </ul> 
         </li>
+        
         </ul>
     </nav>
 

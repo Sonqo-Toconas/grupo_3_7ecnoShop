@@ -7,16 +7,15 @@
     <%- include('./partials/header') %>
     
       <main>
-        <!-- <h1>Bienvenido a 7ECNOSHOP</h1> -->
         <div class="main-conteiner">
           <section>
-            <div class="main-header">
+            <!-- <div class="main-header">
               <span class="fa-solid fa-circle-chevron-left" id="icon-left"></span>
               <span class="fa-solid fa-circle-chevron-right" id="icon-right"></span>
-            </div>
+            </div> -->
           </section>
           <section>
-            <h2><a href="/producto" class="link-productos">Ver catalago completo</a></h2>
+            <button class="buttonIndexProduct"><a href="/producto" class="link-productos">Ver catalago completo</a></button>
           </section>
           <section class="main-footer" onclick="irProducto">
             <% for( let i=0; i < productos.length; i++ ) { %>
