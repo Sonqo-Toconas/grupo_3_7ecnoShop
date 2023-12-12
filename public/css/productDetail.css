@@ -2,14 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    padding-bottom: 30 px;
     font-family: 'Quicksand', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
 }
-.productosDestacados{
-    padding-bottom: 30 px;
-}
+
 .contenedor{
     width: 100%;
     max-width: 1000px;
@@ -68,11 +65,42 @@ main {
         box-shadow: 0px 0px 15px 2px;
         background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
 }
+.productosDestacados{
+    padding-bottom: 40px;
+}
+.cantidad{
+    margin-top: 15px;
+   font-size: 17px;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+}
+.cantidad input{
+    border: none;
+    width: 60px;
+    height: 100%;
+    margin-top: -14px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    padding: 10px 5px;
+    background-color: #f7f7f7;
+    color: #666;
+    font-weight: 800;
+}
+.cantidad label{
+    margin: 5px 0px;
+}
 .img0{
     width: 100%;
     height: auto;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
+    object-fit: cover;
+}
+.img0:hover{
+    transform: scale(1.2);
 }
 article{
     display: flex;
@@ -96,10 +124,16 @@ article{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 .comprar{
+    margin-top: 10px;
+    border: none;
     border-radius: 10px;
     font-size: 20px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+.comprar:hover{
+    color: #007f7f;
 }
 .caja2-main{
     border: 5px solid #f3f3f3;
@@ -152,10 +186,16 @@ button{
 
 }
 .añadir{
+    border: none;
     border-radius: 15px;
     align-items: center;
     justify-content: center;
     outline: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.añadir:hover{
+    color: #007f7f;
 }
 
 .informacion-main{
@@ -249,7 +289,6 @@ h4{
     transition: all 2ms;
 }
 
-
 .eliminar{
     padding: 5px 10px;
     width: 40%;
@@ -287,6 +326,7 @@ h4{
     padding: 5px 10px;
     width: 40%;
     border: none;
+    outline: none;
     margin: 5px;
     border-radius: 10px;
     transition-duration:  500ms;
@@ -295,6 +335,7 @@ h4{
     font-size: 16px;
     text-align: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .botonuser:hover{

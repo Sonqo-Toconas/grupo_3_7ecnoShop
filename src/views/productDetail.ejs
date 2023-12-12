@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0">
     </head>
     
-    
+
        <body>
-        
+        <%- include('./partials/header') %>
             <main class="main">
                 <div class="contenedor">  
                 <div class="contenedor-orden">
@@ -33,8 +33,8 @@
                            
                             <div class="botones">
                               <form action="/usuario/carrito/add/<%=producto.id_product%>" method="post">
-                                <div><label>cantidad</label><br>
-                                    <input type="number" min="1" name="amount"></input></div>
+                                <div class="cantidad"><label>Cantidad:</label><br>
+                                    <input type="number" min="1" name="amount" value="1"></input></div>
                                 <button class="añadir">
                                     <h4>Añadir al carrito</h4>
                                     <i class="fa-solid fa-cart-plus"></i>
@@ -97,7 +97,7 @@
               </div>
             </div>
             </main>
-    
+            <%- include('./partials/footer') %>
        </body>
     
     </html>
