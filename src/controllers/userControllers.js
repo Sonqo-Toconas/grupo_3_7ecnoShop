@@ -171,7 +171,11 @@ const usuario = {
             })
     },
     cartBought: async (req, res) => {
-        let id = req.params.id 
+        if (req.cookies.cookieLogin) {
+            [password, id] = req.cookies.cookieLogin.split('id')
+        } else if (req.session.userLogin) {
+            [password, id] = req.session.userLogin.split('id')
+        }
         console.log(req.body); 
         let methodPay = {
             1: 'tarjeta de credito',
@@ -179,7 +183,7 @@ const usuario = {
             3: 'Efectivo',
             4: 'Billetera virtual'
         }
-        let selectedMethod = methodPay[1];
+        let selectedMethod = methodPay[req.body.formaDePago];
         if (!id) {
             res.send('no existe el id')
         }else {
