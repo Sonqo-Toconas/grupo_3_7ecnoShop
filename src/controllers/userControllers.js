@@ -228,11 +228,11 @@ const usuario = {
                     if (!confirmCreate) {
                         res.send('hubo errores al crear la compra')
                     }else {
-                            // await db.Cart.destroy({
-                            //     where: {
-                            //         user_id : id
-                            //     }
-                            // })
+                            await db.Cart.destroy({
+                                where: {
+                                    user_id : id
+                                }
+                            })
                             res.render('succesBuy',  { factura: invoiceField, nameUser: carrito[0].user.name })
                     }
                     if (!confirmCreate) {
