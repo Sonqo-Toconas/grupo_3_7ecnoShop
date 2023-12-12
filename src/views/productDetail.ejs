@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0">
     </head>
     
-    
+
        <body>
+        <%- include('./partials/header') %>
             <main class="main">
                 <div class="contenedor">  
                 <div class="contenedor-orden">
@@ -31,11 +32,17 @@
                             </form>
                            
                             <div class="botones">
-                                
-                                <button class="añadir" onclick="redirec()">
+                              <form action="/usuario/carrito/add/<%=producto.id_product%>" method="post">
+                                <div class="cantidad"><label>Cantidad:</label><br>
+                                    <input type="number" min="1" name="amount" value="1"></input></div>
+                                <button class="añadir">
                                     <h4>Añadir al carrito</h4>
                                     <i class="fa-solid fa-cart-plus"></i>
                                 </button>
+                            
+
+                              </form>  
+                                
                             </div>
                 </section>
             <div class="contenedor-derecho">
@@ -45,40 +52,9 @@
             </div>   
             </div>
                     <!--Perspectivas y datos-->
-                    <article class="cajagrande2">
-                        <div class="caja2-main">
-                            <h2>Más perspectivas:</h2>
-                            <div class="img1">
-                                <img class="mas" src="/images/celulares/<%= producto.imagen2%>"
-                                    alt="Celular Samsung Cobre perfil">
-                                <img class="mas" src="/images/celulares/<%= producto.imagen3%>"
-                                    alt="Celular Samsung Cobre espalda">
-                            </div>
-                        </div>
-                        <section>
-                            <div class="color">
-                                <h2>Seleccion de colores</h2>
-                                <div class="form-group">
-                                    <input type="radio" name="color" id="azul">
-                                    <label for="blanco">blanco</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="radio" name="color" id="blanco">
-                                    <label for="dorado">Dorado</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="radio" name="color" id="cobre" checked>
-                                    <label for="negro">Negro</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="radio" name="color" id="verde">
-                                    <label for="plateado">Plateado</label>
-                                </div>
-                            </div>
-                        </div>
-                        </section>
-                    </article>
-                </div>
+                   
+        <% if (admin) { %>
+       
                 <div class="carteluser">
                     <p class="informacionCartel">Administrar</p>
                     <div class="conteiner-editar">
@@ -89,6 +65,7 @@
                         </form> 
                       
                 </div>
+           <% } %>
                 <!--Informacion-->
                 <div class="conteiner1">
                 <div class="informacion-main">
@@ -104,7 +81,8 @@
                         <ul>
                             <% otrosProductos.forEach (producto => { %>
                                <li>
-                                <img src="/images/celulares/<%= producto.image%>" alt="<%=producto.name %>">
+                                <a href="/producto/detalle/<%=producto.id_product %>">
+                                <img src="/images/celulares/<%= producto.image%>" alt="<%=producto.name %>"></a>
                                 <div class="text">
                                     <h3><%=producto.name%></h3>
                                 </div>
@@ -119,11 +97,7 @@
               </div>
             </div>
             </main>
-        <script>
-            function redirec (){
-                window.location.href="http://localhost:3030/usuario/carrito"
-            }
-        </script>
+            <%- include('./partials/footer') %>
        </body>
     
     </html>

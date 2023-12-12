@@ -35,21 +35,7 @@ const products = {
     },
 
     filtrosIndex: async (req, res) => {
-        if (req.body.order == 'mayor-precio') {
-            let products = await db.Product.findAll({
-                order: [
-                    ['price', 'DESC'] // Ordenar por el campo 'price' de manera descendente (mayor a menor)
-                ]
-            });
-            res.render('products', { productos: products });
-        } else if (req.body.order == 'menor-precio') {
-            let products = await db.Product.findAll({
-                order: [
-                    ['price', 'ASC'] // Ordenar por el campo 'price' de manera ascendete (mayor a menor)
-                ]
-            });
-            res.render('products', { productos: products });
-        } else if (req.body.order == 'accesorios') {
+        if (req.params.id == 'accesorios') {
             let products = await db.Product.findAll({
                 include: [
                     {
@@ -61,8 +47,8 @@ const products = {
                     },
                 ],
             });
-            res.render('products', { productos: products });
-        } else if (req.body.order == 'celulares') {
+            return res.render('products', { productos: products });
+        } else if (req.params.id == 'celulares') {
             let products = await db.Product.findAll({
                 include: [
                     {
@@ -74,7 +60,7 @@ const products = {
                     },
                 ],
             });
-            res.render('products', { productos: products });
+            return res.render('products', { productos: products });
         }
         else {
             res.redirect('/producto')
@@ -100,7 +86,7 @@ const products = {
 
 
     detalle: async (req, res) => {
-
+let admin =false
         let data = await db.Product.findAll({
             where: {
                 id_product: { [db.Sequelize.Op.ne]: req.params.id }
@@ -109,9 +95,28 @@ const products = {
             limit:4
         })
         let producto = await db.Product.findByPk(req.params.id)
-        res.render('productDetail', { producto: producto, otrosProductos: data })
+        let id = null;
+        if (req.cookies.cookieLogin) {
+            [password, id] = req.cookies.cookieLogin.split('id')
+        } else if (req.session.userLogin) {
+            [password, id] = req.session.userLogin.split('id')
+        }
+        if (id){
+let usuario= await db.User.findByPk(id)
+if(usuario.admin==1){
+admin = true
+}
+        }else {
+admin=false
+        }
+        res.render('productDetail', { producto: producto, otrosProductos: data, admin:admin })
     },
     purchase: async (req, res) => {
+        if (req.cookies.cookieLogin) {
+            [password, id] = req.cookies.cookieLogin.split('id')
+        } else if (req.session.userLogin) {
+            [password, id] = req.session.userLogin.split('id')
+        }
 
         let methodPay = {
             1: 'tarjeta de credito',
@@ -121,23 +126,33 @@ const products = {
         }
         let selectedMethod = methodPay[req.body.formaDePago];
 
-        let producto = await db.Product.findByPk(req.params.id)
-        let idUser = req.session.userLogin
-        console.log(idUser);
-        let user = await db.User.findByPk(idUser)
-        db.Invoice.create({
-            id_user: await user.id_user,
-            invoice_date: new Date(),
-            id_product: producto.id_product,
-            method_pay: selectedMethod
-        })
-            .then(invoice => {
-                res.render('succesBuy', { factura: invoice, nameUser: user.name })
+        let {id_product} = await db.Product.findByPk(req.params.id)
+
+        let {id_user,name} = await db.User.findByPk(id)
+        if (id_user && id_product) {
+            let confirm = await db.Sold.create({
+                user_id: id_user,
+                product_id : id_product,
+                amount : '1'
             })
-            .catch(err => {
-                console.log(err);
-                res.render('error')
+            db.Invoice.create({
+                id_user: id_user,
+                invoice_date: new Date(),
+                id_product: id_product,
+                method_pay: selectedMethod
             })
+                .then(invoice => {
+                    return res.render('succesBuy', { factura: invoice, nameUser: name })
+                })
+                .catch(err => {
+                    console.log(err);
+                    res.render('error')
+                })
+        }else{
+            res.send('hubo un error')
+        }
+        
+        
     },
     mostrarFormularioCreacion: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

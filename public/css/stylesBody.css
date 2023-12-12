@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 body {
@@ -17,10 +16,31 @@ body.dark {
   border: #e8e8f0;
 }
 
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  height: 120px;
+  margin: auto;
+  align-items: center;
+  padding: 15px;
+  background-color: #E8E8F0;
+  border: none;
+  border-bottom: 1px solid #0c047c;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
 body.dark header {
   background-color: #253159;
   color: #e8e8f0;
   border-bottom: 1px solid #e8e8f0;
+}
+
+.logoHeader .logoHeaderDarkMode {
+  width: 15%;
+  align-items: center;
+  align-content: center;
+
 }
 
 .logoHeaderDarkMode {
@@ -37,28 +57,6 @@ body.dark .logoHeader {
 
 body.dark .logoHeaderDarkMode {
   display: block;
-}
-
-/* ---------- HEADER ---------- */
-
-header {
-  display: flex;
-  height: 120px;
-  margin: auto;
-  align-items: center;
-  padding: 15px;
-  background-color: #E8E8F0;
-  border: none;
-  border-bottom: 1px solid #0c047c;
-  font-family: sans-serif;
-  font-size: 18px;
-}
-
-.logoHeader .logoHeaderDarkMode {
-  width: 15%;
-  align-items: center;
-  align-content: center;
-
 }
 
 .logoImage {
@@ -95,7 +93,7 @@ body.dark .searchBar {
   color: white;
   margin: auto;
   position: absolute;
-  right: -9%;
+  right: -7%;
   padding: 10px 10px;
   font-size: 16px;
   border: 1px solid #0c047c;
@@ -138,12 +136,23 @@ body.dark .searchButton:hover {
   color: #0c047c;
   text-decoration: none;
   list-style: none;
+  margin: auto;
   padding: 20px 5px;
+}
+
+.menuHeader li a:hover {
+  background-color: #0c047c;
+  color: #e8e8f0;
 }
 
 body.dark .menuHeader li a {
   background-color: #253159;
   color: #e8e8f0;
+}
+
+body.dark .menuHeader li a:hover {
+  background-color: #e8e8f0;
+  color: #253159;
 }
 
 .horizontalMenu {
@@ -187,6 +196,10 @@ body.dark .menuHeader li button:hover {
 .menuHeader li ul li ul {
   right: -140px;
   top: 0px;
+}
+
+.verticalMenu #Online{
+  display: none;
 }
 
 header i {
@@ -240,6 +253,85 @@ header i {
   box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.2);
 }
 
+@media (min-width: 635px) {
+  header {
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 800px){
+  header {
+    height: auto;
+    flex-direction: column;
+  }
+
+.searchHeader {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: auto;
+}
+
+.searchBar {
+  background-color: #E8E8F0;
+  color: #0c047c;
+  outline: none;
+  width: auto; 
+  padding: 10px;
+  padding-right: 55px;
+  border: 1px solid #0c047c;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+body.dark .searchBar {
+  background-color: #253159;
+  color: #e8e8f0;
+  border: 1px solid #e8e8f0;
+}
+
+.searchButton {
+  background-color: #0c047c;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #0c047c;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+body.dark .searchButton {
+  background-color: #253159;
+  color: #e8e8f0;
+  border: 1px solid #e8e8f0;
+}
+
+body.dark .searchButton {
+  background-color: #253159;
+  color: #e8e8f0;
+  border: 1px solid #e8e8f0;
+}
+
+  .menuHeader {
+    width: 100%;
+    padding: 0;
+  }
+
+  .horizontalMenuOption {
+    padding: 0;
+  }
+
+  .menuHeader li {
+    text-align: center;
+    padding: 10px;
+  }
+}
 
 /* ---------- FOOTER ---------- */
 
@@ -322,13 +414,13 @@ body.dark .redirectContainer a {
 }
 
 @media (min-width: 635px) {
-  footer{
-  position: relative; 
-  margin-left: 40px;
-  margin-right: 40px;
+  footer {
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
-  .container{
+  .container {
     width: 100%;
   }
 
@@ -338,12 +430,12 @@ body.dark .redirectContainer a {
     padding: 10px 0;
   }
 
-  .messageFooter > * {
+  .messageFooter>* {
     flex: 1;
     margin-right: 10px;
   }
 
-  .messageFooter > *:last-child {
+  .messageFooter>*:last-child {
     margin-right: 0;
   }
 
@@ -351,13 +443,16 @@ body.dark .redirectContainer a {
     display: none;
   }
 
-  .redirectContainer{
+  .redirectContainer {
     width: 80%;
     margin-right: -180px;
   }
 
-  .logoFooter, .logoFooterDarkMode {
+  .logoFooter,
+  .logoFooterDarkMode {
     width: 20%;
+    min-height: 60%;
+    min-width: 60%;
     position: absolute;
     top: 0;
     left: 0;

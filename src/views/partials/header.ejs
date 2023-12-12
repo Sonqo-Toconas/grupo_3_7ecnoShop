@@ -13,83 +13,14 @@
             <button type="submit" class="searchButton"><i class="fa-brands fa-sistrix"></i></button>
         </form>
     </div>
+
     <nav class="menuHeader">
-    
-
-        <div class="menuHeaderIcon">
-            <input type="checkbox" id="menuCheck">
-            <label for="menuCheck" class="checkButton">
-                <i class="fa-solid fa-bars" id="menuIcon"></i>
-            </label>
-        </div>
-
-        <ul>
-            <li class="optionMenu"><button>
-                    <p><i class="fa-solid fa-box-open"></i> Productos</p>
-                </button>
-                <ul>
-                    <li>
-                        <form action="">
-                            <a href=""> <i class="fa-solid fa-mobile-screen-button"></i> Celulares</a>
-                        </form>
-                    </li>
-                    <li>
-                        <form action="">
-                            <a href=""> <i class="fa-solid fa-icons"></i> Accesorios</a>
-                        </form>
-                    </li>
-                </ul>
+        <ul class="horizontalMenu">
+            <li id="horizontalMenuOption"><a href="/producto"><i class="fa-solid fa-box-open"></i> Productos</a>
+                <ul class="verticalMenu">
+                    <li id="filterPhone" key="0"> <a href="/producto/filtro/celulares"> <i class="fa-solid fa-mobile-screen-button"></i> Celulares </a></li>
+                    <li id="filterAccesories" key="1"> <a href="/producto/filtro/accesorios"> <i class="fa-solid fa-icons"></i> Accesorios </a> </li>
             </li>
-            <li class="optionMenu"><button>
-                    <p><a href="/usuario/carrito"><i class="fa-solid fa-cart-shopping"></i> Carrito</a>
-                </button></li>
-                <li class="optionMenu"><button>
-                    <p><i class="fa-solid fa-circle-user"></i>Mi cuenta</a>
-                </button>
-                <ul>
-                    <li>
-                        <form action="">
-                            <a href="/usuario/registro"><i class="fa-solid fa-user-plus"></i> Registrarme</a>
-                        </form>
-                    </li>
-                    <li>
-                        <form action="">
-                            <a href="/usuario/login"><i class="fa-solid fa-user"></i> Iniciar Sesión</a>
-                        </form>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <form action="">
-                            <a href="/usuario/"><i class="fa-solid fa-clipboard-user"></i> Mi cuenta</a>
-                        </form>
-                    </li>
-                    <li>
-                        <form action="">
-                            <a href="/usuario/login"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
-                        </form>
-                    </li>
-                </ul>
-            </li> 
-
-
-<!-- 
-            <li id="horizontalMenuOption"><a href=""><i class="fa-solid fa-box-open"></i> Productos</a>
-                <ul class="productMenuHeader">
-                    <li>
-                         <form action="">
-                                <button><i class="fa-solid fa-mobile-screen-button"></i> Celulares</button> </form>
-            <i class="fa-solid fa-mobile-screen-button"></i> Celulares
-                   
-                    </li>
-                    <li>
-                        <form action="">
-                            <i class="fa-solid fa-icons"></i> Accesorios
-                        </form>
-                    
-                    </li>
-            </li>
-
         </ul>
         </li>
 
@@ -101,15 +32,14 @@
                 <li><a href="/usuario/login"><i class="fa-solid fa-user"></i> Iniciar Sesión</a></li>
         </li>
         </ul>
-            
-            <ul class="verticalMenu" id="Online">
+        
+           <!--  <ul class="verticalMenu" id="Online">
                 <li><a href="/"><i class="fa-solid fa-user"></i> Cerrar Sesión</a></li>
                 </li>
-            </ul> 
+            </ul>
         </li>
-        
-        </ul>
-    </nav> -->
+        </ul> -->
+    </nav>
 
     <button class="darkMode" id="darkMode">
         <span><i class="fa-solid fa-sun" id="mode1"></i></span>

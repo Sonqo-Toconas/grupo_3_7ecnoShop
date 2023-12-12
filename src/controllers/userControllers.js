@@ -5,7 +5,7 @@ const productsFilePath = path.join(__dirname, '../views/products/productos.json'
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
-const { Console } = require('console');
+const { Console, error } = require('console');
 
 const usuario = {
     datos: function () {
@@ -158,7 +158,6 @@ const usuario = {
         let datosCarrito = carritoUsuario.map(cart => cart.dataValues.id_cart);
         let carritoFiltrados = producto.filter(producto => numerosCarrito.includes(producto.dataValues.id_product));
         let carrito= carritoUsuario.map(cart => cart.dataValues.amount);
-        
         res.render('productCart', { productos: carritoFiltrados, datos: datosCarrito, cantidad:carrito});
     },
     eliminarDelCarrito: function (req, res) {
@@ -170,6 +169,81 @@ const usuario = {
             .then(() => {
                 res.redirect('/usuario/carrito');
             })
+    },
+    cartBought: async (req, res) => {
+        if (req.cookies.cookieLogin) {
+            [password, id] = req.cookies.cookieLogin.split('id')
+        } else if (req.session.userLogin) {
+            [password, id] = req.session.userLogin.split('id')
+        }
+        console.log(req.body); 
+        let methodPay = {
+            1: 'tarjeta de credito',
+            2: 'Tarjeta de debito',
+            3: 'Efectivo',
+            4: 'Billetera virtual'
+        }
+        let selectedMethod = methodPay[req.body.formaDePago];
+        if (!id) {
+            res.send('no existe el id')
+        }else {
+            try {
+                let carrito = await db.Cart.findAll({
+                    where :{
+                        user_id : id
+                    },
+                    include : [
+                        {
+                            model: db.User,
+                            as: 'user'
+                        },
+                        {
+                            model: db.Product,
+                            as: 'product'
+                        }
+                    ]
+                })
+                if (!carrito || carrito.length == 0) {
+                    res.send('no tiene carrito')
+                }
+                    let invoiceField = []
+                    let confirmCreate = []
+                    for (let i = 0; i < carrito.length; i++) {
+                        let confirm = await db.Sold.create({
+                            user_id: carrito[i].user_id,
+                            product_id : carrito[i].product_id,
+                            amount : carrito[i].amount
+                        })
+                        confirmCreate.push(confirm.dataValues)
+                        
+                        let invoice = await db.Invoice.create({
+                            id_user: carrito[i].user_id,
+                            invoice_date: new Date(),
+                            id_product: carrito[i].product_id,
+                            method_pay: selectedMethod
+                        })
+                            invoiceField.push(invoice.dataValues)
+                    }
+                    
+                    if (!confirmCreate) {
+                        res.send('hubo errores al crear la compra')
+                    }else {
+                            await db.Cart.destroy({
+                                where: {
+                                    user_id : id
+                                }
+                            })
+                            res.render('succesBuy',  { factura: invoiceField, nameUser: carrito[0].user.name })
+                    }
+                    if (!confirmCreate) {
+                        res.send('hubo errores al crear la compra')
+                    }
+                }    
+            catch (err) {
+                console.log(err);
+                return res.send('error')
+            }
+        }
     },
     showUsers: async (req, res) => {
         if (req.session.superAdmin) {
@@ -302,6 +376,29 @@ const usuario = {
                 old: req.body
             })
         }
+    },
+    carritoProcess: async (req,res)=>{
+        if (req.cookies.cookieLogin) {
+            [password, id] = req.cookies.cookieLogin.split('id')
+        } else if (req.session.userLogin) {
+            [password, id] = req.session.userLogin.split('id')
+        }
+        let idProduct = req.params.id
+        let amount = req.body.amount
+
+
+       db.Cart.create({
+            user_id:id,
+            product_id:idProduct,
+            amount:amount
+        })
+        .then(confirm=>{
+            res.redirect("/usuario/carrito")
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+        
     }
 }
 

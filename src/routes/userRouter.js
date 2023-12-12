@@ -28,6 +28,7 @@ router.post('/registro', fileUpload.single('imagen'), validationRegister, userCo
 router.get('/login', userControllers.login);
 router.post('/login', validationLogin, userControllers.processLogin);
 router.get('/carrito', middleware, userControllers.carrito);
+router.post('/carrito/compra', middleware, userControllers.cartBought);
 router.post('/carrito/:id', userControllers.eliminarDelCarrito);
 router.get('/users', middleware, userControllers.showUsers);
 router.patch('/users/:id', userControllers.changeAdmin);
@@ -35,6 +36,8 @@ router.get('/password', userControllers.password);
 router.patch('/password', userControllers.changePassword);
 router.get('/editar/:id', userControllers.userEdit);
 router.post('/editar/:id', fileUpload.single('image'), userControllers.processUserEdit);
+router.post('/carrito/add/:id',middleware, userControllers.carritoProcess);
+//router.post('/agregar-al-carrito/:id', productsControllers.agregarAlCarrito);
 
 
 module.exports = router;
