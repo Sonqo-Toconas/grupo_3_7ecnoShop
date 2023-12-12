@@ -13,15 +13,16 @@
     </main>
     <script>
         function getPdf(invoice) {
-            let query = ''
-            console.log(JSON.parse(invoice));
-            let arr = JSON.parse(invoice)
-            for (let i = 0; i < arr.length; i++) {
-                query += `id${arr[i].id_invoice}`
-
+            let dataFactura = JSON.parse(invoice)
+            if (Array.isArray(dataFactura)) {
+                let query = '';
+                for (let i = 0; i < dataFactura.length; i++) {
+                    query += `id${dataFactura[i].id_invoice}`;
+                }
+                location.href = `http://localhost:3030/comprobante/${query}`;
+            } else if (typeof dataFactura === "object") {
+                location.href = `http://localhost:3030/comprobante/id${dataFactura.id_invoice}`;
             }
-            
-            location.href = `http://localhost:3030/comprobante/${query}`
         }
 
     </script>

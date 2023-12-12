@@ -20,14 +20,15 @@ router.get('/:id', middleware, async (req,res) => {
                 { model: db.Product, as: 'producto' },
                 { model: db.User, as: 'usuario' }
             ]
-        });
-        let sold = await db.Sold.findOne({
-            where:{
-                user_id : invoice.id_user,
-                product_id : invoice.id_product
-            }
         })
-        solds.push(sold);
+            let sold = await db.Sold.findOne({
+                where:{
+                    user_id : invoice.id_user,
+                    product_id : invoice.id_product
+                },
+                order: [['id_sold', 'DESC']]
+            })
+            solds.push(sold);
         invoiceFields.push(invoice);
     }
 
@@ -42,7 +43,7 @@ router.get('/:id', middleware, async (req,res) => {
             subtitle: "comprobante",
             headers:['Usuario','Numero de Telefono','Producto','Cantidad','Medio De Pago', 'Precio', 'Fecha De Compra', 'Total'],
             rows:[
-                [usuario.name, usuario.phone, producto.name, solds[i].amount, invoiceFields[i].method_pay, producto.price, invoiceFields[i].invoice_date, producto.price * solds[i].amount],
+                [usuario.name, usuario.phone, producto.name, solds[i] && solds[i].amount ? solds[i].amount : '1', invoiceFields[i].method_pay, producto.price, invoiceFields[i].invoice_date, producto.price * (solds[i] && solds[i].amount ? solds[i].amount : 1)],
             ]
         }
     

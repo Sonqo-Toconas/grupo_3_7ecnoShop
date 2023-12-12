@@ -125,22 +125,33 @@ admin=false
         }
         let selectedMethod = methodPay[req.body.formaDePago];
 
-        let producto = await db.Product.findByPk(req.params.id)
+        let {id_product} = await db.Product.findByPk(req.params.id)
 
-        let user = await db.User.findByPk(id)
-        db.Invoice.create({
-            id_user: await user.id_user,
-            invoice_date: new Date(),
-            id_product: producto.id_product,
-            method_pay: selectedMethod
-        })
-            .then(invoice => {
-                res.render('succesBuy', { factura: invoice, nameUser: user.name })
+        let {id_user,name} = await db.User.findByPk(id)
+        if (id_user && id_product) {
+            let confirm = await db.Sold.create({
+                user_id: id_user,
+                product_id : id_product,
+                amount : '1'
             })
-            .catch(err => {
-                console.log(err);
-                res.render('error')
+            db.Invoice.create({
+                id_user: id_user,
+                invoice_date: new Date(),
+                id_product: id_product,
+                method_pay: selectedMethod
             })
+                .then(invoice => {
+                    return res.render('succesBuy', { factura: invoice, nameUser: name })
+                })
+                .catch(err => {
+                    console.log(err);
+                    res.render('error')
+                })
+        }else{
+            res.send('hubo un error')
+        }
+        
+        
     },
     mostrarFormularioCreacion: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
