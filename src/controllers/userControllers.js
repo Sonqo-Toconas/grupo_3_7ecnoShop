@@ -372,6 +372,29 @@ const usuario = {
                 old: req.body
             })
         }
+    },
+    carritoProcess: async (req,res)=>{
+        if (req.cookies.cookieLogin) {
+            [password, id] = req.cookies.cookieLogin.split('id')
+        } else if (req.session.userLogin) {
+            [password, id] = req.session.userLogin.split('id')
+        }
+        let idProduct = req.params.id
+        let amount = req.body.amount
+
+
+       db.Cart.create({
+            user_id:id,
+            product_id:idProduct,
+            amount:amount
+        })
+        .then(confirm=>{
+            res.redirect("/usuario/carrito")
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+        
     }
 }
 

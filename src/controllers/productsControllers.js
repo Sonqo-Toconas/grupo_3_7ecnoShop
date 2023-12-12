@@ -86,7 +86,7 @@ const products = {
 
 
     detalle: async (req, res) => {
-
+let admin =false
         let data = await db.Product.findAll({
             where: {
                 id_product: { [db.Sequelize.Op.ne]: req.params.id }
@@ -95,7 +95,20 @@ const products = {
             limit:4
         })
         let producto = await db.Product.findByPk(req.params.id)
-        res.render('productDetail', { producto: producto, otrosProductos: data })
+        if (req.cookies.cookieLogin) {
+            [password, id] = req.cookies.cookieLogin.split('id')
+        } else if (req.session.userLogin) {
+            [password, id] = req.session.userLogin.split('id')
+        }
+        if (id){
+let usuario= await db.User.findByPk(id)
+if(usuario.admin==1){
+admin = true
+}
+        }else {
+admin=false
+        }
+        res.render('productDetail', { producto: producto, otrosProductos: data, admin:admin })
     },
     purchase: async (req, res) => {
         if (req.cookies.cookieLogin) {
