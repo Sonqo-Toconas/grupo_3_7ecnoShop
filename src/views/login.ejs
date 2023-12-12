@@ -8,11 +8,10 @@
 
       <main>
         <section>
-            
-          <form action="/usuario/login" method="post" class="contenedor-main" >
+
+          <form action="/usuario/login" method="post" class="contenedor-main">
             <div>
               <h2>Iniciar sesion</h2>
-              <p>Inicie sesion para acceder a su cuenta</p>
             </div>
             <div class="formulario">
               <div>
@@ -25,35 +24,30 @@
                 <input type="password" name="password" id="password" />
               </div>
               <div class="btnCheck">
-                <input type="checkbox" name="passwordRemember" id="passwordRemember"/>
+                <input type="checkbox" name="passwordRemember" id="passwordRemember" />
                 <label for="passwordRemember">Recordar Contraseña</label>
+                <div class="errores" id="passwordError"></div>
+                <% if (locals.errors) { errors.forEach(error=> { %>
+                  <div>
+                    <p class="mensajeError">
+                      <%= error.msg%>
+                    </p>
+                  </div>
+                  <%}) }%>
               </div>
             </div>
-            <div class="errores" id="passwordError"></div>
-            <% if (locals.errors) { errors.forEach(error=> { %>
-              <div>
-                <p class="mensajeError">
-                  <%= error.msg%>
-                </p>
-              </div>
-              <%}) }%>
-                <button class="boton-IniSesion">Iniciar Sesion</button>
-                <div class="links-conteiner-main">
-                  <p><a href="/usuario/password">Olvidaste tu Contraseña</a></p>
-                  <p><a href="/usuario/registro">¿Todavia no tiene cuenta?</a></p>
-                </div>
-                <div class="botones">
-                  <button class="icon-G"><i class="fa-brands fa-google" id="google"></i></button>
-                  <button class="icon-F"><i class="fa-brands fa-facebook" id="facebook"></i></button>
-                  <button class="icon-T"><i class="fa-brands fa-twitter" id="twitter"></i></button>
-                </div>
 
+            <button class="boton-IniSesion">Iniciar Sesion</button>
+            <div class="links-conteiner-main">
+              <p><a href="/usuario/password">Olvidaste tu Contraseña</a></p>
+              <p><a href="/usuario/registro">¿Todavia no tiene cuenta?</a></p>
+            </div>
           </form>
         </section>
       </main>
 
       <%- include('./partials/footer') %>
-      <script src="/js/userLogin1.js"></script>
+        <script src="/js/userLogin1.js"></script>
   </body>
 
   </html>

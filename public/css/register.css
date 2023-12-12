@@ -1,136 +1,84 @@
-/* *{
-    padding: 0;
-    margin: 0;
-}
-
-body{
-    background-color: #e8e8f0;
-    font-family: sans-serif;
-    font-size: 18px;
-}
-
-h1{
-    font-family: sans-serif;
-    font-size: 28px;
-}
-
-.buttonRegister{
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.formButtonRegister{
-    padding: 5px 10px;
-    transition: all 450ms;
-    width: 30%;
-    background-color: #0c047c;
-    color: #e8e8f0;
-    border: #0c047c solid 1px;
-    border-radius: 15px;
-}
-
-.registerContainer{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 10%;
-    padding:  40px ;
-    border: #0c047c solid 1px;
-    border-radius: 25px;
-}
-
-.content{
-    display: grid;
-    grid-template-columns: 2;
-} ;
-
-
-
-@media (min-width: 320px){
-
-
-    .formText .formBarRegister {
-        
-    }
-
-
-}
-
-@media (min-width: 768px){
-  
-}
-
-
-@media (min-width: 1024px) {} */
-
 main {
     margin: 0;
     padding: 0;
-    padding-top: 120px;
-    padding-bottom: 20px;
-    background-color: #007F7F;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #e8e8f0;
     text-align: center;
 }
 
-.titulo-datos {
-    margin: 8px;
-    padding: 10px;
-    color: #353839;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 20px;
+body.dark main{
+    background-color: #253159;
+    color: #e8e8f0;
 }
 
 .registerForm {
     margin: auto;
     margin-top: 2rem;
-    margin-bottom: 50px;
+    margin-bottom: 2rem;
     padding: 20px 15px;
     padding-bottom: 1.5rem;
     width: 85%;
     max-width: 536px;
-    border: 5px solid #f3f3f3;
+    border: 5px solid #0c047c;
     border-radius: 10px;
-    color: white;
-    background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
+    color: #0c047c;
+    background:  #e8e8f0; 
     text-align: center;
     box-shadow: 0px 0px 15px 2px;
 }
 
-h1 {
-    color: white;
-    font-size: 1.5rem;
+body.dark .registerForm{
+    background-color: #253159;
+    border: #e8e8f0 solid 5px;
+    color: #e8e8f0;
 }
 
-.formulario {
-    margin-left: 10%;
-    color: white;
-    text-align: left;
+.registerForm h1 {
+    color:#0c047c;
+    font-size: 1.8rem;
+}
+
+body.dark .registerForm h1 {
+    color:#e8e8f0;
+    font-size: 1.5rem;
 }
 
 .formText {
     font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px;
 }
 
 .formBarRegister {
     margin-top: 8px;
     padding: 8px;
     width: 88.5%;
-    border: solid 1px #ebebeb;
-    border-radius: 5px;
+    border: none;
+    border-bottom: solid 1px #0c047c;
+    background-color: #e8e8f0;
+}
+
+body.dark .formBarRegister{
+    background-color: #253159;
+    color: #e8e8f0;
+    border-bottom: #e8e8f0 1px solid;
 }
 
 .formBarRegister2 {
     margin-top: 8px;
     padding: 8px;
     width: 88.5%;
-    border: solid 1px #ebebeb;
-    border-radius: 5px;
+    border: none;
+    border-bottom: solid 1px #0c047c;
+    background-color: #e8e8f0;
 }
 
+body.dark .formBarRegister2{
+    background-color: #253159;
+    color: #e8e8f0;
+    border-bottom: #e8e8f0 1px solid;
+}
 
 .buttonRegister {
     margin-top: 15px;
@@ -138,50 +86,59 @@ h1 {
     justify-content: space-around;
 }
 
-.icon-F,
-.icon-T,
-.icon-G {
-    margin: 0 20px;
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 50%;
-    color: #1877F2;
+.buttonRegister button {
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: all 500ms;
+    color: #e8e8f0;
+    background-color: #0c047c;
+    border: #253159 1px solid;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.botones button {
-    margin-bottom: 10px;
-    transition: all 500ms;
-    color: black;
+.buttonRegister button:hover {
+    scale: 1.1;
+    color: #253159;
+    background-color: #e8e8f0;
 }
 
-.botones button:hover {
-    width: 90px;
-    border-radius: 50px;
+body.dark .buttonRegister button{
+    background-color: #e8e8f0;
+    color: #253159;
+    border: 1px solid #e8e8f0;
 }
 
-.formButtonRegister {
+body.dark .buttonRegister button:hover{
+    scale: 1.1;
+    color: #e8e8f0;
+    background-color: #253159f0;
+}
+
+ .formButtonRegister {
     padding: 5px 10px;
     width: 30%;
     border: none;
     border-radius: 5px;
     transition: all 450ms;
-    color: white;
-    background-color: #1259c3;
+    color: #e8e8f0;
+    background-color: #0c047c;
     font-size: 16px;
 }
 
 .boton-formulario:hover {
-    background-color: #0022AA;
+    background-color: #0c047c;
 }
 
 .errorMessageRegister {
     margin-top: 10px;
     margin-left: 10%;
     text-align: left;
+    color: red;
 }
 
 .Error{
     margin-bottom: 30px;
+    color: red;
 }

@@ -1,37 +1,51 @@
 .formProductCreation {
   background-color: #e8e8f0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   box-sizing: border-box;
 }
 
 .CreationFormTitle {
-  color: white;
+  color: #0c047c;
   font-size: 1.5rem;
+}
+
+body.dark .CreationFormTitle{
+  color: #e8e8f0;
 }
 
 main {
   margin: 0;
   padding: 0;
-  padding-top: 120px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #e8e8f0;
   text-align: center;
 }
 
+body.dark main{
+  background-color: #253159;
+}
+
 .formProductCreation {
   margin: auto;
-  margin-top: 2rem;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px 15px;
   padding-bottom: 1.5rem;
   width: 85%;
   max-width: 536px;
-  border: 5px solid #f3f3f3;
+  border: 3px solid #0c047c;
   border-radius: 10px;
-  color: white;
-  background: radial-gradient(circle, rgb(0, 212, 255) 0%, rgb(9, 21, 130) 0%, rgb(0, 212, 255) 100%);
+  color: #0c047c;
+  background: #e8e8f0;
   text-align: center;
   box-shadow: 0px 0px 15px 2px;
+}
+
+body.dark .formProductCreation{
+  border: 3px solid #e8e8f0;
+  color: #e8e8f0;
+  background-color: #253159;
 }
 
 .formProductCreation div {
@@ -51,9 +65,24 @@ main {
 .formProductCreation div textarea {
   width: calc(100% - 20px);
   padding: 10px;
-  border-radius: 5px;
   border: none;
-  background-color: #f2f2f2;
+  background-color: #e8e8f0;
+  border: none;
+  border-bottom: #0c047c 1px solid;
+  color: #0c047c;
+
+}
+
+.formProductCreation .productField input{
+  color: #0c047c;
+  background-color: #e8e8f0;
+}
+
+body.dark .formProductCreation .productField input{
+  color: #e8e8f0;
+  background-color: #253159;
+  border: none;
+  border-bottom:1px solid #e8e8f0 ;
 }
 
 .formProductCreation div input[type="file"] {
@@ -61,7 +90,7 @@ main {
 }
 
 .formProductCreation div input[type="submit"] {
-    background-color: #007F7F;
+    background-color: #e8e8f0;
     color: white;
     border-radius: 5px;
     padding: 10px;
@@ -77,98 +106,6 @@ main {
     background-color: #1259c3;
 }
 
-.botones {
-    display: flex;
-    justify-content: center; /* // Cambio a "center" para alinear horizontalmente */
-    width: calc(100% - 20px);
-    margin-top: 10px;
-}
-
-.botones button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    transition: transform .3s ease-in-out;
-}
-
-.botones button:hover {
-    transform: scale(1.2);
-}
-
-.icon-F, .icon-T, .icon-G {
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin: 0 20px;
-    color: #1877F2;
-    cursor: pointer;
-}
-
-.icon-G{
-    background-color: white;
-    color: black;
-}
-
-@media (min-width:700px){
-    .boton-IniSesion:hover {
-        background-color: rgb(0,212,255,1);
-        color: white;
-        scale: 1.05;
-    }
-
-    .botones button {
-        transition: all 500ms;
-        color: black;
-    }
-
-    .botones button:hover {
-        width: 90px;
-        border-radius: 50px;
-    }
-
-    .icon-G:hover {
-        background-color: rgb(222, 218, 218);
-    }
-
-    .icon-G:hover > #google{
-        font-size: 25px;
-        animation: color-icon 4s linear infinite;
-    }
-
-    .icon-F:hover{
-        background-color: #1877F2;
-    }
-
-    .icon-F:hover > #facebook{
-        font-size: 25px;
-        color: #ffffff;
-    }
-
-    .icon-T:hover > #twitter {
-        font-size: 25px;
-        color: #1D9BF0;
-    }
-}
-
-/* CSS CREATION RESPONSIVE */
-/* 
-.formProductCreation{
-  position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px ;
-
-
-}
-
-.creationFormTitle{
-
-}
-
-.productField{
-
-} */
-
 .errorMessage{
   color: rgba(189, 22, 22, 0.686);
 }
@@ -177,18 +114,30 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  margin: auto;
   height: 40px;
   border-radius: 20px;
   border: none;
-  background: #282877;
-  color: #fff;
+  background: #0c047c;
+  color: #e8e8f0;
   font-weight: bold;
   cursor: pointer;
   font-size: 18px;
 }
 
-.buttonCreation:hover{
-opacity: 90%;
-/* transform: scale(1.1); */
+body.dark .buttonCreation{
+  background: #e8e8f0;
+  color: #253159;
 }
+
+.buttonCreation:hover{
+transform: scale(1.1);
+background-color: #4941d5;
+}
+
+body.dark .buttonCreation:hover{
+  transform: scale(1.1);
+  color: #4941d5;
+  background-color: #e8e8f0;
+  }

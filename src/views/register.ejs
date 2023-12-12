@@ -7,9 +7,10 @@
 
             <main>
                 <div class="registerContainer">
-                    <h1>Creá tu cuenta</h1>
+
                     <form action="/usuario/registro" method="POST" class="registerForm" enctype="multipart/form-data"
                         id="form">
+                        <h1>Creá tu cuenta</h1>
                         <div class="content">
                             <label for="name" class="formText">Nombre y Apellido: </label>
                             <input type="text" name="name" placeholder="Ingresá tu nombre y apellido"
@@ -22,8 +23,8 @@
                             <div class="Error" id="emailError"></div>
 
                             <label for="phone" class="formText"> Celular: </label>
-                            <input type="tel" name="phone" placeholder="Ingresá tu celular" class="formBarRegister"
-                                value="<%=locals.old ? old.phone : null %>" id="phone">
+                            <input type="tel" name="phone" placeholder="Ingresá tu número celular"
+                                class="formBarRegister" value="<%=locals.old ? old.phone : null %>" id="phone">
                             <div class="Error" id="phoneError"></div>
 
                             <label for="image" class="formText">(Opcional) Agregá una foto de perfil</label>
@@ -36,6 +37,7 @@
                                 class="formBarRegister2" id="password">
                             <div class="Error2" id="passwordError"></div>
 
+                            <label for="password" class="formText"> Ingresa la contraseña nuevamente: </label>
                             <input type="password" name="passwordConfirm" placeholder="Confirma tu contraseña"
                                 class="formBarRegister2" id="password2">
                             <div class="Error2" id="passwordError2"></div>
@@ -45,9 +47,10 @@
                                     <%= error.msg%>
                                 </p>
                                 <%}) }%>
-            
+
                                     <div class="buttonRegister">
-                                        <button type="submit" class="formButtonRegister" id="formButton1">Enviar</button>
+                                        <button type="submit" class="formButtonRegister"
+                                            id="formButton1">Enviar</button>
                                         <button type="reset" class="formButtonRegister" id="formButton2">Borrar</button>
                                     </div>
                         </div>
@@ -56,4 +59,5 @@
             <%- include('./partials/footer') %>
                 <script src="/js/userRegister.js"></script>
     </body>
+
     </html>

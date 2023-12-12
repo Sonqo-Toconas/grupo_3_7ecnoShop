@@ -5,18 +5,24 @@
   <body>
 
     <%- include('./partials/header') %>
-    
+
       <main>
         <div class="main-conteiner">
-          <section>
-            <!-- <div class="main-header">
+<!-- 
+          <video autoplay>
+            <source src="../videos/iPhone 15_WOW_Apple.mp4" type="video/mp4">
+          </video> -->
+          <!-- <section>
+            
+            <div class="main-header">
               <span class="fa-solid fa-circle-chevron-left" id="icon-left"></span>
               <span class="fa-solid fa-circle-chevron-right" id="icon-right"></span>
-            </div> -->
-          </section>
-          <section>
-            <button class="buttonIndexProduct"><a href="/producto" class="link-productos">Ver catalago completo</a></button>
-          </section>
+            </div>
+          </section> -->
+
+          <!-- <section> -->
+            <a href="/producto" class="productLink"> Ver catalago completo </a>
+          <!-- </section> -->
           <section class="main-footer" onclick="irProducto">
             <% for( let i=0; i < productos.length; i++ ) { %>
               <div class="product">
