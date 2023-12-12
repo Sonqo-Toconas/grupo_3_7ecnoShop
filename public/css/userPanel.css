@@ -154,6 +154,10 @@ h1 {
     justify-content: space-around;
 }
 
+.conteinerLogout button{
+    cursor: pointer;
+}
+
 .conteinerLogout i {
     margin-left: 5px;
 }

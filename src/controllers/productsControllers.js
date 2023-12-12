@@ -35,21 +35,7 @@ const products = {
     },
 
     filtrosIndex: async (req, res) => {
-        if (req.body.order == 'mayor-precio') {
-            let products = await db.Product.findAll({
-                order: [
-                    ['price', 'DESC'] // Ordenar por el campo 'price' de manera descendente (mayor a menor)
-                ]
-            });
-            res.render('products', { productos: products });
-        } else if (req.body.order == 'menor-precio') {
-            let products = await db.Product.findAll({
-                order: [
-                    ['price', 'ASC'] // Ordenar por el campo 'price' de manera ascendete (mayor a menor)
-                ]
-            });
-            res.render('products', { productos: products });
-        } else if (req.body.order == 'accesorios') {
+        if (req.params.id == 'accesorios') {
             let products = await db.Product.findAll({
                 include: [
                     {
@@ -61,8 +47,8 @@ const products = {
                     },
                 ],
             });
-            res.render('products', { productos: products });
-        } else if (req.body.order == 'celulares') {
+            return res.render('products', { productos: products });
+        } else if (req.params.id == 'celulares') {
             let products = await db.Product.findAll({
                 include: [
                     {
@@ -74,7 +60,7 @@ const products = {
                     },
                 ],
             });
-            res.render('products', { productos: products });
+            return res.render('products', { productos: products });
         }
         else {
             res.redirect('/producto')
@@ -112,6 +98,11 @@ const products = {
         res.render('productDetail', { producto: producto, otrosProductos: data })
     },
     purchase: async (req, res) => {
+        if (req.cookies.cookieLogin) {
+            [password, id] = req.cookies.cookieLogin.split('id')
+        } else if (req.session.userLogin) {
+            [password, id] = req.session.userLogin.split('id')
+        }
 
         let methodPay = {
             1: 'tarjeta de credito',
@@ -122,9 +113,8 @@ const products = {
         let selectedMethod = methodPay[req.body.formaDePago];
 
         let producto = await db.Product.findByPk(req.params.id)
-        let idUser = req.session.userLogin
-        console.log(idUser);
-        let user = await db.User.findByPk(idUser)
+
+        let user = await db.User.findByPk(id)
         db.Invoice.create({
             id_user: await user.id_user,
             invoice_date: new Date(),

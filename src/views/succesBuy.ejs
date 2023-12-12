@@ -5,18 +5,23 @@
     </head>
         <main class="conteiner">
             <div>
-        <h2>Tu compra ha sido exitosa</h2>
-        <h3>Muchas Gracias <%= nameUser %></h3>
+        <h2>Tu compra ha sido exitosa: <strong><%= nameUser %></strong></h2><br>
         <button onclick="getPdf('<%= JSON.stringify(factura) %>')">
             Descargar Comprobante
         </button>
     </div>
     </main>
     <script>
-        function getPdf(data) {
-            let dataFactura = JSON.parse(data)
-            console.log(dataFactura.id_invoice);
-            location.href = `http://localhost:3030/comprobante/${dataFactura.id_invoice}`
+        function getPdf(invoice) {
+            let query = ''
+            console.log(JSON.parse(invoice));
+            let arr = JSON.parse(invoice)
+            for (let i = 0; i < arr.length; i++) {
+                query += `id${arr[i].id_invoice}`
+
+            }
+            
+            location.href = `http://localhost:3030/comprobante/${query}`
         }
 
     </script>

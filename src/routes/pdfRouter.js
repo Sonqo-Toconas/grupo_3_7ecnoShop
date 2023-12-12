@@ -2,33 +2,53 @@ const express = require('express');
 const router = express.Router();
 const PDFDocument = require("pdfkit-table"); 
 const db = require('../database/models');
+const middleware = require('../middlewares/authMiddleware')
 
-router.get('/:id', async (req,res) => {
+router.get('/:id', middleware, async (req,res) => {
+    
+    let query = req.params.id;
 
-    let id = req.params.id;
-    let invoice = await db.Invoice.findOne({
-        where:{'id_invoice':id},
+    const matches = query.match(/id\d+/g);
+    const ids = matches.map(match => match.replace('id', ''));
+    
+    let invoiceFields = []
+    let solds = []
+    for (const invoiceId of ids) {
+        let invoice = await db.Invoice.findOne({
+            where: { 'id_invoice': invoiceId },
             include: [
-                { model: db.Product, as:'producto'},
-                { model: db.User, as:'usuario'}
+                { model: db.Product, as: 'producto' },
+                { model: db.User, as: 'usuario' }
             ]
-    },)
+        });
+        let sold = await db.Sold.findOne({
+            where:{
+                user_id : invoice.id_user,
+                product_id : invoice.id_product
+            }
+        })
+        solds.push(sold);
+        invoiceFields.push(invoice);
+    }
 
 
     const doc = new PDFDocument();
 
     doc.text('Compra Realizada');
-    let {usuario, producto} = invoice
-    let tableArray = {
-        title: "Compra En 7ecnoShop",
-        subtitle: "comprobante",
-        headers:['Usuario','Numero de Telefono','Producto','Cantidad','Medio De Pago', 'Precio', 'Fecha De Compra', 'Total'],
-        rows:[
-            [usuario.name, usuario.phone, producto.name,'1', invoice.method_pay, producto.price, invoice.invoice_date, producto.price],
-        ]
+    for (let i = 0; i < invoiceFields.length; i++) {
+        let {usuario, producto} = invoiceFields[i]
+        let tableArray = {
+            title: "Compra En 7ecnoShop",
+            subtitle: "comprobante",
+            headers:['Usuario','Numero de Telefono','Producto','Cantidad','Medio De Pago', 'Precio', 'Fecha De Compra', 'Total'],
+            rows:[
+                [usuario.name, usuario.phone, producto.name, solds[i].amount, invoiceFields[i].method_pay, producto.price, invoiceFields[i].invoice_date, producto.price * solds[i].amount],
+            ]
+        }
+    
+        await doc.table(tableArray,{ width: 500})
+        
     }
-
-    await doc.table(tableArray,{ width: 500})
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', 'attachment; filename="comprobante.pdf"');
 
